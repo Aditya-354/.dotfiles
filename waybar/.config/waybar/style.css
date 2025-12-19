@@ -1,0 +1,126 @@
+@import "colors.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    margin: 0px 3px 0px 3px;
+}
+
+#window {
+    font-size: 1.2rem;
+    background: @background;
+    padding: 0px 2px;
+    margin: 0 2px;
+}
+
+window#waybar {
+    background: @background;
+    color: #ffd78d;
+    margin: 0px 0;
+}
+
+tooltip {
+    background: @background;
+    font-size: 1.2rem;
+    border: 1px solid rgba(100, 114, 125, 0.5);
+    /* font-size:  */
+}
+
+tooltip label {
+    padding: 0 5px 0 10px;
+    color: @on_surface;
+}
+
+/* #workspaces button {
+    padding: 2px;
+    margin: 2px;
+    font-size: 0.8rem;
+    color: @on_surface;
+} */
+
+/*#workspaces button.focused {
+    background: #64727D;
+    border-bottom: 3px solid white;
+} */
+
+/* Each workspace button */
+#workspaces button {
+    font-size: 0.9rem;
+    padding: 0.5px 7px;
+    margin: 2px 2px;
+    border-radius: 100px;
+    background: @background;
+    color: @on_surface;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.2s ease;
+}
+
+/* Hover */
+#workspaces button:hover {
+    background: @inverse_primary;
+    color: #fff;
+}
+
+/* Active workspace */
+#workspaces button.active {
+    background: @primary;
+    color: @background;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* Urgent workspace */
+#workspaces button.urgent {
+    background: #ff5555;
+    color: #ffffff;
+}
+
+/* Tray container */
+#tray {
+    padding: 5px;
+    /* or @surface */
+}
+
+/* Individual tray icons */
+#tray>.item {
+    padding: 0px;
+    margin: 0 2px;
+    color: @on_surface;
+    border-radius: 6px;
+}
+
+/* Hover effect */
+#tray>.item:hover { 
+     background: rgba(255, 255, 255, 0.12); 
+     color: transparent;
+}
+
+#clock {
+    padding: 0.5rem;
+    /* margin: 5px; */
+    border-radius: 10px;
+    background-color: @background;
+    font-size: 1.3rem;
+    color: @primary;
+}
+
+#pulseaudio {
+    padding: 0.5rem;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: @background;
+    color: @primary;
+    font-size: 1.3rem;
+}
+
+#network {
+    padding: 0.5rem;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: @background;
+    color: #d19a66;
+    font-size: 1.3rem;
+}
+
+
