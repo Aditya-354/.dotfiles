@@ -12,6 +12,7 @@ breeze-gtk
 breeze-plymouth
 brightnessctl
 btrfs-progs
+clang
 cmatrix
 digikam
 discover
@@ -28,12 +29,14 @@ git
 glow
 gnome-system-monitor
 grub
+grub-btrfs
 gst-plugin-pipewire
 gtk4
 htop
 hyprland
 hyprlock
 hyprshot
+inotify-tools
 intel-media-driver
 intel-ucode
 inxi
@@ -80,10 +83,14 @@ nautilus
 neovim
 network-manager-applet
 networkmanager
+nodejs
+notion-app-enhanced
 noto-fonts
 noto-fonts-emoji
+npm
 ntfs-3g
 nwg-look
+obsidian
 ocean-sound-theme
 os-prober
 oxygen
@@ -135,7 +142,10 @@ stow
 swaync
 swww
 systemsettings
+timeshift
+timeshift-autosnap
 tmux
+tree-sitter-cli
 ttf-firacode-nerd
 ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
@@ -166,4 +176,5 @@ xorg-xinit
 yay
 yay-debug
 yazi
+zoxide
 zram-generator
