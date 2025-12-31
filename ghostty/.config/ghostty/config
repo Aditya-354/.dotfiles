@@ -26,10 +26,10 @@
 # # The config file consists of simple key-value pairs,
 # # separated by equals signs.
 font-family = FiraCode Nerd Font Mono
-font-size = 13
+font-size = 15
 window-padding-x = 1
 window-padding-y = 1
-theme = Catppuccin Mocha
+theme = Catppuccin Frappe
 background-opacity = 1.0
 cursor-style = block
 cursor-style-blink = false
