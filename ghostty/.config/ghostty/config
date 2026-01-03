@@ -3,7 +3,7 @@
 # This template file has been automatically created at the following
 # path since Ghostty couldn't find any existing config files on your system:
 #
-#   /home/vimsicaladi/.config/ghostty/config
+#   /home/vimsicaladi/.config/ghostty/ig
 #
 # The template does not set any default options, since Ghostty ships
 # with sensible defaults for all options. Users should only need to set
@@ -34,6 +34,7 @@ background-opacity = 1.0
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor   
+keybind = ctrl+backspace=text:\x17
 #
 # # Spacing around the equals sign does not matter.
 # # All of these are identical:
