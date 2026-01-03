@@ -1,6 +1,7 @@
 aurorae
 base
 base-devel
+bat
 bluedevil
 blueman
 bluez
@@ -24,6 +25,7 @@ fd
 file-roller
 flatpak-kcm
 fzf
+ghostty
 gimp
 git
 glow
@@ -70,6 +72,7 @@ libkscreen
 libksysguard
 libplasma
 libpulse
+libreoffice-fresh
 libva-intel-driver
 linux
 linux-firmware
@@ -84,7 +87,6 @@ neovim
 network-manager-applet
 networkmanager
 nodejs
-notion-app-enhanced
 noto-fonts
 noto-fonts-emoji
 npm
@@ -95,6 +97,7 @@ ocean-sound-theme
 os-prober
 oxygen
 oxygen-sounds
+pandoc-cli
 papirus-icon-theme
 pavucontrol
 pipewire
@@ -129,6 +132,7 @@ qt6ct
 reflector
 rose-pine-cursor
 rose-pine-hyprcursor
+rustup
 screenfetch
 sddm
 sddm-kcm
@@ -142,6 +146,9 @@ stow
 swaync
 swww
 systemsettings
+texlive-fontsextra
+texlive-fontsrecommended
+texlive-latexextra
 timeshift
 timeshift-autosnap
 tmux
