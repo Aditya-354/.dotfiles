@@ -9,15 +9,16 @@
 }
 
 #window {
-    font-size: 1.2rem;
+    font-size: 15px;
     background: @background;
-    padding: 0px 2px;
-    margin: 0 2px;
+    /* padding: 0px 2px; */
+    margin: 5px;
+    border-radius: 10px;
 }
 
 window#waybar {
-    background: @background;
-    color: #ffd78d;
+    background: transparent;
+    color: @secondary;
     margin: 0px 0;
 }
 
@@ -47,10 +48,10 @@ tooltip label {
 
 /* Each workspace button */
 #workspaces button {
-    font-size: 0.9rem;
-    padding: 0.5px 7px;
-    margin: 2px 2px;
-    border-radius: 100px;
+    font-size: 13px;
+    /* padding: 0.5px 7px; */
+    margin: 5px;
+    border-radius: 20px;
     background: @background;
     color: @on_surface;
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -79,7 +80,9 @@ tooltip label {
 /* Tray container */
 #tray {
     padding: 5px;
-    /* or @surface */
+    margin: 5px;
+    /* background: @background; */
+    /* border-radius: 10px; */
 }
 
 /* Individual tray icons */
@@ -87,7 +90,6 @@ tooltip label {
     padding: 0px;
     margin: 0 2px;
     color: @on_surface;
-    border-radius: 6px;
 }
 
 /* Hover effect */
@@ -97,8 +99,8 @@ tooltip label {
 }
 
 #clock {
-    padding: 0.5rem;
-    /* margin: 5px; */
+    /* padding: 0.5rem; */
+    margin: 5px;
     border-radius: 10px;
     background-color: @background;
     font-size: 1.3rem;
