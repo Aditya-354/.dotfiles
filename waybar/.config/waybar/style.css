@@ -4,125 +4,46 @@
     border: none;
     border-radius: 0;
     font-family: "JetBrainsMono Nerd Font";
-    font-weight: bold;
-    margin: 0px 3px 0px 3px;
-}
-
-#window {
-    font-size: 15px;
-    background: @background;
-    /* padding: 0px 2px; */
-    margin: 5px;
-    border-radius: 10px;
+    font-weight: 500;
+    margin: 0;
 }
 
 window#waybar {
-    background: transparent;
-    color: @secondary;
-    margin: 0px 0;
-}
-
-tooltip {
     background: @background;
-    font-size: 1.2rem;
-    border: 1px solid rgba(100, 114, 125, 0.5);
-    /* font-size:  */
+    color: @secondary;
+    font-size: 12px;
 }
 
-tooltip label {
-    padding: 0 5px 0 10px;
-    color: @on_surface;
-}
-
-/* #workspaces button {
-    padding: 2px;
-    margin: 2px;
-    font-size: 0.8rem;
-    color: @on_surface;
-} */
-
-/*#workspaces button.focused {
-    background: #64727D;
-    border-bottom: 3px solid white;
-} */
-
-/* Each workspace button */
 #workspaces button {
-    font-size: 13px;
-    /* padding: 0.5px 7px; */
-    margin: 5px;
-    border-radius: 20px;
+    margin: 3px;
+    padding: 2px 8px;
+    border-radius: 16px;
     background: @background;
     color: @on_surface;
     border: 1px solid rgba(255, 255, 255, 0.15);
-    transition: all 0.2s ease;
 }
 
-/* Hover */
-#workspaces button:hover {
-    background: @inverse_primary;
-    color: #fff;
-}
-
-/* Active workspace */
 #workspaces button.active {
     background: @primary;
     color: @background;
-    border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
-/* Urgent workspace */
-#workspaces button.urgent {
-    background: #ff5555;
-    color: #ffffff;
-}
-
-/* Tray container */
+#clock,
+#pulseaudio,
+#network,
 #tray {
-    padding: 5px;
-    margin: 5px;
-    /* background: @background; */
-    /* border-radius: 10px; */
+    padding: 4px 8px;
+    margin: 3px;
+    border-radius: 8px;
+    background: @background;
+    color: @primary;
 }
 
-/* Individual tray icons */
 #tray>.item {
-    padding: 0px;
     margin: 0 2px;
-    color: @on_surface;
 }
 
-/* Hover effect */
-#tray>.item:hover { 
-     background: rgba(255, 255, 255, 0.12); 
-     color: transparent;
+#tray>.item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: @tertiary;
 }
-
-#clock {
-    /* padding: 0.5rem; */
-    margin: 5px;
-    border-radius: 10px;
-    background-color: @background;
-    font-size: 1.3rem;
-    color: @primary;
-}
-
-#pulseaudio {
-    padding: 0.5rem;
-    margin: 5px;
-    border-radius: 10px;
-    background-color: @background;
-    color: @primary;
-    font-size: 1.3rem;
-}
-
-#network {
-    padding: 0.5rem;
-    margin: 5px;
-    border-radius: 10px;
-    background-color: @background;
-    color: #d19a66;
-    font-size: 1.3rem;
-}
-
-
