@@ -1,0 +1,22 @@
+{
+  "logo": {
+    "type": "file",
+    "source": "~/.config/fastfetch/cat.txt",
+    "padding": {
+      "right": 2
+    }
+  },
+
+  "modules": [
+    "os",
+    "kernel",
+    "uptime",
+    "packages",
+    "wm",
+    "terminal",
+    "cpu",
+    "memory",
+    "disk"
+  ]
+}
+

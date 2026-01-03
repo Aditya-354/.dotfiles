@@ -35,7 +35,8 @@
     },
     "network": {
         // "format-wifi": "{essid}  ",
-        "format-wifi": " {essid} {signalStrength}%",
+        "format-wifi": "{essid}",
+        "on-click": "nm-applet",
         "format-ethernet": "{ipaddr}/{cidr} 󰊗",
         "format-disconnected": "No Connection", //An empty format will hide the module.
         "tooltip-format": "{ifname} via {gwaddr} 󰊗",

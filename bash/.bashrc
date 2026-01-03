@@ -10,3 +10,11 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 eval "$(starship init bash)"ROMPT_COMMAND=set_bash_prompt
 export PATH="$PATH:~/.cargo/bin"
+export PATH="$HOME/.local/bin:$PATH"
+alias cmatrix='TERM=xterm-256color cmatrix -a'
+
+
+if [[ $- == *i* ]]; then
+  animated-fetch
+fi
+
