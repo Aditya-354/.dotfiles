@@ -18,3 +18,4 @@ fi
 
 alias dnic='bat ~/dotnotes/imp_commands.txt'
 alias dnin='bat ~/dotnotes/imp_notes.txt'
+alias wa-fix='ffmpeg -i "$1" -c:v libx264 -profile:v main -pix_fmt yuv420p -movflags +faststart -c:a aac -b:a 128k "${1%.mp4}-wa.mp4"'
