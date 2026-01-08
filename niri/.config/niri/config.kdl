@@ -183,7 +183,7 @@ layout {
         // off
 
         width 1
-        active-color "#ffc87f"
+        active-color "#999999"
         inactive-color "#505050"
 
         // Color of the border around windows that request your attention.
@@ -336,6 +336,7 @@ binds {
     Alt+Comma { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "calculator"; }
     Alt+Slash { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "clipboard"; }
     Alt+Shift+D { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "desktopWidgets" "toggle"; }
+    Alt+Shift+W { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "wallpaper" "toggle"; }
     Alt+R { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
     Alt+S { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle"; }
     Alt+C { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
