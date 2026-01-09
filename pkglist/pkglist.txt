@@ -3,6 +3,7 @@ aurorae
 base
 base-devel
 bat
+bibata-cursor-theme-bin
 bluedevil
 blueman
 bluez
@@ -95,6 +96,7 @@ noto-fonts-emoji
 npm
 ntfs-3g
 nwg-look
+obs-studio
 ocean-sound-theme
 os-prober
 oxygen
@@ -134,7 +136,6 @@ qt6-wayland
 qt6ct
 quickshell-git
 reflector
-rofi
 rose-pine-cursor
 rose-pine-hyprcursor
 rustup
@@ -158,6 +159,7 @@ timeshift
 timeshift-autosnap
 tmux
 tree-sitter-cli
+ttf-fira-code
 ttf-firacode-nerd
 ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
@@ -175,7 +177,6 @@ wget
 wireless_tools
 wireplumber
 wl-clipboard
-wofi
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-kde
 xdg-utils
