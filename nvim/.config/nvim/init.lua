@@ -1,5 +1,4 @@
 require("opts")
-require("autocmds")
 
 -- Lazy.nvim 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"

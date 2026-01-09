@@ -7,7 +7,9 @@ vim.opt.softtabstop = 2
 vim.opt.clipboard = "unnamedplus"
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-
+vim.g.semantic_tokens = false
+vim.o.termguicolors = true
+vim.cmd("colorscheme default")
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 
