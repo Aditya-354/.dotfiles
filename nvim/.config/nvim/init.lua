@@ -1,4 +1,5 @@
 require("opts")
+require("autocmds")
 
 -- Lazy.nvim 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -25,4 +26,3 @@ vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#a6adc8" })
 vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#a6adc8" })
 
 require("keymaps")
-
