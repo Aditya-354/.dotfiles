@@ -1,0 +1,7 @@
+[editor]
+line-number = "relative"
+
+[editor.cursor-shape]
+select = "underline"
+insert = "bar"
+normal = "block"
