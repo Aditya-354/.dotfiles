@@ -487,3 +487,4 @@ binds {
     // Alt+Shift+L { focus-monitor-right; }
 
 }
+include "./noctalia.kdl"
