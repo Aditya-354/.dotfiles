@@ -1,0 +1,6 @@
+inherits = "base16_default_dark"
+
+# "ui.gutter" = "background"
+"ui.gutter" = { bg = "default" }
+"ui.linenr" = { fg = "gray" }
+"ui.linenr.selected" = { fg = "yellow" }
