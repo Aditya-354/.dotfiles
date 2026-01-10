@@ -1,10 +1,25 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false,
-  },
   build = ":TSUpdate",
-  lazy = false 
+  lazy = false,
+  config = function()
+    require("nvim-treesitter.config").setup({
+      highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false,
+      },
+      indent = { enable = true },
+      auto_install = true,
+      ensure_installed = {
+        "lua",
+        "cpp",
+        "c",
+        "rust",
+        "html",
+        "css",
+        "javascript",
+      },
+    })
+  end,
 }
 

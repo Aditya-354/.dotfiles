@@ -1,3 +1,10 @@
+[editor.inline-diagnostics]
+# Show inline diagnostics when the cursor is on the line
+cursor-line = "error" # Can also be "warning", "info", "hint", or "disable"
+
+# Show inline diagnostics on other lines (not on the cursor line)
+other-lines = "warning" # Can also be "warning", "info", "hint", or "disable"
+
 [[language]]
 name = "cpp"
 language-servers = ["clangd"]

@@ -1,4 +1,4 @@
-theme = "terminal"
+theme = "gruvbox_dark_soft"
 
 [editor]
 line-number = "relative"
@@ -8,3 +8,31 @@ gutters = ["line-numbers", "diagnostics", "diff", "spacer"]
 select = "underline"
 insert = "bar"
 normal = "block"
+
+[editor.statusline]
+center = [
+    "file-encoding",
+    "file-type",
+    "file-line-ending",
+    "separator",
+    "file-name",
+    "read-only-indicator",
+    "separator",
+    "spacer",
+    "version-control",
+    "file-modification-indicator",
+]
+left = [
+    "mode",
+    "selections",
+    "primary-selection-length",
+    "separator",
+    "position",
+    "position-percentage",
+]
+right = ["spinner", "diagnostics", "separator", "workspace-diagnostics"]
+
+[editor.statusline.mode]
+insert = "INSERT"
+normal = "NORMAL"
+select = "SELECT"
