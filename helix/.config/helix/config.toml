@@ -4,6 +4,9 @@ theme = "gruvbox_dark_soft"
 line-number = "relative"
 gutters = ["line-numbers", "diagnostics", "diff", "spacer"]
 
+[editor.file-picker]
+hidden = false
+
 [editor.cursor-shape]
 select = "underline"
 insert = "bar"
