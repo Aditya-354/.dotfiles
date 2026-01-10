@@ -11,6 +11,7 @@ PS1='[\u@\h \W]\$ '
 eval "$(starship init bash)"ROMPT_COMMAND=set_bash_prompt
 export PATH="$PATH:~/.cargo/bin"
 export PATH="$HOME/.local/bin:$PATH"
+export EDITOR=nvim
 
 if [[ $- == *i* ]]; then
   fastfetch
@@ -19,3 +20,4 @@ fi
 alias dnic='bat ~/dotnotes/imp_commands.txt'
 alias dnin='bat ~/dotnotes/imp_notes.txt'
 alias wa-fix='ffmpeg -i "$1" -c:v libx264 -profile:v main -pix_fmt yuv420p -movflags +faststart -c:a aac -b:a 128k "${1%.mp4}-wa.mp4"'
+# eval "$(oh-my-posh init bash --config ~/.cache/oh-my-posh/themes/pure.omp.json)"
