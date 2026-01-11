@@ -453,7 +453,7 @@ binds {
 
     // Screenshot
     // Alt+Shift+S { spawn "grim"; }
-    Alt+W { spawn-sh "grim -g \"$(slurp)\" - | wl-copy"; }   
+    Alt+W { spawn-sh "grim -g \"$(slurp)\" "; }   
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here
