@@ -112,7 +112,7 @@ output "eDP-1" {
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 8
+    gaps 23
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -180,7 +180,7 @@ layout {
     border {
         // The settings are the same as for the focus ring.
         // If you enable the border, you probably want to disable the focus ring.
-        // off
+        off
 
         width 1
         active-color "#999999"
@@ -320,7 +320,7 @@ window-rule {
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
-    geometry-corner-radius 3
+    geometry-corner-radius 10
     clip-to-geometry true
 }
 
@@ -340,13 +340,14 @@ binds {
     Alt+R { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
     Alt+S { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle"; }
     Alt+C { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
-    Alt+N { spawn "swaync-client" "-t";}
+    // Alt+N { spawn "swaync-client" "-t";}
     Alt+B { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "bar" "toggle"; }
     Alt+Shift+Q { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
     Alt+E { spawn "dolphin"; }
     Alt+D { spawn "~/.config/waybar/scripts/launch.sh"; }
     Alt+Shift+B { spawn "pkill" "-USR1" "waybar"; }
     Mod+B { spawn "brave"; }
+    Alt+N{ spawn "obsidian"; }
     Mod+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
     Mod+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
@@ -453,7 +454,7 @@ binds {
 
     // Screenshot
     // Alt+Shift+S { spawn "grim"; }
-    Alt+W { spawn-sh "grim -g \"$(slurp)\" "; }   
+    Alt+W { spawn-sh "grim -g \"$(slurp)\" - | wl-copy"; }   
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here
