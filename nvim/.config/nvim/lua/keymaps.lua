@@ -32,4 +32,16 @@ end, { desc = "Find ALL files (including hidden & ignored)" })
 -- Insert mode
 vim.keymap.set("i", "<C-w>", "<C-w>", { noremap = true })
 
+vim.keymap.set('n', '<C-j>', ':m .+1<CR>==', { desc = "Move line down" })
+vim.keymap.set('n', '<C-k>', ':m .-2<CR>==', { desc = "Move line up" })
+
+vim.keymap.set('v', '<C-j>', ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
+vim.keymap.set('v', '<C-k>', ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
+
+-- Duplicate selection down/up
+vim.keymap.set("v", "<C-S-j>", "y'>pgv=gv", { desc = "Duplicate selection down" })
+vim.keymap.set("v", "<C-S-k>", "y'<Pgv=gv", { desc = "Duplicate selection up" })
+
+vim.keymap.set("n", "<C-S-j>", "yyp", { noremap = true, silent = true, desc = "Duplicate line down" })
+vim.keymap.set("n", "<C-S-k>", "yyP", { noremap = true, silent = true, desc = "Duplicate line up" })
 
