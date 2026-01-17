@@ -1,14 +1,14 @@
 # Typography
-font-family = JetBrains Mono Nerd Font
-font-size = 12
+font-family = JetBrains Mono NL Light
+font-size = 13
 font-thicken = true
 adjust-cell-height = 1
 
 # Aesthetics
-window-padding-x = 1
-window-padding-y = 1
-theme = Gruvbox Dark
-background-opacity = 0.97
+window-padding-x = 0
+window-padding-y = 0
+theme = Catppuccin Frappe
+background-opacity = 1.0
 background-blur = 20
 # background = #000000
 
