@@ -1,5 +1,5 @@
 # Typography
-font-family = JetBrains Mono NL Light
+font-family = JetBrains Mono Nerd Font
 font-size = 13
 font-thicken = true
 adjust-cell-height = 1
@@ -7,7 +7,7 @@ adjust-cell-height = 1
 # Aesthetics
 window-padding-x = 0
 window-padding-y = 0
-theme = Catppuccin Frappe
+theme = Catppuccin Mocha
 background-opacity = 1
 background-blur = 20
 # background = #000000
