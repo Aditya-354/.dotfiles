@@ -6,6 +6,6 @@ return {
       contrast = "soft", -- "soft", "medium", "hard"
       transparent_mode = true, -- since you like transparent bg
     })
-    -- vim.cmd("colorscheme gruvbox")
+    vim.cmd("colorscheme gruvbox")
   end,
 }
