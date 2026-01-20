@@ -4,7 +4,7 @@
   "logo": {
     "type": "file",
     "source": "~/.dotfiles/fastfetch/.config/fastfetch/cat.txt",
-    "padding": { "top": 0, "left": 0 }
+    "padding": { "top": 0, "left": 5 }
   },
 
   "modules": [
@@ -19,20 +19,20 @@
     { "type": "memory",  "key": "󰍛 RAM",    "keyColor": "green" },
     { "type": "disk",    "key": " Disk",   "keyColor": "green" },
 
-    "break",
+    // "break",
 
     { "type": "os",       "key": " OS",       "keyColor": "yellow" },
     { "type": "kernel",   "key": " Kernel",   "keyColor": "yellow" },
     { "type": "packages", "key": "󰏖 Pkgs",     "keyColor": "yellow" },
     { "type": "shell",    "key": " Shell",    "keyColor": "yellow" },
 
-    "break",
+    // "break",
 
     { "type": "de",       "key": " DE",       "keyColor": "blue" },
     { "type": "wm",       "key": " WM",       "keyColor": "blue" },
     { "type": "terminal", "key": " Term",     "keyColor": "blue" },
 
-    "break",
+    // "break",
 
     { "type": "command",  "key": "󰁫 OS Age",   "keyColor": "magenta",
       "text": "birth_install=$(stat -c %W /); current=$(date +%s); echo $(((current - birth_install)/86400)) days"
@@ -40,7 +40,7 @@
     { "type": "uptime",   "key": "󰔟 Uptime",   "keyColor": "magenta" },
     { "type": "datetime", "key": " DateTime",  "keyColor": "magenta" },
 
-    "break",
+    // "break",
 
     { "type": "colors", "paddingLeft": 2, "symbol": "circle" },
 
