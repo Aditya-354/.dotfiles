@@ -7,7 +7,7 @@ adjust-cell-height = 1
 # Aesthetics
 window-padding-x = 0
 window-padding-y = 0
-theme = Builtin Pastel Dark
+theme = Catppuccin Frappe
 background-opacity = 0.94
 background-blur = 20
 # background = #000000

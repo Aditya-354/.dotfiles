@@ -6,6 +6,7 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.clipboard = "unnamedplus"
 vim.g.mapleader = " "
+vim.opt.cursorline = true
 vim.g.maplocalleader = " "
 vim.o.termguicolors = true
 vim.opt.autoindent = true

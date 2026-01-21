@@ -7,7 +7,7 @@ return {
     opts = {
       -- Pick ONE default flavor here:
       -- nightfox, dayfox, dawnfox, duskfox, nordfox, terafox, carbonfox
-      fox = "nightfox",
+      fox = "nordfox",
 
       -- Terminal colors
       terminal_colors = true,
