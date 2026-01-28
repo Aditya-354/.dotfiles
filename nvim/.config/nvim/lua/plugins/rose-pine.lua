@@ -14,15 +14,14 @@ return {
       disable_italics = false,
 
       styles = {
-        bold = true,
         italic = true,
         transparency = true,
       },
 
       highlight_groups = {
         -- Example tweaks:
-        -- Comment = { italic = true },
-        -- Keyword = { italic = true },
+        Comment = { italic = true },
+        Keyword = { italic = true },
       },
     })
 
