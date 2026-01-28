@@ -1,19 +1,30 @@
 return {
   "Mofiqul/dracula.nvim",
-  priority = 1000, -- make sure it loads before other UI plugins
+  priority = 1000,
   config = function()
     require("dracula").setup({
-      -- You can tweak these later, keep defaults for now
       transparent_bg = true,
       italic_comment = true,
-
       overrides = {
-        -- example: comments slightly dimmer
         Comment = { fg = "#6272a4", italic = true },
       },
     })
 
-    -- Apply the colorscheme
     vim.cmd.colorscheme("dracula")
+
+    -- 🔴 Override LSP semantic tokens (clangd controls C++ colors)
+    local red = "#ff5555"
+    -- local blue = "#8BE9FD"
+    -- local pinkish = "#916C6C"
+    vim.api.nvim_set_hl(0, "@keyword", { fg = red })
+    -- vim.api.nvim_set_hl(0, "@lsp.type.class", { fg = red })
+    -- vim.api.nvim_set_hl(0, "@lsp.type.macro", { fg = pinkish })
+    vim.api.nvim_set_hl(0, "@lsp.type.keyword", { fg = red })
+    -- vim.api.nvim_set_hl(0, "@lsp.type.parameter", { fg = red })
+    vim.api.nvim_set_hl(0, "@lsp.type.property", { fg = blue })
+
+    vim.api.nvim_set_hl(0, "@lsp.type.function", { fg = red })
+    vim.api.nvim_set_hl(0, "@lsp.type.method", { fg = red })
   end,
 }
+
