@@ -13,7 +13,7 @@ return {
     vim.cmd.colorscheme("dracula")
 
     -- 🔴 Override LSP semantic tokens (clangd controls C++ colors)
-    local red = "#ff5555"
+    local red = "#ff6e6e"
     -- local blue = "#8BE9FD"
     -- local pinkish = "#916C6C"
     vim.api.nvim_set_hl(0, "@keyword", { fg = red })
