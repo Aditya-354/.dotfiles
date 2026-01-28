@@ -5,7 +5,6 @@ return {
     lazy = false,      -- load during startup (so colorscheme is available)
     priority = 1000,   -- load before most other plugins
     opts = {
-      -- Pick ONE default flavor here:
       -- nightfox, dayfox, dawnfox, duskfox, nordfox, terafox, carbonfox
       fox = "nordfox",
 
@@ -13,10 +12,8 @@ return {
       terminal_colors = true,
 
       -- If you want a transparent background (common on Hyprland rices 😄)
-      transparent = true,
+      -- transparent = true,
 
-      -- Dim inactive windows a bit
-      dim_inactive = false,
 
       -- Styling options for syntax groups
       styles = {
