@@ -9,13 +9,13 @@ adjust-cell-height = 1
 window-padding-x = 0
 window-padding-y = 0
 # theme = Dracula
-theme = Catppuccin Frappe
+# theme = Catppuccin Frappe
 # theme = Black Metal (Bathory)
 # theme = Gruvbox Dark
 # theme = Vague
-# theme = 3024 Night
+theme = 3024 Night
 # theme = Cyberpunk Scarlet Protocol
-background-opacity = 1
+background-opacity = 0.80
 background-blur = 20
 # background = #000000
 

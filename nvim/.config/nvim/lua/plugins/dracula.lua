@@ -6,7 +6,12 @@ return {
       transparent_bg = true,
       italic_comment = true,
       overrides = {
-        Comment = { fg = "#6272a4", italic = true },
+          Function = { italic = true },
+          -- Keyword = { italic = true },
+          -- Type = { fg = "#ff6e6e" },
+          -- Identifier = { italic = true },
+          -- ["@variable"] = { italic = true },
+          Comment = { fg = "#6272a4", italic = true },
       },
     })
 
@@ -14,9 +19,9 @@ return {
 
     -- 🔴 Override LSP semantic tokens (clangd controls C++ colors)
     local red = "#ff6e6e"
-    -- local blue = "#8BE9FD"
+    local blue = "#8BE9FD"
     -- local pinkish = "#916C6C"
-    vim.api.nvim_set_hl(0, "@keyword", { fg = red })
+    -- vim.api.nvim_set_hl(0, "@keyword", { fg = red })
     -- vim.api.nvim_set_hl(0, "@lsp.type.class", { fg = red })
     -- vim.api.nvim_set_hl(0, "@lsp.type.macro", { fg = pinkish })
     vim.api.nvim_set_hl(0, "@lsp.type.keyword", { fg = red })
