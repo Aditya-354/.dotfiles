@@ -14,6 +14,7 @@ return {
       disable_italics = false,
 
       styles = {
+          bold = false,
         italic = true,
         transparency = true,
       },
