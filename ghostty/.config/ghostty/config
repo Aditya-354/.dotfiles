@@ -1,8 +1,8 @@
 # Typography
 # font-family = JetBrains Mono Nerd Font
 # font-family = Monoid Nerd Font
-font-family = "Iosevka NFM Light"
-# font-family = "Iosevka NFM"
+# font-family = "Iosevka NFM Light"
+font-family = "Iosevka NFM"
 # font-family = "Iosevka NFM ExtraLight"
 font-size = 15
 font-feature = -liga
