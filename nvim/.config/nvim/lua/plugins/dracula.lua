@@ -24,9 +24,9 @@ return {
     -- vim.api.nvim_set_hl(0, "@keyword", { fg = red })
     -- vim.api.nvim_set_hl(0, "@lsp.type.class", { fg = red })
     -- vim.api.nvim_set_hl(0, "@lsp.type.macro", { fg = pinkish })
-    vim.api.nvim_set_hl(0, "@lsp.type.keyword", { fg = red })
-    vim.api.nvim_set_hl(0, "@lsp.type.parameter", { fg = pinkish })
-    vim.api.nvim_set_hl(0, "@lsp.type.property", { fg = blue })
+    -- vim.api.nvim_set_hl(0, "@lsp.type.keyword", { fg = red })
+    -- vim.api.nvim_set_hl(0, "@lsp.type.parameter", { fg = pinkish })
+    -- vim.api.nvim_set_hl(0, "@lsp.type.property", { fg = blue })
 
     -- vim.api.nvim_set_hl(0, "@lsp.type.function", { fg = red })
     -- vim.api.nvim_set_hl(0, "@lsp.type.method", { fg = red })

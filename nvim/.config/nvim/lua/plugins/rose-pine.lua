@@ -11,7 +11,7 @@ return {
             dim_nc_background = false,
             disable_background = true,
             disable_float_background = true,
-            disable_italics = false,
+            disable_italics = true,
 
             styles = {
                 bold = false,
@@ -21,14 +21,14 @@ return {
 
             highlight_groups = {
                 -- Example tweaks:
-                Comment = { italic = true },
-                Keyword = { italic = true },
-                Type = { fg = "#ff6e6e" },
+                -- Comment = { italic = true },
+                -- Keyword = { italic = true },
+                -- Type = { fg = "#ff6e6e" },
             },
         })
 
         vim.cmd("colorscheme rose-pine")
-        vim.api.nvim_set_hl(0, "@lsp.type.keyword", { fg = red })
-        vim.api.nvim_set_hl(0, "@lsp.type.parameter", { fg = pinkish })
+        -- vim.api.nvim_set_hl(0, "@lsp.type.keyword", { fg = red })
+        -- vim.api.nvim_set_hl(0, "@lsp.type.parameter", { fg = pinkish })
     end,
 }
