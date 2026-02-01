@@ -7,7 +7,7 @@ return {
       -- italic_comment = true,
       overrides = {
           -- Function = { italic = true },
-          Keyword = { italic = true },
+          -- Keyword = { italic = true },
           Type = { fg = "#ff6e6e" },
           -- Identifier = { italic = true },
           -- ["@variable"] = { italic = true },
@@ -15,7 +15,7 @@ return {
       },
     })
 
-    vim.cmd.colorscheme("dracula")
+    -- vim.cmd.colorscheme("dracula")
 
     -- 🔴 Override LSP semantic tokens (clangd controls C++ colors)
     local red = "#ff6e6e"

@@ -1,13 +1,17 @@
 # Typography
 # font-family = JetBrains Mono Nerd Font
-font-family = Monoid Nerd Font
-font-size = 14
-font-thicken = true
-adjust-cell-height = 1
+# font-family = Monoid Nerd Font
+font-family = "Iosevka NFM Light"
+# font-family = "Iosevka NFM"
+# font-family = "Iosevka NFM ExtraLight"
+font-size = 15
+font-feature = -liga
+# font-thicken = true
+# adjust-cell-height = 0
 
 # Aesthetics
-window-padding-x = 0
-window-padding-y = 0
+# window-padding-x = 0
+# window-padding-y = 0
 # theme = Dracula
 # theme = Catppuccin Frappe
 # theme = Black Metal (Bathory)
@@ -24,6 +28,6 @@ cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor   
 keybind = ctrl+backspace=text:\x17
-resize-overlay-duration = 4s 200ms
+# resize-overlay-duration = 4s 200ms
 keybind = ctrl+|=new_split:right
 keybind = ctrl+z=close_surface
