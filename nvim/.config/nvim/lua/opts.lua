@@ -1,5 +1,5 @@
 vim.opt.number = true
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 21
 vim.opt.relativenumber = true
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
