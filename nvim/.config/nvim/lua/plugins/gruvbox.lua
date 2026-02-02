@@ -7,6 +7,6 @@ return {
       bold = false,
       transparent_mode = true, -- since you like transparent bg
     })
-    -- vim.cmd("colorscheme gruvbox")
+    vim.cmd("colorscheme gruvbox")
   end,
 }

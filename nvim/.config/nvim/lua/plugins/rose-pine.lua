@@ -27,7 +27,7 @@ return {
             },
         })
 
-        vim.cmd("colorscheme rose-pine")
+        -- vim.cmd("colorscheme rose-pine")
         -- vim.api.nvim_set_hl(0, "@lsp.type.keyword", { fg = red })
         -- vim.api.nvim_set_hl(0, "@lsp.type.parameter", { fg = pinkish })
     end,

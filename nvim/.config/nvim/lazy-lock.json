@@ -3,6 +3,7 @@
   "dracula.nvim": { "branch": "main", "commit": "ae752c13e95fb7c5f58da4b5123cb804ea7568ee" },
   "gitsigns.nvim": { "branch": "main", "commit": "abf82a65f185bd54adc0679f74b7d6e1ada690c9" },
   "gruvbox.nvim": { "branch": "main", "commit": "a472496e1a4465a2dd574389dcf6cdb29af9bf1b" },
+  "indent-blankline.nvim": { "branch": "master", "commit": "005b56001b2cb30bfa61b7986bc50657816ba4ba" },
   "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
   "lualine.nvim": { "branch": "master", "commit": "47f91c416daef12db467145e16bed5bbfe00add8" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "c953789db7fd28eafe5eb5659846d34b5024b3cc" },
