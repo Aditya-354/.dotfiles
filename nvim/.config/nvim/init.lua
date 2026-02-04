@@ -23,7 +23,11 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 
 vim.api.nvim_set_hl(0, "LineNr", { fg = "#cdd6f4" })
-vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#f9e2af", bold = true })
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#f9e2af" })
+
+vim.diagnostic.config({
+    virtual_text = false,
+})
 
 -- If using relativenumber
 vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#a6adc8" })
