@@ -15,11 +15,12 @@ font-feature = -liga
 # theme = Dracula
 # theme = Catppuccin Frappe
 # theme = Black Metal (Bathory)
-# theme = Gruvbox Dark
-theme = Vague
+theme = Gruvbox Dark
+# theme = Vague
 # theme = 3024 Night
 # theme = Cyberpunk Scarlet Protocol
-background-opacity = 0.90
+# background-opacity = 0.90
+background-opacity = 1
 background-blur = 20
 # background = #000000
 
