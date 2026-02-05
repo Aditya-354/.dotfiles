@@ -11,7 +11,9 @@ return {
                 comments = false,
                 operators = false,
                 folds = false,
-            },     transparent_mode = true, -- since you like transparent bg
+            },     
+            transparent_mode = true, -- since you like transparent bg
+            contrast = "soft",
         })
         vim.cmd("colorscheme gruvbox")
     end,
