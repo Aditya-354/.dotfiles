@@ -14,6 +14,9 @@ return {
             },     
             transparent_mode = true, -- since you like transparent bg
             contrast = "soft",
+            overrides = {
+                -- SignColumn = {bg = "#"}
+            } 
         })
         vim.cmd("colorscheme gruvbox")
     end,
