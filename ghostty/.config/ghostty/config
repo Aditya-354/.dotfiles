@@ -4,7 +4,7 @@
 # font-family = "Iosevka NFM Light"
 font-family = "Iosevka NFM"
 # font-family = "Iosevka NFM ExtraLight"
-font-size = 15
+font-size = 12
 font-feature = -liga
 # font-thicken = true
 # adjust-cell-height = 0
