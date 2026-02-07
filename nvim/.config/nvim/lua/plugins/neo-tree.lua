@@ -12,7 +12,7 @@ return {
       filesystem = {
         filtered_items = {
           visible = true,   -- 👈 this is the key line
-          hide_dotfiles = false,
+          -- hide_dotfiles = false,
           hide_gitignored = false,
         },
       },
