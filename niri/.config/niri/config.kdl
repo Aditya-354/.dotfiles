@@ -347,7 +347,8 @@ binds {
     Alt+D { spawn "~/.config/waybar/scripts/launch.sh"; }
     Alt+Shift+B { spawn "pkill" "-USR1" "waybar"; }
     Mod+B { spawn "brave"; }
-    Alt+N{ spawn "obsidian"; }
+    Mod+O { spawn "obsidian"; }
+    // Alt+N{ spawn "obsidian"; }
     Mod+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
     Mod+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
