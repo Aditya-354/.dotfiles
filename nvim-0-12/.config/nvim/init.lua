@@ -715,3 +715,8 @@ require("rose-pine").setup({
 })
 
 vim.cmd("colorscheme rose-pine")
+
+pcall(function()
+  vim.lsp.config("gitlab_duo", { autostart = false })
+  vim.lsp.config("gitlab_ci_ls", { autostart = false })
+end)
