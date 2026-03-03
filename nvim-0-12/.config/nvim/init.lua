@@ -370,6 +370,7 @@ vim.pack.add({
 	"https://www.github.com/ibhagwan/fzf-lua",
 	"https://www.github.com/nvim-tree/nvim-tree.lua",
   "https://github.com/rose-pine/neovim",
+  "https://github.com/ellisonleao/gruvbox.nvim",
 	{
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
 		branch = "main",
@@ -398,6 +399,7 @@ packadd("nvim-tree.lua")
 packadd("nvim-lspconfig")
 packadd("mason.nvim")
 packadd("neovim") -- rose-pine theme
+packadd("gruvbox.nvim")
 -- packadd("efmls-configs-nvim")
 -- packadd("blink.cmp")
 -- packadd("LuaSnip")
@@ -887,6 +889,8 @@ vim.lsp.enable({
 -- =============================================================================================
 -- THEME CONFIG
 -- =============================================================================================
+
+-- ROSE-PINE
 require("rose-pine").setup({
     variant = "auto", -- auto, main, moon, or dawn
     dark_variant = "main", -- main, moon, or dawn
@@ -966,7 +970,33 @@ require("rose-pine").setup({
     end,
 })
 
-vim.cmd("colorscheme rose-pine")
--- vim.cmd("colorscheme rose-pine-main")
+-- GRUVBOX
+require("gruvbox").setup({
+  terminal_colors = true, -- add neovim terminal colors
+  undercurl = true,
+  underline = true,
+  bold = true,
+  italic = {
+    strings = true,
+    emphasis = true,
+    comments = true,
+    operators = true,
+    folds = true,
+  },
+  strikethrough = true,
+  invert_selection = false,
+  invert_signs = false,
+  invert_tabline = false,
+  inverse = true, -- invert background for search, diffs, statuslines and errors
+  contrast = "soft", -- can be "hard", "soft" or empty string
+  palette_overrides = {},
+  overrides = {},
+  dim_inactive = false,
+  transparent_mode = false,
+})
+
+-- vim.cmd("colorscheme rose-pine")
+-- "vim.cmd("colorscheme rose-pine-main")
+vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme rose-pine-moon")
 -- vim.cmd("colorscheme rose-pine-dawn")
