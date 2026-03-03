@@ -505,8 +505,6 @@ require("mini.indentscope").setup({})
 -- require("mini.pairs").setup({})
 require("mini.trailspace").setup({})
 require("mini.bufremove").setup({})
-require("mini.notify").setup({})
-require("mini.icons").setup({})
 
 -- gitsigns config and setup
 require("gitsigns").setup({
