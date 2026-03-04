@@ -3,7 +3,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "Iosevka Nerd Font Mono";
     font-weight: 500;
     margin: 0;
 }
@@ -11,7 +11,7 @@
 window#waybar {
     background: @background;
     color: @secondary;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 #workspaces button {
