@@ -276,7 +276,7 @@ vim.keymap.set("n", "<leader>ld", ":lsp disable<CR>", { desc = "Disable LSP supp
 vim.keymap.set("n", "<leader>sl", ":StrudelLaunch<CR>", { desc = "Launch strudel" })
 vim.keymap.set("n", "<leader>su", ":StrudelUpdate<CR>", { desc = "Update strudel" })
 vim.keymap.set("n", "<leader>ss", ":StrudelStop<CR>", { desc = "Stop strudel" })
-vim.keymap.set("n", "<leader>sq", "StrudelQuit<CR>", { desc = "Quit strudel" })
+vim.keymap.set("n", "<leader>sq", ":StrudelQuit<CR>", { desc = "Quit strudel" })
 
 vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result (centered)" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result (centered)" })
