@@ -1,37 +1,37 @@
 {
-    "layer": "top",
-    "modules-left": [
-	"hyprland/workspaces",
-        "hyprland/window"
-    ],
-    "modules-right": [
-        "bluetooth",
-        "pulseaudio",
-        "network",
-        "tray"
-    ],
-    "modules-center": [
-	"clock"
-    ],
-    "clock": {
-	"format": " {:%a, %d. %b  %H:%M} ",
-        "format-alt": " {:%a, %d. %b  %H:%M} ",
-	"tooltip-format": " {:%a, %d. %b  %H:%M} " 
-    },
-    "hyprland/workspaces": {
-        "format": "{name}",
-        "on-click": "activate",
-        "sort-by-number": true
-    },
+        "layer": "top",
+        "modules-left": [
+                "clock",
+                "hyprland/window"
+        ],
+        "modules-right": [
+                "bluetooth",
+                "pulseaudio",
+                "network",
+                "tray"
+        ],
+        "modules-center": [
+                "hyprland/workspaces",
+        ],
+        "clock": {
+                "format": " {:%a, %d. %b  %H:%M} ",
+                "format-alt": " {:%a, %d. %b  %H:%M} ",
+                "tooltip-format": " {:%a, %d. %b  %H:%M} " 
+        },
+        "hyprland/workspaces": {
+                "format": "{name}",
+                "on-click": "activate",
+                "sort-by-number": true
+        },
     // ・
     "hyprland/window": {
-        "format": "[{}󠁯]",
-        "empty-format": "",
-        "rewrite": {
-            "(.*) — Mozilla Firefox": "🌎  $1",
-            "(.*) - fish": ">  [$1]"
-        },
-        "separate-outputs": true
+            "format": "[{}󠁯]",
+            "empty-format": "",
+            "rewrite": {
+                    "(.*) — Mozilla Firefox": "🌎  $1",
+                    "(.*) - fish": ">  [$1]"
+            },
+            "separate-outputs": true
     },
     "network": {
         // "format-wifi": "{essid}  ",
@@ -46,37 +46,37 @@
         "max-length": 50
     },
     "pulseaudio": {
-        "format": "{volume}% {icon} ",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-muted": "",
-        "format-icons": {
-            "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
-            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
-            "headphone": "",
-            "hands-free": " ",
-            "headset": "",
-            "phone": "",
-            "phone-muted": "",
-            "portable": "",
-            "car": "",
-            "default": [
-                "",
-                ""
+            "format": "{volume}% {icon} ",
+            "format-bluetooth": "{volume}% {icon}",
+            "format-muted": "",
+            "format-icons": {
+                    "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+                    "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+                    "headphone": "",
+                    "hands-free": " ",
+                    "headset": "",
+                    "phone": "",
+                    "phone-muted": "",
+                    "portable": "",
+                    "car": "",
+                    "default": [
+                            "",
+                            ""
+                    ]
+            },
+            "scroll-step": 1,
+            "on-click": "pavucontrol",
+            "ignored-sinks": [
+                    "Easy Effects Sink"
             ]
-        },
-        "scroll-step": 1,
-        "on-click": "pavucontrol",
-        "ignored-sinks": [
-            "Easy Effects Sink"
-        ]
     },
     "bluetooth": {
-        "format": " {status}",
-        "format-connected": " {device_alias}",
-        "format-disabled": " off",
-        "on-click": "blueman-manager"
+            "format": " {status}",
+            "format-connected": " {device_alias}",
+            "format-disabled": " off",
+            "on-click": "blueman-manager"
     },
     "tray": {
-        "spacing": 10
+            "spacing": 10
     }
 }
