@@ -1,49 +1,57 @@
 @import "colors.css";
 
 * {
-    border: none;
-    border-radius: 0;
-    font-family: "Iosevka Nerd Font Mono";
-    font-weight: 500;
-    margin: 0;
+        border: none;
+        /* border-radius: 100px; */
+        font-family: "JetBrains Mono Nerd Font";
+        font-weight: bold;
+        margin: 0px;
 }
 
 window#waybar {
-    background: @background;
-    color: @secondary;
-    font-size: 15px;
+        background: @background;
+        color: @secondary;
+        font-size: 12px;
 }
 
 #workspaces button {
-    margin: 3px;
-    padding: 2px 8px;
-    border-radius: 16px;
-    background: @background;
-    color: @on_surface;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+        /* margin: 3px; */
+        margin-bottom: 2px;
+        margin-top: 2px;
+        margin-right: 3px;
+        margin-left: 3px;
+        padding: 0px 15px;
+        /* padding-right: 2px; */
+        /* padding-left: 2px; */
+        /* padding-top: 0; */
+        /* padding-bottom: 0; */
+        border-radius: 16px;
+        background: @background;
+        color: @on_surface;
+        border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 #workspaces button.active {
-    background: @primary;
-    color: @background;
+        background: @primary;
+        color: @background;
 }
 
 #clock,
 #pulseaudio,
 #network,
 #tray {
-    padding: 4px 8px;
-    margin: 3px;
-    border-radius: 8px;
-    background: @background;
-    color: @primary;
+        padding: 0px 15px;
+        /* margin: 3px; */
+        border-radius: 8px;
+        background: @background;
+        color: @primary;
 }
 
 #tray>.item {
-    margin: 0 2px;
+        /* margin: 0 2px; */
 }
 
 #tray>.item:hover {
-    background: rgba(255, 255, 255, 0.12);
-    color: @tertiary;
+        background: rgba(255, 255, 255, 0.12);
+        color: @tertiary;
 }
