@@ -14,7 +14,7 @@
                 "hyprland/workspaces"
         ],
         "clock": {
-                "format": " {:%a, %d. %b  %H:%M} ",
+                "format": " {:%a %Y-%b-%d %I:%M %p} ",
                 "format-alt": " {:%a, %d. %b  %H:%M} ",
                 "tooltip-format": " {:%a, %d. %b  %H:%M} " 
         },
