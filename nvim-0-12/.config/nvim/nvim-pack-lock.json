@@ -35,6 +35,10 @@
     "nvim-treesitter": {
       "rev": "cb2cb74f3c3cbbcc17e79cada2060165d616d849",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
+    },
+    "strudel.nvim": {
+      "rev": "a6b9752b0084a20c37786b54eef2095bb31daff7",
+      "src": "https://github.com/gruvw/strudel.nvim"
     }
   }
 }

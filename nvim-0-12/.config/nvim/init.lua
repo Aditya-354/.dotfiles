@@ -273,6 +273,11 @@ vim.keymap.set("n", "<leader>c", ":nohlsearch<CR>", { desc = "Clear search highl
 vim.keymap.set("n", "<leader>le", ":lsp enable<CR>", { desc = "Enable LSP support" })
 vim.keymap.set("n", "<leader>ld", ":lsp disable<CR>", { desc = "Disable LSP support" })
 
+vim.keymap.set("n", "<leader>sl", ":StrudelLaunch<CR>", { desc = "Launch strudel" })
+vim.keymap.set("n", "<leader>su", ":StrudelUpdate<CR>", { desc = "Update strudel" })
+vim.keymap.set("n", "<leader>ss", ":StrudelStop<CR>", { desc = "Stop strudel" })
+vim.keymap.set("n", "<leader>sq", "StrudelQuit<CR>", { desc = "Quit strudel" })
+
 vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result (centered)" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result (centered)" })
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Half page down (centered)" })
@@ -387,6 +392,14 @@ vim.pack.add({
 	-- "https://github.com/L3MON4D3/LuaSnip",
 })
 
+-- STRUDEL
+vim.pack.add({
+        {
+                src = "https://github.com/gruvw/strudel.nvim.git",
+                build = "npm ci",
+        },
+})
+
 local function packadd(name)
 	vim.cmd("packadd " .. name)
 end
@@ -395,6 +408,7 @@ packadd("gitsigns.nvim")
 packadd("mini.nvim")
 packadd("fzf-lua")
 packadd("nvim-tree.lua")
+packadd("strudel.nvim")
 -- LSP
 packadd("nvim-lspconfig")
 packadd("mason.nvim")
@@ -408,6 +422,16 @@ packadd("gruvbox.nvim")
 -- PLUGIN CONFIGS
 -- ============================================================================
 
+-- strudel.nvim config and setup
+require("strudel").setup({
+        browser_exec_path = "/usr/bin/brave",
+        ui = {
+                maximise_menu_panel = true,
+                hide_menu_panel = true,
+        }
+})
+
+-- nvim-treesitter config and setup
 local setup_treesitter = function()
 	local treesitter = require("nvim-treesitter")
 	treesitter.setup({})
