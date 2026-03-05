@@ -11,7 +11,7 @@
                 "tray"
         ],
         "modules-center": [
-                "hyprland/workspaces",
+                "hyprland/workspaces"
         ],
         "clock": {
                 "format": " {:%a, %d. %b  %H:%M} ",
