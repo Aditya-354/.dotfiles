@@ -8,7 +8,7 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 # PS1='[\u@\h \W]\$ '
-PS1='\[\e[32m\][\u@\h]\[\e[0m\]:\[\e[38;2;100;150;255m\]$(minipro)\[\e[0m\] > '
+PS1='\n  \[\e[32m\][\u@\h]\[\e[0m\]:\[\e[38;2;100;150;255m\]$(minipro)\[\e[0m\] \n󰁔 '
 # eval "$(starship init bash)"ROMPT_COMMAND=set_bash_prompt
 export PATH="$PATH:~/.cargo/bin"
 export PATH="$HOME/.local/bin:$PATH"
@@ -22,8 +22,6 @@ if [[ $- == *i* ]]; then
   fastfetch
 fi
 
-alias dnic='bat ~/dotnotes/imp_commands.txt'
-alias dnin='bat ~/dotnotes/imp_notes.txt'
 alias wa-fix='ffmpeg -i "$1" -c:v libx264 -profile:v main -pix_fmt yuv420p -movflags +faststart -c:a aac -b:a 128k "${1%.mp4}-wa.mp4"'
 source /usr/share/nvm/init-nvm.sh
 # eval "$(oh-my-posh init bash --config ~/.cache/oh-my-posh/themes/kali.omp.json)"
