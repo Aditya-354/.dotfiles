@@ -23,6 +23,5 @@ if [[ $- == *i* ]]; then
   fastfetch
 fi
 
-alias wa-fix='ffmpeg -i "$1" -c:v libx264 -profile:v main -pix_fmt yuv420p -movflags +faststart -c:a aac -b:a 128k "${1%.mp4}-wa.mp4"'
 source /usr/share/nvm/init-nvm.sh
 # eval "$(oh-my-posh init bash --config ~/.cache/oh-my-posh/themes/kali.omp.json)"
