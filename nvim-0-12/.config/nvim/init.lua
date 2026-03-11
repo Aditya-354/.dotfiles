@@ -35,7 +35,7 @@ vim.opt.scrolloff = 10 -- keep 10 lines above/below cursor
 vim.opt.sidescrolloff = 10 -- keep 10 lines to left/right of cursor
 
 vim.opt.tabstop = 2 -- tabwidth
-vim.opt.shiftwidth = 8 -- indent width
+vim.opt.shiftwidth = 4 -- indent width
 vim.opt.softtabstop = 2 -- soft tab stop not tabs on tab/backspace
 vim.opt.expandtab = true -- use spaces instead of tabs
 vim.opt.smartindent = true -- smart auto-indent
@@ -1026,8 +1026,8 @@ require("gruvbox").setup({
   transparent_mode = true,
 })
 
-vim.cmd("colorscheme rose-pine")
+-- vim.cmd("colorscheme rose-pine")
 -- "vim.cmd("colorscheme rose-pine-main")
--- vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme rose-pine-moon")
 -- vim.cmd("colorscheme rose-pine-dawn")
