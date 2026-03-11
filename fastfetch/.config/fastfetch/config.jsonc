@@ -3,7 +3,7 @@
 
   "logo": {
     "type": "file",
-    "source": "~/.dotfiles/fastfetch/.config/fastfetch/cat.txt",
+    "source": "~/.dotfiles/fastfetch/.config/fastfetch/logo.txt",
     "padding": { "top": 0, "left": 5 }
   },
 
