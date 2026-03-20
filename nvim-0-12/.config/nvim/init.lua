@@ -1027,7 +1027,7 @@ require("gruvbox").setup({
 
 -- vim.cmd("colorscheme rose-pine")
 -- "vim.cmd("colorscheme rose-pine-main")
--- vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme gruvbox")
 -- vim.cmd.colorscheme("habamax")
-vim.cmd("colorscheme rose-pine-moon")
+-- vim.cmd("colorscheme rose-pine-moon")
 -- vim.cmd("colorscheme rose-pine-dawn")
