@@ -1,5 +1,4 @@
 vim.opt.termguicolors = true
--- vim.cmd.colorscheme("habamax")
 
 local function set_transparent() -- set UI component to transparent
 	local groups = {
@@ -1019,7 +1018,7 @@ require("gruvbox").setup({
   invert_signs = false,
   invert_tabline = false,
   inverse = true, -- invert background for search, diffs, statuslines and errors
-  contrast = "", -- can be "hard", "soft" or empty string
+  contrast = "soft", -- can be "hard", "soft" or empty string
   palette_overrides = {},
   overrides = {},
   dim_inactive = false,
@@ -1028,6 +1027,7 @@ require("gruvbox").setup({
 
 -- vim.cmd("colorscheme rose-pine")
 -- "vim.cmd("colorscheme rose-pine-main")
-vim.cmd("colorscheme gruvbox")
--- vim.cmd("colorscheme rose-pine-moon")
+-- vim.cmd("colorscheme gruvbox")
+-- vim.cmd.colorscheme("habamax")
+vim.cmd("colorscheme rose-pine-moon")
 -- vim.cmd("colorscheme rose-pine-dawn")
