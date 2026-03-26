@@ -382,6 +382,7 @@ vim.pack.add({
 	"https://www.github.com/nvim-tree/nvim-tree.lua",
   "https://github.com/rose-pine/neovim",
   "https://github.com/ellisonleao/gruvbox.nvim",
+  "https://github.com/brianhuster/live-preview.nvim",
 	{
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
 		branch = "main",
@@ -436,6 +437,8 @@ require("strudel").setup({
                 hide_menu_panel = true,
         }
 })
+
+require("livepreview.config").set()
 
 -- nvim-treesitter config and setup
 local setup_treesitter = function()
