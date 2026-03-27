@@ -383,6 +383,7 @@ vim.pack.add({
 	"https://www.github.com/nvim-tree/nvim-tree.lua",
   "https://github.com/rose-pine/neovim",
   "https://github.com/ellisonleao/gruvbox.nvim",
+  "https://github.com/mofiqul/dracula.nvim",
 	{
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
 		branch = "main",
@@ -412,6 +413,7 @@ local function packadd(name)
 end
 packadd("nvim-treesitter")
 packadd("gitsigns.nvim")
+packadd("dracula.nvim")
 packadd("mini.nvim")
 packadd("fzf-lua")
 packadd("nvim-tree.lua")
@@ -1026,6 +1028,11 @@ require("gruvbox").setup({
   transparent_mode = true,
 })
 
+require("dracula").setup({
+    show_end_of_buffer = true,
+    transparent_bg = true,
+    italic_comment = false,
+})
 
 -- vim.cmd("colorscheme rose-pine")
 -- "vim.cmd("colorscheme rose-pine-main")
