@@ -271,6 +271,7 @@ end, { expr = true, silent = true, desc = "Up (wrap-aware)" })
 vim.keymap.set("n", "<leader>c", ":nohlsearch<CR>", { desc = "Clear search highlights" })
 vim.keymap.set("n", "<leader>le", ":lsp enable<CR>", { desc = "Enable LSP support" })
 vim.keymap.set("n", "<leader>ld", ":lsp disable<CR>", { desc = "Disable LSP support" })
+vim.keymap.set("n", "<leader>lp", ":LivePreview start<CR>", { desc = "Start live preview" })
 
 vim.keymap.set("n", "<leader>sl", ":StrudelLaunch<CR>", { desc = "Launch strudel" })
 vim.keymap.set("n", "<leader>su", ":StrudelUpdate<CR>", { desc = "Update strudel" })
@@ -382,7 +383,6 @@ vim.pack.add({
 	"https://www.github.com/nvim-tree/nvim-tree.lua",
   "https://github.com/rose-pine/neovim",
   "https://github.com/ellisonleao/gruvbox.nvim",
-  "https://github.com/brianhuster/live-preview.nvim",
 	{
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
 		branch = "main",
@@ -437,8 +437,6 @@ require("strudel").setup({
                 hide_menu_panel = true,
         }
 })
-
-require("livepreview.config").set()
 
 -- nvim-treesitter config and setup
 local setup_treesitter = function()
