@@ -8,6 +8,7 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias so='clear && source ~/.bashrc && fastfetch'
+alias clear='cl'
 # PS1='[\u@\h \W]\$ '
 # PS1='\n  \[\e[32m\]\u@\h\[\e[0m\] \[\e[38;2;100;150;255m\]$(minipro)\[\e[0m\]\n\033[93m➜  '
 eval "$(starship init bash)"ROMPT_COMMAND=set_bash_prompt
