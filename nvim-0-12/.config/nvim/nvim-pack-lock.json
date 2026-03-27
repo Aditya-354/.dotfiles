@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "catppuccin": {
+      "rev": "a7788416689dbefea659d9e9415c87926b0ba5d8",
+      "src": "https://github.com/catppuccin/nvim"
+    },
     "fzf-lua": {
       "rev": "b56cd2ffbce57bfd9133a645bd02cd86895a7e3f",
       "src": "https://www.github.com/ibhagwan/fzf-lua"
