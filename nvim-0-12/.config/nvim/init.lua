@@ -58,7 +58,7 @@ vim.opt.conceallevel = 0 -- do not hide markup
 vim.opt.concealcursor = "" -- do not hide cursorline in markup
 vim.opt.lazyredraw = true -- do not redraw during macros
 vim.opt.synmaxcol = 300 -- syntax highlighting limit
-vim.opt.fillchars = { eob = " " } -- hide "~" on empty lines
+-- vim.opt.fillchars = { eob = " " } -- hide "~" on empty lines
 
 local undodir = vim.fn.expand("~/.vim/undodir")
 if
@@ -1021,7 +1021,7 @@ require("gruvbox").setup({
   invert_signs = false,
   invert_tabline = false,
   inverse = true, -- invert background for search, diffs, statuslines and errors
-  contrast = "soft", -- can be "hard", "soft" or empty string
+  contrast = "", -- can be "hard", "soft" or empty string
   palette_overrides = {},
   overrides = {},
   dim_inactive = false,
@@ -1036,8 +1036,8 @@ require("dracula").setup({
 
 -- vim.cmd("colorscheme rose-pine")
 -- "vim.cmd("colorscheme rose-pine-main")
--- vim.cmd("colorscheme gruvbox")
-vim.cmd("colorscheme dracula")
+vim.cmd("colorscheme gruvbox")
+-- vim.cmd("colorscheme dracula")
 -- vim.cmd.colorscheme("habamax")
 -- vim.cmd("colorscheme rose-pine-moon")
 -- vim.cmd("colorscheme rose-pine-dawn")
