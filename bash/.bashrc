@@ -10,8 +10,8 @@ alias grep='grep --color=auto'
 alias so='clear && source ~/.bashrc && fastfetch'
 alias cl='clear'
 # PS1='[\u@\h \W]\$ '
-PS1='\n  \[\e[32m\]\u@\h\[\e[0m\] \[\e[38;2;100;150;255m\]$(minipro)\[\e[0m\]\n\033[93m➜ \e\e '
-# eval "$(starship init bash)"ROMPT_COMMAND=set_bash_prompt
+# PS1='\n  \[\e[32m\]\u@\h\[\e[0m\] \[\e[38;2;100;150;255m\]$(minipro)\[\e[0m\]\n\033[93m➜ \e\e '
+eval "$(starship init bash)"ROMPT_COMMAND=set_bash_prompt
 export PATH="$PATH:~/.cargo/bin"
 export PATH="$HOME/.local/bin:$PATH"
 export EDITOR=nvim
