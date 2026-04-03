@@ -4,22 +4,24 @@
 # font-family = "Iosevka NFM Light"
 font-family = "Iosevka NFM"
 # font-family = "Iosevka NFM ExtraLight"
-font-size = 14
+font-size = 15
 font-feature = -liga
 # font-thicken = true
 # adjust-cell-height = 0
 
 # Aesthetics
-# window-padding-x = 0
-# window-padding-y = 0
+window-padding-x = 0
+window-padding-y = 0
 # theme = Dracula
 # theme = Catppuccin Frappe
 # theme = Black Metal (Bathory)
-# theme = Gruvbox Material Dark
-theme = Vague
+# theme = Gruvbox Dark
+# theme = Vague
 # theme = 3024 Night
+theme = Jellybeans
+# theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-background-opacity = 0.90
+background-opacity = 1
 # background-opacity = 1
 background-blur = 20
 # background = #000000
