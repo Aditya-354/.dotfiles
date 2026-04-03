@@ -939,7 +939,7 @@ require("rose-pine").setup({
     styles = {
         bold = false,
         italic = false,
-        transparency = true,
+        transparency = false,
     },
 
     groups = {
@@ -984,15 +984,15 @@ require("gruvbox").setup({
     strings = true,
     emphasis = true,
     comments = true,
-    operators = true,
+    operators = false,
     folds = true,
   },
   strikethrough = true,
-  invert_selection = false,
-  invert_signs = false,
-  invert_tabline = false,
+  invert_selection = true,
+  invert_signs = true,
+  invert_tabline = true,
   inverse = true, -- invert background for search, diffs, statuslines and errors
-  contrast = "soft", -- can be "hard", "soft" or empty string
+  contrast = "hard", -- can be "hard", "soft" or empty string
   palette_overrides = {},
   overrides = {},
   dim_inactive = false,
@@ -1001,14 +1001,14 @@ require("gruvbox").setup({
 
 require("dracula").setup({
     show_end_of_buffer = true,
-    transparent_bg = true,
+    transparent_bg = false,
     italic_comment = true,
 })
 
 -- vim.cmd("colorscheme rose-pine")
 -- "vim.cmd("colorscheme rose-pine-main")
--- vim.cmd("colorscheme gruvbox")
-vim.cmd("colorscheme dracula")
+vim.cmd("colorscheme gruvbox")
+-- vim.cmd("colorscheme dracula")
 -- vim.cmd.colorscheme("habamax")
 -- vim.cmd("colorscheme rose-pine-moon")
 -- vim.cmd("colorscheme rose-pine-dawn")
