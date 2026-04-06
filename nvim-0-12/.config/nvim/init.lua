@@ -938,7 +938,7 @@ require("rose-pine").setup({
 
     styles = {
         bold = false,
-        italic = false,
+        italic = true,
         transparency = false,
     },
 
@@ -981,11 +981,11 @@ require("gruvbox").setup({
   underline = true,
   bold = false,
   italic = {
-    strings = true,
-    emphasis = true,
-    comments = true,
+    strings = false,
+    emphasis = false,
+    comments = false,
     operators = false,
-    folds = true,
+    folds = false,
   },
   strikethrough = true,
   invert_selection = false,
@@ -994,7 +994,13 @@ require("gruvbox").setup({
   inverse = true, -- invert background for search, diffs, statuslines and errors
   contrast = "", -- can be "hard", "soft" or empty string
   palette_overrides = {},
-  overrides = {},
+  overrides = {
+      -- Function = {italic = true},
+      -- Keyword = {italic = true},
+      -- Identifier = {italic = true},
+      -- ["@variable"] = {italic = true}, -- treesitter specific
+      -- Methods = {italic = true},
+  },
   dim_inactive = false,
   transparent_mode = false,
 })
