@@ -30,7 +30,7 @@ vim.opt.number = true -- line number
 vim.opt.relativenumber = true -- relative line numbers
 vim.opt.cursorline = true -- highlight current line
 vim.opt.wrap = false -- do not wrap lines by default
-vim.opt.scrolloff = 10 -- keep 10 lines above/below cursor
+vim.opt.scrolloff = 20 -- keep 20 lines above/below cursor
 vim.opt.sidescrolloff = 10 -- keep 10 lines to left/right of cursor
 
 vim.opt.tabstop = 2 -- tabwidth
