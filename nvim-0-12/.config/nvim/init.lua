@@ -386,7 +386,6 @@ vim.pack.add({
   "https://github.com/mofiqul/dracula.nvim",
   "https://github.com/folke/tokyonight.nvim",
   "https://github.com/sainnhe/everforest",
-  "https://github.com/maxmx03/solarized.nvim",
   "https://github.com/edeneast/nightfox.nvim",
   "https://github.com/marko-cerovac/material.nvim",
 	{
@@ -430,7 +429,6 @@ packadd("mason.nvim")
 packadd("gruvbox.nvim")
 packadd("tokyonight.nvim")
 packadd("everforest")
-packadd("solarized.nvim")
 packadd("material.nvim")
 -- packadd("efmls-configs-nvim")
 -- packadd("blink.cmp")
@@ -969,71 +967,6 @@ require("dracula").setup({
     italic_comment = false,
 })
 
-require('solarized').setup({
-  transparent = {
-    enabled = false,
-    pmenu = true,
-    normal = true,
-    normalfloat = true,
-    neotree = true,
-    nvimtree = true,
-    whichkey = true,
-    telescope = true,
-    lazy = true,
-  },
-  on_highlights = nil,
-  on_colors = nil,
-  palette = 'selenized', -- solarized (default) | selenized
-  variant = 'winter', -- "spring" | "summer" | "autumn" | "winter" (default)
-  error_lens = {
-    text = false,
-    symbol = false,
-  },
-  styles = {
-    enabled = false,
-    types = {},
-    functions = {},
-    parameters = {},
-    comments = {},
-    strings = {},
-    keywords = {},
-    variables = {},
-    constants = {},
-  },
-  plugins = {
-    treesitter = true,
-    lspconfig = true,
-    navic = true,
-    cmp = true,
-    indentblankline = true,
-    neotree = true,
-    nvimtree = true,
-    whichkey = true,
-    dashboard = true,
-    gitsigns = true,
-    telescope = true,
-    noice = true,
-    hop = true,
-    ministatusline = true,
-    minitabline = true,
-    ministarter = true,
-    minicursorword = true,
-    notify = true,
-    rainbowdelimiters = true,
-    bufferline = true,
-    lazy = true,
-    rendermarkdown = true,
-    ale = true,
-    coc = true,
-    leap = true,
-    alpha = true,
-    yanky = true,
-    gitgutter = true,
-    mason = true,
-    flash = true,
-  },
-})
-
 require('nightfox').setup({
     options = {
         transparent = true,
@@ -1112,10 +1045,4 @@ require('material').setup({
     custom_highlights = {}, -- Overwrite default highlight groups
 })
 
--- vim.cmd("colorscheme rose-pine")
--- "vim.cmd("colorscheme rose-pine-main")
 vim.cmd("colorscheme gruvbox")
--- vim.cmd("colorscheme dracula")
--- vim.cmd.colorscheme("habamax")
--- vim.cmd("colorscheme rose-pine-moon")
--- vim.cmd("colorscheme rose-pine-dawn")
