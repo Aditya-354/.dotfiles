@@ -1045,4 +1045,4 @@ require('material').setup({
     custom_highlights = {}, -- Overwrite default highlight groups
 })
 
-vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme everforest")
