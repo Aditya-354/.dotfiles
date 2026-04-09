@@ -12,7 +12,7 @@ alias cl='clear'
 # PS1='[\u@\h \W]\$ '
 # PS1='\n  \[\e[32m\]\u@\h\[\e[0m\] \[\e[38;2;100;150;255m\]$(minipro)\[\e[0m\]\n\033[93m➜  '
 # \n\033[93m
-eval "$(starship init bash)"ROMPT_COMMAND=set_bash_prompt
+# eval "$(starship init bash)"ROMPT_COMMAND=set_bash_prompt
 export PATH="$PATH:~/.cargo/bin"
 export PATH="$HOME/.local/bin:$PATH"
 export EDITOR=nvim
@@ -26,4 +26,9 @@ export PATH="$HOME/.config/emacs/bin:$PATH"
 # fi
 
 source /usr/share/nvm/init-nvm.sh
-# eval "$(oh-my-posh init bash --config ~/.cache/oh-my-posh/themes/kali.omp.json)"
+# eval "$(oh-my-posh init bash --config 'tiwahu')"
+# eval "$(oh-my-posh init bash --config 'kushal')"
+# eval "$(oh-my-posh init bash --config 'lambdageneration')"
+# eval "$(oh-my-posh init bash --config 'hul10')"
+eval "$(oh-my-posh init bash --config 'robbyrussell')"
+
