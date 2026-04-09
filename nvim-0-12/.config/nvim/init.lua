@@ -381,9 +381,14 @@ vim.pack.add({
 	"https://www.github.com/echasnovski/mini.nvim",
 	"https://www.github.com/ibhagwan/fzf-lua",
 	"https://www.github.com/nvim-tree/nvim-tree.lua",
-  "https://github.com/rose-pine/neovim",
+  -- colorschemes
   "https://github.com/ellisonleao/gruvbox.nvim",
   "https://github.com/mofiqul/dracula.nvim",
+  "https://github.com/folke/tokyonight.nvim",
+  "https://github.com/sainnhe/everforest",
+  "https://github.com/maxmx03/solarized.nvim",
+  "https://github.com/edeneast/nightfox.nvim",
+  "https://github.com/marko-cerovac/material.nvim",
 	{
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
 		branch = "main",
@@ -402,10 +407,10 @@ vim.pack.add({
 
 -- STRUDEL
 vim.pack.add({
-        {
-                src = "https://github.com/gruvw/strudel.nvim.git",
-                build = "npm ci",
-        },
+    {
+        src = "https://github.com/gruvw/strudel.nvim.git",
+        build = "npm ci",
+    },
 })
 
 local function packadd(name)
@@ -415,14 +420,18 @@ packadd("nvim-treesitter")
 packadd("gitsigns.nvim")
 packadd("dracula.nvim")
 packadd("mini.nvim")
+packadd("nightfox.nvim")
 packadd("fzf-lua")
 packadd("nvim-tree.lua")
 packadd("strudel.nvim")
 -- LSP
 packadd("nvim-lspconfig")
 packadd("mason.nvim")
-packadd("neovim") -- rose-pine theme
 packadd("gruvbox.nvim")
+packadd("tokyonight.nvim")
+packadd("everforest")
+packadd("solarized.nvim")
+packadd("material.nvim")
 -- packadd("efmls-configs-nvim")
 -- packadd("blink.cmp")
 -- packadd("LuaSnip")
@@ -923,57 +932,6 @@ vim.lsp.enable({
 -- THEME CONFIG
 -- =============================================================================================
 
--- ROSE-PINE
-require("rose-pine").setup({
-    variant = "moon", -- auto, main, moon, or dawn
-    dark_variant = "main", -- main, moon, or dawn
-    dim_inactive_windows = false,
-    extend_background_behind_borders = true,
-
-    enable = {
-        terminal = true,
-        legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
-        migrations = true, -- Handle deprecated options automatically
-    },
-
-    styles = {
-        bold = false,
-        italic = true,
-        transparency = false,
-    },
-
-    groups = {
-        border = "muted",
-        link = "iris",
-        panel = "surface",
-
-        error = "love",
-        hint = "iris",
-        info = "foam",
-        note = "pine",
-        todo = "rose",
-        warn = "gold",
-
-        git_add = "foam",
-        git_change = "rose",
-        git_delete = "love",
-        git_dirty = "rose",
-        git_ignore = "muted",
-        git_merge = "iris",
-        git_rename = "pine",
-        git_stage = "iris",
-        git_text = "rose",
-        git_untracked = "subtle",
-
-        h1 = "iris",
-        h2 = "foam",
-        h3 = "rose",
-        h4 = "gold",
-        h5 = "pine",
-        h6 = "foam",
-    },
-})
-
 -- GRUVBOX
 require("gruvbox").setup({
   terminal_colors = true, -- add neovim terminal colors
@@ -1007,8 +965,151 @@ require("gruvbox").setup({
 
 require("dracula").setup({
     show_end_of_buffer = true,
-    transparent_bg = false,
-    italic_comment = true,
+    transparent_bg = true,
+    italic_comment = false,
+})
+
+require('solarized').setup({
+  transparent = {
+    enabled = false,
+    pmenu = true,
+    normal = true,
+    normalfloat = true,
+    neotree = true,
+    nvimtree = true,
+    whichkey = true,
+    telescope = true,
+    lazy = true,
+  },
+  on_highlights = nil,
+  on_colors = nil,
+  palette = 'selenized', -- solarized (default) | selenized
+  variant = 'winter', -- "spring" | "summer" | "autumn" | "winter" (default)
+  error_lens = {
+    text = false,
+    symbol = false,
+  },
+  styles = {
+    enabled = false,
+    types = {},
+    functions = {},
+    parameters = {},
+    comments = {},
+    strings = {},
+    keywords = {},
+    variables = {},
+    constants = {},
+  },
+  plugins = {
+    treesitter = true,
+    lspconfig = true,
+    navic = true,
+    cmp = true,
+    indentblankline = true,
+    neotree = true,
+    nvimtree = true,
+    whichkey = true,
+    dashboard = true,
+    gitsigns = true,
+    telescope = true,
+    noice = true,
+    hop = true,
+    ministatusline = true,
+    minitabline = true,
+    ministarter = true,
+    minicursorword = true,
+    notify = true,
+    rainbowdelimiters = true,
+    bufferline = true,
+    lazy = true,
+    rendermarkdown = true,
+    ale = true,
+    coc = true,
+    leap = true,
+    alpha = true,
+    yanky = true,
+    gitgutter = true,
+    mason = true,
+    flash = true,
+  },
+})
+
+require('nightfox').setup({
+    options = {
+        transparent = true,
+        terminal_colors = true,
+    },
+    styles = {
+        comments = "NONE",
+        conditionals = "NONE",
+        constants = "NONE",
+        functions = "NONE",
+        keywords = "NONE",
+        numbers = "NONE",
+        operators = "NONE",
+        strings = "NONE",
+        types = "NONE",
+        variables = "NONE",
+    }
+})
+
+require("tokyonight").setup({
+  style = "night", -- "storm", "moon", "night", "day"
+  transparent = true, -- Disable setting the background color
+  terminal_colors = true, -- Configure colors for the Neovim terminal
+  styles = {
+    comments = { italic = false },
+    keywords = { italic = false },
+    sidebars = "dark", -- style for sidebars (e.g., nvim-tree)
+    floats = "dark",   -- style for floating windows
+  },
+  sidebars = { "qf", "help" },
+  day_brightness = 0.3,
+  plugins = { auto = true },
+})
+
+require('material').setup({
+    contrast = {
+        terminal = false, -- Enable contrast for the built-in terminal
+        sidebars = false, -- Enable contrast for sidebar-like windows (e.g. Nvim-Tree)
+        floating_windows = true, -- Enable contrast for floating windows
+        cursor_line = false, -- Enable darker background for the cursor line
+        non_current_windows = false, -- Enable contrasted background for non-current windows
+        popup_menu = false, -- Enable lighter background for the popup menu
+    },
+
+    italics = {
+        comments = false, -- Enable italic comments
+        functions = false, -- Enable italic functions
+        keywords = false, -- Enable italic keywords
+        variables = false, -- Enable italic variables
+    },
+
+    contrast_filetypes = { -- Filetypes with contrasted background
+        "terminal",
+        "packer",
+        "qf"
+    },
+
+    high_visibility = {
+        lighter = false, -- Enable higher contrast text for lighter style
+        darker = false, -- Enable higher contrast text for darker style
+    },
+
+    disable = {
+        colored_cursor = false, -- Disable the colored cursor
+        borders = false, -- Disable borders between verticaly split windows
+        background = true, -- Prevent the theme from setting the background (useful for transparency)
+        term_colors = false, -- Prevent the theme from setting terminal colors
+        eob_lines = false, -- Hide the end-of-buffer lines (~)
+    },
+
+    lualine_style = "default", -- Lualine style: "default", "stealth"
+
+    async_loading = true, -- Load the theme asynchronously for faster startup
+
+    custom_colors = nil, -- Overwrite default colors
+    custom_highlights = {}, -- Overwrite default highlight groups
 })
 
 -- vim.cmd("colorscheme rose-pine")
