@@ -930,7 +930,6 @@ vim.lsp.enable({
 -- THEME CONFIG
 -- =============================================================================================
 
--- GRUVBOX
 require("gruvbox").setup({
   terminal_colors = true, -- add neovim terminal colors
   undercurl = true,
@@ -958,7 +957,7 @@ require("gruvbox").setup({
       -- Methods = {italic = true},
   },
   dim_inactive = false,
-  transparent_mode = false,
+  transparent_mode = true,
 })
 
 require("dracula").setup({
