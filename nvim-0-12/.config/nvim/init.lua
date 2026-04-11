@@ -388,6 +388,9 @@ vim.pack.add({
   "https://github.com/sainnhe/everforest",
   "https://github.com/edeneast/nightfox.nvim",
   "https://github.com/marko-cerovac/material.nvim",
+  { src = "https://github.com/zitrocode/carvion.nvim", name = 'carvion' },
+  "https://github.com/sirzif/tzfn.nvim",
+  "https://github.com/projekt0n/github-nvim-theme",
 	{
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
 		branch = "main",
@@ -419,6 +422,7 @@ packadd("nvim-treesitter")
 packadd("gitsigns.nvim")
 packadd("dracula.nvim")
 packadd("mini.nvim")
+packadd("carvion")
 packadd("nightfox.nvim")
 packadd("fzf-lua")
 packadd("nvim-tree.lua")
@@ -429,7 +433,9 @@ packadd("mason.nvim")
 packadd("gruvbox.nvim")
 packadd("tokyonight.nvim")
 packadd("everforest")
+packadd("tzfn.nvim")
 packadd("material.nvim")
+packadd("github-nvim-theme")
 -- packadd("efmls-configs-nvim")
 -- packadd("blink.cmp")
 -- packadd("LuaSnip")
@@ -1036,6 +1042,47 @@ require('material').setup({
 
     custom_colors = nil, -- Overwrite default colors
     custom_highlights = {}, -- Overwrite default highlight groups
+})
+
+require("carvion").setup({
+    transparent = true,
+    styles = {
+        comments = {},
+        keywords = {},
+        functions = {},
+        variables = {},
+        strings = {},
+        types = {}
+    }
+})
+
+require("tzfn").setup({
+    dim_inactive_windows = false,
+    extend_background_behind_borders = true,
+    styles = {
+        bold = false,
+        italic = false,
+        transparency = true,
+    },
+})
+
+require("github-theme").setup({
+    options = {
+        hide_end_of_buffer = false,
+        transparent = true,
+        styles = {                 -- Style to be applied to different syntax groups
+            comments = 'NONE',       -- Value is any valid attr-list value `:help attr-list`
+            functions = 'NONE',
+            keywords = 'NONE',
+            variables = 'NONE',
+            conditionals = 'NONE',
+            constants = 'NONE',
+            numbers = 'NONE',
+            operators = 'NONE',
+            strings = 'NONE',
+            types = 'NONE',
+        },
+    }
 })
 
 vim.cmd("colorscheme everforest")

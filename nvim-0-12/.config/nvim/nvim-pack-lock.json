@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "carvion": {
+      "rev": "162732074f4f642d99eaa17cd69876f0d4b158dd",
+      "src": "https://github.com/zitrocode/carvion.nvim"
+    },
     "dracula.nvim": {
       "rev": "ae752c13e95fb7c5f58da4b5123cb804ea7568ee",
       "src": "https://github.com/mofiqul/dracula.nvim"
@@ -11,6 +15,10 @@
     "fzf-lua": {
       "rev": "eee072d89ccdc0a4627bf67d0757d2e4981c7292",
       "src": "https://www.github.com/ibhagwan/fzf-lua"
+    },
+    "github-nvim-theme": {
+      "rev": "c106c9472154d6b2c74b74565616b877ae8ed31d",
+      "src": "https://github.com/projekt0n/github-nvim-theme"
     },
     "gitsigns.nvim": {
       "rev": "8d82c240f190fc33723d48c308ccc1ed8baad69d",
@@ -31,6 +39,10 @@
     "mini.nvim": {
       "rev": "69b7433355664cf76898eb86a12a019f39bd86d1",
       "src": "https://www.github.com/echasnovski/mini.nvim"
+    },
+    "monokai-v2.nvim": {
+      "rev": "33e6930fc965ef56d12982f0799d9f62cc792093",
+      "src": "https://github.com/khoido2003/monokai-v2.nvim"
     },
     "nightfox.nvim": {
       "rev": "ba47d4b4c5ec308718641ba7402c143836f35aa9",
@@ -55,6 +67,10 @@
     "tokyonight.nvim": {
       "rev": "cdc07ac78467a233fd62c493de29a17e0cf2b2b6",
       "src": "https://github.com/folke/tokyonight.nvim"
+    },
+    "tzfn.nvim": {
+      "rev": "fbc11c7f7242f9ea13a0f70e7a6c5e0845a54279",
+      "src": "https://github.com/sirzif/tzfn.nvim"
     }
   }
 }
