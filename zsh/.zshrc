@@ -13,6 +13,9 @@ export ZSH="$HOME/.oh-my-zsh"
 
 alias so='source ~/.zshrc && clear && fastfetch'
 alias cl='clear'
+alias e='nvim'
+alias workspace='tmux new -As workspace'
+alias base='tmux new -As base'
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
