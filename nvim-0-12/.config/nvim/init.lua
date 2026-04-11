@@ -945,17 +945,11 @@ require("gruvbox").setup({
   strikethrough = true,
   invert_selection = false,
   invert_signs = false,
-  invert_tabline = false,
+  invert_tabline = true,
   inverse = true, -- invert background for search, diffs, statuslines and errors
   contrast = "", -- can be "hard", "soft" or empty string
   palette_overrides = {},
-  overrides = {
-      -- Function = {italic = true},
-      -- Keyword = {italic = true},
-      -- Identifier = {italic = true},
-      -- ["@variable"] = {italic = true}, -- treesitter specific
-      -- Methods = {italic = true},
-  },
+  overrides = {},
   dim_inactive = false,
   transparent_mode = true,
 })

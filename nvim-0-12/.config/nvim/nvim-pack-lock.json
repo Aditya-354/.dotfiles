@@ -9,19 +9,19 @@
       "src": "https://github.com/sainnhe/everforest"
     },
     "fzf-lua": {
-      "rev": "b56cd2ffbce57bfd9133a645bd02cd86895a7e3f",
+      "rev": "eee072d89ccdc0a4627bf67d0757d2e4981c7292",
       "src": "https://www.github.com/ibhagwan/fzf-lua"
     },
     "gitsigns.nvim": {
-      "rev": "9f3c6dd7868bcc116e9c1c1929ce063b978fa519",
+      "rev": "8d82c240f190fc33723d48c308ccc1ed8baad69d",
       "src": "https://www.github.com/lewis6991/gitsigns.nvim"
     },
     "gruvbox.nvim": {
-      "rev": "561126520034a1dac2f78ab063db025d12555998",
+      "rev": "334d5fd49fc8033f26408425366c66c6390c57bb",
       "src": "https://github.com/ellisonleao/gruvbox.nvim"
     },
     "mason.nvim": {
-      "rev": "44d1e90e1f66e077268191e3ee9d2ac97cc18e65",
+      "rev": "b03fb0f20bc1d43daf558cda981a2be22e73ac42",
       "src": "https://github.com/mason-org/mason.nvim"
     },
     "material.nvim": {
@@ -29,7 +29,7 @@
       "src": "https://github.com/marko-cerovac/material.nvim"
     },
     "mini.nvim": {
-      "rev": "cad365c212fb1e332cb93fa8f72697125799d00a",
+      "rev": "69b7433355664cf76898eb86a12a019f39bd86d1",
       "src": "https://www.github.com/echasnovski/mini.nvim"
     },
     "nightfox.nvim": {
@@ -37,20 +37,20 @@
       "src": "https://github.com/edeneast/nightfox.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "ead0f5f342d8d323441e7d4b88f0fc436a81ad5f",
+      "rev": "c588db330592fa477a70d2fee6ba20a57194bdc3",
       "src": "https://www.github.com/neovim/nvim-lspconfig"
     },
     "nvim-tree.lua": {
-      "rev": "c988e289428d9202b28ba27479647033c7dd2956",
+      "rev": "509962f21ab7289d8dcd28568af539be39a8c01e",
       "src": "https://www.github.com/nvim-tree/nvim-tree.lua"
     },
     "nvim-treesitter": {
-      "rev": "cb2cb74f3c3cbbcc17e79cada2060165d616d849",
+      "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "strudel.nvim": {
-      "rev": "a6b9752b0084a20c37786b54eef2095bb31daff7",
-      "src": "https://github.com/gruvw/strudel.nvim"
+      "rev": "3a7e62c9048a318281328ad08d6269e50b884cd3",
+      "src": "https://github.com/gruvw/strudel.nvim.git"
     },
     "tokyonight.nvim": {
       "rev": "cdc07ac78467a233fd62c493de29a17e0cf2b2b6",
