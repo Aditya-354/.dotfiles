@@ -18,8 +18,10 @@ local function set_transparent() -- set UI component to transparent
 	for _, g in ipairs(groups) do
 		vim.api.nvim_set_hl(0, g, { bg = "none" })
 	end
-	vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", fg = "#767676" })
+	-- vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", fg = "#767676" })
 end
+
+vim.cmd("colorscheme torte")
 
 set_transparent()
 
@@ -112,147 +114,147 @@ vim.opt.maxmempattern = 20000 -- increase max memory
 -- ============================================================================
 
 -- Git branch function with caching and Nerd Font icon
-local cached_branch = ""
-local last_check = 0
-local function git_branch()
-	local now = vim.loop.now()
-	if now - last_check > 5000 then -- Check every 5 seconds
-		cached_branch = vim.fn.system("git branch --show-current 2>/dev/null | tr -d '\n'")
-		last_check = now
-	end
-	if cached_branch ~= "" then
-		return " \u{e725} " .. cached_branch .. " " -- nf-dev-git_branch
-	end
-	return ""
-end
-
--- File type with Nerd Font icon
-local function file_type()
-	local ft = vim.bo.filetype
-	local icons = {
-		lua = "\u{e620} ", -- nf-dev-lua
-		python = "\u{e73c} ", -- nf-dev-python
-		javascript = "\u{e74e} ", -- nf-dev-javascript
-		typescript = "\u{e628} ", -- nf-dev-typescript
-		javascriptreact = "\u{e7ba} ",
-		typescriptreact = "\u{e7ba} ",
-		html = "\u{e736} ", -- nf-dev-html5
-		css = "\u{e749} ", -- nf-dev-css3
-		scss = "\u{e749} ",
-		json = "\u{e60b} ", -- nf-dev-json
-		markdown = "\u{e73e} ", -- nf-dev-markdown
-		vim = "\u{e62b} ", -- nf-dev-vim
-		sh = "\u{f489} ", -- nf-oct-terminal
-		bash = "\u{f489} ",
-		zsh = "\u{f489} ",
-		rust = "\u{e7a8} ", -- nf-dev-rust
-		go = "\u{e724} ", -- nf-dev-go
-		c = "\u{e61e} ", -- nf-dev-c
-		cpp = "\u{e61d} ", -- nf-dev-cplusplus
-		java = "\u{e738} ", -- nf-dev-java
-		php = "\u{e73d} ", -- nf-dev-php
-		ruby = "\u{e739} ", -- nf-dev-ruby
-		swift = "\u{e755} ", -- nf-dev-swift
-		kotlin = "\u{e634} ",
-		dart = "\u{e798} ",
-		elixir = "\u{e62d} ",
-		haskell = "\u{e777} ",
-		sql = "\u{e706} ",
-		yaml = "\u{f481} ",
-		toml = "\u{e615} ",
-		xml = "\u{f05c} ",
-		dockerfile = "\u{f308} ", -- nf-linux-docker
-		gitcommit = "\u{f418} ", -- nf-oct-git_commit
-		gitconfig = "\u{f1d3} ", -- nf-fa-git
-		vue = "\u{fd42} ", -- nf-md-vuejs
-		svelte = "\u{e697} ",
-		astro = "\u{e628} ",
-	}
-
-	if ft == "" then
-		return " \u{f15b} " -- nf-fa-file_o
-	end
-
-	return ((icons[ft] or " \u{f15b} ") .. ft)
-end
-
--- File size with Nerd Font icon
-local function file_size()
-	local size = vim.fn.getfsize(vim.fn.expand("%"))
-	if size < 0 then
-		return ""
-	end
-	local size_str
-	if size < 1024 then
-		size_str = size .. "B"
-	elseif size < 1024 * 1024 then
-		size_str = string.format("%.1fK", size / 1024)
-	else
-		size_str = string.format("%.1fM", size / 1024 / 1024)
-	end
-	return " \u{f016} " .. size_str .. " " -- nf-fa-file_o
-end
-
--- Mode indicators with Nerd Font icons
-local function mode_icon()
-	local mode = vim.fn.mode()
-	local modes = {
-		n = " \u{f121}  NORMAL",
-		i = " \u{f11c}  INSERT",
-		v = " \u{f0168} VISUAL",
-		V = " \u{f0168} V-LINE",
-		["\22"] = " \u{f0168} V-BLOCK",
-		c = " \u{f120} COMMAND",
-		s = " \u{f0c5} SELECT",
-		S = " \u{f0c5} S-LINE",
-		["\19"] = " \u{f0c5} S-BLOCK",
-		R = " \u{f044} REPLACE",
-		r = " \u{f044} REPLACE",
-		["!"] = " \u{f489} SHELL",
-		t = " \u{f120} TERMINAL",
-	}
-	return modes[mode] or (" \u{f059} " .. mode)
-end
-
-_G.mode_icon = mode_icon
-_G.git_branch = git_branch
-_G.file_type = file_type
-_G.file_size = file_size
-
-vim.cmd([[
-  highlight StatusLineBold gui=bold cterm=bold
-]])
-
--- Function to change statusline based on window focus
-local function setup_dynamic_statusline()
-	vim.api.nvim_create_autocmd({ "WinEnter", "BufEnter" }, {
-		callback = function()
-			vim.opt_local.statusline = table.concat({
-				"  ",
-				"%#StatusLineBold#",
-				"%{v:lua.mode_icon()}",
-				"%#StatusLine#",
-				" \u{e0b1} %f %h%m%r", -- nf-pl-left_hard_divider
-				"%{v:lua.git_branch()}",
-				"\u{e0b1} ", -- nf-pl-left_hard_divider
-				"%{v:lua.file_type()}",
-				"\u{e0b1} ", -- nf-pl-left_hard_divider
-				"%{v:lua.file_size()}",
-				"%=", -- Right-align everything after this
-				" \u{f017} %l:%c  %P ", -- nf-fa-clock_o for line/col
-			})
-		end,
-	})
-	vim.api.nvim_set_hl(0, "StatusLineBold", { bold = true })
-
-	vim.api.nvim_create_autocmd({ "WinLeave", "BufLeave" }, {
-		callback = function()
-			vim.opt_local.statusline = "  %f %h%m%r \u{e0b1} %{v:lua.file_type()} %=  %l:%c   %P "
-		end,
-	})
-end
-
-setup_dynamic_statusline()
+-- local cached_branch = ""
+-- local last_check = 0
+-- local function git_branch()
+-- 	local now = vim.loop.now()
+-- 	if now - last_check > 5000 then -- Check every 5 seconds
+-- 		cached_branch = vim.fn.system("git branch --show-current 2>/dev/null | tr -d '\n'")
+-- 		last_check = now
+-- 	end
+-- 	if cached_branch ~= "" then
+-- 		return " \u{e725} " .. cached_branch .. " " -- nf-dev-git_branch
+-- 	end
+-- 	return ""
+-- end
+--
+-- -- File type with Nerd Font icon
+-- local function file_type()
+-- 	local ft = vim.bo.filetype
+-- 	local icons = {
+-- 		lua = "\u{e620} ", -- nf-dev-lua
+-- 		python = "\u{e73c} ", -- nf-dev-python
+-- 		javascript = "\u{e74e} ", -- nf-dev-javascript
+-- 		typescript = "\u{e628} ", -- nf-dev-typescript
+-- 		javascriptreact = "\u{e7ba} ",
+-- 		typescriptreact = "\u{e7ba} ",
+-- 		html = "\u{e736} ", -- nf-dev-html5
+-- 		css = "\u{e749} ", -- nf-dev-css3
+-- 		scss = "\u{e749} ",
+-- 		json = "\u{e60b} ", -- nf-dev-json
+-- 		markdown = "\u{e73e} ", -- nf-dev-markdown
+-- 		vim = "\u{e62b} ", -- nf-dev-vim
+-- 		sh = "\u{f489} ", -- nf-oct-terminal
+-- 		bash = "\u{f489} ",
+-- 		zsh = "\u{f489} ",
+-- 		rust = "\u{e7a8} ", -- nf-dev-rust
+-- 		go = "\u{e724} ", -- nf-dev-go
+-- 		c = "\u{e61e} ", -- nf-dev-c
+-- 		cpp = "\u{e61d} ", -- nf-dev-cplusplus
+-- 		java = "\u{e738} ", -- nf-dev-java
+-- 		php = "\u{e73d} ", -- nf-dev-php
+-- 		ruby = "\u{e739} ", -- nf-dev-ruby
+-- 		swift = "\u{e755} ", -- nf-dev-swift
+-- 		kotlin = "\u{e634} ",
+-- 		dart = "\u{e798} ",
+-- 		elixir = "\u{e62d} ",
+-- 		haskell = "\u{e777} ",
+-- 		sql = "\u{e706} ",
+-- 		yaml = "\u{f481} ",
+-- 		toml = "\u{e615} ",
+-- 		xml = "\u{f05c} ",
+-- 		dockerfile = "\u{f308} ", -- nf-linux-docker
+-- 		gitcommit = "\u{f418} ", -- nf-oct-git_commit
+-- 		gitconfig = "\u{f1d3} ", -- nf-fa-git
+-- 		vue = "\u{fd42} ", -- nf-md-vuejs
+-- 		svelte = "\u{e697} ",
+-- 		astro = "\u{e628} ",
+-- 	}
+--
+-- 	if ft == "" then
+-- 		return " \u{f15b} " -- nf-fa-file_o
+-- 	end
+--
+-- 	return ((icons[ft] or " \u{f15b} ") .. ft)
+-- end
+--
+-- -- File size with Nerd Font icon
+-- local function file_size()
+-- 	local size = vim.fn.getfsize(vim.fn.expand("%"))
+-- 	if size < 0 then
+-- 		return ""
+-- 	end
+-- 	local size_str
+-- 	if size < 1024 then
+-- 		size_str = size .. "B"
+-- 	elseif size < 1024 * 1024 then
+-- 		size_str = string.format("%.1fK", size / 1024)
+-- 	else
+-- 		size_str = string.format("%.1fM", size / 1024 / 1024)
+-- 	end
+-- 	return " \u{f016} " .. size_str .. " " -- nf-fa-file_o
+-- end
+--
+-- -- Mode indicators with Nerd Font icons
+-- local function mode_icon()
+-- 	local mode = vim.fn.mode()
+-- 	local modes = {
+-- 		n = " \u{f121}  NORMAL",
+-- 		i = " \u{f11c}  INSERT",
+-- 		v = " \u{f0168} VISUAL",
+-- 		V = " \u{f0168} V-LINE",
+-- 		["\22"] = " \u{f0168} V-BLOCK",
+-- 		c = " \u{f120} COMMAND",
+-- 		s = " \u{f0c5} SELECT",
+-- 		S = " \u{f0c5} S-LINE",
+-- 		["\19"] = " \u{f0c5} S-BLOCK",
+-- 		R = " \u{f044} REPLACE",
+-- 		r = " \u{f044} REPLACE",
+-- 		["!"] = " \u{f489} SHELL",
+-- 		t = " \u{f120} TERMINAL",
+-- 	}
+-- 	return modes[mode] or (" \u{f059} " .. mode)
+-- end
+--
+-- _G.mode_icon = mode_icon
+-- _G.git_branch = git_branch
+-- _G.file_type = file_type
+-- _G.file_size = file_size
+--
+-- vim.cmd([[
+--   highlight StatusLineBold gui=bold cterm=bold
+-- ]])
+--
+-- -- Function to change statusline based on window focus
+-- local function setup_dynamic_statusline()
+-- 	vim.api.nvim_create_autocmd({ "WinEnter", "BufEnter" }, {
+-- 		callback = function()
+-- 			vim.opt_local.statusline = table.concat({
+-- 				"  ",
+-- 				"%#StatusLineBold#",
+-- 				"%{v:lua.mode_icon()}",
+-- 				"%#StatusLine#",
+-- 				" \u{e0b1} %f %h%m%r", -- nf-pl-left_hard_divider
+-- 				"%{v:lua.git_branch()}",
+-- 				"\u{e0b1} ", -- nf-pl-left_hard_divider
+-- 				"%{v:lua.file_type()}",
+-- 				"\u{e0b1} ", -- nf-pl-left_hard_divider
+-- 				"%{v:lua.file_size()}",
+-- 				"%=", -- Right-align everything after this
+-- 				" \u{f017} %l:%c  %P ", -- nf-fa-clock_o for line/col
+-- 			})
+-- 		end,
+-- 	})
+-- 	vim.api.nvim_set_hl(0, "StatusLineBold", { bold = true })
+--
+-- 	vim.api.nvim_create_autocmd({ "WinLeave", "BufLeave" }, {
+-- 		callback = function()
+-- 			vim.opt_local.statusline = "  %f %h%m%r \u{e0b1} %{v:lua.file_type()} %=  %l:%c   %P "
+-- 		end,
+-- 	})
+-- end
+--
+-- setup_dynamic_statusline()
 
 -- ============================================================================
 -- KEYMAPS
@@ -383,15 +385,14 @@ vim.pack.add({
 	"https://www.github.com/nvim-tree/nvim-tree.lua",
   -- colorschemes
   "https://github.com/ellisonleao/gruvbox.nvim",
-  "https://github.com/mofiqul/dracula.nvim",
-  "https://github.com/folke/tokyonight.nvim",
   "https://github.com/sainnhe/everforest",
-  "https://github.com/edeneast/nightfox.nvim",
-  "https://github.com/marko-cerovac/material.nvim",
-  { src = "https://github.com/zitrocode/carvion.nvim", name = 'carvion' },
-  "https://github.com/sirzif/tzfn.nvim",
   "https://github.com/projekt0n/github-nvim-theme",
-	{
+  "https://github.com/nvim-lualine/lualine.nvim",
+  "https://github.com/water-sucks/darkrose.nvim",
+  "https://github.com/navarasu/onedark.nvim",
+  "https://github.com/casedami/neomodern.nvim",
+  "https://github.com/ramojus/mellifluous.nvim",
+  {
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
 		branch = "main",
 		build = ":TSUpdate",
@@ -420,21 +421,20 @@ local function packadd(name)
 end
 packadd("nvim-treesitter")
 packadd("gitsigns.nvim")
-packadd("dracula.nvim")
 packadd("mini.nvim")
-packadd("carvion")
-packadd("nightfox.nvim")
+packadd("lualine.nvim")
 packadd("fzf-lua")
 packadd("nvim-tree.lua")
 packadd("strudel.nvim")
+packadd("onedark.nvim")
 -- LSP
 packadd("nvim-lspconfig")
 packadd("mason.nvim")
 packadd("gruvbox.nvim")
-packadd("tokyonight.nvim")
+packadd("neomodern.nvim")
+packadd("darkrose.nvim")
+packadd("mellifluous.nvim")
 packadd("everforest")
-packadd("tzfn.nvim")
-packadd("material.nvim")
 packadd("github-nvim-theme")
 -- packadd("efmls-configs-nvim")
 -- packadd("blink.cmp")
@@ -942,9 +942,9 @@ require("gruvbox").setup({
   underline = true,
   bold = false,
   italic = {
-    strings = false,
-    emphasis = false,
-    comments = false,
+    strings = true,
+    emphasis = true,
+    comments = true,
     operators = false,
     folds = false,
   },
@@ -953,124 +953,19 @@ require("gruvbox").setup({
   invert_signs = false,
   invert_tabline = true,
   inverse = true, -- invert background for search, diffs, statuslines and errors
-  contrast = "", -- can be "hard", "soft" or empty string
+  contrast = "hard", -- can be "hard", "soft" or empty string
   palette_overrides = {},
   overrides = {},
   dim_inactive = false,
-  transparent_mode = true,
-})
-
-require("dracula").setup({
-    show_end_of_buffer = true,
-    transparent_bg = true,
-    italic_comment = false,
-})
-
-require('nightfox').setup({
-    options = {
-        transparent = true,
-        terminal_colors = true,
-    },
-    styles = {
-        comments = "NONE",
-        conditionals = "NONE",
-        constants = "NONE",
-        functions = "NONE",
-        keywords = "NONE",
-        numbers = "NONE",
-        operators = "NONE",
-        strings = "NONE",
-        types = "NONE",
-        variables = "NONE",
-    }
-})
-
-require("tokyonight").setup({
-  style = "night", -- "storm", "moon", "night", "day"
-  transparent = true, -- Disable setting the background color
-  terminal_colors = true, -- Configure colors for the Neovim terminal
-  styles = {
-    comments = { italic = false },
-    keywords = { italic = false },
-    sidebars = "dark", -- style for sidebars (e.g., nvim-tree)
-    floats = "dark",   -- style for floating windows
-  },
-  sidebars = { "qf", "help" },
-  day_brightness = 0.3,
-  plugins = { auto = true },
-})
-
-require('material').setup({
-    contrast = {
-        terminal = false, -- Enable contrast for the built-in terminal
-        sidebars = false, -- Enable contrast for sidebar-like windows (e.g. Nvim-Tree)
-        floating_windows = true, -- Enable contrast for floating windows
-        cursor_line = false, -- Enable darker background for the cursor line
-        non_current_windows = false, -- Enable contrasted background for non-current windows
-        popup_menu = false, -- Enable lighter background for the popup menu
-    },
-
-    italics = {
-        comments = false, -- Enable italic comments
-        functions = false, -- Enable italic functions
-        keywords = false, -- Enable italic keywords
-        variables = false, -- Enable italic variables
-    },
-
-    contrast_filetypes = { -- Filetypes with contrasted background
-        "terminal",
-        "packer",
-        "qf"
-    },
-
-    high_visibility = {
-        lighter = false, -- Enable higher contrast text for lighter style
-        darker = false, -- Enable higher contrast text for darker style
-    },
-
-    disable = {
-        colored_cursor = false, -- Disable the colored cursor
-        borders = false, -- Disable borders between verticaly split windows
-        background = true, -- Prevent the theme from setting the background (useful for transparency)
-        term_colors = false, -- Prevent the theme from setting terminal colors
-        eob_lines = false, -- Hide the end-of-buffer lines (~)
-    },
-
-    lualine_style = "default", -- Lualine style: "default", "stealth"
-
-    async_loading = true, -- Load the theme asynchronously for faster startup
-
-    custom_colors = nil, -- Overwrite default colors
-    custom_highlights = {}, -- Overwrite default highlight groups
-})
-
-require("carvion").setup({
-    transparent = true,
-    styles = {
-        comments = {},
-        keywords = {},
-        functions = {},
-        variables = {},
-        strings = {},
-        types = {}
-    }
-})
-
-require("tzfn").setup({
-    dim_inactive_windows = false,
-    extend_background_behind_borders = true,
-    styles = {
-        bold = false,
-        italic = false,
-        transparency = true,
-    },
+  transparent_mode = false,
 })
 
 require("github-theme").setup({
     options = {
         hide_end_of_buffer = false,
-        transparent = true,
+        transparent = false,
         styles = {                 -- Style to be applied to different syntax groups
+            bold = false,
             comments = 'NONE',       -- Value is any valid attr-list value `:help attr-list`
             functions = 'NONE',
             keywords = 'NONE',
@@ -1085,4 +980,163 @@ require("github-theme").setup({
     }
 })
 
-vim.cmd("colorscheme github_dark")
+require("lualine").setup({
+options = {
+    icons_enabled = true,
+    theme = 'auto',
+    -- component_separators = { left = '', right = ''},
+    -- section_separators = { left = '', right = ''},
+    component_separators = { left = '', right = '' },
+    section_separators = { left = '', right = '' };
+    disabled_filetypes = {
+      statusline = {},
+      winbar = {},
+    },
+    ignore_focus = {},
+    always_divide_middle = true,
+    always_show_tabline = true,
+    globalstatus = false,
+    refresh = {
+      statusline = 1000,
+      tabline = 1000,
+      winbar = 1000,
+      refresh_time = 16, -- ~60fps
+      events = {
+        'WinEnter',
+        'BufEnter',
+        'BufWritePost',
+        'SessionLoadPost',
+        'FileChangedShellPost',
+        'VimResized',
+        'Filetype',
+        'CursorMoved',
+        'CursorMovedI',
+        'ModeChanged',
+      },
+    }
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_c = {'filename'},
+    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {'filename'},
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  winbar = {},
+  inactive_winbar = {},
+  extensions = {}
+})
+
+require("darkrose").setup({
+    -- Override colors
+    colors = {
+        -- orange = "#F87757",
+    },
+    -- Override existing or add new highlight groups
+    transparent_background = true,
+    overrides = function(c)
+        return {
+            -- Type = { fg = "#aa67ca" },
+            String = { fg = "#9a8000" },
+            ["@string"] = { fg = "#9a8000" },
+            ["@comment"] = { fg = "#7b9b9a" },
+            Comment = { fg = "#7b9b9a" },
+            CursorLine = { bg = "#1a1a1a" },
+        }
+    end,
+    -- Styles to enable or disable
+    styles = {
+        bold = false, -- Enable bold highlights for some highlight groups
+        italic = false, -- Enable italic highlights for some highlight groups
+        underline = true, -- Enable underline highlights for some highlight groups
+    },
+})
+
+-- Lua
+require('onedark').setup  {
+    -- Main options --
+    style = 'dark', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+    transparent = false,  -- Show/hide background
+    term_colors = true, -- Change terminal color as per the selected theme style
+    ending_tildes = true, -- Show the end-of-buffer tildes. By default they are hidden
+    cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
+
+    -- toggle theme style ---
+    toggle_style_key = "<leader>ts", -- keybind to toggle theme style. Leave it nil to disable it, or set it to a string, for example "<leader>ts"
+    toggle_style_list = {'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light'}, -- List of styles to toggle between
+
+    -- Change code style ---
+    -- Options are italic, bold, underline, none
+    -- You can configure multiple style with comma separated, For e.g., keywords = 'italic,bold'
+    code_style = {
+        comments = 'italic',
+        keywords = 'none',
+        functions = 'none',
+        strings = 'none',
+        variables = 'none'
+    },
+
+    -- Lualine options --
+    lualine = {
+        transparent = false, -- lualine center bar transparency
+    },
+
+    -- Custom Highlights --
+    colors = {}, -- Override default colors
+    highlights = {}, -- Override highlight groups
+
+    -- Plugins Config --
+    diagnostics = {
+        darker = true, -- darker colors for diagnostic
+        undercurl = true,   -- use undercurl instead of underline for diagnostics
+        background = true,    -- use background color for virtual text
+    },
+}
+
+require("mellifluous").setup({
+    styles = {
+        main_keywords = { bold = false },
+    },
+    mellifluous = {
+        neutral = true,
+    },
+})
+
+require("neomodern").setup({
+  -- 'default' default background
+  -- 'alt' darker background
+  -- 'transparent' background is not set
+  bg = "transparent",
+
+  theme = "moon", -- 'moon' | 'iceclimber' | 'gyokuro' | 'hojicha' | 'roseprime'
+
+  gutter = {
+    cursorline = false, -- highlight the cursorline in the gutter
+    dark = false, -- highlight gutter darker than the Normal bg
+  },
+
+  diagnostics = {
+    darker = true, -- use darker colors for diagnostics
+    undercurl = true, -- use undercurl for diagnostics
+    background = true, -- use a background color for diagnostics
+  },
+
+  -- override colors, see #Customization below
+  overrides = {
+    default = {},
+    hlgroups = {}
+  }
+})
+
+-- vim.keymap.set("n", "<leader>tt", require("oasis").toggle_transparency, { desc = "Toggle Transparency" })
+-- vim.cmd("colorscheme onedark")
