@@ -1,29 +1,29 @@
 vim.opt.termguicolors = true
 
-local function set_transparent() -- set UI component to transparent
-	local groups = {
-		"Normal",
-		"NormalNC",
-		"EndOfBuffer",
-		"NormalFloat",
-		"FloatBorder",
-		"SignColumn",
-		"StatusLine",
-		"StatusLineNC",
-		"TabLine",
-		"TabLineFill",
-		"TabLineSel",
-		"ColorColumn",
-	}
-	for _, g in ipairs(groups) do
-		vim.api.nvim_set_hl(0, g, { bg = "none" })
-	end
-	-- vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", fg = "#767676" })
-end
-
-vim.cmd("colorscheme torte")
-
-set_transparent()
+-- local function set_transparent() -- set UI component to transparent
+-- 	local groups = {
+-- 		"Normal",
+-- 		"NormalNC",
+-- 		"EndOfBuffer",
+-- 		"NormalFloat",
+-- 		"FloatBorder",
+-- 		"SignColumn",
+-- 		"StatusLine",
+-- 		"StatusLineNC",
+-- 		"TabLine",
+-- 		"TabLineFill",
+-- 		"TabLineSel",
+-- 		"ColorColumn",
+-- 	}
+-- 	for _, g in ipairs(groups) do
+-- 		vim.api.nvim_set_hl(0, g, { bg = "none" })
+-- 	end
+-- 	-- vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", fg = "#767676" })
+-- end
+--
+-- vim.cmd("colorscheme torte")
+--
+-- set_transparent()
 
 -- ============================================================================
 -- OPTIONS
@@ -386,12 +386,13 @@ vim.pack.add({
   -- colorschemes
   "https://github.com/ellisonleao/gruvbox.nvim",
   "https://github.com/sainnhe/everforest",
-  "https://github.com/projekt0n/github-nvim-theme",
   "https://github.com/nvim-lualine/lualine.nvim",
   "https://github.com/water-sucks/darkrose.nvim",
   "https://github.com/navarasu/onedark.nvim",
+  "https://github.com/uhs-robert/oasis.nvim",
   "https://github.com/casedami/neomodern.nvim",
   "https://github.com/sainnhe/sonokai",
+  "https://github.com/Mofiqul/vscode.nvim",
   "https://github.com/ramojus/mellifluous.nvim",
   {
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
@@ -432,12 +433,13 @@ packadd("onedark.nvim")
 packadd("nvim-lspconfig")
 packadd("mason.nvim")
 packadd("gruvbox.nvim")
+packadd("vscode.nvim")
+packadd("oasis.nvim")
 packadd("sonokai")
 packadd("neomodern.nvim")
 packadd("darkrose.nvim")
 packadd("mellifluous.nvim")
 packadd("everforest")
-packadd("github-nvim-theme")
 -- packadd("efmls-configs-nvim")
 -- packadd("blink.cmp")
 -- packadd("LuaSnip")
@@ -962,25 +964,25 @@ require("gruvbox").setup({
   transparent_mode = false,
 })
 
-require("github-theme").setup({
-    options = {
-        hide_end_of_buffer = false,
-        transparent = false,
-        styles = {                 -- Style to be applied to different syntax groups
-            bold = false,
-            comments = 'NONE',       -- Value is any valid attr-list value `:help attr-list`
-            functions = 'NONE',
-            keywords = 'NONE',
-            variables = 'NONE',
-            conditionals = 'NONE',
-            constants = 'NONE',
-            numbers = 'NONE',
-            operators = 'NONE',
-            strings = 'NONE',
-            types = 'NONE',
-        },
-    }
-})
+-- require("github-theme").setup({
+--     options = {
+--         hide_end_of_buffer = false,
+--         transparent = false,
+--         styles = {                 -- Style to be applied to different syntax groups
+--             bold = false,
+--             comments = 'NONE',       -- Value is any valid attr-list value `:help attr-list`
+--             functions = 'NONE',
+--             keywords = 'NONE',
+--             variables = 'NONE',
+--             conditionals = 'NONE',
+--             constants = 'NONE',
+--             numbers = 'NONE',
+--             operators = 'NONE',
+--             strings = 'NONE',
+--             types = 'NONE',
+--         },
+--     }
+-- })
 
 
 require("darkrose").setup({
@@ -1145,5 +1147,56 @@ require("neomodern").setup({
 vim.g.sonokai_style = 'default'
 vim.g.sonokai_enable_italic = 1
 vim.g.sonokai_better_performance = 1
--- vim.keymap.set("n", "<leader>tt", require("oasis").toggle_transparency, { desc = "Toggle Transparency" })
+vim.keymap.set("n", "<leader>tt", require("oasis").toggle_transparency, { desc = "Toggle Transparency" })
 
+-- Oasis.nvim
+-- Styles: "night", "midnight", "abyss", "starlight", "desert", "sol", "canyon", "dune", "cactus", "mirage", "lagoon", "twilight", "rose"
+require("oasis").setup({
+  style = "lagoon",                     -- Primary style, the default used when colorscheme is set to "oasis"
+  dark_style = nil,                     -- Applies to primary style only: Overrides dark mode with another theme (e.g., "abyss")
+  light_style = nil,                    -- Applies to primary style only: Overrides light mode with another theme (e.g., "dune")
+  light_intensity = 3,                  -- Light background intensity (1-5): 1=subtle, 5=saturated
+  use_legacy_comments = false,          -- For "desert" style only, uses the loud skyblue comment color from desert.vim for a more retro experience
+  themed_syntax = true,                 -- Uses the theme's primary color for statements/keywords. Set to false for the classic yellow syntax from desert.vim for a more retro experience
+
+  -- Text styling - toggle individual styles
+  styles = {
+    bold = false,                        -- Enable bold text (keywords, functions, etc.)
+    italic = false,                      -- Enable italics (comments, certain keywords)
+    underline = true,                   -- Enable underlined text (matching words)
+    undercurl = true,                   -- Enable undercurl for diagnostics/spelling
+    strikethrough = true,               -- Enable strikethrough text (deprecations)
+  },
+
+  -- Display options
+  transparent = false,                  -- Set to true for transparent backgrounds (bye-bye theme backgrounds)
+  terminal_colors = true,               -- Apply Oasis colors to Neovim's built-in terminal
+  match_paren_bg = true,               -- Enable/disable background on MatchParen highlight
+
+  -- Contrast controls (WCAG: AA = 4.5, AAA = 7.0)
+  contrast = {
+    -- Note: Light themes obey the targets below. All dark themes target 7.0 by default with only a couple of exceptions that dip to 6.5.
+    min_ratio = 5.8,                    -- Clamp 4.5–7.0; target contrast for syntax/terminal colors. Increase for more contrast, decrease for more pop.
+    force_aaa = false,                  -- When true, forces AAA (7.0) wherever possible; as a result some colors will appear muddy (bye bye non-primary colors).
+  },
+
+  palette_overrides = {},               -- Override colors in specific palettes
+  highlight_overrides = {},             -- Override specific highlight groups
+
+  -- Plugin integrations
+  integrations = {
+    default_enabled = true,             -- Default behavior: true = enable all, false = disable all
+    -- For each plugin: nil = use default_enabled, true = enable, false = disable
+    plugins = {
+      fzf_lua = nil,
+      gitsigns = nil,
+      lazy = nil,
+      mini = nil,
+      render_markdown = nil,
+      snacks = nil,
+      which_key = nil,
+    },
+  },
+})
+
+vim.cmd("colorscheme oasis")
