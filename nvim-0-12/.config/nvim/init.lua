@@ -391,6 +391,7 @@ vim.pack.add({
   "https://github.com/water-sucks/darkrose.nvim",
   "https://github.com/navarasu/onedark.nvim",
   "https://github.com/casedami/neomodern.nvim",
+  "https://github.com/sainnhe/sonokai",
   "https://github.com/ramojus/mellifluous.nvim",
   {
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
@@ -431,6 +432,7 @@ packadd("onedark.nvim")
 packadd("nvim-lspconfig")
 packadd("mason.nvim")
 packadd("gruvbox.nvim")
+packadd("sonokai")
 packadd("neomodern.nvim")
 packadd("darkrose.nvim")
 packadd("mellifluous.nvim")
@@ -1138,6 +1140,12 @@ require("neomodern").setup({
     hlgroups = {}
   }
 })
+
+-- Set options before loading the scheme
+vim.g.sonokai_style = 'default'
+vim.g.sonokai_enable_italic = 1
+vim.g.sonokai_better_performance = 1
+-- vim.cmd.colorscheme('sonokai')
 
 -- vim.keymap.set("n", "<leader>tt", require("oasis").toggle_transparency, { desc = "Toggle Transparency" })
 -- vim.cmd("colorscheme onedark")
