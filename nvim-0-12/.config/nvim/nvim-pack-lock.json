@@ -44,6 +44,10 @@
       "rev": "5e6ed2cfa6c909acb20ca185276015c112211576",
       "src": "https://github.com/casedami/neomodern.nvim"
     },
+    "nordic.nvim": {
+      "rev": "9f757428264ef1fcd1703e17702d3a28f307a2f7",
+      "src": "https://github.com/AlexvZyl/nordic.nvim"
+    },
     "nvim-lspconfig": {
       "rev": "c588db330592fa477a70d2fee6ba20a57194bdc3",
       "src": "https://www.github.com/neovim/nvim-lspconfig"
