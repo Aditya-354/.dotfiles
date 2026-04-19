@@ -1342,5 +1342,5 @@ require("rose-pine").setup({
     end,
 })
 
-vim.cmd("colorscheme oasis")
+vim.cmd("colorscheme nord")
 
