@@ -393,7 +393,9 @@ vim.pack.add({
   "https://github.com/casedami/neomodern.nvim",
   "https://github.com/sainnhe/sonokai",
   "https://github.com/Mofiqul/vscode.nvim",
+  "https://github.com/rebelot/kanagawa.nvim",
   "https://github.com/ramojus/mellifluous.nvim",
+  "https://github.com/shaunsingh/nord.nvim",
   {
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
 		branch = "main",
@@ -433,6 +435,7 @@ packadd("onedark.nvim")
 packadd("nvim-lspconfig")
 packadd("mason.nvim")
 packadd("gruvbox.nvim")
+packadd("kanagawa.nvim")
 packadd("vscode.nvim")
 packadd("oasis.nvim")
 packadd("sonokai")
@@ -1199,6 +1202,41 @@ require("oasis").setup({
       which_key = nil,
     },
   },
+})
+
+-- Default options:
+require('kanagawa').setup({
+    compile = false,             -- enable compiling the colorscheme
+    undercurl = true,            -- enable undercurls
+    commentStyle = { italic = false },
+    functionStyle = {},
+    keywordStyle = { italic = false},
+    statementStyle = { bold = false },
+    typeStyle = { bold = false},
+    transparent = false,         -- do not set background color
+    dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
+    terminalColors = true,       -- define vim.g.terminal_color_{0,17}
+    colors = {                   -- add/modify theme and palette colors
+        palette = {},
+        theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
+    },
+    overrides = function(colors) -- add/modify highlights
+        return {}
+    end,
+    theme = "wave",              -- Load "wave" theme
+    background = {               -- map the value of 'background' option to a theme
+        dark = "wave",           -- try "dragon" !
+        light = "lotus"
+    },
+    colors = {
+        theme = {
+            all = {
+                ui = {
+                    bg_gutter = "none",
+                }
+            }
+        }
+    }
 })
 
 vim.cmd("colorscheme oasis")
