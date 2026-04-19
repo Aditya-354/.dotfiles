@@ -947,9 +947,9 @@ require("gruvbox").setup({
   underline = true,
   bold = false,
   italic = {
-    strings = true,
-    emphasis = true,
-    comments = true,
+    strings = false,
+    emphasis = false,
+    comments = false,
     operators = false,
     folds = false,
   },
@@ -958,7 +958,7 @@ require("gruvbox").setup({
   invert_signs = false,
   invert_tabline = true,
   inverse = true, -- invert background for search, diffs, statuslines and errors
-  contrast = "hard", -- can be "hard", "soft" or empty string
+  contrast = "", -- can be "hard", "soft" or empty string
   palette_overrides = {},
   overrides = {},
   dim_inactive = false,
@@ -1014,7 +1014,7 @@ require("darkrose").setup({
 -- Lua
 require('onedark').setup  {
     -- Main options --
-    style = 'deep', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+    style = 'dark', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
     transparent = false,  -- Show/hide background
     term_colors = true, -- Change terminal color as per the selected theme style
     ending_tildes = true, -- Show the end-of-buffer tildes. By default they are hidden
@@ -1028,11 +1028,12 @@ require('onedark').setup  {
     -- Options are italic, bold, underline, none
     -- You can configure multiple style with comma separated, For e.g., keywords = 'italic,bold'
     code_style = {
-        comments = 'italic',
+        comments = 'none',
         keywords = 'none',
         functions = 'none',
         strings = 'none',
-        variables = 'none'
+        variables = 'none',
+        Methods = 'none',
     },
 
     -- Lualine options --
@@ -1146,7 +1147,7 @@ require("neomodern").setup({
 
 -- Set options before loading the scheme
 vim.g.sonokai_style = 'default'
-vim.g.sonokai_enable_italic = 1
+vim.g.sonokai_enable_italic = 0
 vim.g.sonokai_better_performance = 1
 vim.keymap.set("n", "<leader>tt", require("oasis").toggle_transparency, { desc = "Toggle Transparency" })
 
