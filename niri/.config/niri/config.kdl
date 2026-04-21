@@ -184,7 +184,7 @@ layout {
         // If you enable the border, you probably want to disable the focus ring.
         on
 
-        width 2
+        width 0
         active-color "#999999"
         inactive-color "#505050"
 
@@ -227,7 +227,7 @@ layout {
         softness 30
 
         // Spread expands the shadow.
-        spread 10
+        spread 20
 
         // Offset moves the shadow relative to the window.
         offset x=0 y=5
