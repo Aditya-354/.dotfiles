@@ -274,6 +274,7 @@ vim.keymap.set("n", "<leader>c", ":nohlsearch<CR>", { desc = "Clear search highl
 vim.keymap.set("n", "<leader>le", ":lsp enable<CR>", { desc = "Enable LSP support" })
 vim.keymap.set("n", "<leader>ld", ":lsp disable<CR>", { desc = "Disable LSP support" })
 vim.keymap.set("n", "<leader>lp", ":LivePreview start<CR>", { desc = "Start live preview" })
+vim.keymap.set("i", "<C-BS>", "<C-w>", { desc = "Delete word" })
 
 vim.keymap.set("n", "<leader>sl", ":StrudelLaunch<CR>", { desc = "Launch strudel" })
 vim.keymap.set("n", "<leader>su", ":StrudelUpdate<CR>", { desc = "Update strudel" })
