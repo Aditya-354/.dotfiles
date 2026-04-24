@@ -332,6 +332,7 @@ binds {
 
     // Applications & Programs
     Alt+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Alt+F {spawn "foot"; }
     Alt+Shift+S {spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "screenRecorder" "toggle"; }
     Alt+G hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Alt+Period { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "emoji"; }
