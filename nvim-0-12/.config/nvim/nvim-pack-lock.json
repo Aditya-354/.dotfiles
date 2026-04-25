@@ -1,8 +1,21 @@
 {
   "plugins": {
+    "LuaSnip": {
+      "rev": "a62e1083a3cfe8b6b206e7d3d33a51091df25357",
+      "src": "https://github.com/L3MON4D3/LuaSnip"
+    },
+    "blink.cmp": {
+      "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
+      "src": "https://github.com/saghen/blink.cmp",
+      "version": "1.0.0 - 2.0.0"
+    },
     "darkrose.nvim": {
       "rev": "7d3ffd24460dafdcdbd50322442b8f4d1152c6f6",
       "src": "https://github.com/water-sucks/darkrose.nvim"
+    },
+    "efmls-configs-nvim": {
+      "rev": "5dc52088c231f2721f545570fcb541b04802ce6b",
+      "src": "https://github.com/creativenull/efmls-configs-nvim"
     },
     "everforest": {
       "rev": "b03a03148c8b34c24c96960b93da9c8883d11f54",
