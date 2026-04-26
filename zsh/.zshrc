@@ -13,7 +13,6 @@ export ZSH="$HOME/.oh-my-zsh"
 
 alias so='source ~/.zshrc && clear && fastfetch'
 alias cl='clear'
-alias e='nvim'
 alias workspace='tmux new -As workspace'
 alias base='tmux new -As base'
 # alias g++='g++ -std=c++23 -g -Wall -Wextra -Wshadow'
