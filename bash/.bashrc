@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+alias ls='colorls'
 alias grep='grep --color=auto'
 alias so='clear && source ~/.bashrc && fastfetch'
 alias cl='clear'
@@ -34,5 +34,5 @@ source /usr/share/nvm/init-nvm.sh
 # eval "$(oh-my-posh init bash --config 'lambdageneration')"
 # eval "$(oh-my-posh init bash --config 'hul10')"
 # eval "$(oh-my-posh init bash --config 'robbyrussell')"
-eval "$(oh-my-posh init bash --config 'powerlevel10k_classic')"
+eval "$(oh-my-posh init bash --config 'pure')"
 
