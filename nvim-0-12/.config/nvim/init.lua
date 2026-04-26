@@ -971,7 +971,7 @@ require("gruvbox").setup({
   palette_overrides = {},
   overrides = {},
   dim_inactive = false,
-  transparent_mode = false,
+  transparent_mode = true,
 })
 
 -- require("github-theme").setup({
@@ -1001,17 +1001,17 @@ require("darkrose").setup({
         -- orange = "#F87757",
     },
     -- Override existing or add new highlight groups
-    transparent_background = false,
-    overrides = function(c)
-        return {
-            -- Type = { fg = "#aa67ca" },
-            String = { fg = "#9a8000" },
-            ["@string"] = { fg = "#9a8000" },
-            ["@comment"] = { fg = "#7b9b9a" },
-            Comment = { fg = "#7b9b9a" },
-            CursorLine = { bg = "#1a1a1a" },
-        }
-    end,
+    transparent_background = true,
+    -- overrides = function(c)
+    --     return {
+    --         -- Type = { fg = "#aa67ca" },
+    --         String = { fg = "#9a8000" },
+    --         ["@string"] = { fg = "#9a8000" },
+    --         ["@comment"] = { fg = "#7b9b9a" },
+    --         Comment = { fg = "#7b9b9a" },
+    --         CursorLine = { bg = "#1a1a1a" },
+    --     }
+    -- end,
     -- Styles to enable or disable
     styles = {
         bold = false, -- Enable bold highlights for some highlight groups
@@ -1219,7 +1219,7 @@ require('kanagawa').setup({
     keywordStyle = { italic = false},
     statementStyle = { bold = false },
     typeStyle = { bold = false},
-    transparent = false,         -- do not set background color
+    transparent = true,         -- do not set background color
     dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
     terminalColors = true,       -- define vim.g.terminal_color_{0,17}
     colors = {                   -- add/modify theme and palette colors
@@ -1343,5 +1343,5 @@ require("rose-pine").setup({
     end,
 })
 
-vim.cmd("colorscheme oasis-starlight")
+vim.cmd("colorscheme kanagawa-dragon")
 
