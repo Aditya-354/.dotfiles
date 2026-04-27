@@ -1354,48 +1354,55 @@ require("black-metal").setup({
   },
 })
 
--- local function set_transparent() -- set UI component to transparent
--- 	local groups = {
--- 		"Normal",
--- 		"NormalNC",
--- 		"EndOfBuffer",
--- 		"NormalFloat",
--- 		"FloatBorder",
--- 		"SignColumn",
--- 		"StatusLine",
--- 		"StatusLineNC",
--- 		"TabLine",
--- 		"TabLineFill",
--- 		"TabLineSel",
--- 		"ColorColumn",
--- 	}
--- 	for _, g in ipairs(groups) do
--- 		vim.api.nvim_set_hl(0, g, { bg = "none" })
--- 	end
--- 	-- vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", fg = "#767676" })
--- end
+local function set_transparent() -- set UI component to transparent
+	local groups = {
+		"Normal",
+		"NormalNC",
+		"EndOfBuffer",
+		"NormalFloat",
+		"FloatBorder",
+		"SignColumn",
+		"StatusLine",
+		"StatusLineNC",
+		"TabLine",
+		"TabLineFill",
+		"TabLineSel",
+		"ColorColumn",
+	}
+	for _, g in ipairs(groups) do
+		vim.api.nvim_set_hl(0, g, { bg = "none" })
+	end
+	-- vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", fg = "#767676" })
+end
 
 -- Can be one of: bathory | burzum | dark-funeral | darkthrone | 
 -- emperor | gorgoroth | immortal | impaled-nazarene | khold | marduk | mayhem | nile | taake | thyrfing | venom | windir
 
-vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "darkthrone",
-    callback = function()
-        local hl_groups = {
-            "Normal",
-            "NormalFloat",
-            "SignColumn",
-            "NormalNC", -- background for non-current windows
-            "EndOfBuffer",
-            "MsgArea",
-        }
-        for _, group in ipairs(hl_groups) do
-            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
-        end
-    end,
-})
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--     pattern = "darkthrone",
+--     callback = function()
+--         local hl_groups = {
+--             "Normal",
+--             "NormalFloat",
+--             "SignColumn",
+--             "NormalNC", -- background for non-current windows
+--             "EndOfBuffer",
+--             "MsgArea",
+--             "FloatBorder",
+--             "StatusLine",
+--             "StatusLineNC",
+--             "ColorColumn",
+--             "TabLine",
+--             "TabLineFill",
+--             "TabLineSel",
+--         }
+--         for _, group in ipairs(hl_groups) do
+--             vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+--         end
+--     end,
+-- })
 
-vim.cmd("colorscheme darkthrone")
+vim.cmd("colorscheme burzum")
 
--- set_transparent()
+set_transparent()
 
