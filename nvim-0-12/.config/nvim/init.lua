@@ -1402,7 +1402,7 @@ end
 --     end,
 -- })
 
-vim.cmd("colorscheme burzum")
+vim.cmd("colorscheme bathory")
 
 set_transparent()
 
