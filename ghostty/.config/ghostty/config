@@ -44,7 +44,7 @@ theme = Rose Pine
 background-opacity = 0.9
 # background-opacity = 1
 # background-blur = 20
-background = #030303
+background = #020202
 
 # Feature config
 cursor-style = block
