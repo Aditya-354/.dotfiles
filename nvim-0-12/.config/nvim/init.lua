@@ -391,7 +391,6 @@ vim.pack.add({
   "https://github.com/water-sucks/darkrose.nvim",
   "https://github.com/navarasu/onedark.nvim",
   "https://github.com/uhs-robert/oasis.nvim",
-  "https://github.com/casedami/neomodern.nvim",
   "https://github.com/sainnhe/sonokai",
   "https://github.com/Mofiqul/vscode.nvim",
   "https://github.com/rebelot/kanagawa.nvim",
@@ -445,7 +444,6 @@ packadd("kanagawa.nvim")
 packadd("vscode.nvim")
 packadd("oasis.nvim")
 packadd("sonokai")
-packadd("neomodern.nvim")
 packadd("darkrose.nvim")
 packadd("mellifluous.nvim")
 packadd("everforest")
@@ -1126,32 +1124,6 @@ require("lualine").setup({
     winbar = {},
     inactive_winbar = {},
     extensions = {}
-})
-
-require("neomodern").setup({
-  -- 'default' default background
-  -- 'alt' darker background
-  -- 'transparent' background is not set
-  bg = "transparent",
-
-  theme = "moon", -- 'moon' | 'iceclimber' | 'gyokuro' | 'hojicha' | 'roseprime'
-
-  gutter = {
-    cursorline = false, -- highlight the cursorline in the gutter
-    dark = false, -- highlight gutter darker than the Normal bg
-  },
-
-  diagnostics = {
-    darker = true, -- use darker colors for diagnostics
-    undercurl = true, -- use undercurl for diagnostics
-    background = true, -- use a background color for diagnostics
-  },
-
-  -- override colors, see #Customization below
-  overrides = {
-    default = {},
-    hlgroups = {}
-  }
 })
 
 -- Set options before loading the scheme
