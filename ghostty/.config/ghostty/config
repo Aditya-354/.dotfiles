@@ -41,10 +41,10 @@ theme = Rose Pine
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-background-opacity = 0.9
+background-opacity = 0.8
 # background-opacity = 1
 # background-blur = 20
-background = #020202
+background = #000000
 
 # Feature config
 cursor-style = block
