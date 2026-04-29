@@ -1410,12 +1410,12 @@ end
 --     end,
 -- })
 
-vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "bathory",
-    callback = function()
-        vim.api.nvim_set_hl(0, "Comment", { fg = "#555555" })
-    end,
-})
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--     pattern = "bathory",
+--     callback = function()
+--         vim.api.nvim_set_hl(0, "Comment", { fg = "#555555" })
+--     end,
+-- })
 
 vim.cmd("colorscheme bathory")
 
