@@ -105,3 +105,22 @@ tooltip {
     border-radius: 8px;
 }
 
+#cpu {
+    color: #2ae9ee;
+}
+
+#cpu:hover {
+    background-color: rgba(11, 11, 11, 0.5);
+    transition: all 300ms ease-in-out;
+    border-radius: 8px;
+}
+
+#memory {
+    color: @yellow;
+}
+
+#memory:hover {
+    background-color: rgba(11, 11, 11, 0.5);
+    transition: all 300ms ease-in-out;
+    border-radius: 8px;
+}
