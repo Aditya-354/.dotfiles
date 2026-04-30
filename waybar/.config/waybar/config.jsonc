@@ -9,7 +9,7 @@
 {
     "layer": "top",
     // "modules-left": ["sway/workspaces", "sway/mode"],
-    "spacing": 20,
+    "spacing": 5,
     // "margin-top": 5,
     "modules-left": [
         "hyprland/workspaces", 
@@ -101,6 +101,6 @@
         "format": " {initialClass} ",
         "separate-outputs": true,
         "icon": true,
-        "tooltip-format": " {initialClass} - {title} ",
+        "tooltip-format": " {title} ",
     },
 }
