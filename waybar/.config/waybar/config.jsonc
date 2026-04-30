@@ -9,7 +9,7 @@
 {
     "layer": "top",
     // "modules-left": ["sway/workspaces", "sway/mode"],
-    "spacing": 5,
+    "spacing": 8,
     // "margin-top": 5,
     "modules-left": [
         "hyprland/workspaces", 
@@ -48,7 +48,7 @@
         }
     },
     "pulseaudio": {
-        "format": "{volume}% {icon}",
+        "format": " {volume}% {icon}",
         // "format-bluetooth": "{volume}% {icon} ",
         "format-muted": "Muted ",
         "format-icons": {
@@ -66,7 +66,7 @@
     },
     "network": {
         "interface": "enp2s0",
-        "format": "{ifname}",
+        "format": "{ifname} ",
         "format-wifi": "{essid} {icon}",
         "fotmat-icons": [
             "󰤯",
@@ -84,7 +84,7 @@
         "on-click": "ghostty -e nmtui",
     },
     "bluetooth": {
-        "format": " {status}",
+        "format": "  {status} ",
         "format-disabled": "",
         "format-connected-battery": "  {device_battery_percentage}% ",
         "tooltip-format": "{controller_alias}\t{controller_address}",
