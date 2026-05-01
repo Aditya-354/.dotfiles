@@ -61,7 +61,7 @@ tooltip {
 }
 
 #workspaces {
-    /* background-color: @bg3; */
+    background-color: @bg3;
     margin: 2px 0;
     padding: 2px 4px;
     border-radius: 99px;
@@ -96,7 +96,7 @@ tooltip {
 }
 
 #bluetooth {
-    color: @aqua;
+    color: cornflowerblue;
 }
 
 #bluetooth:hover {
