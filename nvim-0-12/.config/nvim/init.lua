@@ -6,7 +6,7 @@ vim.opt.termguicolors = true
 -- ============================================================================
 vim.opt.number = true -- line number
 vim.opt.relativenumber = true -- relative line numbers
-vim.opt.cursorline = false -- highlight current line
+vim.opt.cursorline = true -- highlight current line
 vim.opt.wrap = false -- do not wrap lines by default
 vim.opt.scrolloff = 10 -- keep 20 lines above/below cursor
 vim.opt.sidescrolloff = 10 -- keep 10 lines to left/right of cursor
@@ -380,6 +380,7 @@ vim.pack.add({
   "https://github.com/folke/tokyonight.nvim",
   "https://github.com/craftzdog/solarized-osaka.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
+  { src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
   "https://github.com/shaunsingh/nord.nvim",
   { src = "https://github.com/rose-pine/neovim", name = "rose-pine" },
   {
@@ -420,6 +421,7 @@ packadd("onedark.nvim")
 -- LSP
 packadd("nvim-lspconfig")
 packadd("solarized-osaka.nvim")
+packadd("catppuccin")
 packadd("mason.nvim")
 packadd("gruvbox.nvim")
 packadd("nord.nvim")
@@ -843,92 +845,92 @@ vim.lsp.enable({
 -- ============================================================================
 -- FLOATING TERMINAL
 -- ============================================================================
--- vim.api.nvim_create_autocmd("TermClose", {
--- 	group = augroup,
--- 	callback = function()
--- 		if vim.v.event.status == 0 then
--- 			vim.api.nvim_buf_delete(0, {})
--- 		end
--- 	end,
--- })
---
--- vim.api.nvim_create_autocmd("TermOpen", {
--- 	group = augroup,
--- 	callback = function()
--- 		vim.opt_local.number = false
--- 		vim.opt_local.relativenumber = false
--- 		vim.opt_local.signcolumn = "no"
--- 	end,
--- })
---
--- local terminal_state = { buf = nil, win = nil, is_open = false }
---
--- local function FloatingTerminal()
--- 	if terminal_state.is_open and terminal_state.win and vim.api.nvim_win_is_valid(terminal_state.win) then
--- 		vim.api.nvim_win_close(terminal_state.win, false)
--- 		terminal_state.is_open = false
--- 		return
--- 	end
---
--- 	if not terminal_state.buf or not vim.api.nvim_buf_is_valid(terminal_state.buf) then
--- 		terminal_state.buf = vim.api.nvim_create_buf(false, true)
--- 		vim.bo[terminal_state.buf].bufhidden = "hide"
--- 	end
---
--- 	local width = math.floor(vim.o.columns * 0.8)
--- 	local height = math.floor(vim.o.lines * 0.8)
--- 	local row = math.floor((vim.o.lines - height) / 2)
--- 	local col = math.floor((vim.o.columns - width) / 2)
---
--- 	terminal_state.win = vim.api.nvim_open_win(terminal_state.buf, true, {
--- 		relative = "editor",
--- 		width = width,
--- 		height = height,
--- 		row = row,
--- 		col = col,
--- 		style = "minimal",
--- 		border = "rounded",
--- 	})
---
--- 	vim.wo[terminal_state.win].winblend = 0
--- 	vim.wo[terminal_state.win].winhighlight = "Normal:FloatingTermNormal,FloatBorder:FloatingTermBorder"
--- 	vim.api.nvim_set_hl(0, "FloatingTermNormal", { bg = "none" })
--- 	vim.api.nvim_set_hl(0, "FloatingTermBorder", { bg = "none" })
---
--- 	local has_terminal = false
--- 	local lines = vim.api.nvim_buf_get_lines(terminal_state.buf, 0, -1, false)
--- 	for _, line in ipairs(lines) do
--- 		if line ~= "" then
--- 			has_terminal = true
--- 			break
--- 		end
--- 	end
--- 	if not has_terminal then
--- 		vim.fn.termopen(os.getenv("SHELL"))
--- 	end
---
--- 	terminal_state.is_open = true
--- 	vim.cmd("startinsert")
---
--- 	vim.api.nvim_create_autocmd("BufLeave", {
--- 		buffer = terminal_state.buf,
--- 		callback = function()
--- 			if terminal_state.is_open and terminal_state.win and vim.api.nvim_win_is_valid(terminal_state.win) then
--- 				vim.api.nvim_win_close(terminal_state.win, false)
--- 				terminal_state.is_open = false
--- 			end
--- 		end,
--- 		once = true,
--- 	})
--- end
---
--- vim.keymap.set("n", "<leader>t", FloatingTerminal, { noremap = true, silent = true, desc = "Toggle floating terminal" })
--- vim.keymap.set("t", "<Esc>", function()
--- 	if terminal_state.is_open and terminal_state.win and vim.api.nvim_win_is_valid(terminal_state.win) then
--- 		vim.api.nvim_win_close(terminal_state.win, false)
--- 		terminal_state.is_open = false
--- 	end
--- end, { noremap = true, silent = true, desc = "Close floating terminal" })
+vim.api.nvim_create_autocmd("TermClose", {
+	group = augroup,
+	callback = function()
+		if vim.v.event.status == 0 then
+			vim.api.nvim_buf_delete(0, {})
+		end
+	end,
+})
+
+vim.api.nvim_create_autocmd("TermOpen", {
+	group = augroup,
+	callback = function()
+		vim.opt_local.number = false
+		vim.opt_local.relativenumber = false
+		vim.opt_local.signcolumn = "no"
+	end,
+})
+
+local terminal_state = { buf = nil, win = nil, is_open = false }
+
+local function FloatingTerminal()
+	if terminal_state.is_open and terminal_state.win and vim.api.nvim_win_is_valid(terminal_state.win) then
+		vim.api.nvim_win_close(terminal_state.win, false)
+		terminal_state.is_open = false
+		return
+	end
+
+	if not terminal_state.buf or not vim.api.nvim_buf_is_valid(terminal_state.buf) then
+		terminal_state.buf = vim.api.nvim_create_buf(false, true)
+		vim.bo[terminal_state.buf].bufhidden = "hide"
+	end
+
+	local width = math.floor(vim.o.columns * 0.8)
+	local height = math.floor(vim.o.lines * 0.8)
+	local row = math.floor((vim.o.lines - height) / 2)
+	local col = math.floor((vim.o.columns - width) / 2)
+
+	terminal_state.win = vim.api.nvim_open_win(terminal_state.buf, true, {
+		relative = "editor",
+		width = width,
+		height = height,
+		row = row,
+		col = col,
+		style = "minimal",
+		border = "rounded",
+	})
+
+	vim.wo[terminal_state.win].winblend = 0
+	vim.wo[terminal_state.win].winhighlight = "Normal:FloatingTermNormal,FloatBorder:FloatingTermBorder"
+	vim.api.nvim_set_hl(0, "FloatingTermNormal", { bg = "none" })
+	vim.api.nvim_set_hl(0, "FloatingTermBorder", { bg = "none" })
+
+	local has_terminal = false
+	local lines = vim.api.nvim_buf_get_lines(terminal_state.buf, 0, -1, false)
+	for _, line in ipairs(lines) do
+		if line ~= "" then
+			has_terminal = true
+			break
+		end
+	end
+	if not has_terminal then
+		vim.fn.termopen(os.getenv("SHELL"))
+	end
+
+	terminal_state.is_open = true
+	vim.cmd("startinsert")
+
+	vim.api.nvim_create_autocmd("BufLeave", {
+		buffer = terminal_state.buf,
+		callback = function()
+			if terminal_state.is_open and terminal_state.win and vim.api.nvim_win_is_valid(terminal_state.win) then
+				vim.api.nvim_win_close(terminal_state.win, false)
+				terminal_state.is_open = false
+			end
+		end,
+		once = true,
+	})
+end
+
+vim.keymap.set("n", "<leader>t", FloatingTerminal, { noremap = true, silent = true, desc = "Toggle floating terminal" })
+vim.keymap.set("t", "<Esc>", function()
+	if terminal_state.is_open and terminal_state.win and vim.api.nvim_win_is_valid(terminal_state.win) then
+		vim.api.nvim_win_close(terminal_state.win, false)
+		terminal_state.is_open = false
+	end
+end, { noremap = true, silent = true, desc = "Close floating terminal" })
 
 -- =============================================================================================
 -- THEME CONFIG
@@ -957,26 +959,6 @@ require("gruvbox").setup({
   dim_inactive = false,
   transparent_mode = false,
 })
-
--- require("github-theme").setup({
---     options = {
---         hide_end_of_buffer = false,
---         transparent = false,
---         styles = {                 -- Style to be applied to different syntax groups
---             bold = false,
---             comments = 'NONE',       -- Value is any valid attr-list value `:help attr-list`
---             functions = 'NONE',
---             keywords = 'NONE',
---             variables = 'NONE',
---             conditionals = 'NONE',
---             constants = 'NONE',
---             numbers = 'NONE',
---             operators = 'NONE',
---             strings = 'NONE',
---             types = 'NONE',
---         },
---     }
--- })
 
 -- Lua
 require('onedark').setup  {
@@ -1173,66 +1155,7 @@ require("rose-pine").setup({
         Cursor = { fg = 'white', bg = 'white' },
         -- If you want the line number of the cursor to be brighter too:
         CursorLineNr = { fg = '#ffffff', bold = true }, 
-    }
-    --    groups = {
-	--        border = "muted",
-	--        link = "iris",
-	--        panel = "surface",
-	--
-	--        error = "love",
-	--        hint = "iris",
-	--        info = "foam",
-	--        note = "pine",
-	--        todo = "rose",
-	--        warn = "gold",
-	--
-	--        git_add = "foam",
-	--        git_change = "rose",
-	--        git_delete = "love",
-	--        git_dirty = "rose",
-	--        git_ignore = "muted",
-	--        git_merge = "iris",
-	--        git_rename = "pine",
-	--        git_stage = "iris",
-	--        git_text = "rose",
-	--        git_untracked = "subtle",
-	--
-	--        h1 = "iris",
-	--        h2 = "foam",
-	--        h3 = "rose",
-	--        h4 = "gold",
-	--        h5 = "pine",
-	--        h6 = "foam",
-	--    },
-	--
-	--    palette = {
-	--        -- Override the builtin palette per variant
-	--        -- moon = {
-	--        --     base = '#18191a',
-	--        --     overlay = '#363738',
-	--        -- },
-	--    },
-	--
-	-- -- NOTE: Highlight groups are extended (merged) by default. Disable this
-	-- -- per group via `inherit = false`
-	--    highlight_groups = {
-	--        -- Comment = { fg = "foam" },
-	--        -- StatusLine = { fg = "love", bg = "love", blend = 15 },
-	--        -- VertSplit = { fg = "muted", bg = "muted" },
-	--        -- Visual = { fg = "base", bg = "text", inherit = false },
-	--    },
-	--
-	--    before_highlight = function(group, highlight, palette)
-	--        -- Disable all undercurls
-	--        -- if highlight.undercurl then
-	--        --     highlight.undercurl = false
-	--        -- end
-	--        --
-	--        -- Change palette colour
-	--        -- if highlight.fg == palette.pine then
-	--        --     highlight.fg = palette.foam
-	--        -- end
-	--    end,
+    },
 })
 
 require("black-metal").setup({
@@ -1317,77 +1240,100 @@ require("solarized-osaka").setup({
   hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
   dim_inactive = false, -- dims inactive windows
   lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
-
-  --- You can override specific color groups to use other groups or a hex color
-  --- function will be called with a ColorScheme table
-  -- ---@param colors ColorScheme
-  -- on_colors = function(colors) end,
-  --
-  -- --- You can override specific highlights to use other groups or a hex color
-  -- --- function will be called with a Highlights and ColorScheme table
-  -- ---@param highlights Highlights
-  -- ---@param colors ColorScheme
-  -- on_highlights = function(highlights, colors) end,
 })
 
-local function set_transparent() -- set UI component to transparent
-	local groups = {
-		"Normal",
-		"NormalNC",
-		"EndOfBuffer",
-		"NormalFloat",
-		"FloatBorder",
-		"SignColumn",
-		-- "StatusLine",
-		"StatusLineNC",
-		"TabLine",
-		"TabLineFill",
-		"TabLineSel",
-		"ColorColumn",
-    "LineNr",
-    -- "CursorLineNr",
-	}
-	for _, g in ipairs(groups) do
-		vim.api.nvim_set_hl(0, g, { bg = "none", ctermbg = "none" })
-	end
-	-- vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", fg = "#767676" })
-end
+require("catppuccin").setup({
+    flavour = "auto", -- latte, frappe, macchiato, mocha
+    background = { -- :h background
+        light = "latte",
+        dark = "mocha",
+    },
+    transparent_background = true, -- disables setting the background color.
+    float = {
+        transparent = false, -- enable transparent floating windows
+        solid = false, -- use solid styling for floating windows, see |winborder|
+    },
+    term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
+    dim_inactive = {
+        enabled = false, -- dims the background color of inactive window
+        shade = "dark",
+        percentage = 0.15, -- percentage of the shade to apply to the inactive window
+    },
+    no_italic = false, -- Force no italic
+    no_bold = false, -- Force no bold
+    no_underline = false, -- Force no underline
+    styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
+        comments = { "italic" }, -- Change the style of comments
+        conditionals = { "italic" },
+        loops = {},
+        functions = {},
+        keywords = {},
+        strings = {},
+        variables = {},
+        numbers = {},
+        booleans = {},
+        properties = {},
+        types = {},
+        operators = {},
+        -- miscs = {}, -- Uncomment to turn off hard-coded styles
+    },
+    lsp_styles = { -- Handles the style of specific lsp hl groups (see `:h lsp-highlight`).
+        virtual_text = {
+            errors = { "italic" },
+            hints = { "italic" },
+            warnings = { "italic" },
+            information = { "italic" },
+            ok = { "italic" },
+        },
+        underlines = {
+            errors = { "underline" },
+            hints = { "underline" },
+            warnings = { "underline" },
+            information = { "underline" },
+            ok = { "underline" },
+        },
+        inlay_hints = {
+            background = true,
+        },
+    },
+    color_overrides = {},
+    custom_highlights = {},
+    default_integrations = true,
+    auto_integrations = false,
+    integrations = {
+        cmp = true,
+        gitsigns = true,
+        nvimtree = true,
+        notify = false,
+        mini = {
+            enabled = true,
+        },
+    },
+})
 
--- Can be one of: bathory | burzum | dark-funeral | darkthrone | 
--- emperor | gorgoroth | immortal | impaled-nazarene | khold | marduk | mayhem | nile | taake | thyrfing | venom | windir
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "darkthrone",
+    callback = function()
+        local hl_groups = {
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "TabLineSel",
+        }
+        for _, group in ipairs(hl_groups) do
+            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+        end
+    end,
+})
 
--- vim.api.nvim_create_autocmd("ColorScheme", {
---     pattern = "darkthrone",
---     callback = function()
---         local hl_groups = {
---             "Normal",
---             "NormalFloat",
---             "SignColumn",
---             "NormalNC", -- background for non-current windows
---             "EndOfBuffer",
---             "MsgArea",
---             "FloatBorder",
---             "StatusLine",
---             "StatusLineNC",
---             "ColorColumn",
---             "TabLine",
---             "TabLineFill",
---             "TabLineSel",
---         }
---         for _, group in ipairs(hl_groups) do
---             vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
---         end
---     end,
--- })
-
--- vim.api.nvim_create_autocmd("ColorScheme", {
---     pattern = "bathory",
---     callback = function()
---         vim.api.nvim_set_hl(0, "Comment", { fg = "#555555" })
---     end,
--- })
-
-vim.cmd("colorscheme rose-pine")
-
-set_transparent()
+vim.cmd("colorscheme catppuccin-mocha")
 

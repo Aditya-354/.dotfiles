@@ -7,16 +7,16 @@
 }
 
 #waybar {
-    background-color: @bg0;
+    background-color: @base;
 }
 
 tooltip {
-    background-color: @bg4;
-    color: @fg;
+    background-color: @crust;
+    color: @subtext1;
     /* margin: 10px; */
     /* padding: 10px; */
     border-radius: 12px;
-    border-color: @grey0;
+    border-color: @mantle;
 }
 
 .modules-left {
@@ -25,7 +25,7 @@ tooltip {
 
 .modules-center {
     background-color: transparent;
-    color: @fg;
+    color: @text;
     padding: 2px 12px;
     border-radius: 99px;
     box-shadow: 0 0 1;
@@ -40,28 +40,28 @@ tooltip {
 }
 
 #pulseaudio {
-    color: @yellow;
+    color: @subtext0;
 }
 
 #pulseaudio:hover {
-    background-color: rgba(11, 11, 11, 0.5);
+    background-color: @crust;
     transition: all 300ms ease-in-out;
     border-radius: 8px;
 }
 
 #network {
-    color: #999999;
+    color: @overlay2;
     padding: 2px;
 }
 
 #network:hover {
-    background-color: rgba(11, 11, 11, 0.5);
+    background-color: @crust;
     transition: all 300ms ease-in-out;
     border-radius: 8px;
 }
 
 #workspaces {
-    background-color: transparent;
+    background-color: @surface0;
     /* background-color: @bg3; */
     margin: 2px 0;
     padding: 2px 4px;
@@ -69,7 +69,7 @@ tooltip {
 }
 
 #workspaces button {
-    background-color: @bg4;
+    background-color: @base;
     padding: 2px 4px;
     border-radius: 99px;
     margin: 0 2px;
@@ -78,12 +78,12 @@ tooltip {
 }
 
 #workspaces buttom.empty {
-    color: @grey0;
+    color: @sky;
 }
 
 #workspaces button.active {
-    background-color: @green;
-    color: @bg1;
+    background-color: @yellow;
+    color: @crust;
     min-width: 1.5rem;
     font-weight: bold;
     transition: none;
@@ -97,31 +97,31 @@ tooltip {
 }
 
 #bluetooth {
-    color: cornflowerblue;
+    color: @blue;
 }
 
 #bluetooth:hover {
-    background-color: rgba(11, 11, 11, 0.5);
+    background-color: @crust;
     transition: all 300ms ease-in-out;
     border-radius: 8px;
 }
 
 #cpu {
-    color: #2ae9ee;
+    color: @green;
 }
 
 #cpu:hover {
-    background-color: rgba(11, 11, 11, 0.5);
+    background-color: @crust;
     transition: all 300ms ease-in-out;
     border-radius: 8px;
 }
 
 #memory {
-    color: @yellow;
+    color: @red;
 }
 
 #memory:hover {
-    background-color: rgba(11, 11, 11, 0.5);
+    background-color: @crust;
     transition: all 300ms ease-in-out;
     border-radius: 8px;
 }

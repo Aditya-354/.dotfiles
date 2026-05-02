@@ -18,7 +18,7 @@ window-padding-x = 0
 window-padding-y = 0
 # theme = Dracula
 # theme = Catppuccin Frappe
-# theme = Catppuccin Mocha
+theme = Catppuccin Mocha
 # theme = Adwaita Dark
 # theme = Blue Berry Pie
 # theme = TokyoNight Night
@@ -26,7 +26,7 @@ window-padding-y = 0
 # theme = Rapture
 # theme = Cursor Dark
 # theme = Rose Pine
-theme = iTerm2 Solarized Dark
+# theme = iTerm2 Solarized Dark
 # theme = Solarized Dark Higher Contrast
 # theme = Belafonte Night
 # theme = Vercel
@@ -46,7 +46,7 @@ theme = iTerm2 Solarized Dark
 background-opacity = 1
 # background-opacity = 1
 # background-blur = 20
-background = #000000
+# background = #000000
 
 # Feature config
 cursor-style = block

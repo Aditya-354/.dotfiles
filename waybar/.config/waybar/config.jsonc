@@ -1,13 +1,6 @@
-// 1. data / time
-// 2. media
-// 3. network / ethernet
-// 4. bluetooth
-// 5. workspaces
-// 6. volume
-// 7. brightness
-
 {
     "layer": "top",
+    "position": "bottom",
     // "modules-left": ["sway/workspaces", "sway/mode"],
     "spacing": 8,
     // "margin-top": 5,
