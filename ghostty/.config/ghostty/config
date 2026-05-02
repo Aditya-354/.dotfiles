@@ -25,7 +25,9 @@ window-padding-y = 0
 # theme = Calamity
 # theme = Rapture
 # theme = Cursor Dark
-theme = Rose Pine
+# theme = Rose Pine
+theme = iTerm2 Solarized Dark
+# theme = Solarized Dark Higher Contrast
 # theme = Belafonte Night
 # theme = Vercel
 # theme = Black Metal (Bathory)
@@ -41,10 +43,10 @@ theme = Rose Pine
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-background-opacity = 0.94
+background-opacity = 1
 # background-opacity = 1
 # background-blur = 20
-background = #220000
+background = #000000
 
 # Feature config
 cursor-style = block

@@ -11,7 +11,7 @@
 }
 
 tooltip {
-    background-color: @bg1;
+    background-color: @bg4;
     color: @fg;
     /* margin: 10px; */
     /* padding: 10px; */
@@ -24,7 +24,7 @@ tooltip {
 }
 
 .modules-center {
-    background-color: @bg0;
+    background-color: transparent;
     color: @fg;
     padding: 2px 12px;
     border-radius: 99px;
@@ -61,7 +61,8 @@ tooltip {
 }
 
 #workspaces {
-    background-color: @bg3;
+    background-color: transparent;
+    /* background-color: @bg3; */
     margin: 2px 0;
     padding: 2px 4px;
     border-radius: 99px;
@@ -89,7 +90,7 @@ tooltip {
 }
 
 #window {
-    background-color: @bg0;
+    background-color: transparent;
     border-radius: 20px;
     padding-left: 10px;
     padding-right: 10px;

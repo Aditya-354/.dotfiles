@@ -89,6 +89,10 @@
       "rev": "9504524e5ed0e326534698f637f9d038ba4cd0ee",
       "src": "https://github.com/rose-pine/neovim"
     },
+    "solarized-osaka.nvim": {
+      "rev": "a261ee90fb3e5e82660567e4874d384e996afa4f",
+      "src": "https://github.com/craftzdog/solarized-osaka.nvim"
+    },
     "sonokai": {
       "rev": "b023c5280b16fe2366f5e779d8d2756b3e5ee9c3",
       "src": "https://github.com/sainnhe/sonokai"

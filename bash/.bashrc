@@ -33,6 +33,6 @@ source /usr/share/nvm/init-nvm.sh
 # eval "$(oh-my-posh init bash --config 'kushal')"
 # eval "$(oh-my-posh init bash --config 'lambdageneration')"
 # eval "$(oh-my-posh init bash --config 'hul10')"
-# eval "$(oh-my-posh init bash --config 'robbyrussell')"
-eval "$(oh-my-posh init bash --config 'pure')"
+eval "$(oh-my-posh init bash --config 'robbyrussell')"
+# eval "$(oh-my-posh init bash --config 'pure')"
 

@@ -378,6 +378,7 @@ vim.pack.add({
   "https://github.com/rebelot/kanagawa.nvim",
   "https://github.com/ramojus/mellifluous.nvim",
   "https://github.com/folke/tokyonight.nvim",
+  "https://github.com/craftzdog/solarized-osaka.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
   "https://github.com/shaunsingh/nord.nvim",
   { src = "https://github.com/rose-pine/neovim", name = "rose-pine" },
@@ -418,6 +419,7 @@ packadd("strudel.nvim")
 packadd("onedark.nvim")
 -- LSP
 packadd("nvim-lspconfig")
+packadd("solarized-osaka.nvim")
 packadd("mason.nvim")
 packadd("gruvbox.nvim")
 packadd("nord.nvim")
@@ -949,11 +951,11 @@ require("gruvbox").setup({
   invert_signs = false,
   invert_tabline = true,
   inverse = true, -- invert background for search, diffs, statuslines and errors
-  contrast = "", -- can be "hard", "soft" or empty string
+  contrast = "soft", -- can be "hard", "soft" or empty string
   palette_overrides = {},
   overrides = {},
   dim_inactive = false,
-  transparent_mode = true,
+  transparent_mode = false,
 })
 
 -- require("github-theme").setup({
@@ -976,36 +978,10 @@ require("gruvbox").setup({
 --     }
 -- })
 
-
-require("darkrose").setup({
-    -- Override colors
-    colors = {
-        -- orange = "#F87757",
-    },
-    -- Override existing or add new highlight groups
-    transparent_background = true,
-    -- overrides = function(c)
-    --     return {
-    --         -- Type = { fg = "#aa67ca" },
-    --         String = { fg = "#9a8000" },
-    --         ["@string"] = { fg = "#9a8000" },
-    --         ["@comment"] = { fg = "#7b9b9a" },
-    --         Comment = { fg = "#7b9b9a" },
-    --         CursorLine = { bg = "#1a1a1a" },
-    --     }
-    -- end,
-    -- Styles to enable or disable
-    styles = {
-        bold = false, -- Enable bold highlights for some highlight groups
-        italic = false, -- Enable italic highlights for some highlight groups
-        underline = true, -- Enable underline highlights for some highlight groups
-    },
-})
-
 -- Lua
 require('onedark').setup  {
     -- Main options --
-    style = 'dark', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+    style = 'deep', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
     transparent = false,  -- Show/hide background
     term_colors = true, -- Change terminal color as per the selected theme style
     ending_tildes = true, -- Show the end-of-buffer tildes. By default they are hidden
@@ -1044,23 +1020,14 @@ require('onedark').setup  {
     },
 }
 
-require("mellifluous").setup({
-    styles = {
-        main_keywords = { bold = false },
-    },
-    mellifluous = {
-        neutral = true,
-    },
-})
-
 require("lualine").setup({
     options = {
         icons_enabled = true,
-        theme = 'rose-pine',
-        -- component_separators = { left = '', right = ''},
-        -- section_separators = { left = '', right = ''},
-        component_separators = { left = '', right = '' },
-        section_separators = { left = '', right = '' };
+        theme = 'oasis',
+        component_separators = { left = '', right = ''},
+        section_separators = { left = '', right = ''},
+        -- component_separators = { left = '', right = '' },
+        -- section_separators = { left = '', right = '' };
         disabled_filetypes = {
             statusline = {},
             winbar = {},
@@ -1110,10 +1077,6 @@ require("lualine").setup({
     extensions = {}
 })
 
--- Set options before loading the scheme
-vim.g.sonokai_style = 'default'
-vim.g.sonokai_enable_italic = 0
-vim.g.sonokai_better_performance = 1
 vim.keymap.set("n", "<leader>tt", require("oasis").toggle_transparency, { desc = "Toggle Transparency" })
 
 -- Oasis.nvim
@@ -1136,7 +1099,7 @@ require("oasis").setup({
   },
 
   -- Display options
-  transparent = false,                  -- Set to true for transparent backgrounds (bye-bye theme backgrounds)
+  transparent = true,                  -- Set to true for transparent backgrounds (bye-bye theme backgrounds)
   terminal_colors = true,               -- Apply Oasis colors to Neovim's built-in terminal
   match_paren_bg = false,               -- Enable/disable background on MatchParen highlight
 
@@ -1148,7 +1111,9 @@ require("oasis").setup({
   },
 
   palette_overrides = {},               -- Override colors in specific palettes
-  highlight_overrides = {},             -- Override specific highlight groups
+  highlight_overrides = {
+      -- Type = { fg = "#ffaa00" },
+  },             -- Override specific highlight groups
 
   -- Plugin integrations
   integrations = {
@@ -1166,45 +1131,10 @@ require("oasis").setup({
   },
 })
 
--- Default options:
-require('kanagawa').setup({
-    compile = false,             -- enable compiling the colorscheme
-    undercurl = true,            -- enable undercurls
-    commentStyle = { italic = false },
-    functionStyle = {},
-    keywordStyle = { italic = false},
-    statementStyle = { bold = false },
-    typeStyle = { bold = false},
-    transparent = true,         -- do not set background color
-    dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
-    terminalColors = true,       -- define vim.g.terminal_color_{0,17}
-    colors = {                   -- add/modify theme and palette colors
-        palette = {},
-        theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
-    },
-    overrides = function(colors) -- add/modify highlights
-        return {}
-    end,
-    theme = "wave",              -- Load "wave" theme
-    background = {               -- map the value of 'background' option to a theme
-        dark = "wave",           -- try "dragon" !
-        light = "lotus"
-    },
-    colors = {
-        theme = {
-            all = {
-                ui = {
-                    bg_gutter = "none",
-                }
-            }
-        }
-    }
-})
-
 -- Example config in lua
 vim.g.nord_contrast = true
 vim.g.nord_borders = false
-vim.g.nord_disable_background = true
+vim.g.nord_disable_background = false
 vim.g.nord_italic = false
 vim.g.nord_uniform_diff_background = true
 vim.g.nord_bold = false
@@ -1234,69 +1164,75 @@ require("rose-pine").setup({
 
     styles = {
         bold = false,
-        -- italic = false,
+        italic = false,
         transparency = true,
     },
 
-    groups = {
-        border = "muted",
-        link = "iris",
-        panel = "surface",
 
-        error = "love",
-        hint = "iris",
-        info = "foam",
-        note = "pine",
-        todo = "rose",
-        warn = "gold",
-
-        git_add = "foam",
-        git_change = "rose",
-        git_delete = "love",
-        git_dirty = "rose",
-        git_ignore = "muted",
-        git_merge = "iris",
-        git_rename = "pine",
-        git_stage = "iris",
-        git_text = "rose",
-        git_untracked = "subtle",
-
-        h1 = "iris",
-        h2 = "foam",
-        h3 = "rose",
-        h4 = "gold",
-        h5 = "pine",
-        h6 = "foam",
-    },
-
-    palette = {
-        -- Override the builtin palette per variant
-        -- moon = {
-        --     base = '#18191a',
-        --     overlay = '#363738',
-        -- },
-    },
-
-	-- NOTE: Highlight groups are extended (merged) by default. Disable this
-	-- per group via `inherit = false`
     highlight_groups = {
-        -- Comment = { fg = "foam" },
-        -- StatusLine = { fg = "love", bg = "love", blend = 15 },
-        -- VertSplit = { fg = "muted", bg = "muted" },
-        -- Visual = { fg = "base", bg = "text", inherit = false },
-    },
-
-    before_highlight = function(group, highlight, palette)
-        -- Disable all undercurls
-        -- if highlight.undercurl then
-        --     highlight.undercurl = false
-        -- end
-        --
-        -- Change palette colour
-        -- if highlight.fg == palette.pine then
-        --     highlight.fg = palette.foam
-        -- end
-    end,
+        Cursor = { fg = 'white', bg = 'white' },
+        -- If you want the line number of the cursor to be brighter too:
+        CursorLineNr = { fg = '#ffffff', bold = true }, 
+    }
+    --    groups = {
+	--        border = "muted",
+	--        link = "iris",
+	--        panel = "surface",
+	--
+	--        error = "love",
+	--        hint = "iris",
+	--        info = "foam",
+	--        note = "pine",
+	--        todo = "rose",
+	--        warn = "gold",
+	--
+	--        git_add = "foam",
+	--        git_change = "rose",
+	--        git_delete = "love",
+	--        git_dirty = "rose",
+	--        git_ignore = "muted",
+	--        git_merge = "iris",
+	--        git_rename = "pine",
+	--        git_stage = "iris",
+	--        git_text = "rose",
+	--        git_untracked = "subtle",
+	--
+	--        h1 = "iris",
+	--        h2 = "foam",
+	--        h3 = "rose",
+	--        h4 = "gold",
+	--        h5 = "pine",
+	--        h6 = "foam",
+	--    },
+	--
+	--    palette = {
+	--        -- Override the builtin palette per variant
+	--        -- moon = {
+	--        --     base = '#18191a',
+	--        --     overlay = '#363738',
+	--        -- },
+	--    },
+	--
+	-- -- NOTE: Highlight groups are extended (merged) by default. Disable this
+	-- -- per group via `inherit = false`
+	--    highlight_groups = {
+	--        -- Comment = { fg = "foam" },
+	--        -- StatusLine = { fg = "love", bg = "love", blend = 15 },
+	--        -- VertSplit = { fg = "muted", bg = "muted" },
+	--        -- Visual = { fg = "base", bg = "text", inherit = false },
+	--    },
+	--
+	--    before_highlight = function(group, highlight, palette)
+	--        -- Disable all undercurls
+	--        -- if highlight.undercurl then
+	--        --     highlight.undercurl = false
+	--        -- end
+	--        --
+	--        -- Change palette colour
+	--        -- if highlight.fg == palette.pine then
+	--        --     highlight.fg = palette.foam
+	--        -- end
+	--    end,
 })
 
 require("black-metal").setup({
@@ -1331,7 +1267,7 @@ require("black-metal").setup({
   -- The following table accepts values the same as the `gui` option for normal
   -- highlights. For example, `bold`, `italic`, `underline`, `none`.
   code_style = {
-    comments = "italic",
+    comments = "none",
     conditionals = "none",
     functions = "none",
     keywords = "none",
@@ -1358,6 +1294,40 @@ require("black-metal").setup({
       reverse = false,
     },
   },
+})
+
+require("solarized-osaka").setup({
+  -- your configuration comes here
+  -- or leave it empty to use the default settings
+  transparent = true, -- Enable this to disable setting the background color
+  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
+  styles = {
+    -- Style to be applied to different syntax groups
+    -- Value is any valid attr-list value for `:help nvim_set_hl`
+    comments = { italic = false },
+    keywords = { italic = false },
+    functions = { italic = false },
+    variables = { italic = false },
+    -- Background styles. Can be "dark", "transparent" or "normal"
+    sidebars = "dark", -- style for sidebars, see below
+    floats = "dark", -- style for floating windows
+  },
+  -- sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
+  day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
+  hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
+  dim_inactive = false, -- dims inactive windows
+  lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
+
+  --- You can override specific color groups to use other groups or a hex color
+  --- function will be called with a ColorScheme table
+  -- ---@param colors ColorScheme
+  -- on_colors = function(colors) end,
+  --
+  -- --- You can override specific highlights to use other groups or a hex color
+  -- --- function will be called with a Highlights and ColorScheme table
+  -- ---@param highlights Highlights
+  -- ---@param colors ColorScheme
+  -- on_highlights = function(highlights, colors) end,
 })
 
 local function set_transparent() -- set UI component to transparent
@@ -1417,7 +1387,7 @@ end
 --     end,
 -- })
 
-vim.cmd("colorscheme bathory")
+vim.cmd("colorscheme rose-pine")
 
 set_transparent()
 
