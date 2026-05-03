@@ -1005,7 +1005,7 @@ require('onedark').setup  {
 require("lualine").setup({
     options = {
         icons_enabled = true,
-        theme = 'oasis',
+        theme = 'auto',
         component_separators = { left = '', right = ''},
         section_separators = { left = '', right = ''},
         -- component_separators = { left = '', right = '' },
