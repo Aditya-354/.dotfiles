@@ -12,7 +12,7 @@ alias cl='clear'
 alias workspace='tmux new -As workspace'
 alias base='tmux new -As base'
 
-# ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 # ZSH_THEME="kafeitu"
 # ZSH_THEME="kphoen"
 # ZSH_THEME="gianu"
@@ -41,5 +41,5 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 [[ ! -f ~/.dotfiles/zsh/.p10k.zsh ]] || source ~/.dotfiles/zsh/.p10k.zsh
 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 # eval "$(oh-my-posh init zsh --config 'robbyrussell')"
