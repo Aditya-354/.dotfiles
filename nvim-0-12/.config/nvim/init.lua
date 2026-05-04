@@ -1263,8 +1263,8 @@ require("catppuccin").setup({
     no_bold = false, -- Force no bold
     no_underline = false, -- Force no underline
     styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
-        comments = { "italic" }, -- Change the style of comments
-        conditionals = { "italic" },
+        comments = {}, -- Change the style of comments
+        conditionals = {},
         loops = {},
         functions = {},
         keywords = {},
@@ -1275,7 +1275,7 @@ require("catppuccin").setup({
         properties = {},
         types = {},
         operators = {},
-        -- miscs = {}, -- Uncomment to turn off hard-coded styles
+        miscs = {}, -- Uncomment to turn off hard-coded styles
     },
     lsp_styles = { -- Handles the style of specific lsp hl groups (see `:h lsp-highlight`).
         virtual_text = {
