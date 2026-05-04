@@ -1311,29 +1311,29 @@ require("catppuccin").setup({
     },
 })
 
-vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "darkthrone",
-    callback = function()
-        local hl_groups = {
-            "Normal",
-            "NormalFloat",
-            "SignColumn",
-            "NormalNC", -- background for non-current windows
-            "EndOfBuffer",
-            "MsgArea",
-            "FloatBorder",
-            "StatusLine",
-            "StatusLineNC",
-            "ColorColumn",
-            "TabLine",
-            "TabLineFill",
-            "TabLineSel",
-        }
-        for _, group in ipairs(hl_groups) do
-            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
-        end
-    end,
-})
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--     pattern = "darkthrone",
+--     callback = function()
+--         local hl_groups = {
+--             "Normal",
+--             "NormalFloat",
+--             "SignColumn",
+--             "NormalNC", -- background for non-current windows
+--             "EndOfBuffer",
+--             "MsgArea",
+--             "FloatBorder",
+--             "StatusLine",
+--             "StatusLineNC",
+--             "ColorColumn",
+--             "TabLine",
+--             "TabLineFill",
+--             "TabLineSel",
+--         }
+--         for _, group in ipairs(hl_groups) do
+--             vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+--         end
+--     end,
+-- })
 
 vim.cmd("colorscheme catppuccin-mocha")
 
