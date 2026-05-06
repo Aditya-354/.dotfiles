@@ -370,13 +370,8 @@ vim.pack.add({
   "https://github.com/ellisonleao/gruvbox.nvim",
   "https://github.com/sainnhe/everforest",
   "https://github.com/nvim-lualine/lualine.nvim",
-  "https://github.com/water-sucks/darkrose.nvim",
   "https://github.com/navarasu/onedark.nvim",
   "https://github.com/uhs-robert/oasis.nvim",
-  "https://github.com/sainnhe/sonokai",
-  "https://github.com/Mofiqul/vscode.nvim",
-  "https://github.com/rebelot/kanagawa.nvim",
-  "https://github.com/ramojus/mellifluous.nvim",
   "https://github.com/folke/tokyonight.nvim",
   "https://github.com/craftzdog/solarized-osaka.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
@@ -428,12 +423,7 @@ packadd("nord.nvim")
 packadd("rose-pine")
 packadd("tokyonight.nvim")
 packadd("black-metal-theme-neovim")
-packadd("kanagawa.nvim")
-packadd("vscode.nvim")
 packadd("oasis.nvim")
-packadd("sonokai")
-packadd("darkrose.nvim")
-packadd("mellifluous.nvim")
 packadd("everforest")
 packadd("efmls-configs-nvim")
 packadd("blink.cmp")
