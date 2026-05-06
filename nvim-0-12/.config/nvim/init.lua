@@ -6,7 +6,7 @@ vim.opt.termguicolors = true
 -- ============================================================================
 vim.opt.number = true -- line number
 vim.opt.relativenumber = true -- relative line numbers
-vim.opt.cursorline = true -- highlight current line
+vim.opt.cursorline = false -- highlight current line
 vim.opt.wrap = false -- do not wrap lines by default
 vim.opt.scrolloff = 10 -- keep 20 lines above/below cursor
 vim.opt.sidescrolloff = 10 -- keep 10 lines to left/right of cursor
@@ -1301,29 +1301,30 @@ require("catppuccin").setup({
     },
 })
 
--- vim.api.nvim_create_autocmd("ColorScheme", {
---     pattern = "onedark",
---     callback = function()
---         local hl_groups = {
---             "Normal",
---             "NormalFloat",
---             "SignColumn",
---             "NormalNC", -- background for non-current windows
---             "EndOfBuffer",
---             "MsgArea",
---             "FloatBorder",
---             "StatusLine",
---             "StatusLineNC",
---             "ColorColumn",
---             "TabLine",
---             "TabLineFill",
---             "TabLineSel",
---         }
---         for _, group in ipairs(hl_groups) do
---             vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
---         end
---     end,
--- })
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "bathory",
+    callback = function()
+        local hl_groups = {
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "TabLineSel",
+            "LineNr",
+        }
+        for _, group in ipairs(hl_groups) do
+            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+        end
+    end,
+})
 
-vim.cmd("colorscheme catppuccin-mocha")
+vim.cmd("colorscheme bathory")
 
