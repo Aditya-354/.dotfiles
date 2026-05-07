@@ -1144,7 +1144,7 @@ require("rose-pine").setup({
     highlight_groups = {
         Cursor = { fg = 'white', bg = 'white' },
         -- If you want the line number of the cursor to be brighter too:
-        CursorLineNr = { fg = '#ffffff', bold = true }, 
+        CursorLineNr = { fg = '#ffffff', bold = true },
     },
 })
 
