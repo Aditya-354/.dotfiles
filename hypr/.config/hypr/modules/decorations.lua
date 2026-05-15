@@ -3,12 +3,12 @@
 -----------------------
 hl.config({
     general = {
-        gaps_in  = 8,
-        gaps_out = 15,
-        -- gaps_in = 0,
-        -- gaps_out = 0,
+        -- gaps_in  = 8,
+        -- gaps_out = 15,
+        gaps_in = 0,
+        gaps_out = 0,
 
-        border_size = 0,
+        border_size = 3,
 
         col = {
             -- active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
@@ -21,10 +21,10 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 5,
-        rounding_power = 10,
-        -- rounding = 0,
-        -- rounding_power = 0,
+        -- rounding       = 5,
+        -- rounding_power = 10,
+        rounding = 0,
+        rounding_power = 0,
 
         active_opacity   = 1.0,
         inactive_opacity = 1.0,
