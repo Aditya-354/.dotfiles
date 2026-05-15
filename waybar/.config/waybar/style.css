@@ -4,17 +4,16 @@
     all: unset;
     font-family: "JetBrainsMono Nerd Font Propo", "MesloLGS Nerd Font Propo";
     font-size: 16px;
+    margin-top: -1px;
 }
 
 #waybar {
-    background-color: @base;
+    background-color: @bg0;
 }
 
 tooltip {
     background-color: @crust;
     color: @subtext1;
-    /* margin: 10px; */
-    /* padding: 10px; */
     border-radius: 12px;
     border-color: @mantle;
 }
@@ -25,7 +24,7 @@ tooltip {
 
 .modules-center {
     background-color: transparent;
-    color: @text;
+    color: @red;
     padding: 2px 12px;
     border-radius: 99px;
     box-shadow: 0 0 1;
@@ -40,7 +39,7 @@ tooltip {
 }
 
 #pulseaudio {
-    color: @subtext0;
+    color: @orange;
 }
 
 #pulseaudio:hover {
@@ -50,7 +49,7 @@ tooltip {
 }
 
 #network {
-    color: @overlay2;
+    color: @aqua;
     padding: 2px;
 }
 
@@ -82,7 +81,7 @@ tooltip {
 }
 
 #workspaces button.active {
-    background-color: @yellow;
+    background-color: @orange;
     color: @crust;
     min-width: 1.5rem;
     font-weight: bold;
