@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "top",
     // "modules-left": ["sway/workspaces", "sway/mode"],
-    "spacing": 8,
+    // "spacing": 8,
     // "margin-top": 5,
     "modules-left": [
         "hyprland/workspaces", 
@@ -44,7 +44,7 @@
         }
     },
     "pulseaudio": {
-        "format": " {volume}% {icon}",
+        "format": "{icon}  ",
         // "format-bluetooth": "{volume}% {icon} ",
         "format-muted": "Muted ",
         "format-icons": {
@@ -57,6 +57,7 @@
             "default": ["", ""]
         },
         "scroll-step": 1,
+        "tooltip-format": "volume: {volume}%",
         "on-click": "pavucontrol",
         "ignored-sinks": ["Easy Effects Sink"]
     },
@@ -72,7 +73,7 @@
             "󰤥",
             "󰤨",
         ],
-        "format-ethernet": " ",
+        "format-ethernet": "  ",
         "format-disconnected": "", //An empty format will hide the module.
         "tooltip-format": "{ifname} via {gwaddr} 󰊗",
         "tooltip-format-wifi": "{essid} {icon}[{bandwidthDownBits} {bandwidthUpBits}]",
@@ -81,11 +82,11 @@
         "on-click": "ghostty -e nmtui",
     },
     "bluetooth": {
-        "format": "  {status} ",
+        "format": "  ",
         "format-disabled": "",
-        "format-connected-battery": "  {device_battery_percentage}% ",
+        "format-connected-battery": "  ",
         "tooltip-format": "{controller_alias}\t{controller_address}",
-        "tooltip-format-connected": "{num_connections} connected\n{controller_alias}: {controller_address}\n{device_enumerate}",
+        "tooltip-format-connected": "{num_connections} connected\n{controller_alias}: {controller_address}\n{device_enumerate}\nBattery: {device_battery_percentage}%",
         "tooltip-format-enumerate-connected": "{device_alias}: {device_address}",
         "on-click": "ghostty -e bluetuith",
     },
