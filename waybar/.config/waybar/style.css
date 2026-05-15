@@ -5,10 +5,11 @@
     font-family: "JetBrainsMono Nerd Font Propo", "MesloLGS Nerd Font Propo";
     font-size: 16px;
     margin-top: -1px;
+    margin-bottom: -1px;
 }
 
 #waybar {
-    background-color: @bg0;
+    background-color: #111111;
 }
 
 tooltip {
@@ -24,7 +25,7 @@ tooltip {
 
 .modules-center {
     background-color: transparent;
-    color: @red;
+    color: #ffffff;
     padding: 2px 12px;
     border-radius: 99px;
     box-shadow: 0 0 1;
@@ -39,38 +40,26 @@ tooltip {
 }
 
 #pulseaudio {
-    color: @orange;
-}
-
-#pulseaudio:hover {
-    background-color: @crust;
-    transition: all 300ms ease-in-out;
-    border-radius: 8px;
+    color: #ffffff;
 }
 
 #network {
-    color: @aqua;
+    color: #ffffff;
     padding: 2px;
 }
 
-#network:hover {
-    background-color: @crust;
-    transition: all 300ms ease-in-out;
-    border-radius: 8px;
-}
-
 #workspaces {
-    background-color: @surface0;
+    background-color: @bg0;
     /* background-color: @bg3; */
     margin: 2px 0;
     padding: 2px 4px;
-    border-radius: 99px;
+    /* border-radius: 99px; */
 }
 
 #workspaces button {
-    background-color: @base;
+    /* background-color: @bg0; */
     padding: 2px 4px;
-    border-radius: 99px;
+    /* border-radius: 99px; */
     margin: 0 2px;
     transition: all 200ms ease-in-out;
     min-width: 20px;
@@ -81,7 +70,7 @@ tooltip {
 }
 
 #workspaces button.active {
-    background-color: @orange;
+    background-color: #ffffff;
     color: @crust;
     min-width: 1.5rem;
     font-weight: bold;
@@ -96,31 +85,14 @@ tooltip {
 }
 
 #bluetooth {
-    color: @blue;
-}
-
-#bluetooth:hover {
-    background-color: @crust;
-    transition: all 300ms ease-in-out;
-    border-radius: 8px;
+    color: #ffffff;
 }
 
 #cpu {
     color: @green;
 }
 
-#cpu:hover {
-    background-color: @crust;
-    transition: all 300ms ease-in-out;
-    border-radius: 8px;
-}
-
 #memory {
     color: @red;
 }
 
-#memory:hover {
-    background-color: @crust;
-    transition: all 300ms ease-in-out;
-    border-radius: 8px;
-}
