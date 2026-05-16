@@ -36,7 +36,7 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(powermenu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(super .. " + J", hl.dsp.exec_cmd("togglesplit"))    -- dwindle only
+-- hl.bind(super .. " + J", hl.dsp.exec_cmd("togglesplit"))    -- dwindle only
 hl.bind(super .. " + W", hl.dsp.exec_cmd("hyprshot -m window"))
 hl.bind(super .. " + R", hl.dsp.exec_cmd("hyprshot -m region --raw | satty --filename -"))
 
