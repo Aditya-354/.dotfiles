@@ -9,7 +9,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 alias so='source ~/.zshrc && clear && fastfetch'
 alias cl='clear'
-alias workspace='tmux new -As workspace'
+alias dev='tmux new -As dev'
 alias base='tmux new -As base'
 
 ZSH_THEME="robbyrussell"
