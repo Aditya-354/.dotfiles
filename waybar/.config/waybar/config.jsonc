@@ -44,12 +44,12 @@
         }
     },
     "pulseaudio": {
-        "format": "{icon} ",
+        "format": "{icon}  ",
         // "format-bluetooth": "{volume}% {icon} ",
         "format-muted": "Muted ",
         "format-icons": {
             "headphone": "",
-            "headset": " ",
+            "headset": "",
             "phone": "",
             "phone-muted": "",
             "portable": "",
