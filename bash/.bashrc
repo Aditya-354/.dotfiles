@@ -23,6 +23,8 @@ export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export PATH="$HOME/.config/emacs/bin:$PATH"
 export VIMRUNTIME=~/workspace/neovim/runtime
+export GEM_HOME="$(gem env user_gemhome)"
+export PATH="$PATH:$GEM_HOME/bin"
 
 # if [[ $- == *i* ]]; then
 #   fastfetch
