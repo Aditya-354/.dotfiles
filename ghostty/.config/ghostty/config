@@ -1,6 +1,6 @@
 # Typography
-# font-family = JetBrains Mono Nerd Font
-font-family = MesloLGS Nerd Font Mono
+font-family = JetBrains Mono Nerd Font
+# font-family = MesloLGS Nerd Font Mono
 # font-family = "UbuntuMono Nerd Font"
 # font-family = "Agave Nerd Font Mono"
 # font-style = Regular
@@ -8,7 +8,7 @@ font-family = MesloLGS Nerd Font Mono
 # font-family = "Iosevka NFM Light"
 # font-family = "Iosevka NFM"
 # font-family = "Iosevka NFM ExtraLight"
-font-size = 16
+font-size = 13
 font-feature = -liga
 # font-thicken = true
 # adjust-cell-height = 0
@@ -45,8 +45,8 @@ theme = Vague
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-# background-opacity = 0.95
-background-opacity = 1
+background-opacity = 0.95
+# background-opacity = 1
 # background-blur = 20
 # background = #000000
 
