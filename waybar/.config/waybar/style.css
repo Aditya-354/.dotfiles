@@ -3,13 +3,13 @@
 * {
     all: unset;
     font-family: "JetBrainsMono Nerd Font Propo", "MesloLGS Nerd Font Propo";
-    font-size: 16px;
-    /* margin-top: -1px; */
-    /* margin-bottom: -1px; */
+    font-size: 15px;
+    margin-top: -1px;
+    margin-bottom: -1px;
 }
 
 #waybar {
-    background-color: #111111;
+    background-color: @bg0;
 }
 
 tooltip {
@@ -19,20 +19,12 @@ tooltip {
     border-color: @mantle;
 }
 
-.modules-left {
-    margin-left: 0;
-}
-
 .modules-center {
     background-color: transparent;
-    color: #ffffff;
-    padding: 2px 12px;
+    color: @teal;
+    padding: 2px;
     border-radius: 99px;
     box-shadow: 0 0 1;
-}
-
-.modules-right {
-    margin-right: 0;
 }
 
 #clock {
@@ -40,16 +32,16 @@ tooltip {
 }
 
 #pulseaudio {
-    color: #ffffff;
+    color: @teal;
 }
 
 #network {
-    color: #ffffff;
+    color: @teal;
     padding: 2px;
 }
 
 #workspaces {
-    background-color: @bg0;
+    /* background-color: @bg0; */
     /* background-color: @bg3; */
     margin: 2px 0;
     padding: 2px 4px;
@@ -58,8 +50,8 @@ tooltip {
 
 #workspaces button {
     /* background-color: @bg0; */
-    padding: 2px 4px;
-    /* border-radius: 99px; */
+    padding: 1px;
+    border-radius: 2px;
     margin: 0 2px;
     transition: all 200ms ease-in-out;
     min-width: 20px;
@@ -70,8 +62,8 @@ tooltip {
 }
 
 #workspaces button.active {
-    background-color: #ffffff;
-    color: @crust;
+    background-color: @teal;
+    color: @bg0;
     min-width: 1.5rem;
     font-weight: bold;
     transition: none;
@@ -82,10 +74,11 @@ tooltip {
     border-radius: 20px;
     padding-left: 10px;
     padding-right: 10px;
+    color: @teal;
 }
 
 #bluetooth {
-    color: #ffffff;
+    color: @teal;
 }
 
 #cpu {

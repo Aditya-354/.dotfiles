@@ -1302,7 +1302,7 @@ require("catppuccin").setup({
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "bathory",
+    pattern = "lunaperche",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1323,8 +1323,9 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         for _, group in ipairs(hl_groups) do
             vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
         end
+        vim.api.nvim_set_hl(0, "Comment", { fg = "#808080" })
     end,
 })
 
-vim.cmd("colorscheme bathory")
+vim.cmd("colorscheme lunaperche")
 
