@@ -1315,8 +1315,8 @@ vim.api.nvim_create_autocmd("ColorScheme", {
             "StatusLine",
             "StatusLineNC",
             "ColorColumn",
-            -- "TabLine",
-            -- "TabLineFill",
+            "TabLine",
+            "TabLineFill",
             -- "TabLineSel",
             "LineNr",
         }
