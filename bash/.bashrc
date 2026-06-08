@@ -11,10 +11,9 @@ alias so='clear && source ~/.bashrc && fastfetch'
 alias cl='clear'
 alias base='tmux new -As base'
 alias workspace='tmux new -As workspace'
-# PS1='[\u@\h \W]\$ '
-# PS1='\n  \[\e[32m\]\u@\h\[\e[0m\] \[\e[38;2;100;150;255m\]$(minipro)\[\e[0m\]\n\033[93m➜  '
-# \n\033[93m
-# eval "$(starship init bash)"ROMPT_COMMAND=set_bash_prompt
+
+PS1='\e[31m\]➜  \e[33m\]\u@\h \e[35m\]\W \e[0m\]\$ '
+
 export PATH="$PATH:~/.cargo/bin"
 export PATH="$HOME/.local/bin:$PATH"
 export EDITOR=nvim
@@ -23,15 +22,10 @@ export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export PATH="$HOME/.config/emacs/bin:$PATH"
 export VIMRUNTIME=~/workspace/neovim/runtime
-export GEM_HOME="$(gem env user_gemhome)"
-export PATH="$PATH:$GEM_HOME/bin"
 
 # if [[ $- == *i* ]]; then
 #   fastfetch
 # fi
 
 source /usr/share/nvm/init-nvm.sh
-
-# eval "$(oh-my-posh init bash --config 'robbyrussell')"
-eval "$(oh-my-posh init bash --config 'emodipt-extend')"
 
