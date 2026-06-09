@@ -1302,7 +1302,7 @@ require("catppuccin").setup({
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "dark-funeral",
+    pattern = "lunaperche",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1327,5 +1327,5 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
-vim.cmd("colorscheme dark-funeral")
+vim.cmd("colorscheme lunaperche")
 
