@@ -997,11 +997,11 @@ require('onedark').setup  {
 require("lualine").setup({
     options = {
         icons_enabled = true,
-        theme = 'auto',
-        component_separators = { left = '', right = ''},
-        section_separators = { left = '', right = ''},
-        -- component_separators = { left = '', right = '' },
-        -- section_separators = { left = '', right = '' };
+        theme = 'catppuccin-mocha',
+        -- component_separators = { left = '', right = ''},
+        -- section_separators = { left = '', right = ''},
+        component_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' };
         disabled_filetypes = {
             statusline = {},
             winbar = {},
@@ -1247,7 +1247,7 @@ require('onenord').setup({
     diagnostics = "underline",
   },
   disable = {
-    background = false, -- Disable setting the background color
+    background = true, -- Disable setting the background color
     float_background = false, -- Disable setting the background color for floating windows
     cursorline = true, -- Disable the cursorline
     eob_lines = false, -- Hide the end-of-buffer lines
