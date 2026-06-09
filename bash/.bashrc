@@ -12,8 +12,8 @@ alias cl='clear'
 alias base='tmux new -As base'
 alias workspace='tmux new -As workspace'
 
-PS1='\e[31m\]➜  \e[33m\]\u@\h \e[34m\]\W \e[0m\]\$ '
-
+PS1='\[\e[33m\]\u@\h \[\e[34m\]\W \[\e[0m\]\$ '
+# ➜
 export PATH="$PATH:~/.cargo/bin"
 export PATH="$HOME/.local/bin:$PATH"
 export EDITOR=nvim
