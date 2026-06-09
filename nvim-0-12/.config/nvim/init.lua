@@ -1256,7 +1256,9 @@ require('onenord').setup({
   inverse = {
     match_paren = false,
   },
-  custom_highlights = {}, -- Overwrite default highlight groups
+  custom_highlights = {
+      ["@variable.parameter"] = { fg = "#cc88ff" },
+  }, -- Overwrite default highlight groups
   custom_colors = {}, -- Overwrite default colors
 })
 
