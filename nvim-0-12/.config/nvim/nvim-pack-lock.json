@@ -73,6 +73,10 @@
       "rev": "df4792accde9db0043121f32628bcf8e645d9aea",
       "src": "https://github.com/navarasu/onedark.nvim"
     },
+    "onenord.nvim": {
+      "rev": "8b6fe1e0f260ca0b8201ef6a8e2c97e0f38ea35d",
+      "src": "https://github.com/rmehri01/onenord.nvim"
+    },
     "rose-pine": {
       "rev": "9504524e5ed0e326534698f637f9d038ba4cd0ee",
       "src": "https://github.com/rose-pine/neovim"

@@ -375,6 +375,7 @@ vim.pack.add({
   "https://github.com/folke/tokyonight.nvim",
   "https://github.com/craftzdog/solarized-osaka.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
+  "https://github.com/rmehri01/onenord.nvim",
   { src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
   "https://github.com/shaunsingh/nord.nvim",
   { src = "https://github.com/rose-pine/neovim", name = "rose-pine" },
@@ -420,6 +421,7 @@ packadd("catppuccin")
 packadd("mason.nvim")
 packadd("gruvbox.nvim")
 packadd("nord.nvim")
+packadd("onenord.nvim")
 packadd("rose-pine")
 packadd("tokyonight.nvim")
 packadd("black-metal-theme-neovim")
@@ -1302,7 +1304,7 @@ require("catppuccin").setup({
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "nord",
+    pattern = "onenord",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1327,5 +1329,5 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
-vim.cmd("colorscheme nord")
+vim.cmd("colorscheme onenord")
 
