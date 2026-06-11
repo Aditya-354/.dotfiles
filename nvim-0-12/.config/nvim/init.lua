@@ -997,7 +997,7 @@ require('onedark').setup  {
 require("lualine").setup({
     options = {
         icons_enabled = true,
-        theme = 'onenord',
+        theme = 'onedark',
         -- component_separators = { left = '', right = ''},
         -- section_separators = { left = '', right = ''},
         component_separators = { left = '', right = '' },
@@ -1332,7 +1332,7 @@ require("catppuccin").setup({
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "onenord",
+    pattern = "unokai",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1357,5 +1357,5 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
-vim.cmd("colorscheme onenord")
+vim.cmd("colorscheme unokai")
 
