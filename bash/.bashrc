@@ -10,8 +10,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias so='clear && source ~/.bashrc && fastfetch'
 alias cl='clear'
-alias base='tmux new -As base'
-alias workspace='tmux new -As workspace'
+alias cpp='~/Templates/./cpp'
 
 PS1='\[\e[33m\]\u@\h \[\e[34m\]\W \[\e[0m\]\$ '
 # ➜

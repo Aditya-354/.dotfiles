@@ -1332,7 +1332,7 @@ require("catppuccin").setup({
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "murphy",
+    pattern = "bathory",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1348,7 +1348,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
             "TabLine",
             "TabLineFill",
             -- "TabLineSel",
-            -- "LineNr",
+            "LineNr",
         }
         for _, group in ipairs(hl_groups) do
             vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
@@ -1357,5 +1357,5 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
-vim.cmd("colorscheme murphy")
+vim.cmd("colorscheme bathory")
 
