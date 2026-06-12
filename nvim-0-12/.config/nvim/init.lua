@@ -1190,6 +1190,7 @@ require("black-metal").setup({
     operators = "none",
     keyword_return = "none",
     strings = "none",
+    methods = "none",
     variables = "none",
   },
 
@@ -1353,9 +1354,9 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         for _, group in ipairs(hl_groups) do
             vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
         end
-        vim.api.nvim_set_hl(0, "Comment", { fg = "#a0a0a0" })
+        vim.api.nvim_set_hl(0, "Comment", { fg = "#dd00af" })
     end,
 })
 
-vim.cmd("colorscheme bathory")
+vim.cmd("colorscheme onenord")
 
