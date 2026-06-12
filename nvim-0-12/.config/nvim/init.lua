@@ -274,6 +274,9 @@ vim.keymap.set({ "n", "v" }, "<leader>x", '"_d', { desc = "Delete without yankin
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" })
 
+vim.keymap.set("n", "<leader>tb", ":colo bathory<CR>", { desc = "Change color theme to bathory" })
+vim.keymap.set("n", "<leader>te", ":colo everforest<CR>", { desc = "Change color theme to everforest" })
+
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to bottom window" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to top window" })
@@ -997,7 +1000,7 @@ require('onedark').setup  {
 require("lualine").setup({
     options = {
         icons_enabled = true,
-        theme = 'auto',
+        theme = 'onenord',
         -- component_separators = { left = '', right = ''},
         -- section_separators = { left = '', right = ''},
         component_separators = { left = '', right = '' },
@@ -1358,5 +1361,5 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
-vim.cmd("colorscheme onenord")
+vim.cmd("colorscheme everforest")
 
