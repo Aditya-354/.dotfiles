@@ -53,7 +53,7 @@ tooltip {
     padding: 1px;
     border-radius: 2px;
     margin: 0 2px;
-    transition: all 200ms ease-in-out;
+    /* transition: all 200ms ease-in-out; */
     min-width: 20px;
 }
 
