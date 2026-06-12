@@ -1,3 +1,4 @@
 # tmux plugins (managed by TPM)
 tmux/.config/tmux/plugins/
 kitty/.config/kitty/current-theme.conf
+kitty/.config/kitty/kitty.conf.bak
