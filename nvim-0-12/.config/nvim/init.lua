@@ -997,7 +997,7 @@ require('onedark').setup  {
 require("lualine").setup({
     options = {
         icons_enabled = true,
-        theme = 'onedark',
+        theme = 'auto',
         -- component_separators = { left = '', right = ''},
         -- section_separators = { left = '', right = ''},
         component_separators = { left = '', right = '' },
@@ -1332,7 +1332,7 @@ require("catppuccin").setup({
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "unokai",
+    pattern = "murphy",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1348,14 +1348,14 @@ vim.api.nvim_create_autocmd("ColorScheme", {
             "TabLine",
             "TabLineFill",
             -- "TabLineSel",
-            "LineNr",
+            -- "LineNr",
         }
         for _, group in ipairs(hl_groups) do
             vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
         end
-        vim.api.nvim_set_hl(0, "Comment", { fg = "#808080" })
+        vim.api.nvim_set_hl(0, "Comment", { fg = "#a0a0a0" })
     end,
 })
 
-vim.cmd("colorscheme unokai")
+vim.cmd("colorscheme murphy")
 
