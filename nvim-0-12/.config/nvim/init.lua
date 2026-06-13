@@ -1360,6 +1360,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
             vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
         end
         -- vim.api.nvim_set_hl(0, "Comment", { fg = "#dd00af" })
+        vim.api.nvim_set_hl(0, "MatchParen", { fg = "#000000", bg = "#ffffff" })
     end,
 })
 
