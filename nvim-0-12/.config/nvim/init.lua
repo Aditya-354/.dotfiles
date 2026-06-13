@@ -274,7 +274,7 @@ vim.keymap.set({ "n", "v" }, "<leader>x", '"_d', { desc = "Delete without yankin
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" })
 
-vim.keymap.set("n", "<leader>tl", ":colo lunaperche<CR>", { desc = "Change color theme to bathory" })
+vim.keymap.set("n", "<leader>dc", ":colo darkvoid<CR>", { desc = "Change color theme to bathory" })
 vim.keymap.set("n", "<leader>te", ":colo everforest<CR>", { desc = "Change color theme to everforest" })
 vim.keymap.set("n", "<leader>tc", ":colo catppuccin-mocha<CR>", { desc = "Change color theme to everforest" })
 vim.keymap.set("n", "<leader>tg", ":colo gruvbox<CR>", { desc = "Change color theme to everforest" })
@@ -939,13 +939,13 @@ require("gruvbox").setup({
   terminal_colors = true, -- add neovim terminal colors
   undercurl = true,
   underline = true,
-  bold = false,
+  bold = true,
   italic = {
-    strings = true,
-    emphasis = true,
-    comments = true,
+    strings = false,
+    emphasis = false,
+    comments = false,
     operators = false,
-    folds = true,
+    folds = false,
   },
   strikethrough = true,
   invert_selection = false,
@@ -956,7 +956,7 @@ require("gruvbox").setup({
   palette_overrides = {},
   overrides = {},
   dim_inactive = false,
-  transparent_mode = false,
+  transparent_mode = true,
 })
 
 -- Lua
@@ -1339,6 +1339,74 @@ require("catppuccin").setup({
     },
 })
 
+require('darkvoid').setup({
+    transparent = true,
+    glow = true,
+    show_end_of_buffer = true,
+
+    colors = {
+        fg = "#c0c0c0",
+        bg = "#1c1c1c",
+        cursor = "#bdfe58",
+        line_nr = "#404040",
+        -- visual = "#303030",
+        comment = "#585858",
+        string = "#d1d1d1",
+        func = "#e1e1e1",
+        kw = "#f1f1f1",
+        identifier = "#b1b1b1",
+        type = "#a1a1a1",
+        type_builtin = "#c5c5c5", -- current
+        -- type_builtin = "#8cf8f7", -- glowy blue old (was present by default before type_builtin was introduced added here for people who may like it)
+        search_highlight = "#1bfd9c",
+        operator = "#1bfd9c",
+        bracket = "#e6e6e6",
+        preprocessor = "#4b8902",
+        bool = "#66b2b2",
+        constant = "#b2d8d8",
+
+        -- enable or disable specific plugin highlights
+        plugins = {
+            gitsigns = true,
+            nvim_cmp = true,
+            treesitter = true,
+            nvimtree = true,
+            telescope = true,
+            lualine = true,
+            bufferline = true,
+            oil = true,
+            whichkey = true,
+            nvim_notify = true,
+        },
+
+        -- gitsigns colors
+        added = "#baffc9",
+        changed = "#ffffba",
+        removed = "#ffb3ba",
+
+        -- Pmenu colors
+        pmenu_bg = "#1c1c1c",
+        pmenu_sel_bg = "#1bfd9c",
+        pmenu_fg = "#c0c0c0",
+
+        -- EndOfBuffer color
+        eob = "#3c3c3c",
+
+        -- Telescope specific colors
+        border = "#585858",
+        title = "#bdfe58",
+
+        -- bufferline specific colors
+        bufferline_selection = "#1bfd9c",
+
+        -- LSP diagnostics colors
+        error = "#dea6a0",
+        warning = "#d6efd8",
+        hint = "#bedc74",
+        info = "#7fa1c3",
+    },
+})
+
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "darkvoid",
     callback = function()
@@ -1370,6 +1438,15 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "*",
     callback = function()
         vim.api.nvim_set_hl(0, "CursorLine", { bg = "none", ctermbg = "none" })
+        vim.api.nvim_set_hl(0, "TabLine", { bg = "none", ctermbg = "none" })
+        vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", ctermbg = "none" })
+    end,
+})
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "gruvbox",
+    callback = function()
+        vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none", ctermbg = "none" })
     end,
 })
 
