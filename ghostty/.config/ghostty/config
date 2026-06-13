@@ -44,10 +44,10 @@ theme = Rapture
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-# background-opacity = 0.8
-background-opacity = 1
+background-opacity = 0.84
+# background-opacity = 1
 # background-blur = 20
-background = #121212
+background = #000000
 
 # Feature config
 cursor-style = block
