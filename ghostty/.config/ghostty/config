@@ -32,9 +32,9 @@ window-padding-y = 0
 # theme = Vercel
 # theme = Black Metal (Bathory)
 # true = Gruvbox Dark
-# theme = Gruvbox Material
+theme = Gruvbox Material
 # theme = Brogrammer
-theme = Vague
+# theme = Vague
 # theme = Afterglow
 # theme = Flexoki Dark
 # theme = Monokai Soda
@@ -47,7 +47,7 @@ theme = Vague
 # background-opacity = 0.8
 background-opacity = 1
 # background-blur = 20
-# background = #000000
+background = #000000
 
 # Feature config
 cursor-style = block

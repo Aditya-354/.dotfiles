@@ -376,6 +376,7 @@ vim.pack.add({
   "https://github.com/sainnhe/everforest",
   "https://github.com/nvim-lualine/lualine.nvim",
   "https://github.com/navarasu/onedark.nvim",
+  "https://github.com/darkvoid-theme/darkvoid.nvim",
   "https://github.com/uhs-robert/oasis.nvim",
   "https://github.com/folke/tokyonight.nvim",
   "https://github.com/craftzdog/solarized-osaka.nvim",
@@ -424,6 +425,7 @@ packadd("nvim-lspconfig")
 packadd("solarized-osaka.nvim")
 packadd("catppuccin")
 packadd("mason.nvim")
+packadd("darkvoid.nvim")
 packadd("gruvbox.nvim")
 packadd("nord.nvim")
 packadd("onenord.nvim")
@@ -1338,7 +1340,7 @@ require("catppuccin").setup({
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "lunaperche",
+    pattern = "darkvoid",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1371,5 +1373,5 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
-vim.cmd("colorscheme lunaperche")
+vim.cmd("colorscheme darkvoid")
 
