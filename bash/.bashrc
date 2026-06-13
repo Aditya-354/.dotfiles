@@ -10,7 +10,8 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias so='clear && source ~/.bashrc && fastfetch'
 alias cl='clear'
-alias cpp='~/Templates/./cpp'
+alias cpp='~/scripts/./cpp'
+alias bin='~/scripts/./bin'
 
 PS1='\[\e[33m\]\u@\h: \[\e[34m\]\W \[\e[0m\]\$ '
 # ➜
