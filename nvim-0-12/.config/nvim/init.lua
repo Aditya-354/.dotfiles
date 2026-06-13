@@ -6,7 +6,7 @@ vim.opt.termguicolors = true
 -- ============================================================================
 vim.opt.number = true -- line number
 vim.opt.relativenumber = true -- relative line numbers
-vim.opt.cursorline = false -- highlight current line
+vim.opt.cursorline = true -- highlight current line
 vim.opt.wrap = false -- do not wrap lines by default
 vim.opt.scrolloff = 10 -- keep 20 lines above/below cursor
 vim.opt.sidescrolloff = 10 -- keep 10 lines to left/right of cursor
@@ -274,8 +274,10 @@ vim.keymap.set({ "n", "v" }, "<leader>x", '"_d', { desc = "Delete without yankin
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" })
 
-vim.keymap.set("n", "<leader>tb", ":colo bathory<CR>", { desc = "Change color theme to bathory" })
+vim.keymap.set("n", "<leader>tl", ":colo lunaperche<CR>", { desc = "Change color theme to bathory" })
 vim.keymap.set("n", "<leader>te", ":colo everforest<CR>", { desc = "Change color theme to everforest" })
+vim.keymap.set("n", "<leader>tc", ":colo catppuccin-mocha<CR>", { desc = "Change color theme to everforest" })
+vim.keymap.set("n", "<leader>tg", ":colo gruvbox<CR>", { desc = "Change color theme to everforest" })
 
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to bottom window" })
@@ -1000,7 +1002,7 @@ require('onedark').setup  {
 require("lualine").setup({
     options = {
         icons_enabled = true,
-        theme = 'onenord',
+        theme = 'auto',
         -- component_separators = { left = '', right = ''},
         -- section_separators = { left = '', right = ''},
         component_separators = { left = '', right = '' },
@@ -1336,7 +1338,7 @@ require("catppuccin").setup({
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "bathory",
+    pattern = "lunaperche",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1357,9 +1359,16 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         for _, group in ipairs(hl_groups) do
             vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
         end
-        vim.api.nvim_set_hl(0, "Comment", { fg = "#dd00af" })
+        -- vim.api.nvim_set_hl(0, "Comment", { fg = "#dd00af" })
     end,
 })
 
-vim.cmd("colorscheme everforest")
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "*",
+    callback = function()
+        vim.api.nvim_set_hl(0, "CursorLine", { bg = "none", ctermbg = "none" })
+    end,
+})
+
+vim.cmd("colorscheme lunaperche")
 
