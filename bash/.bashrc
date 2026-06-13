@@ -12,7 +12,7 @@ alias so='clear && source ~/.bashrc && fastfetch'
 alias cl='clear'
 alias cpp='~/Templates/./cpp'
 
-PS1='\[\e[33m\]\u@\h \[\e[34m\]\W \[\e[0m\]\$ '
+PS1='\[\e[33m\]\u@\h: \[\e[34m\]\W \[\e[0m\]\$ '
 # ➜
 export PATH="$PATH:~/.cargo/bin"
 export PATH="$HOME/.local/bin:$PATH"
