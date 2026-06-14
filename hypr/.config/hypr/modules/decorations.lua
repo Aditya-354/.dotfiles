@@ -3,8 +3,8 @@
 -----------------------
 hl.config({
     general = {
-        gaps_in  = 8,
-        gaps_out = 12,
+        gaps_in  = 4,
+        gaps_out = 7,
         -- gaps_in = 0,
         -- gaps_out = 0,
 
