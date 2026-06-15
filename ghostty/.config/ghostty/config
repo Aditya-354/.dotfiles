@@ -22,7 +22,8 @@ window-padding-y = 0
 # theme = Blue Berry Pie
 # theme = TokyoNight Night
 # theme = Calamity
-theme = Rapture
+# theme = Rapture
+theme = Zenbones Dark
 # theme = Cursor Dark
 # theme = Rose Pine
 # theme = iTerm2 Solarized Dark
@@ -44,10 +45,10 @@ theme = Rapture
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-background-opacity = 0.84
+background-opacity = 0.93
 # background-opacity = 1
 # background-blur = 20
-background = #000000
+# background = #000000
 
 # Feature config
 cursor-style = block
