@@ -263,6 +263,8 @@ vim.keymap.set("n", "<leader>su", ":StrudelUpdate<CR>", { desc = "Update strudel
 vim.keymap.set("n", "<leader>ss", ":StrudelStop<CR>", { desc = "Stop strudel" })
 vim.keymap.set("n", "<leader>sq", ":StrudelQuit<CR>", { desc = "Quit strudel" })
 
+vim.keymap.set("n", "<leader>dt", ":!date<CR>", { desc = "Display Time" })
+
 vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result (centered)" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result (centered)" })
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Half page down (centered)" })
