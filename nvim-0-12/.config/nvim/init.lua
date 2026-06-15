@@ -1350,7 +1350,7 @@ require('darkvoid').setup({
         cursor = "#bdfe58",
         line_nr = "#404040",
         -- visual = "#303030",
-        comment = "#585858",
+        comment = "#676767",
         string = "#d1d1d1",
         func = "#e1e1e1",
         kw = "#f1f1f1",
