@@ -21,10 +21,11 @@ tooltip {
 
 .modules-center {
     background-color: transparent;
-    color: @teal;
+    color: #ffffff;
     padding: 2px;
     border-radius: 99px;
     box-shadow: 0 0 1;
+    font-weight: 400;
 }
 
 #clock {
@@ -32,11 +33,11 @@ tooltip {
 }
 
 #pulseaudio {
-    color: @teal;
+    color: #ffffff
 }
 
 #network {
-    color: @teal;
+    color: #ffffff;
     padding: 2px;
 }
 
@@ -74,18 +75,18 @@ tooltip {
     border-radius: 20px;
     padding-left: 10px;
     padding-right: 10px;
-    color: @teal;
+    color: #ffffff;
 }
 
 #bluetooth {
-    color: @teal;
+    color: #ffffff;
 }
 
 #cpu {
-    color: @green;
+    color: #ffffff;
 }
 
 #memory {
-    color: @red;
+    color: #ffffff;
 }
 

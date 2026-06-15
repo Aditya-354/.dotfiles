@@ -1,13 +1,9 @@
 # Typography
 # font-family = JetBrains Mono Nerd Font
 font-family = MesloLGS Nerd Font Mono
-# font-family = "UbuntuMono Nerd Font"
 # font-family = "Agave Nerd Font Mono"
-# font-style = Regular
-# font-family = "Iosevka NFM Light"
 # font-family = "Iosevka NFM"
-# font-family = "Iosevka NFM ExtraLight"
-font-size = 13
+font-size = 17
 font-feature = -liga
 # font-thicken = true
 # adjust-cell-height = 0
