@@ -7,6 +7,7 @@
 
 alias cls='colorls'
 alias ls='ls --color=auto'
+alias ll='ls -hAl'
 alias grep='grep --color=auto'
 alias so='clear && source ~/.bashrc && fastfetch'
 alias cl='clear'
