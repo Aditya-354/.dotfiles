@@ -3,7 +3,7 @@
 # font-family = MesloLGS Nerd Font Mono
 # font-family = "Agave Nerd Font Mono"
 # font-family = "Iosevka NFM"
-font-size = 17
+font-size = 13
 font-feature = -liga
 # font-thicken = true
 # adjust-cell-height = 0
@@ -41,8 +41,8 @@ theme = Zenbones Dark
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-# background-opacity = 0.92
-background-opacity = 1
+background-opacity = 0.94
+# background-opacity = 1
 # background-blur = 20
 background = #1a1517
 
