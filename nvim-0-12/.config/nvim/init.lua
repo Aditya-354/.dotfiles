@@ -281,6 +281,8 @@ vim.keymap.set("n", "<leader>te", ":colo everforest<CR>", { desc = "Change color
 vim.keymap.set("n", "<leader>tc", ":colo catppuccin-mocha<CR>", { desc = "Change color theme to everforest" })
 vim.keymap.set("n", "<leader>tg", ":colo gruvbox<CR>", { desc = "Change color theme to everforest" })
 
+vim.keymap.set("n", "<leader>j", ":Ex<CR>", { desc = "Open netrw" })
+
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to bottom window" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to top window" })
