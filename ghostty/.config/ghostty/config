@@ -41,10 +41,10 @@ theme = Zenbones Dark
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-background-opacity = 0.93
+background-opacity = 0.8
 # background-opacity = 1
 # background-blur = 20
-# background = #000000
+background = #000010
 
 # Feature config
 cursor-style = block
