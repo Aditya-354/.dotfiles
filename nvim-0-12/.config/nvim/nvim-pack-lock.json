@@ -25,10 +25,6 @@
       "rev": "5dc52088c231f2721f545570fcb541b04802ce6b",
       "src": "https://github.com/creativenull/efmls-configs-nvim"
     },
-    "everforest": {
-      "rev": "b03a03148c8b34c24c96960b93da9c8883d11f54",
-      "src": "https://github.com/sainnhe/everforest"
-    },
     "fzf-lua": {
       "rev": "eee072d89ccdc0a4627bf67d0757d2e4981c7292",
       "src": "https://www.github.com/ibhagwan/fzf-lua"
@@ -53,10 +49,6 @@
       "rev": "69b7433355664cf76898eb86a12a019f39bd86d1",
       "src": "https://www.github.com/echasnovski/mini.nvim"
     },
-    "nord.nvim": {
-      "rev": "80c1e5321505aeb22b7a9f23eb82f1e193c12470",
-      "src": "https://github.com/shaunsingh/nord.nvim"
-    },
     "nvim-lspconfig": {
       "rev": "c588db330592fa477a70d2fee6ba20a57194bdc3",
       "src": "https://www.github.com/neovim/nvim-lspconfig"
@@ -69,33 +61,13 @@
       "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
-    "oasis.nvim": {
-      "rev": "657b997e865986b1c34f1554bf0c1a52d10aaa13",
-      "src": "https://github.com/uhs-robert/oasis.nvim"
-    },
-    "onedark.nvim": {
-      "rev": "df4792accde9db0043121f32628bcf8e645d9aea",
-      "src": "https://github.com/navarasu/onedark.nvim"
-    },
     "onenord.nvim": {
       "rev": "8b6fe1e0f260ca0b8201ef6a8e2c97e0f38ea35d",
       "src": "https://github.com/rmehri01/onenord.nvim"
     },
-    "rose-pine": {
-      "rev": "9504524e5ed0e326534698f637f9d038ba4cd0ee",
-      "src": "https://github.com/rose-pine/neovim"
-    },
-    "solarized-osaka.nvim": {
-      "rev": "a261ee90fb3e5e82660567e4874d384e996afa4f",
-      "src": "https://github.com/craftzdog/solarized-osaka.nvim"
-    },
     "strudel.nvim": {
       "rev": "3a7e62c9048a318281328ad08d6269e50b884cd3",
       "src": "https://github.com/gruvw/strudel.nvim.git"
-    },
-    "tokyonight.nvim": {
-      "rev": "cdc07ac78467a233fd62c493de29a17e0cf2b2b6",
-      "src": "https://github.com/folke/tokyonight.nvim"
     }
   }
 }

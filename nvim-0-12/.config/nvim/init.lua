@@ -375,18 +375,11 @@ vim.pack.add({
 	"https://www.github.com/nvim-tree/nvim-tree.lua",
   -- colorschemes
   "https://github.com/ellisonleao/gruvbox.nvim",
-  "https://github.com/sainnhe/everforest",
   "https://github.com/nvim-lualine/lualine.nvim",
-  "https://github.com/navarasu/onedark.nvim",
   "https://github.com/darkvoid-theme/darkvoid.nvim",
-  "https://github.com/uhs-robert/oasis.nvim",
-  "https://github.com/folke/tokyonight.nvim",
-  "https://github.com/craftzdog/solarized-osaka.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
   "https://github.com/rmehri01/onenord.nvim",
   { src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
-  "https://github.com/shaunsingh/nord.nvim",
-  { src = "https://github.com/rose-pine/neovim", name = "rose-pine" },
   {
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
 		branch = "main",
@@ -414,6 +407,7 @@ vim.pack.add({
 local function packadd(name)
 	vim.cmd("packadd " .. name)
 end
+
 packadd("nvim-treesitter")
 packadd("gitsigns.nvim")
 packadd("mini.nvim")
@@ -421,22 +415,15 @@ packadd("lualine.nvim")
 packadd("fzf-lua")
 packadd("nvim-tree.lua")
 packadd("strudel.nvim")
-packadd("onedark.nvim")
--- LSP
 packadd("nvim-lspconfig")
-packadd("solarized-osaka.nvim")
-packadd("catppuccin")
 packadd("mason.nvim")
+packadd("efmls-configs-nvim")
+
+packadd("catppuccin")
 packadd("darkvoid.nvim")
 packadd("gruvbox.nvim")
-packadd("nord.nvim")
 packadd("onenord.nvim")
-packadd("rose-pine")
-packadd("tokyonight.nvim")
 packadd("black-metal-theme-neovim")
-packadd("oasis.nvim")
-packadd("everforest")
-packadd("efmls-configs-nvim")
 packadd("blink.cmp")
 packadd("LuaSnip")
 
@@ -961,48 +948,6 @@ require("gruvbox").setup({
   transparent_mode = true,
 })
 
--- Lua
-require('onedark').setup  {
-    -- Main options --
-    style = 'deep', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
-    transparent = false,  -- Show/hide background
-    term_colors = true, -- Change terminal color as per the selected theme style
-    ending_tildes = true, -- Show the end-of-buffer tildes. By default they are hidden
-    cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
-
-    -- toggle theme style ---
-    toggle_style_key = "<leader>ts", -- keybind to toggle theme style. Leave it nil to disable it, or set it to a string, for example "<leader>ts"
-    toggle_style_list = {'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light'}, -- List of styles to toggle between
-
-    -- Change code style ---
-    -- Options are italic, bold, underline, none
-    -- You can configure multiple style with comma separated, For e.g., keywords = 'italic,bold'
-    code_style = {
-        comments = 'none',
-        keywords = 'none',
-        functions = 'none',
-        strings = 'none',
-        variables = 'none',
-        Methods = 'none',
-    },
-
-    -- Lualine options --
-    lualine = {
-        transparent = false, -- lualine center bar transparency
-    },
-
-    -- Custom Highlights --
-    colors = {}, -- Override default colors
-    highlights = {}, -- Override highlight groups
-
-    -- Plugins Config --
-    diagnostics = {
-        darker = true, -- darker colors for diagnostic
-        undercurl = true,   -- use undercurl instead of underline for diagnostics
-        background = true,    -- use background color for virtual text
-    },
-}
-
 require("lualine").setup({
     options = {
         icons_enabled = true,
@@ -1058,105 +1003,6 @@ require("lualine").setup({
     winbar = {},
     inactive_winbar = {},
     extensions = {}
-})
-
-vim.keymap.set("n", "<leader>tt", require("oasis").toggle_transparency, { desc = "Toggle Transparency" })
-
--- Oasis.nvim
--- Styles: "night", "midnight", "abyss", "starlight", "desert", "sol", "canyon", "dune", "cactus", "mirage", "lagoon", "twilight", "rose"
-require("oasis").setup({
-  style = "lagoon",                     -- Primary style, the default used when colorscheme is set to "oasis"
-  dark_style = nil,                     -- Applies to primary style only: Overrides dark mode with another theme (e.g., "abyss")
-  light_style = nil,                    -- Applies to primary style only: Overrides light mode with another theme (e.g., "dune")
-  light_intensity = 3,                  -- Light background intensity (1-5): 1=subtle, 5=saturated
-  use_legacy_comments = false,          -- For "desert" style only, uses the loud skyblue comment color from desert.vim for a more retro experience
-  themed_syntax = true,                 -- Uses the theme's primary color for statements/keywords. Set to false for the classic yellow syntax from desert.vim for a more retro experience
-
-  -- Text styling - toggle individual styles
-  styles = {
-    bold = false,                        -- Enable bold text (keywords, functions, etc.)
-    italic = false,                      -- Enable italics (comments, certain keywords)
-    underline = true,                   -- Enable underlined text (matching words)
-    undercurl = true,                   -- Enable undercurl for diagnostics/spelling
-    strikethrough = true,               -- Enable strikethrough text (deprecations)
-  },
-
-  -- Display options
-  transparent = true,                  -- Set to true for transparent backgrounds (bye-bye theme backgrounds)
-  terminal_colors = true,               -- Apply Oasis colors to Neovim's built-in terminal
-  match_paren_bg = false,               -- Enable/disable background on MatchParen highlight
-
-  -- Contrast controls (WCAG: AA = 4.5, AAA = 7.0)
-  contrast = {
-    -- Note: Light themes obey the targets below. All dark themes target 7.0 by default with only a couple of exceptions that dip to 6.5.
-    min_ratio = 5.8,                    -- Clamp 4.5–7.0; target contrast for syntax/terminal colors. Increase for more contrast, decrease for more pop.
-    force_aaa = false,                  -- When true, forces AAA (7.0) wherever possible; as a result some colors will appear muddy (bye bye non-primary colors).
-  },
-
-  palette_overrides = {},               -- Override colors in specific palettes
-  highlight_overrides = {
-      -- Type = { fg = "#ffaa00" },
-  },             -- Override specific highlight groups
-
-  -- Plugin integrations
-  integrations = {
-    default_enabled = true,             -- Default behavior: true = enable all, false = disable all
-    -- For each plugin: nil = use default_enabled, true = enable, false = disable
-    plugins = {
-      fzf_lua = nil,
-      gitsigns = nil,
-      lazy = nil,
-      mini = nil,
-      render_markdown = nil,
-      snacks = nil,
-      which_key = nil,
-    },
-  },
-})
-
--- Example config in lua
-vim.g.nord_contrast = true
-vim.g.nord_borders = true
-vim.g.nord_disable_background = false
-vim.g.nord_italic = false
-vim.g.nord_uniform_diff_background = true
-vim.g.nord_bold = false
-
-require("tokyonight").setup({
-    style = "night",
-    transparent = false,
-    styles = {
-        functions = {},
-        comments = { italic = false },
-        keywords = { italic = false },
-        variables = {},
-    },
-})
-
-require("rose-pine").setup({
-    variant = "auto", -- auto, main, moon, or dawn
-    dark_variant = "main", -- main, moon, or dawn
-    dim_inactive_windows = false,
-    extend_background_behind_borders = true,
-
-    enable = {
-        terminal = true,
-        legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
-        migrations = true, -- Handle deprecated options automatically
-    },
-
-    styles = {
-        bold = false,
-        italic = false,
-        transparency = true,
-    },
-
-
-    highlight_groups = {
-        Cursor = { fg = 'white', bg = 'white' },
-        -- If you want the line number of the cursor to be brighter too:
-        CursorLineNr = { fg = '#ffffff', bold = true },
-    },
 })
 
 require("black-metal").setup({
@@ -1219,29 +1065,6 @@ require("black-metal").setup({
       reverse = false,
     },
   },
-})
-
-require("solarized-osaka").setup({
-  -- your configuration comes here
-  -- or leave it empty to use the default settings
-  transparent = true, -- Enable this to disable setting the background color
-  -- terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
-  styles = {
-    -- Style to be applied to different syntax groups
-    -- Value is any valid attr-list value for `:help nvim_set_hl`
-    comments = { italic = false },
-    keywords = { italic = false },
-    functions = { italic = false },
-    variables = { italic = false },
-    -- Background styles. Can be "dark", "transparent" or "normal"
-    sidebars = "transparent", -- style for sidebars, see below
-    floats = "transparent", -- style for floating windows
-  },
-  -- sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
-  day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
-  hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
-  dim_inactive = false, -- dims inactive windows
-  lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
 })
 
 require('onenord').setup({
@@ -1343,7 +1166,7 @@ require("catppuccin").setup({
 
 require('darkvoid').setup({
     transparent = true,
-    glow = true,
+    glow = false,
     show_end_of_buffer = true,
 
     colors = {
@@ -1433,6 +1256,30 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         end
         -- vim.api.nvim_set_hl(0, "Comment", { fg = "#dd00af" })
         -- vim.api.nvim_set_hl(0, "MatchParen", { fg = "#000000", bg = "#ffffff" })
+    end,
+})
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "default",
+    callback = function()
+        local hl_groups = {
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "LineNr",
+        }
+        for _, group in ipairs(hl_groups) do
+            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+        end
     end,
 })
 
