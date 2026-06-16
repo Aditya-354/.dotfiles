@@ -1,6 +1,6 @@
 # Typography
 # font-family = JetBrains Mono Nerd Font
-font-family = MesloLGS Nerd Font Mono
+# font-family = MesloLGS Nerd Font Mono
 # font-family = "Agave Nerd Font Mono"
 # font-family = "Iosevka NFM"
 font-size = 17
@@ -44,7 +44,7 @@ theme = Zenbones Dark
 # background-opacity = 0.92
 background-opacity = 1
 # background-blur = 20
-background = #101010
+background = #1a1517
 
 # Feature config
 cursor-style = block
