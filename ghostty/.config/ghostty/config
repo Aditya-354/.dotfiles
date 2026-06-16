@@ -42,7 +42,7 @@ theme = Zenbones Dark
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
 # background-opacity = 0.92
-# background-opacity = 1
+background-opacity = 1
 # background-blur = 20
 background = #101010
 
