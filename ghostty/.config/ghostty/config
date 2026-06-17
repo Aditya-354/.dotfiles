@@ -1,10 +1,11 @@
 # Typography
 # font-family = JetBrains Mono Nerd Font
 # font-family = MesloLGS Nerd Font Mono
+# font-family = Hack
 # font-family = "Agave Nerd Font Mono"
-# font-family = "Iosevka NFM"
+font-family = "Iosevka NFM"
 font-size = 13
-font-feature = -liga
+# font-feature = -calt
 # font-thicken = true
 # adjust-cell-height = 0
 
@@ -20,6 +21,8 @@ window-padding-y = 0
 # theme = Calamity
 # theme = Rapture
 theme = Zenbones Dark
+# theme = Matte Black
+# theme = Selenized Black
 # theme = Cursor Dark
 # theme = Rose Pine
 # theme = iTerm2 Solarized Dark
@@ -27,7 +30,6 @@ theme = Zenbones Dark
 # theme = Solarized Dark Higher Contrast
 # theme = Belafonte Night
 # theme = Vercel
-# theme = Black Metal (Bathory)
 # theme = Gruvbox Dark
 # theme = Gruvbox Material
 # theme = Brogrammer
@@ -44,7 +46,7 @@ theme = Zenbones Dark
 background-opacity = 0.94
 # background-opacity = 1
 # background-blur = 20
-background = #1a1517
+background = #101010
 
 # Feature config
 cursor-style = block

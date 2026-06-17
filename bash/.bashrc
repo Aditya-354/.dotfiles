@@ -31,4 +31,6 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 # fi
 
 source /usr/share/nvm/init-nvm.sh
+# eval "$(oh-my-posh init bash --config emodipt-extend)"
+# eval "$(oh-my-posh init bash --config emodipt-extend)"
 
