@@ -88,7 +88,7 @@
         "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{num_connections} connected\n{controller_alias}: {controller_address}\n{device_enumerate}\nBattery: {device_battery_percentage}%",
         "tooltip-format-enumerate-connected": "{device_alias}: {device_address}",
-        "on-click": "ghostty -e bluetuith",
+        "on-click": "kitty -e bluetuith",
     },
     "custom/wallpaper": {
         "format": " ",
