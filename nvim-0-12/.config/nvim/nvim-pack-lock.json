@@ -33,6 +33,10 @@
       "rev": "8d82c240f190fc33723d48c308ccc1ed8baad69d",
       "src": "https://www.github.com/lewis6991/gitsigns.nvim"
     },
+    "greeter.nvim": {
+      "rev": "a2ba2e037b81c4848d6fe892c43b9aee398de1d1",
+      "src": "/home/asrwx/plugins/greeter.nvim"
+    },
     "gruvbox.nvim": {
       "rev": "334d5fd49fc8033f26408425366c66c6390c57bb",
       "src": "https://github.com/ellisonleao/gruvbox.nvim"

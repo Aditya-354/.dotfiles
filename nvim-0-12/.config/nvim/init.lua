@@ -406,6 +406,12 @@ vim.pack.add({
     },
 })
 
+vim.pack.add({
+    {
+        src = "/home/asrwx/plugins/greeter.nvim",
+    }
+})
+
 local function packadd(name)
 	vim.cmd("packadd " .. name)
 end
@@ -1233,6 +1239,8 @@ require('darkvoid').setup({
         info = "#7fa1c3",
     },
 })
+
+require("greeter").greet()
 
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "darkvoid",
