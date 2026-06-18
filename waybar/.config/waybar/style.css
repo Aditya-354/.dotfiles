@@ -9,7 +9,7 @@
 }
 
 #waybar {
-    background-color: transparent;
+    background-color: @bg0;
 }
 
 tooltip {
