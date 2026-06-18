@@ -2,10 +2,11 @@
 # font-family = JetBrains Mono Nerd Font
 # font-family = MesloLGS Nerd Font Mono
 # font-family = Hack
+font-family = FiraCode Nerd Font
 # font-family = "Agave Nerd Font Mono"
 font-family = "Iosevka NFM"
-font-size = 13
-# font-feature = -calt
+font-size = 12
+font-feature = -calt
 # font-thicken = true
 # adjust-cell-height = 0
 
@@ -15,12 +16,12 @@ window-padding-y = 0
 # theme = Dracula
 # theme = Catppuccin Frappe
 # theme = Catppuccin Mocha
-# theme = Adwaita Dark
+theme = Adwaita Dark
 # theme = Blue Berry Pie
 # theme = TokyoNight Night
 # theme = Calamity
 # theme = Rapture
-theme = Zenbones Dark
+# theme = Zenbones Dark
 # theme = Matte Black
 # theme = Selenized Black
 # theme = Cursor Dark
@@ -43,10 +44,10 @@ theme = Zenbones Dark
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-background-opacity = 0.94
+background-opacity = 0.9
 # background-opacity = 1
 # background-blur = 20
-background = #101010
+background = #190005
 
 # Feature config
 cursor-style = block

@@ -1173,8 +1173,8 @@ require("catppuccin").setup({
 })
 
 require('darkvoid').setup({
-    transparent = true,
-    glow = false,
+    transparent = false,
+    glow = true,
     show_end_of_buffer = true,
 
     colors = {
@@ -1260,6 +1260,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
             "TabLineFill",
             -- "TabLineSel",
             "LineNr",
+            "Cursor",
         }
         for _, group in ipairs(hl_groups) do
             vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
