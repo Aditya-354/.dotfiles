@@ -3,13 +3,13 @@
 * {
     all: unset;
     font-family: "FiraCode Nerd Font Propo", "MesloLGS Nerd Font Propo";
-    font-size: 16px;
-    margin-top: 1px;
+    font-size: 20px;
+    margin-top: -1px;
     margin-bottom: -1px;
 }
 
 #waybar {
-    background-color: transparent;
+    background-color: @bg0;
 }
 
 tooltip {
