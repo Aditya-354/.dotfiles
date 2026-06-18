@@ -2,8 +2,8 @@
 
 * {
     all: unset;
-    font-family: "JetBrainsMono Nerd Font Propo", "MesloLGS Nerd Font Propo";
-    font-size: 15px;
+    font-family: "FiraCode Nerd Font Propo", "MesloLGS Nerd Font Propo";
+    font-size: 16px;
     margin-top: 1px;
     margin-bottom: -1px;
 }
@@ -25,7 +25,6 @@ tooltip {
     padding: 2px;
     border-radius: 99px;
     box-shadow: 0 0 1;
-    font-weight: 400;
 }
 
 #clock {
