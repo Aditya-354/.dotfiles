@@ -31,6 +31,13 @@ vim.opt.signcolumn = "yes" -- always show a sign column
 --         vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#3b4252", ctermbg = "darkgray" })
 --     end,
 -- })
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "man",
+    callback = function()
+        vim.wo.number = true
+        vim.wo.relativenumber = true
+    end,
+})
 vim.opt.showmatch = true -- highlights matching brackets
 vim.opt.cmdheight = 1 -- single line command line
 vim.opt.completeopt = "menuone,noinsert,noselect" -- completion options
