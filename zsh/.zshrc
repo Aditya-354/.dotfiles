@@ -32,7 +32,7 @@ fi
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-alias ls='colorls'
+alias ls='ls --color=auto'
 bindkey '^H' backward-kill-word
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
