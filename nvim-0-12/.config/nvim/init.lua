@@ -1096,7 +1096,7 @@ require('onenord').setup({
     diagnostics = "underline",
   },
   disable = {
-    background = false, -- Disable setting the background color
+    background = true, -- Disable setting the background color
     float_background = false, -- Disable setting the background color for floating windows
     cursorline = true, -- Disable the cursorline
     eob_lines = false, -- Hide the end-of-buffer lines
