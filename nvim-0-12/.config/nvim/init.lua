@@ -935,7 +935,7 @@ require("gruvbox").setup({
   terminal_colors = true, -- add neovim terminal colors
   undercurl = true,
   underline = true,
-  bold = true,
+  bold = false,
   italic = {
     strings = false,
     emphasis = false,
@@ -948,11 +948,11 @@ require("gruvbox").setup({
   invert_signs = false,
   invert_tabline = true,
   inverse = true, -- invert background for search, diffs, statuslines and errors
-  contrast = "soft", -- can be "hard", "soft" or empty string
+  contrast = "", -- can be "hard", "soft" or empty string
   palette_overrides = {},
   overrides = {},
   dim_inactive = false,
-  transparent_mode = true,
+  transparent_mode = false,
 })
 
 require("lualine").setup({
@@ -1204,7 +1204,7 @@ require('darkvoid').setup({
             treesitter = true,
             nvimtree = true,
             telescope = true,
-            lualine = true,
+            lualine = false,
             bufferline = true,
             oil = true,
             whichkey = true,
@@ -1245,19 +1245,19 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "darkvoid",
     callback = function()
         local hl_groups = {
-            -- "Normal",
-            -- "NormalFloat",
-            -- "SignColumn",
-            -- "NormalNC", -- background for non-current windows
-            -- "EndOfBuffer",
-            -- "MsgArea",
-            -- "FloatBorder",
-            -- "StatusLine",
-            -- "StatusLineNC",
-            -- "ColorColumn",
-            -- "TabLine",
-            -- "TabLineFill",
-            -- "TabLineSel",
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "TabLineSel",
             "LineNr",
             "Cursor",
         }
