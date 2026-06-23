@@ -1087,7 +1087,7 @@ require('onenord').setup({
     diagnostics = "underline",
   },
   disable = {
-    background = true, -- Disable setting the background color
+    background = false, -- Disable setting the background color
     float_background = false, -- Disable setting the background color for floating windows
     cursorline = true, -- Disable the cursorline
     eob_lines = false, -- Hide the end-of-buffer lines
@@ -1245,18 +1245,18 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "darkvoid",
     callback = function()
         local hl_groups = {
-            "Normal",
-            "NormalFloat",
-            "SignColumn",
-            "NormalNC", -- background for non-current windows
-            "EndOfBuffer",
-            "MsgArea",
-            "FloatBorder",
-            "StatusLine",
-            "StatusLineNC",
-            "ColorColumn",
-            "TabLine",
-            "TabLineFill",
+            -- "Normal",
+            -- "NormalFloat",
+            -- "SignColumn",
+            -- "NormalNC", -- background for non-current windows
+            -- "EndOfBuffer",
+            -- "MsgArea",
+            -- "FloatBorder",
+            -- "StatusLine",
+            -- "StatusLineNC",
+            -- "ColorColumn",
+            -- "TabLine",
+            -- "TabLineFill",
             -- "TabLineSel",
             "LineNr",
             "Cursor",
@@ -1266,30 +1266,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         end
         -- vim.api.nvim_set_hl(0, "Comment", { fg = "#dd00af" })
         -- vim.api.nvim_set_hl(0, "MatchParen", { fg = "#000000", bg = "#ffffff" })
-    end,
-})
-
-vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "default",
-    callback = function()
-        local hl_groups = {
-            "Normal",
-            "NormalFloat",
-            "SignColumn",
-            "NormalNC", -- background for non-current windows
-            "EndOfBuffer",
-            "MsgArea",
-            "FloatBorder",
-            "StatusLine",
-            "StatusLineNC",
-            "ColorColumn",
-            "TabLine",
-            "TabLineFill",
-            "LineNr",
-        }
-        for _, group in ipairs(hl_groups) do
-            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
-        end
     end,
 })
 
