@@ -1254,7 +1254,7 @@ require("tokyonight").setup({
 local dracula = require("dracula")
 dracula.setup({
     show_end_of_buffer = true,
-    transparent_bg = true,
+    transparent_bg = false,
 })
 
 local greeter = require("greeter")
@@ -1304,5 +1304,5 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
-vim.cmd("colorscheme dracula")
+vim.cmd("colorscheme darkvoid")
 
