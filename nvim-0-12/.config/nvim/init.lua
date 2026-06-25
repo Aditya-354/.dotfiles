@@ -1177,7 +1177,7 @@ require("catppuccin").setup({
 
 require('darkvoid').setup({
     transparent = false,
-    glow = true,
+    glow = false,
     show_end_of_buffer = true,
 
     colors = {

@@ -6,7 +6,7 @@ font-family = FiraCode Nerd Font
 # font-family = "Agave Nerd Font Mono"
 font-family = "Iosevka NFM"
 font-size = 12
-# font-feature = -calt
+font-feature = -calt
 # font-thicken = true
 # adjust-cell-height = 0
 
