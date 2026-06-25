@@ -3,13 +3,14 @@
 * {
     all: unset;
     font-family: "FiraCode Nerd Font Propo", "MesloLGS Nerd Font Propo";
-    font-size: 20px;
+    font-size: 16px;
     margin-top: -1px;
     margin-bottom: -1px;
 }
 
 #waybar {
-    background-color: @bg0;
+    background-color: @base;
+    box-shadow: 0 0 1;
 }
 
 tooltip {
@@ -20,32 +21,36 @@ tooltip {
 }
 
 .modules-center {
-    background-color: transparent;
-    color: #ffffff;
-    padding: 2px;
-    border-radius: 99px;
-    box-shadow: 0 0 1;
+
+}
+
+.modules-left {
+
+}
+
+.modules-right {
+
 }
 
 #clock {
     font-weight: 400;
+    color: @text;
 }
 
 #pulseaudio {
-    color: #ffffff
+    color: @teal;
 }
 
 #network {
-    color: #ffffff;
+    color: @orange;
     padding: 2px;
 }
 
 #workspaces {
     /* background-color: @bg0; */
-    /* background-color: @bg3; */
     margin: 2px 0;
     padding: 2px 4px;
-    /* border-radius: 99px; */
+    border-radius: 99px;
 }
 
 #workspaces button {
@@ -62,23 +67,21 @@ tooltip {
 }
 
 #workspaces button.active {
-    background-color: @teal;
+    background-color: @yellow;
     color: @bg0;
     min-width: 1.5rem;
     font-weight: bold;
     transition: none;
+    border-radius: 99px;
 }
 
 #window {
     background-color: transparent;
-    border-radius: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    color: #ffffff;
+    padding-left: 4px;
 }
 
 #bluetooth {
-    color: #ffffff;
+    color: @blue;
 }
 
 #cpu {
