@@ -21,6 +21,10 @@
       "rev": "45be993a5617e05811b6b293c05e6aded7003cc9",
       "src": "https://github.com/darkvoid-theme/darkvoid.nvim"
     },
+    "dracula.nvim": {
+      "rev": "ae752c13e95fb7c5f58da4b5123cb804ea7568ee",
+      "src": "https://github.com/Mofiqul/dracula.nvim"
+    },
     "efmls-configs-nvim": {
       "rev": "5dc52088c231f2721f545570fcb541b04802ce6b",
       "src": "https://github.com/creativenull/efmls-configs-nvim"
@@ -72,6 +76,10 @@
     "strudel.nvim": {
       "rev": "3a7e62c9048a318281328ad08d6269e50b884cd3",
       "src": "https://github.com/gruvw/strudel.nvim.git"
+    },
+    "tokyonight.nvim": {
+      "rev": "cdc07ac78467a233fd62c493de29a17e0cf2b2b6",
+      "src": "https://github.com/folke/tokyonight.nvim"
     }
   }
 }

@@ -283,10 +283,10 @@ vim.keymap.set({ "n", "v" }, "<leader>x", '"_d', { desc = "Delete without yankin
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" })
 
-vim.keymap.set("n", "<leader>dc", ":colo darkvoid<CR>", { desc = "Change color theme to bathory" })
-vim.keymap.set("n", "<leader>te", ":colo everforest<CR>", { desc = "Change color theme to everforest" })
-vim.keymap.set("n", "<leader>tc", ":colo catppuccin-mocha<CR>", { desc = "Change color theme to everforest" })
-vim.keymap.set("n", "<leader>tg", ":colo gruvbox<CR>", { desc = "Change color theme to everforest" })
+vim.keymap.set("n", "<leader>dc", ":colo darkvoid<CR>", { desc = "Change color theme to darkvoid" })
+vim.keymap.set("n", "<leader>dd", ":colo dracula<CR>", { desc = "Change color theme to dracula" })
+vim.keymap.set("n", "<leader>tc", ":colo catppuccin-mocha<CR>", { desc = "Change color theme to catppuccin-mocha" })
+vim.keymap.set("n", "<leader>tg", ":colo gruvbox<CR>", { desc = "Change color theme to gruvbox" })
 vim.keymap.set("n", "<leader>tt", ":!date<CR>", { desc = "Display date and time" })
 
 vim.keymap.set("n", "<leader>j", ":Ex<CR>", { desc = "Open netrw" })
@@ -385,9 +385,11 @@ vim.pack.add({
 	-- "https://www.github.com/nvim-tree/nvim-tree.lua",
   -- colorschemes
   "https://github.com/ellisonleao/gruvbox.nvim",
+  "https://github.com/folke/tokyonight.nvim",
   "https://github.com/nvim-lualine/lualine.nvim",
   "https://github.com/darkvoid-theme/darkvoid.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
+  "https://github.com/Mofiqul/dracula.nvim",
   "https://github.com/rmehri01/onenord.nvim",
   { src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
   {
@@ -437,7 +439,9 @@ packadd("efmls-configs-nvim")
 
 packadd("catppuccin")
 packadd("darkvoid.nvim")
+packadd("dracula.nvim")
 packadd("gruvbox.nvim")
+packadd("tokyonight.nvim")
 packadd("onenord.nvim")
 packadd("black-metal-theme-neovim")
 packadd("blink.cmp")
@@ -1173,7 +1177,7 @@ require("catppuccin").setup({
 
 require('darkvoid').setup({
     transparent = false,
-    glow = false,
+    glow = true,
     show_end_of_buffer = true,
 
     colors = {
@@ -1239,26 +1243,41 @@ require('darkvoid').setup({
     },
 })
 
-require("greeter").greet()
+require("tokyonight").setup({
+    transparent = false,
+    styles = {
+        comments = { italic = false },
+        keywords = { italic = false },
+    }
+})
+
+local dracula = require("dracula")
+dracula.setup({
+    show_end_of_buffer = true,
+    transparent_bg = false,
+})
+
+local greeter = require("greeter")
+greeter.greet()
 
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "darkvoid",
     callback = function()
         local hl_groups = {
-            "Normal",
-            "NormalFloat",
-            "SignColumn",
-            "NormalNC", -- background for non-current windows
-            "EndOfBuffer",
-            "MsgArea",
-            "FloatBorder",
-            "StatusLine",
-            "StatusLineNC",
-            "ColorColumn",
-            "TabLine",
-            "TabLineFill",
-            "TabLineSel",
-            "LineNr",
+            -- "Normal",
+            -- "NormalFloat",
+            -- "SignColumn",
+            -- "NormalNC", -- background for non-current windows
+            -- "EndOfBuffer",
+            -- "MsgArea",
+            -- "FloatBorder",
+            -- "StatusLine",
+            -- "StatusLineNC",
+            -- "ColorColumn",
+            -- "TabLine",
+            -- "TabLineFill",
+            -- "TabLineSel",
+            -- "LineNr",
             "Cursor",
         }
         for _, group in ipairs(hl_groups) do

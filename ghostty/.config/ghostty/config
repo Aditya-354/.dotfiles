@@ -6,14 +6,14 @@ font-family = FiraCode Nerd Font
 # font-family = "Agave Nerd Font Mono"
 font-family = "Iosevka NFM"
 font-size = 12
-font-feature = -calt
+# font-feature = -calt
 # font-thicken = true
 # adjust-cell-height = 0
 
 # Aesthetics
 window-padding-x = 0
 window-padding-y = 0
-# theme = Dracula
+theme = Dracula
 # theme = Catppuccin Frappe
 # theme = Catppuccin Mocha
 # theme = Adwaita Dark
@@ -26,7 +26,8 @@ window-padding-y = 0
 # theme = Selenized Black
 # theme = Cursor Dark
 # theme = Rose Pine
-theme = Dark Modern
+# theme = Dark Modern
+# theme = Modus Vivendi Tinted
 # theme = iTerm2 Solarized Dark
 # theme = Gruber Darker
 # theme = Solarized Dark Higher Contrast
