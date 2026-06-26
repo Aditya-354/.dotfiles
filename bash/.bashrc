@@ -13,7 +13,6 @@ alias so='clear && source ~/.bashrc && fastfetch'
 alias cl='clear'
 alias cpp='~/scripts/./cpp.bash'
 alias bin='~/scripts/./bin.bash'
-alias doom='~/.config/emacs/bin/doom'
 
 # PS1='\[\e[33m\e[1m\]\u@\h: \[\e[34m\]\W \[\e[0m\]\$ '
 # ➜
