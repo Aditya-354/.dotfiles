@@ -53,7 +53,7 @@ background-opacity = 1
 
 # Feature config
 cursor-style = block
-cursor-style-blink = false
+custom-shader = cursor_animation.glsl
 shell-integration-features = no-cursor   
 keybind = ctrl+backspace=text:\x17
 # resize-overlay-duration = 4s 200ms
