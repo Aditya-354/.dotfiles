@@ -386,6 +386,7 @@ vim.pack.add({
   -- colorschemes
   "https://github.com/ellisonleao/gruvbox.nvim",
   "https://github.com/folke/tokyonight.nvim",
+  "https://github.com/prichrd/netrw.nvim",
   "https://github.com/nvim-lualine/lualine.nvim",
   "https://github.com/darkvoid-theme/darkvoid.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
@@ -430,6 +431,7 @@ packadd("nvim-treesitter")
 packadd("gitsigns.nvim")
 packadd("mini.nvim")
 packadd("lualine.nvim")
+packadd("netrw.nvim")
 packadd("fzf-lua")
 -- packadd("nvim-tree.lua")
 packadd("strudel.nvim")
@@ -558,6 +560,7 @@ vim.keymap.set("n", "<leader>fX", function()
 end, { desc = "FZF Diagnostics Workspace" })
 
 require("mini.indentscope").setup({})
+require("mini.icons").setup({})
 require("mini.notify").setup({})
 
 require("gitsigns").setup({
@@ -1286,6 +1289,24 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         -- vim.api.nvim_set_hl(0, "Comment", { fg = "#dd00af" })
         -- vim.api.nvim_set_hl(0, "MatchParen", { fg = "#000000", bg = "#ffffff" })
     end,
+})
+
+require("netrw").setup({
+  -- File icons to use when `use_devicons` is false or if
+  -- no icon is found for the given file type.
+  icons = {
+    symlink = '',
+    directory = '',
+    file = '',
+  },
+  -- Uses mini.icon or nvim-web-devicons if true, otherwise use the file icon specified above
+  use_devicons = true,
+  mappings = {
+    -- Function mappings receive an object describing the node under the cursor
+    ['p'] = function(payload) print(vim.inspect(payload)) end,
+    -- String mappings are executed as vim commands
+    ['<Leader>p'] = ":echo 'hello world'<CR>",
+  },
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
