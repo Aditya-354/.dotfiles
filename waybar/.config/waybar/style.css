@@ -9,8 +9,8 @@
 }
 
 #waybar {
-    /* background-color: @base; */
-    background-color: transparent;
+    background-color: @base;
+    /* background-color: transparent; */
     box-shadow: 0 0 1;
 }
 
