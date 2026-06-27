@@ -16,7 +16,7 @@ alias base='tmux new -As base'
 # ZSH_THEME="kafeitu"
 # ZSH_THEME="kphoen"
 # ZSH_THEME="gianu"
-# ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(git)
 
@@ -40,5 +40,4 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 [[ ! -f ~/.dotfiles/zsh/.p10k.zsh ]] || source ~/.dotfiles/zsh/.p10k.zsh
 
-eval "$(starship init zsh)"
-# eval "$(oh-my-posh init zsh --config 'tokyo')"
+# eval "$(starship init zsh)"
