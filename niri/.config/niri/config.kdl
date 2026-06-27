@@ -258,7 +258,10 @@ layout {
 // spawn-at-startup "waybar"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
-spawn-sh-at-startup "qs -c noctalia-shell"
+spawn-sh-at-startup "waybar & disown"
+spawn-sh-at-startup "waypaper --restore"
+spawn-sh-at-startup "awww-daemon &"
+spawn-sh-at-startup "swaync"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
@@ -322,7 +325,7 @@ window-rule {
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
-    geometry-corner-radius 10
+    geometry-corner-radius 0
     clip-to-geometry true
 }
 
@@ -333,27 +336,15 @@ binds {
     // Applications & Programs
     Alt+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Alt+F {spawn "foot"; }
-    Alt+Shift+S {spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "screenRecorder" "toggle"; }
     Alt+G hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
-    Alt+Period { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "emoji"; }
-    Alt+Comma { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "calculator"; }
-    Alt+Slash { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "clipboard"; }
-    Alt+Shift+D { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "desktopWidgets" "toggle"; }
-    Alt+Shift+W { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "wallpaper" "toggle"; }
-    Alt+R { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
-    Alt+S { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle"; }
-    Alt+C { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
-    // Alt+N { spawn "swaync-client" "-t";}
-    Alt+B { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "bar" "toggle"; }
-    Alt+Shift+Q { spawn "/usr/bin/qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
+    Alt+Shift+W { spawn "waypaper"; }
+    Alt+R { spawn "~/.config/rofi/launchers/myType/./launcher.sh"; }
+    Alt+S { spawn "~/.config/rofi/applets/bin/./powermenu.sh"; }
+    Alt+N { spawn "~/.config/waybar/scripts/reload_waybar.sh";}
     Alt+E { spawn "dolphin"; }
-    Alt+D { spawn "~/.config/waybar/scripts/launch.sh"; }
-    Alt+Shift+B { spawn "pkill" "-USR1" "waybar"; }
     Mod+B { spawn "brave"; }
     Mod+O { spawn "obsidian"; }
-    // Alt+N{ spawn "obsidian"; }
     Mod+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
-    Mod+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
     // Volume, Audio, & Brightness
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
