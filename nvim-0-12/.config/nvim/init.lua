@@ -418,6 +418,15 @@ vim.pack.add({
 })
 
 vim.pack.add({
+    'https://github.com/MeanderingProgrammer/render-markdown.nvim',
+})
+require("render-markdown").setup({})
+
+vim.pack.add({
+    "https://github.com/3rd/image.nvim",
+})
+
+vim.pack.add({
     {
         src = "/home/asrwx/plugins/greeter.nvim",
     }
@@ -938,330 +947,17 @@ vim.lsp.enable({
 -- THEME CONFIG
 -- =============================================================================================
 
-require("gruvbox").setup({
-  terminal_colors = true, -- add neovim terminal colors
-  undercurl = true,
-  underline = true,
-  bold = false,
-  italic = {
-    strings = false,
-    emphasis = false,
-    comments = false,
-    operators = false,
-    folds = false,
-  },
-  strikethrough = true,
-  invert_selection = false,
-  invert_signs = false,
-  invert_tabline = true,
-  inverse = true, -- invert background for search, diffs, statuslines and errors
-  contrast = "", -- can be "hard", "soft" or empty string
-  palette_overrides = {},
-  overrides = {},
-  dim_inactive = false,
-  transparent_mode = false,
-})
-
-require("lualine").setup({
-    options = {
-        icons_enabled = true,
-        theme = 'auto',
-        component_separators = { left = '', right = ''},
-        section_separators = { left = '', right = ''},
-        -- component_separators = { left = '', right = '' },
-        -- section_separators = { left = '', right = '' };
-        disabled_filetypes = {
-            statusline = {},
-            winbar = {},
-        },
-        ignore_focus = {},
-        always_divide_middle = true,
-        always_show_tabline = true,
-        globalstatus = false,
-        refresh = {
-            statusline = 1000,
-            tabline = 1000,
-            winbar = 1000,
-            refresh_time = 16, -- ~60fps
-            events = {
-                'WinEnter',
-                'BufEnter',
-                'BufWritePost',
-                'SessionLoadPost',
-                'FileChangedShellPost',
-                'VimResized',
-                'Filetype',
-                'CursorMoved',
-                'CursorMovedI',
-                'ModeChanged',
-            },
-        }
-    },
-    sections = {
-        lualine_a = {'mode'},
-        lualine_b = {'branch', 'diff', 'diagnostics'},
-        lualine_c = {'filename'},
-        lualine_x = {'encoding', 'fileformat', 'filetype'},
-        lualine_y = {'progress'},
-        lualine_z = {'location'}
-    },
-    inactive_sections = {
-        lualine_a = {},
-        lualine_b = {},
-        lualine_c = {'filename'},
-        lualine_x = {'location'},
-        lualine_y = {},
-        lualine_z = {}
-    },
-    tabline = {},
-    winbar = {},
-    inactive_winbar = {},
-    extensions = {}
-})
-
-require("black-metal").setup({
-  -----MAIN OPTIONS-----
-  --
-  -- Can be one of: bathory | burzum | dark-funeral | darkthrone | 
-  -- emperor | gorgoroth | immortal | impaled-nazarene | khold | marduk | mayhem | nile | taake | thyrfing | venom | windir
-  theme = "burzum",
-  cursorline_gutter = true,
-  -- If true, highlights the gutter darker than the bg
-  dark_gutter = false,
-  -- if true favor treesitter highlights over semantic highlights
-  favor_treesitter_hl = false,
-  -- Don't set background of floating windows. Recommended for when using floating
-  -- windows with borders.
-  plain_float = false,
-  -- Show the end-of-buffer character
-  show_eob = true,
-  -- If true, enable the vim terminal colors
-  term_colors = true,
-  -- Keymap (in normal mode) to toggle between light and dark variants.
-  toggle_variant_key = "<leader>bt",
-  -- Don't set background
-  transparent = true,
-  alt_bg = false,
-
-  diagnostics = {
-    darker = true, -- Darker colors for diagnostic
-    undercurl = true, -- Use undercurl for diagnostics
-    background = true, -- Use background color for virtual text
-  },
-  -- The following table accepts values the same as the `gui` option for normal
-  -- highlights. For example, `bold`, `italic`, `underline`, `none`.
-  code_style = {
-    comments = "none",
-    conditionals = "none",
-    functions = "none",
-    keywords = "none",
-    headings = "none", -- Markdown headings
-    operators = "none",
-    keyword_return = "none",
-    strings = "none",
-    methods = "none",
-    variables = "none",
-  },
-
-  -- The following options allow for more control over some plugin appearances.
-  plugin = {
-    lualine = {
-      -- Bold lualine_a sections
-      bold = true,
-      -- Don't set section/component backgrounds. Recommended to not set
-      -- section/component separators.
-      plain = false,
-    },
-    cmp = { -- works for nvim.cmp and blink.nvim
-      -- Don't highlight lsp-kind items. Only the current selection will be highlighted.
-      plain = false,
-      -- Reverse lsp-kind items' highlights in blink/cmp menu.
-      reverse = false,
-    },
-  },
-})
-
-require('onenord').setup({
-  theme = nil, -- "dark" or "light". Alternatively, remove the option and set vim.o.background instead
-  borders = true, -- Split window borders
-  fade_nc = false, -- Fade non-current windows, making them more distinguishable
-  styles = {
-    comments = "italic",
-    strings = "NONE",
-    keywords = "NONE",
-    functions = "NONE",
-    variables = "NONE",
-    diagnostics = "underline",
-  },
-  disable = {
-    background = false, -- Disable setting the background color
-    float_background = false, -- Disable setting the background color for floating windows
-    cursorline = true, -- Disable the cursorline
-    eob_lines = false, -- Hide the end-of-buffer lines
-  },
-  -- Inverse highlight for different groups
-  inverse = {
-    match_paren = false,
-  },
-  custom_highlights = {
-      ["@variable.parameter"] = { fg = "#cc88ff" },
-  }, -- Overwrite default highlight groups
-  custom_colors = {}, -- Overwrite default colors
-})
-
-require("catppuccin").setup({
-    flavour = "auto", -- latte, frappe, macchiato, mocha
-    background = { -- :h background
-        light = "latte",
-        dark = "mocha",
-    },
-    transparent_background = false, -- disables setting the background color.
-    float = {
-        transparent = false, -- enable transparent floating windows
-        solid = false, -- use solid styling for floating windows, see |winborder|
-    },
-    term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
-    dim_inactive = {
-        enabled = false, -- dims the background color of inactive window
-        shade = "dark",
-        percentage = 0.15, -- percentage of the shade to apply to the inactive window
-    },
-    no_italic = false, -- Force no italic
-    no_bold = false, -- Force no bold
-    no_underline = false, -- Force no underline
-    styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
-        comments = {}, -- Change the style of comments
-        conditionals = {},
-        loops = {},
-        functions = {},
-        keywords = {},
-        strings = {},
-        variables = {},
-        numbers = {},
-        booleans = {},
-        properties = {},
-        types = {},
-        operators = {},
-        miscs = {}, -- Uncomment to turn off hard-coded styles
-    },
-    lsp_styles = { -- Handles the style of specific lsp hl groups (see `:h lsp-highlight`).
-        virtual_text = {
-            errors = { "italic" },
-            hints = { "italic" },
-            warnings = { "italic" },
-            information = { "italic" },
-            ok = { "italic" },
-        },
-        underlines = {
-            errors = { "underline" },
-            hints = { "underline" },
-            warnings = { "underline" },
-            information = { "underline" },
-            ok = { "underline" },
-        },
-        inlay_hints = {
-            background = true,
-        },
-    },
-    color_overrides = {},
-    custom_highlights = {},
-    default_integrations = true,
-    auto_integrations = false,
-    integrations = {
-        cmp = true,
-        gitsigns = true,
-        nvimtree = true,
-        notify = false,
-        mini = {
-            enabled = true,
-        },
-    },
-})
-
-require('darkvoid').setup({
-    transparent = false,
-    glow = false,
-    show_end_of_buffer = true,
-
-    colors = {
-        fg = "#c0c0c0",
-        bg = "#1c1c1c",
-        cursor = "#bdfe58",
-        line_nr = "#404040",
-        -- visual = "#303030",
-        comment = "#676767",
-        string = "#d1d1d1",
-        func = "#e1e1e1",
-        kw = "#f1f1f1",
-        identifier = "#b1b1b1",
-        type = "#a1a1a1",
-        type_builtin = "#c5c5c5", -- current
-        -- type_builtin = "#8cf8f7", -- glowy blue old (was present by default before type_builtin was introduced added here for people who may like it)
-        search_highlight = "#1bfd9c",
-        operator = "#1bfd9c",
-        bracket = "#e6e6e6",
-        preprocessor = "#4b8902",
-        bool = "#66b2b2",
-        constant = "#b2d8d8",
-
-        -- enable or disable specific plugin highlights
-        plugins = {
-            gitsigns = true,
-            nvim_cmp = true,
-            treesitter = true,
-            nvimtree = true,
-            telescope = true,
-            lualine = false,
-            bufferline = true,
-            oil = true,
-            whichkey = true,
-            nvim_notify = true,
-        },
-
-        -- gitsigns colors
-        added = "#baffc9",
-        changed = "#ffffba",
-        removed = "#ffb3ba",
-
-        -- Pmenu colors
-        pmenu_bg = "#1c1c1c",
-        pmenu_sel_bg = "#1bfd9c",
-        pmenu_fg = "#c0c0c0",
-
-        -- EndOfBuffer color
-        eob = "#3c3c3c",
-
-        -- Telescope specific colors
-        border = "#585858",
-        title = "#bdfe58",
-
-        -- bufferline specific colors
-        bufferline_selection = "#1bfd9c",
-
-        -- LSP diagnostics colors
-        error = "#dea6a0",
-        warning = "#d6efd8",
-        hint = "#bedc74",
-        info = "#7fa1c3",
-    },
-})
-
-require("tokyonight").setup({
-    transparent = false,
-    styles = {
-        comments = { italic = false },
-        keywords = { italic = false },
-    }
-})
-
-local dracula = require("dracula")
-dracula.setup({
-    show_end_of_buffer = true,
-    transparent_bg = true,
-})
-
-local greeter = require("greeter")
-greeter.greet()
+require("gruvboxCS")
+require("lualineSL")
+require("blackmetalCS")
+require("onenordCS")
+require("catppuccinCS")
+require("darkvoidCS")
+require("tokyonightCS")
+require("draculaCS")
+require("myGreeter")
+require("netrwicons")
+require("imagerenderer")
 
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "darkvoid",
@@ -1291,23 +987,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
-require("netrw").setup({
-  -- File icons to use when `use_devicons` is false or if
-  -- no icon is found for the given file type.
-  icons = {
-    symlink = '',
-    directory = '',
-    file = '',
-  },
-  -- Uses mini.icon or nvim-web-devicons if true, otherwise use the file icon specified above
-  use_devicons = true,
-  mappings = {
-    -- Function mappings receive an object describing the node under the cursor
-    ['p'] = function(payload) print(vim.inspect(payload)) end,
-    -- String mappings are executed as vim commands
-    ['<Leader>p'] = ":echo 'hello world'<CR>",
-  },
-})
 
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "*",
@@ -1325,5 +1004,5 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
-vim.cmd("colorscheme default")
+vim.cmd("colorscheme dracula")
 
