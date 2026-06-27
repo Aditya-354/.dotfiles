@@ -1257,7 +1257,7 @@ require("tokyonight").setup({
 local dracula = require("dracula")
 dracula.setup({
     show_end_of_buffer = true,
-    transparent_bg = true,
+    transparent_bg = false,
 })
 
 local greeter = require("greeter")
@@ -1267,20 +1267,20 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "darkvoid",
     callback = function()
         local hl_groups = {
-            -- "Normal",
-            -- "NormalFloat",
-            -- "SignColumn",
-            -- "NormalNC", -- background for non-current windows
-            -- "EndOfBuffer",
-            -- "MsgArea",
-            -- "FloatBorder",
-            -- "StatusLine",
-            -- "StatusLineNC",
-            -- "ColorColumn",
-            -- "TabLine",
-            -- "TabLineFill",
-            -- "TabLineSel",
-            -- "LineNr",
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "TabLineSel",
+            "LineNr",
             "Cursor",
         }
         for _, group in ipairs(hl_groups) do
@@ -1325,5 +1325,5 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
-vim.cmd("colorscheme dracula")
+vim.cmd("colorscheme default")
 
