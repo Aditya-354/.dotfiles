@@ -965,7 +965,7 @@ require("gruvbox").setup({
 require("lualine").setup({
     options = {
         icons_enabled = true,
-        theme = 'onenord',
+        theme = 'auto',
         component_separators = { left = '', right = ''},
         section_separators = { left = '', right = ''},
         -- component_separators = { left = '', right = '' },
@@ -1257,7 +1257,7 @@ require("tokyonight").setup({
 local dracula = require("dracula")
 dracula.setup({
     show_end_of_buffer = true,
-    transparent_bg = false,
+    transparent_bg = true,
 })
 
 local greeter = require("greeter")
