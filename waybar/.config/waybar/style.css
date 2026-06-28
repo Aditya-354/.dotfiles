@@ -1,95 +1,105 @@
-@import "mycolors.css";
+@define-color highlight rgba(117, 241, 250, 1);
+@define-color dark-9 rgba(24, 24, 27, 1);
+@define-color dark-8 rgba(39, 39, 42, 1);
+@define-color dark-7 rgba(63, 63, 70, 1);
+@define-color dark-6 rgba(82, 82, 91, 1);
+@define-color dark-5 rgba(113, 113, 122, 1);
 
 * {
-    all: unset;
-    font-family: "FiraCode Nerd Font Propo", "MesloLGS Nerd Font Propo";
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FiraCode Nerd Font Propo;
     font-size: 16px;
-    margin-top: -1px;
-    margin-bottom: -1px;
 }
 
-#waybar {
-    background-color: @base;
-    /* background-color: transparent; */
-    box-shadow: 0 0 1;
-}
-
-tooltip {
-    background-color: @crust;
-    color: @subtext1;
-    border-radius: 12px;
-    border-color: @mantle;
-}
-
-.modules-center {
-
-}
-
-.modules-left {
-
-}
-
-.modules-right {
-
-}
-
-#clock {
-    font-weight: 400;
-    color: @text;
-}
-
-#pulseaudio {
-    color: @teal;
-}
-
-#network {
-    color: @orange;
-    padding: 2px;
-}
-
-#workspaces {
-    /* background-color: @bg0; */
-    margin: 2px 0;
-    padding: 2px 4px;
-    border-radius: 99px;
+window#waybar {
+    background-color: @dark-9;
+    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
+    color: #ffffff;
 }
 
 #workspaces button {
-    /* background-color: @bg0; */
-    padding: 1px;
+    padding: 3px;
+    margin: 7px 0px 7px 7px;
+    background: transparent;
     border-radius: 2px;
-    margin: 0 2px;
-    /* transition: all 200ms ease-in-out; */
-    min-width: 20px;
-}
-
-#workspaces buttom.empty {
-    color: @sky;
+    color: white;
 }
 
 #workspaces button.active {
-    background-color: @yellow;
-    color: @bg0;
-    min-width: 1.5rem;
-    font-weight: bold;
-    transition: none;
-    border-radius: 99px;
+    background: @highlight;
+    color: black;
+    font-weight: 700;
 }
 
-#window {
-    background-color: transparent;
-    padding-left: 4px;
+#workspaces button.urgent {
+    background: rgba(227, 81, 73, 1);
 }
 
-#bluetooth {
-    color: @blue;
+#battery,
+#bluetooth,
+#network,
+#cpu,
+#memory,
+#volume {
+    border-radius: 8px;
+    padding: 5px 8px;
+    background: @dark-8;
+    margin: 5px 10px 5px 0px;
 }
 
-#cpu {
-    color: #ffffff;
+#pulseaudio-slider {
+    padding: 0px;
+    margin: 0px;
+    margin-left: 8px;
 }
 
-#memory {
-    color: #ffffff;
+#pulseaudio-slider slider {
+    all: unset;
+    min-height: 0;
+    min-width: 0;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
 }
 
+#pulseaudio-slider trough {
+    min-height: 8px;
+    min-width: 75px;
+    border-radius: 5px;
+    background: @dark-7;
+}
+
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background: @highlight;
+}
+
+#media {
+    color: #42ff9f;
+    margin: 7px 0px 7px 80px;
+}
+
+#custom-media-animation {
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+#custom-media-now-playing {
+    margin-right: 10px;
+}
+
+#custom-media-time {
+    color: @dark-5;
+    font-size: 14px;
+}
+
+tooltip {
+    background: @dark-9;
+    border-radius: 5px;
+}
+
+tooltip label {
+    color: white;
+}
