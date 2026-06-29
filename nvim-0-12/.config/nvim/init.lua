@@ -385,15 +385,12 @@ vim.pack.add({
 	-- "https://www.github.com/nvim-tree/nvim-tree.lua",
   -- colorschemes
   "https://github.com/ellisonleao/gruvbox.nvim",
-  "https://github.com/folke/tokyonight.nvim",
   "https://github.com/prichrd/netrw.nvim",
   "https://github.com/nvim-lualine/lualine.nvim",
   "https://github.com/sainnhe/sonokai",
   "https://github.com/darkvoid-theme/darkvoid.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
   "https://github.com/Mofiqul/dracula.nvim",
-  "https://github.com/rmehri01/onenord.nvim",
-  { src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
   {
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
 		branch = "main",
@@ -449,13 +446,10 @@ packadd("nvim-lspconfig")
 packadd("mason.nvim")
 packadd("efmls-configs-nvim")
 
-packadd("catppuccin")
 packadd("darkvoid.nvim")
 packadd("sonokai")
 packadd("dracula.nvim")
 packadd("gruvbox.nvim")
-packadd("tokyonight.nvim")
-packadd("onenord.nvim")
 packadd("black-metal-theme-neovim")
 packadd("blink.cmp")
 packadd("LuaSnip")
@@ -952,10 +946,7 @@ vim.lsp.enable({
 require("gruvboxCS")
 require("lualineSL")
 require("blackmetalCS")
-require("onenordCS")
-require("catppuccinCS")
 require("darkvoidCS")
-require("tokyonightCS")
 require("draculaCS")
 require("myGreeter")
 require("netrwicons")
