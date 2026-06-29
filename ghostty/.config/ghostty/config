@@ -6,7 +6,7 @@ font-family = FiraCode Nerd Font
 # font-family = SauceCodePro Nerd Font Mono
 # font-family = "Agave Nerd Font Mono"
 # font-family = "Iosevka NFM"
-font-size = 12
+font-size = 17
 # font-feature = -calt
 # font-thicken = true
 # adjust-cell-height = 0
@@ -49,10 +49,10 @@ theme = Midnight In Mojave
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-background-opacity = 0.8
+background-opacity = 0.85
 # background-opacity = 1
 # background-blur = 20
-background = #020216
+background = #1a000a
 
 # Feature config
 cursor-style = block
