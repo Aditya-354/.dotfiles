@@ -388,6 +388,7 @@ vim.pack.add({
   "https://github.com/folke/tokyonight.nvim",
   "https://github.com/prichrd/netrw.nvim",
   "https://github.com/nvim-lualine/lualine.nvim",
+  "https://github.com/sainnhe/sonokai",
   "https://github.com/darkvoid-theme/darkvoid.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
   "https://github.com/Mofiqul/dracula.nvim",
@@ -441,6 +442,7 @@ packadd("gitsigns.nvim")
 packadd("mini.nvim")
 packadd("lualine.nvim")
 packadd("netrw.nvim")
+packadd("sonokai")
 packadd("fzf-lua")
 -- packadd("nvim-tree.lua")
 packadd("strudel.nvim")
@@ -984,6 +986,29 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         end
         -- vim.api.nvim_set_hl(0, "Comment", { fg = "#dd00af" })
         -- vim.api.nvim_set_hl(0, "MatchParen", { fg = "#000000", bg = "#ffffff" })
+    end,
+})
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "sonokai",
+    callback = function()
+        local hl_groups = {
+            "Normal",
+            "NormalFloat",
+            "NormalNC",
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLineNC",
+            "ColorColumn",
+            "Tabline",
+            "TabLineSel",
+            "LineNr",
+            "Cursor",
+        }
+        for _, group in ipairs(hl_groups) do
+            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+        end
     end,
 })
 

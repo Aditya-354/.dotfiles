@@ -8,7 +8,9 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FiraCode Nerd Font Propo;
-    font-size: 16px;
+    font-size: 18px;
+    margin-top: -2px;
+    margin-bottom: -2px;
 }
 
 window#waybar {
@@ -102,4 +104,24 @@ tooltip {
 
 tooltip label {
     color: white;
+}
+
+#network {
+    color: red;
+}
+
+#cpu {
+    color: magenta;
+}
+
+#memory {
+    color: orange;
+}
+
+#bluetooth {
+    color: skyblue;
+}
+
+#volume {
+    color: rgba(245, 100, 100, 1);
 }
