@@ -285,7 +285,7 @@ vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" }
 
 vim.keymap.set("n", "<leader>dc", ":colo darkvoid<CR>", { desc = "Change color theme to darkvoid" })
 vim.keymap.set("n", "<leader>dd", ":colo dracula<CR>", { desc = "Change color theme to dracula" })
-vim.keymap.set("n", "<leader>tc", ":colo catppuccin-mocha<CR>", { desc = "Change color theme to catppuccin-mocha" })
+vim.keymap.set("n", "<leader>tc", ":colo catppuccin<CR>", { desc = "Change color theme to catppuccin-mocha" })
 vim.keymap.set("n", "<leader>tg", ":colo gruvbox<CR>", { desc = "Change color theme to gruvbox" })
 vim.keymap.set("n", "<leader>tt", ":!date<CR>", { desc = "Display date and time" })
 
@@ -391,6 +391,7 @@ vim.pack.add({
   "https://github.com/darkvoid-theme/darkvoid.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
   "https://github.com/Mofiqul/dracula.nvim",
+
   {
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
 		branch = "main",
@@ -405,6 +406,13 @@ vim.pack.add({
 		version = vim.version.range("1.*"),
 	},
 	"https://github.com/L3MON4D3/LuaSnip",
+})
+
+vim.pack.add({
+	{
+		src = "https://github.com/rose-pine/neovim",
+		name = "rose-pine",
+	},
 })
 
 -- STRUDEL
@@ -947,6 +955,7 @@ require("gruvboxCS")
 require("lualineSL")
 require("blackmetalCS")
 require("darkvoidCS")
+require("rosepineCS")
 require("draculaCS")
 require("myGreeter")
 require("netrwicons")
