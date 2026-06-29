@@ -990,29 +990,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "sonokai",
-    callback = function()
-        local hl_groups = {
-            "Normal",
-            "NormalFloat",
-            "NormalNC",
-            "EndOfBuffer",
-            "MsgArea",
-            "FloatBorder",
-            "StatusLineNC",
-            "ColorColumn",
-            "Tabline",
-            "TabLineSel",
-            "LineNr",
-            "Cursor",
-        }
-        for _, group in ipairs(hl_groups) do
-            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
-        end
-    end,
-})
-
-vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "*",
     callback = function()
         vim.api.nvim_set_hl(0, "CursorLine", { bg = "none", ctermbg = "none" })
