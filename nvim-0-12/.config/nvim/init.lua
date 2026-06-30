@@ -574,7 +574,6 @@ end, { desc = "FZF Diagnostics Workspace" })
 
 require("mini.indentscope").setup({})
 require("mini.icons").setup({})
-require("mini.notify").setup({})
 
 require("gitsigns").setup({
 	signs = {
