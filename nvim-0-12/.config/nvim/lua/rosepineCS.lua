@@ -1,7 +1,7 @@
 local rosepine = require("rose-pine")
 rosepine.setup({
     variant = "auto", -- auto, main, moon, or dawn
-    dark_variant = "main", -- main, moon, or dawn
+    dark_variant = "moon", -- main, moon, or dawn
     dim_inactive_windows = false,
     extend_background_behind_borders = true,
 
@@ -14,7 +14,7 @@ rosepine.setup({
     styles = {
         bold = false,
         italic = true,
-        transparency = true,
+        transparency = false,
     },
 
     groups = {
