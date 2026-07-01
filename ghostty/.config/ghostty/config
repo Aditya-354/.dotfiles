@@ -1,9 +1,9 @@
 # Typography
 # font-family = JetBrains Mono Nerd Font
-font-family = MesloLGS Nerd Font Mono
-# font-family = FiraCode Nerd Font
+# font-family = MesloLGS Nerd Font Mono
+font-family = FiraCode Nerd Font
 # font-family = "Iosevka NFM"
-font-size = 18
+font-size = 15
 # font-feature = -calt
 # font-thicken = true
 # adjust-cell-height = 0
@@ -46,7 +46,7 @@ theme = Gruvbox Material
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-background-opacity = 0.85
+background-opacity = 0.9
 # background-opacity = 1
 # background-blur = 20
 background = #1a000a
