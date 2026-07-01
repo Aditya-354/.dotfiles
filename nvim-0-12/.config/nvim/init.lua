@@ -1005,5 +1005,5 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
-vim.cmd("colorscheme dracula")
+vim.cmd("colorscheme darkvoid")
 
