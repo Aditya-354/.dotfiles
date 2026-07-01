@@ -14,7 +14,7 @@ alias cl='clear'
 alias cpp='~/scripts/./cpp.bash'
 alias bin='~/scripts/./bin.bash'
 
-# PS1='\[\e[33m\e[1m\]\u@\h: \[\e[34m\]\W \[\e[0m\]\$ '
+PS1='\[\e[33m\e[1m\]\u@\h: \[\e[34m\]\W \[\e[0m\]\$ '
 # ➜
 export PATH="$PATH:~/.cargo/bin"
 export PATH="$HOME/.local/bin:$PATH"
@@ -36,4 +36,4 @@ source /usr/share/nvm/init-nvm.sh
 # eval "$(oh-my-posh init bash --config emodipt-extend)"
 
 # source ~/.bash/themes/aphrodite/aphrodite.theme.sh
-eval "$(starship init bash)"
+# eval "$(starship init bash)"

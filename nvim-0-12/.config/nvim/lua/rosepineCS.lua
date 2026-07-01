@@ -14,7 +14,7 @@ rosepine.setup({
     styles = {
         bold = false,
         italic = true,
-        transparency = true,
+        transparency = false,
     },
 
     groups = {

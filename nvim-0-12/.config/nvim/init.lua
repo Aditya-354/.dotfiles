@@ -961,7 +961,7 @@ require("netrwicons")
 require("imagerenderer")
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "darkvoid",
+    pattern = "sonokai",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1005,5 +1005,5 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
-vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme sonokai")
 

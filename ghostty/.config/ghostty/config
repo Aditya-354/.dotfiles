@@ -34,9 +34,10 @@ window-padding-y = 0
 # theme = Vercel
 # theme = Gruvbox Dark
 # theme = Onenord
-theme = Gruvbox Material
+# theme = Gruvbox Material
 # theme = Brogrammer
 # theme = Vague
+theme = Sonokai
 # theme = Afterglow
 # theme = Flexoki Dark
 # theme = Monokai Soda
@@ -46,10 +47,11 @@ theme = Gruvbox Material
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-background-opacity = 0.9
+# background-opacity = 0.9
 # background-opacity = 1
-# background-blur = 20
-background = #1a000a
+# # background-blur = 20
+# background = #1a000a
+background = #1c1c1c
 
 # Feature config
 cursor-style = block
