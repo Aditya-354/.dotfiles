@@ -1,20 +1,18 @@
 # Arch Linux (Hyprland & Niri) Dotfiles
 
-These are configurations and dotfiles for my arch linux setup. Every time I create a new config package, i use GNU stow to create symlinks to 
-perserve my configurations that can be easily set up when my system breaks.
+These are configurations and dotfiles for my arch linux setup. Every time I create a new config package, I use GNU stow to create symlinks to 
+preserve my configurations that can be easily set up whenever i switch to another machine.
 
 ## Tools that I use:
 
 - Terminal: Kitty, Ghostty
 
-- System fetch: fastfetch
+- Fetch: fastfetch
 
 - Desktop Environments: Hyprland, Niri
 
-- Quickshell: noctalia-shell
+- Shell: bash, zsh
 
-- Bash prompt: starship
+- Text Editor: Neovim
 
-- Code Editor: Neovim
-
-- Theme manager: noctalia-shell theme manager which uses matugen to generate colors.
+- Launcher: rofi
