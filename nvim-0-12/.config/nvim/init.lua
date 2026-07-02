@@ -987,6 +987,13 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "darkvoid",
+    callback = function()
+        vim.api.nvim_set_hl(0, "Cursor", { bg = "none", ctermbg = "none" })
+    end,
+})
+
+vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "*",
     callback = function()
         vim.api.nvim_set_hl(0, "CursorLine", { bg = "none", ctermbg = "none" })
