@@ -57,6 +57,10 @@
       "rev": "69b7433355664cf76898eb86a12a019f39bd86d1",
       "src": "https://www.github.com/echasnovski/mini.nvim"
     },
+    "neogit": {
+      "rev": "43ea1a0854052e583f647e0b35879f0158a70a78",
+      "src": "https://github.com/neogitorg/neogit"
+    },
     "netrw.nvim": {
       "rev": "3f643df59951d9adc4cf348cefe435fcdb5a3671",
       "src": "https://github.com/prichrd/netrw.nvim"
