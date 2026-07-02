@@ -51,7 +51,7 @@ theme = Sonokai
 # background-opacity = 1
 # # background-blur = 20
 # background = #1a000a
-background = #1c1c1c
+background = #2f2f2f
 
 # Feature config
 cursor-style = block
