@@ -287,7 +287,7 @@ vim.keymap.set("n", "<leader>tc", ":colo catppuccin<CR>", { desc = "Change color
 vim.keymap.set("n", "<leader>tg", ":colo gruvbox<CR>", { desc = "Change color theme to gruvbox" })
 vim.keymap.set("n", "<leader>tt", ":!date<CR>", { desc = "Display date and time" })
 
-vim.keymap.set("n", "<leader>j", ":Ex<CR>", { desc = "Open netrw" })
+vim.keymap.set("n", "<leader>j", ":Neotree toggle<CR>", { desc = "Open neo-tree" })
 
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to bottom window" })
@@ -378,13 +378,11 @@ vim.api.nvim_create_autocmd("FileType", {
 -- ============================================================================
 vim.pack.add({
 	"https://www.github.com/lewis6991/gitsigns.nvim",
-	"https://www.github.com/echasnovski/mini.nvim",
 	"https://www.github.com/ibhagwan/fzf-lua",
-	-- "https://www.github.com/nvim-tree/nvim-tree.lua",
-  -- colorschemes
   "https://github.com/ellisonleao/gruvbox.nvim",
   "https://github.com/prichrd/netrw.nvim",
   "https://github.com/nvim-lualine/lualine.nvim",
+  "https://github.com/lukas-reineke/indent-blankline.nvim",
   "https://github.com/sainnhe/sonokai",
   "https://github.com/darkvoid-theme/darkvoid.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
@@ -395,7 +393,6 @@ vim.pack.add({
 		branch = "main",
 		build = ":TSUpdate",
 	},
-	-- Language Server Protocols
 	"https://www.github.com/neovim/nvim-lspconfig",
 	"https://github.com/mason-org/mason.nvim",
 	"https://github.com/creativenull/efmls-configs-nvim",
@@ -407,10 +404,26 @@ vim.pack.add({
 })
 
 vim.pack.add({
+  {
+    src = 'https://github.com/nvim-neo-tree/neo-tree.nvim',
+    version = vim.version.range('3')
+  },
+  -- dependencies
+  "https://github.com/nvim-lua/plenary.nvim",
+  "https://github.com/MunifTanjim/nui.nvim",
+})
+
+vim.pack.add({
 	{
 		src = "https://github.com/rose-pine/neovim",
 		name = "rose-pine",
 	},
+})
+
+vim.pack.add({
+    {
+        src = "https://github.com/nvim-tree/nvim-web-devicons",
+    },
 })
 
 -- STRUDEL
@@ -442,13 +455,12 @@ end
 
 packadd("nvim-treesitter")
 packadd("gitsigns.nvim")
-packadd("mini.nvim")
 packadd("lualine.nvim")
 packadd("netrw.nvim")
 packadd("fzf-lua")
--- packadd("nvim-tree.lua")
 packadd("strudel.nvim")
 packadd("nvim-lspconfig")
+packadd("indent-blankline.nvim")
 packadd("mason.nvim")
 packadd("efmls-configs-nvim")
 
@@ -569,9 +581,6 @@ end, { desc = "FZF Diagnostics Document" })
 vim.keymap.set("n", "<leader>fX", function()
 	require("fzf-lua").diagnostics_workspace()
 end, { desc = "FZF Diagnostics Workspace" })
-
-require("mini.indentscope").setup({})
-require("mini.icons").setup({})
 
 require("gitsigns").setup({
 	signs = {
@@ -735,30 +744,30 @@ vim.keymap.set("n", "<leader>q", function()
 end, { desc = "Open diagnostic list" })
 vim.keymap.set("n", "<leader>dl", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
 
--- require("blink.cmp").setup({
--- 	keymap = {
--- 		preset = "none",
--- 		["<C-Space>"] = { "show", "hide" },
--- 		["<CR>"] = { "accept", "fallback" },
--- 		["<C-j>"] = { "select_next", "fallback" },
--- 		["<C-k>"] = { "select_prev", "fallback" },
--- 		["<Tab>"] = { "snippet_forward", "fallback" },
--- 		["<S-Tab>"] = { "snippet_backward", "fallback" },
--- 	},
--- 	appearance = { nerd_font_variant = "mono" },
--- 	completion = { menu = { auto_show = true } },
--- 	sources = { default = { "lsp", "path", "buffer", "snippets" } },
--- 	snippets = {
--- 		expand = function(snippet)
--- 			require("luasnip").lsp_expand(snippet)
--- 		end,
--- 	},
---
--- 	fuzzy = {
--- 		implementation = "prefer_rust",
--- 		prebuilt_binaries = { download = true },
--- 	},
--- })
+require("blink.cmp").setup({
+	keymap = {
+		preset = "none",
+		["<C-Space>"] = { "show", "hide" },
+		["<CR>"] = { "accept", "fallback" },
+		["<C-j>"] = { "select_next", "fallback" },
+		["<C-k>"] = { "select_prev", "fallback" },
+		["<Tab>"] = { "snippet_forward", "fallback" },
+		["<S-Tab>"] = { "snippet_backward", "fallback" },
+	},
+	appearance = { nerd_font_variant = "mono" },
+	completion = { menu = { auto_show = true } },
+	sources = { default = { "lsp", "path", "buffer", "snippets" } },
+	snippets = {
+		expand = function(snippet)
+			require("luasnip").lsp_expand(snippet)
+		end,
+	},
+
+	fuzzy = {
+		implementation = "prefer_rust",
+		prebuilt_binaries = { download = true },
+	},
+})
 
 vim.lsp.config["*"] = {
 	capabilities = require("blink.cmp").get_lsp_capabilities(),
@@ -957,6 +966,7 @@ require("draculaCS")
 require("myGreeter")
 require("netrwicons")
 require("imagerenderer")
+require("ibl").setup()
 
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "sonokai",
