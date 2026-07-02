@@ -270,8 +270,6 @@ vim.keymap.set("n", "<leader>su", ":StrudelUpdate<CR>", { desc = "Update strudel
 vim.keymap.set("n", "<leader>ss", ":StrudelStop<CR>", { desc = "Stop strudel" })
 vim.keymap.set("n", "<leader>sq", ":StrudelQuit<CR>", { desc = "Quit strudel" })
 
-vim.keymap.set("n", "<leader>ng", ":Neogit<CR>", { desc = "Open Neogit" })
-
 vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result (centered)" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result (centered)" })
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Half page down (centered)" })
@@ -389,7 +387,6 @@ vim.pack.add({
   "https://github.com/nvim-lualine/lualine.nvim",
   "https://github.com/sainnhe/sonokai",
   "https://github.com/darkvoid-theme/darkvoid.nvim",
-  "https://github.com/neogitorg/neogit",
   "https://github.com/metalelf0/black-metal-theme-neovim",
   "https://github.com/Mofiqul/dracula.nvim",
 
@@ -453,7 +450,6 @@ packadd("fzf-lua")
 packadd("strudel.nvim")
 packadd("nvim-lspconfig")
 packadd("mason.nvim")
-packadd("neogit")
 packadd("efmls-configs-nvim")
 
 packadd("darkvoid.nvim")
