@@ -1023,19 +1023,19 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
--- local NeoTreeGroups = {
---     "NeoTreeNormal",
---     "NeoTreeNormalNC",
---     "NeoTreeSignColumn",
---     "NeoTreeStatusLine",
---     "NeoTreeStatusLineNC",
---     "NeoTreeVertSplit",
---     "NeoTreeWinSeparator",
--- }
---
--- for _, group in ipairs(NeoTreeGroups) do
---     vim.api.nvim_set_hl(0, group, { bg = "NONE", ctermbg = "NONE" })
--- end
+local NeoTreeGroups = {
+    "NeoTreeNormal",
+    "NeoTreeNormalNC",
+    "NeoTreeSignColumn",
+    "NeoTreeStatusLine",
+    "NeoTreeStatusLineNC",
+    "NeoTreeVertSplit",
+    "NeoTreeWinSeparator",
+}
+
+for _, group in ipairs(NeoTreeGroups) do
+    vim.api.nvim_set_hl(0, group, { bg = "NONE", ctermbg = "NONE" })
+end
 
 -- Set options BEFORE loading the colorscheme
 vim.g.gruvbox_material_background = "hard"
