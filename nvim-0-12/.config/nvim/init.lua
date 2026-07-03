@@ -386,6 +386,7 @@ vim.pack.add({
   "https://github.com/sainnhe/sonokai",
   "https://github.com/darkvoid-theme/darkvoid.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
+  "https://github.com/sainnhe/gruvbox-material",
   "https://github.com/Mofiqul/dracula.nvim",
 
   {
@@ -461,6 +462,7 @@ packadd("fzf-lua")
 packadd("strudel.nvim")
 packadd("nvim-lspconfig")
 packadd("indent-blankline.nvim")
+packadd("gruvbox-material")
 packadd("mason.nvim")
 packadd("efmls-configs-nvim")
 
@@ -744,30 +746,30 @@ vim.keymap.set("n", "<leader>q", function()
 end, { desc = "Open diagnostic list" })
 vim.keymap.set("n", "<leader>dl", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
 
-require("blink.cmp").setup({
-	keymap = {
-		preset = "none",
-		["<C-Space>"] = { "show", "hide" },
-		["<CR>"] = { "accept", "fallback" },
-		["<C-j>"] = { "select_next", "fallback" },
-		["<C-k>"] = { "select_prev", "fallback" },
-		["<Tab>"] = { "snippet_forward", "fallback" },
-		["<S-Tab>"] = { "snippet_backward", "fallback" },
-	},
-	appearance = { nerd_font_variant = "mono" },
-	completion = { menu = { auto_show = true } },
-	sources = { default = { "lsp", "path", "buffer", "snippets" } },
-	snippets = {
-		expand = function(snippet)
-			require("luasnip").lsp_expand(snippet)
-		end,
-	},
-
-	fuzzy = {
-		implementation = "prefer_rust",
-		prebuilt_binaries = { download = true },
-	},
-})
+-- require("blink.cmp").setup({
+-- 	keymap = {
+-- 		preset = "none",
+-- 		["<C-Space>"] = { "show", "hide" },
+-- 		["<CR>"] = { "accept", "fallback" },
+-- 		["<C-j>"] = { "select_next", "fallback" },
+-- 		["<C-k>"] = { "select_prev", "fallback" },
+-- 		["<Tab>"] = { "snippet_forward", "fallback" },
+-- 		["<S-Tab>"] = { "snippet_backward", "fallback" },
+-- 	},
+-- 	appearance = { nerd_font_variant = "mono" },
+-- 	completion = { menu = { auto_show = true } },
+-- 	sources = { default = { "lsp", "path", "buffer", "snippets" } },
+-- 	snippets = {
+-- 		expand = function(snippet)
+-- 			require("luasnip").lsp_expand(snippet)
+-- 		end,
+-- 	},
+--
+-- 	fuzzy = {
+-- 		implementation = "prefer_rust",
+-- 		prebuilt_binaries = { download = true },
+-- 	},
+-- })
 
 vim.lsp.config["*"] = {
 	capabilities = require("blink.cmp").get_lsp_capabilities(),
@@ -996,6 +998,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
+-- Overrides:
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "darkvoid",
     callback = function()
@@ -1020,5 +1023,26 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
-vim.cmd("colorscheme sonokai")
+-- local NeoTreeGroups = {
+--     "NeoTreeNormal",
+--     "NeoTreeNormalNC",
+--     "NeoTreeSignColumn",
+--     "NeoTreeStatusLine",
+--     "NeoTreeStatusLineNC",
+--     "NeoTreeVertSplit",
+--     "NeoTreeWinSeparator",
+-- }
+--
+-- for _, group in ipairs(NeoTreeGroups) do
+--     vim.api.nvim_set_hl(0, group, { bg = "NONE", ctermbg = "NONE" })
+-- end
+
+-- Set options BEFORE loading the colorscheme
+vim.g.gruvbox_material_background = "hard"
+vim.g.gruvbox_material_foreground = "mix"
+vim.g.gruvbox_material_enable_italic = true
+vim.g.gruvbox_material_better_performance = true
+vim.g.gruvbox_material_transparent_background = 0
+
+vim.cmd("colorscheme gruvbox-material")
 
