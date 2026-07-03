@@ -968,7 +968,7 @@ require("draculaCS")
 require("myGreeter")
 require("netrwicons")
 require("imagerenderer")
-require("ibl").setup()
+-- require("ibl").setup()
 
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "sonokai",
