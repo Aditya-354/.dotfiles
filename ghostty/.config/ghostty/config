@@ -3,7 +3,7 @@
 # font-family = MesloLGS Nerd Font Mono
 font-family = FiraCode Nerd Font
 # font-family = "Iosevka NFM"
-font-size = 13
+font-size = 12
 # font-feature = -calt
 # font-thicken = true
 # adjust-cell-height = 0
@@ -51,7 +51,7 @@ theme = Sonokai
 # background-opacity = 1
 # # background-blur = 20
 # background = #1a000a
-background = #2f2f2f
+background = #242424
 
 # Feature config
 cursor-style = block
