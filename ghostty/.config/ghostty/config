@@ -4,7 +4,7 @@
 font-family = FiraCode Nerd Font
 # font-family = Maple Mono NF
 # font-family = "Iosevka NFM"
-font-size = 12
+font-size = 14.5
 # font-feature = -calt
 # font-thicken = true
 adjust-cell-height = 5%
@@ -35,10 +35,12 @@ window-padding-y = 0
 # theme = Vercel
 # theme = Gruvbox Dark
 # theme = Onenord
-theme = Gruvbox Material
+# theme = Gruvbox Material
 # theme = Brogrammer
 # theme = Vague
 # theme = Sonokai
+# theme = 0x96f
+theme = Chalk
 # theme = Afterglow
 # theme = Flexoki Dark
 # theme = Monokai Soda
@@ -51,7 +53,7 @@ theme = Gruvbox Material
 # background-opacity = 0.87
 background-opacity = 1
 # # background-blur = 20
-background = #141219
+background = #202022
 # background = #242424
 
 # Feature config
