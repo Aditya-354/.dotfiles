@@ -383,6 +383,7 @@ vim.pack.add({
   "https://github.com/prichrd/netrw.nvim",
   "https://github.com/nvim-lualine/lualine.nvim",
   "https://github.com/lukas-reineke/indent-blankline.nvim",
+  "https://github.com/shaunsingh/nord.nvim",
   "https://github.com/sainnhe/sonokai",
   "https://github.com/darkvoid-theme/darkvoid.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
@@ -463,6 +464,7 @@ packadd("strudel.nvim")
 packadd("nvim-lspconfig")
 packadd("indent-blankline.nvim")
 packadd("gruvbox-material")
+packadd("nord.nvim")
 packadd("mason.nvim")
 packadd("efmls-configs-nvim")
 
@@ -971,7 +973,7 @@ require("imagerenderer")
 -- require("ibl").setup()
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "sonokai",
+    pattern = "darkvoid",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1043,6 +1045,17 @@ vim.g.gruvbox_material_foreground = "mix"
 vim.g.gruvbox_material_enable_italic = true
 vim.g.gruvbox_material_better_performance = true
 vim.g.gruvbox_material_transparent_background = 0
+
+-- Example config in lua
+vim.g.nord_contrast = false
+vim.g.nord_borders = false
+vim.g.nord_disable_background = false
+vim.g.nord_italic = true
+vim.g.nord_uniform_diff_background = true
+vim.g.nord_bold = false
+
+-- Load the colorscheme
+require('nord').set()
 
 vim.cmd("colorscheme gruvbox-material")
 
