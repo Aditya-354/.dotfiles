@@ -1,10 +1,10 @@
 # Typography
 # font-family = JetBrains Mono Nerd Font
 # font-family = MesloLGS Nerd Font Mono
-# font-family = FiraCode Nerd Font
-font-family = Maple Mono NF
+font-family = FiraCode Nerd Font
+# font-family = Maple Mono NF
 # font-family = "Iosevka NFM"
-font-size = 15
+font-size = 12
 # font-feature = -calt
 # font-thicken = true
 adjust-cell-height = 5%
@@ -35,10 +35,10 @@ window-padding-y = 0
 # theme = Vercel
 # theme = Gruvbox Dark
 # theme = Onenord
-theme = Gruvbox Material
+# theme = Gruvbox Material
 # theme = Brogrammer
 # theme = Vague
-# theme = Sonokai
+theme = Sonokai
 # theme = Afterglow
 # theme = Flexoki Dark
 # theme = Monokai Soda
@@ -48,10 +48,10 @@ theme = Gruvbox Material
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-# background-opacity = 0.9
+# background-opacity = 0.87
 background-opacity = 1
 # # background-blur = 20
-# background = #1a000a
+background = #141219
 # background = #242424
 
 # Feature config
