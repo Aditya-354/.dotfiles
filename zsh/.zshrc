@@ -1,11 +1,13 @@
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+ZSH=/usr/share/oh-my-zsh/
 
 alias so='source ~/.zshrc && clear && fastfetch'
 alias cl='clear'
 alias dev='tmux new -As dev'
 alias base='tmux new -As base'
+alias gdc='git add . && git commit -m "." && git push'
 
-# ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 # ZSH_THEME="kafeitu"
 # ZSH_THEME="kphoen"
 # ZSH_THEME="gianu"
@@ -29,6 +31,11 @@ bindkey '^H' backward-kill-word
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# [[ ! -f ~/.dotfiles/zsh/.p10k.zsh ]] || source ~/.dotfiles/zsh/.p10k.zsh
+ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+  mkdir $ZSH_CACHE_DIR
+fi
 
-eval "$(starship init zsh)"
+source $ZSH/oh-my-zsh.sh
+
+# eval "$(starship init zsh)"
