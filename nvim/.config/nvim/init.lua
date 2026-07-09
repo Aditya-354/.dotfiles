@@ -1043,5 +1043,5 @@ vim.g.nord_bold = false
 -- Load the colorscheme
 require('nord').set()
 
-vim.cmd("colorscheme rose-pine")
+vim.cmd("colorscheme darkvoid")
 
