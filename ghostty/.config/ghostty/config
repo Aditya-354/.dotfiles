@@ -4,15 +4,15 @@
 font-family = FiraCode Nerd Font
 # font-family = Maple Mono NF
 # font-family = "Iosevka NFM"
-font-size = 15
+font-size = 17
 # font-feature = -calt
 # font-thicken = true
-# adjust-cell-height = 5%
+adjust-cell-height = 10%
 
 # Aesthetics
 window-padding-x = 0
 window-padding-y = 0
-# theme = Dracula
+theme = Dracula
 # theme = Catppuccin Frappe
 # theme = Catppuccin Mocha
 # theme = Adwaita Dark
@@ -37,7 +37,7 @@ window-padding-y = 0
 # theme = Onenord
 # theme = Gruvbox Material
 # theme = Brogrammer
-theme = Vague
+# theme = Vague
 # theme = Sonokai
 # theme = Chalk
 # theme = Afterglow
