@@ -13,7 +13,7 @@ rosepine.setup({
 
     styles = {
         bold = false,
-        italic = true,
+        italic = false,
         transparency = true,
     },
 
