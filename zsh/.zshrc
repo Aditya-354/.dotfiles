@@ -6,6 +6,8 @@ alias cl='clear'
 alias dev='tmux new -As dev'
 alias base='tmux new -As base'
 alias gdc='git add . && git commit -m "." && git push'
+alias cpp='~/scripts/./cpp.bash'
+alias bin='~/scripts/./bin.bash'
 
 ZSH_THEME="robbyrussell"
 # ZSH_THEME="kafeitu"
