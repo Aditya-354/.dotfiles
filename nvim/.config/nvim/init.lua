@@ -287,7 +287,8 @@ vim.keymap.set("n", "<leader>tc", ":colo catppuccin<CR>", { desc = "Change color
 vim.keymap.set("n", "<leader>tg", ":colo gruvbox<CR>", { desc = "Change color theme to gruvbox" })
 vim.keymap.set("n", "<leader>tt", ":!date<CR>", { desc = "Display date and time" })
 
-vim.keymap.set("n", "<leader>j", ":Neotree toggle<CR>", { desc = "Open neo-tree" })
+vim.keymap.set("n", "<leader>j", ":Ex<CR>", { desc = "Open neo-tree" })
+vim.keymap.set("n", "<leader>F", ":Neotree toggle<CR>", { desc = "Open neo-tree" })
 
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to bottom window" })
