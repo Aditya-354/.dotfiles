@@ -1014,14 +1014,21 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         vim.api.nvim_set_hl(0, "CursorLine", { bg = "none", ctermbg = "none" })
         vim.api.nvim_set_hl(0, "TabLine", { bg = "none", ctermbg = "none" })
         vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", ctermbg = "none" })
+        vim.api.nvim_set_hl(0, "SignColumn", { bg = "none", ctermbg = "none" })
     end,
 })
 
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--     pattern = "gruvbox",
+--     callback = function()
+--         vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none", ctermbg = "none" })
+--     end,
+-- })
+
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "gruvbox",
+    pattern = "rose-pine",
     callback = function()
-        vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none", ctermbg = "none" })
-        vim.api.nvim_set_hl(0, "SignColumn", { bg = "none", ctermbg = "none" })
+        vim.api.nvim_set_hl(0, "Cursor", { bg = "none", ctermbg = "none" })
     end,
 })
 
@@ -1057,5 +1064,5 @@ vim.g.nord_bold = false
 -- Load the colorscheme
 require('nord').set()
 
-vim.cmd("colorscheme gruvbox-material")
+vim.cmd("colorscheme rose-pine")
 
