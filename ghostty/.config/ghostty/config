@@ -38,9 +38,8 @@ window-padding-y = 0
 # theme = Gruvbox Material
 # theme = Brogrammer
 # theme = Vague
-# theme = Sonokai
-# theme = 0x96f
-theme = Chalk
+theme = Sonokai
+# theme = Chalk
 # theme = Afterglow
 # theme = Flexoki Dark
 # theme = Monokai Soda
@@ -50,10 +49,10 @@ theme = Chalk
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-# background-opacity = 0.87
-background-opacity = 1
+background-opacity = 0.87
+# background-opacity = 1
 # # background-blur = 20
-background = #202022
+background = #151519
 # background = #242424
 
 # Feature config
