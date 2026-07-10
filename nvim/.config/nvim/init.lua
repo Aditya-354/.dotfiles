@@ -385,9 +385,11 @@ vim.pack.add({
   "https://github.com/nvim-lualine/lualine.nvim",
   "https://github.com/lukas-reineke/indent-blankline.nvim",
   "https://github.com/shaunsingh/nord.nvim",
+  "https://github.com/sainnhe/edge",
   "https://github.com/sainnhe/sonokai",
   "https://github.com/darkvoid-theme/darkvoid.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
+  "https://github.com/oskarnurm/koda.nvim",
   "https://github.com/sainnhe/gruvbox-material",
   "https://github.com/Mofiqul/dracula.nvim",
 
@@ -470,6 +472,8 @@ packadd("efmls-configs-nvim")
 
 packadd("darkvoid.nvim")
 packadd("sonokai")
+packadd("koda.nvim")
+packadd("edge")
 packadd("dracula.nvim")
 packadd("gruvbox.nvim")
 packadd("black-metal-theme-neovim")
@@ -939,6 +943,7 @@ require("blackmetalCS")
 require("darkvoidCS")
 require("rosepineCS")
 require("draculaCS")
+require("kodaCS")
 require("myGreeter")
 require("netrwicons")
 require("imagerenderer")
@@ -998,7 +1003,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 -- })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "rose-pine",
+    pattern = "*",
     callback = function()
         vim.api.nvim_set_hl(0, "Cursor", { bg = "none", ctermbg = "none" })
     end,
@@ -1036,5 +1041,5 @@ vim.g.nord_bold = false
 -- Load the colorscheme
 require('nord').set()
 
-vim.cmd("colorscheme darkvoid")
+vim.cmd("colorscheme koda-dark")
 
