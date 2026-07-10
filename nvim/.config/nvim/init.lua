@@ -403,7 +403,6 @@ vim.pack.add({
 		src = "https://github.com/saghen/blink.cmp",
 		version = vim.version.range("1.*"),
 	},
-	"https://github.com/L3MON4D3/LuaSnip",
 })
 
 vim.pack.add({
@@ -475,7 +474,6 @@ packadd("dracula.nvim")
 packadd("gruvbox.nvim")
 packadd("black-metal-theme-neovim")
 packadd("blink.cmp")
-packadd("LuaSnip")
 
 -- ============================================================================
 -- PLUGIN CONFIGS
@@ -740,11 +738,6 @@ require("blink.cmp").setup({
 	appearance = { nerd_font_variant = "mono" },
 	completion = { menu = { auto_show = true } },
 	sources = { default = { "lsp", "path", "buffer", "snippets" } },
-	snippets = {
-		expand = function(snippet)
-			require("luasnip").lsp_expand(snippet)
-		end,
-	},
 
 	fuzzy = {
 		implementation = "prefer_rust",
