@@ -4,10 +4,10 @@
 font-family = FiraCode Nerd Font
 # font-family = Maple Mono NF
 # font-family = "Iosevka NFM"
-font-size = 17
+font-size = 13
 # font-feature = -calt
 # font-thicken = true
-adjust-cell-height = 10%
+# adjust-cell-height = 10%
 
 # Aesthetics
 window-padding-x = 0
@@ -38,7 +38,7 @@ theme = Dracula
 # theme = Gruvbox Material
 # theme = Brogrammer
 # theme = Vague
-# theme = Sonokai
+theme = Sonokai
 # theme = Chalk
 # theme = Afterglow
 # theme = Flexoki Dark
@@ -49,11 +49,11 @@ theme = Dracula
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-background-opacity = 0.86
+# background-opacity = 0.85
 # background-opacity = 1
 # # background-blur = 20
 # background = #151519
-background = #000000
+# background = #090909
 # background = #242424
 
 # Feature config
