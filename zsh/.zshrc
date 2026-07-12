@@ -18,6 +18,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 export LANG=en_US.UTF-8
+export MANPAGER="nvim +Man!"
 
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
