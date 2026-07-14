@@ -387,6 +387,7 @@ vim.pack.add({
   "https://github.com/shaunsingh/nord.nvim",
   "https://github.com/sainnhe/edge",
   "https://github.com/sainnhe/sonokai",
+  "https://github.com/Mofiqul/adwaita.nvim",
   "https://github.com/darkvoid-theme/darkvoid.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
   "https://github.com/oskarnurm/koda.nvim",
@@ -466,6 +467,7 @@ packadd("strudel.nvim")
 packadd("nvim-lspconfig")
 packadd("indent-blankline.nvim")
 packadd("gruvbox-material")
+packadd("adwaita.nvim")
 packadd("nord.nvim")
 packadd("mason.nvim")
 packadd("efmls-configs-nvim")
@@ -619,7 +621,7 @@ local diagnostic_signs = {
 
 vim.diagnostic.config({
 	-- virtual_text = { prefix = "●", spacing = 4 },
-  virtual_text = false,
+  virtual_text = true,
 	signs = {
 		text = {
 			[vim.diagnostic.severity.ERROR] = diagnostic_signs.Error,
@@ -953,20 +955,20 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "darkvoid",
     callback = function()
         local hl_groups = {
-            "Normal",
-            "NormalFloat",
-            "SignColumn",
-            "NormalNC", -- background for non-current windows
-            "EndOfBuffer",
-            "MsgArea",
-            "FloatBorder",
-            "StatusLine",
-            "StatusLineNC",
-            "ColorColumn",
-            "TabLine",
-            "TabLineFill",
-            "TabLineSel",
-            "LineNr",
+            -- "Normal",
+            -- "NormalFloat",
+            -- "SignColumn",
+            -- "NormalNC", -- background for non-current windows
+            -- "EndOfBuffer",
+            -- "MsgArea",
+            -- "FloatBorder",
+            -- "StatusLine",
+            -- "StatusLineNC",
+            -- "ColorColumn",
+            -- "TabLine",
+            -- "TabLineFill",
+            -- "TabLineSel",
+            -- "LineNr",
             "Cursor",
         }
         for _, group in ipairs(hl_groups) do
