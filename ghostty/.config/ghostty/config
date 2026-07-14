@@ -1,7 +1,8 @@
 # Typography
 # font-family = JetBrains Mono Nerd Font
 # font-family = MesloLGS Nerd Font Mono
-font-family = FiraCode Nerd Font
+# font-family = FiraCode Nerd Font
+font-family = CaskaydiaMono Nerd Font Mono
 # font-family = Maple Mono NF
 # font-family = "Iosevka NFM"
 font-size = 13
@@ -28,7 +29,7 @@ theme = Dracula
 # theme = Dark Modern
 # theme = Midnight In Mojave
 # theme = Modus Vivendi Tinted
-# theme = iTerm2 Solarized Dark
+theme = iTerm2 Solarized Dark
 # theme = Gruber Darker
 # theme = Solarized Dark Higher Contrast
 # theme = Belafonte Night
@@ -38,7 +39,7 @@ theme = Dracula
 # theme = Gruvbox Material
 # theme = Brogrammer
 # theme = Vague
-theme = Sonokai
+# theme = Sonokai
 # theme = Chalk
 # theme = Afterglow
 # theme = Flexoki Dark

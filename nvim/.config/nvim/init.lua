@@ -951,6 +951,7 @@ require("netrwicons")
 require("imagerenderer")
 -- require("ibl").setup()
 
+-- OVERRIDES:
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "darkvoid",
     callback = function()
@@ -969,6 +970,34 @@ vim.api.nvim_create_autocmd("ColorScheme", {
             -- "TabLineFill",
             -- "TabLineSel",
             -- "LineNr",
+            -- "Cursor",
+        }
+        for _, group in ipairs(hl_groups) do
+            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+        end
+        -- vim.api.nvim_set_hl(0, "Comment", { fg = "#dd00af" })
+        -- vim.api.nvim_set_hl(0, "MatchParen", { fg = "#000000", bg = "#ffffff" })
+    end,
+})
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "adwaita",
+    callback = function()
+        local hl_groups = {
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "TabLineSel",
+            "LineNr",
             "Cursor",
         }
         for _, group in ipairs(hl_groups) do
@@ -979,11 +1008,22 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
--- Overrides:
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "darkvoid",
+    pattern = "adwaita",
     callback = function()
-        vim.api.nvim_set_hl(0, "Cursor", { bg = "none", ctermbg = "none" })
+        -- Fetch all current highlight groups
+        local hl_groups = vim.fn.getcompletion("", "highlight")
+
+        for _, hl_name in ipairs(hl_groups) do
+            -- Get existing attributes for the highlight group
+            local success, hl_info = pcall(vim.api.nvim_get_hl, 0, { name = hl_name, link = false })
+
+            -- If it has a bold attribute, turn it off
+            if success and hl_info.bold then
+                hl_info.bold = false
+                vim.api.nvim_set_hl(0, hl_name, hl_info)
+            end
+        end
     end,
 })
 
@@ -994,19 +1034,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         vim.api.nvim_set_hl(0, "TabLine", { bg = "none", ctermbg = "none" })
         vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", ctermbg = "none" })
         vim.api.nvim_set_hl(0, "SignColumn", { bg = "none", ctermbg = "none" })
-    end,
-})
-
--- vim.api.nvim_create_autocmd("ColorScheme", {
---     pattern = "gruvbox",
---     callback = function()
---         vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none", ctermbg = "none" })
---     end,
--- })
-
-vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "*",
-    callback = function()
+        vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none", ctermbg = "none" })
         vim.api.nvim_set_hl(0, "Cursor", { bg = "none", ctermbg = "none" })
     end,
 })
@@ -1025,14 +1053,14 @@ for _, group in ipairs(NeoTreeGroups) do
     vim.api.nvim_set_hl(0, group, { bg = "NONE", ctermbg = "NONE" })
 end
 
--- Set options BEFORE loading the colorscheme
+-- Gruvbox-material Config: Set options BEFORE loading the colorscheme
 vim.g.gruvbox_material_background = "hard"
 vim.g.gruvbox_material_foreground = "mix"
 vim.g.gruvbox_material_enable_italic = false
 vim.g.gruvbox_material_better_performance = true
 vim.g.gruvbox_material_transparent_background = 1
 
--- Example config in lua
+-- Nord Config
 vim.g.nord_contrast = false
 vim.g.nord_borders = false
 vim.g.nord_disable_background = false
@@ -1043,5 +1071,7 @@ vim.g.nord_bold = false
 -- Load the colorscheme
 require('nord').set()
 
-vim.cmd("colorscheme koda-dark")
+-- vim.cmd("colorscheme koda-dark")
+vim.cmd("colorscheme darkvoid")
+-- vim.cmd("colorscheme adwaita")
 
