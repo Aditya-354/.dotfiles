@@ -1074,6 +1074,6 @@ vim.g.nord_bold = false
 require('nord').set()
 
 -- vim.cmd("colorscheme koda-dark")
--- vim.cmd("colorscheme darkvoid")
-vim.cmd("colorscheme adwaita")
+vim.cmd("colorscheme darkvoid")
+-- vim.cmd("colorscheme adwaita")
 
