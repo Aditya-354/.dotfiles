@@ -1,8 +1,8 @@
 # Typography
 # font-family = JetBrains Mono Nerd Font
-# font-family = MesloLGS Nerd Font Mono
+font-family = MesloLGS Nerd Font Mono
 # font-family = FiraCode Nerd Font
-font-family = CaskaydiaMono Nerd Font Mono
+# font-family = CaskaydiaMono Nerd Font Mono
 # font-family = Maple Mono NF
 # font-family = "Iosevka NFM"
 font-size = 13
@@ -16,7 +16,7 @@ window-padding-y = 0
 theme = Dracula
 # theme = Catppuccin Frappe
 # theme = Catppuccin Mocha
-# theme = Adwaita Dark
+theme = Adwaita Dark
 # theme = Blue Berry Pie
 # theme = TokyoNight Night
 # theme = Calamity
@@ -29,7 +29,7 @@ theme = Dracula
 # theme = Dark Modern
 # theme = Midnight In Mojave
 # theme = Modus Vivendi Tinted
-theme = iTerm2 Solarized Dark
+# theme = iTerm2 Solarized Dark
 # theme = Gruber Darker
 # theme = Solarized Dark Higher Contrast
 # theme = Belafonte Night
@@ -53,7 +53,7 @@ theme = iTerm2 Solarized Dark
 # background-opacity = 0.85
 # background-opacity = 1
 # # background-blur = 20
-# background = #151519
+background = #121212
 # background = #090909
 # background = #242424
 

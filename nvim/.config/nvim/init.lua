@@ -392,6 +392,7 @@ vim.pack.add({
   "https://github.com/metalelf0/black-metal-theme-neovim",
   "https://github.com/oskarnurm/koda.nvim",
   "https://github.com/sainnhe/gruvbox-material",
+  "https://github.com/craftzdog/solarized-osaka.nvim",
   "https://github.com/Mofiqul/dracula.nvim",
 
   {
@@ -469,6 +470,7 @@ packadd("indent-blankline.nvim")
 packadd("gruvbox-material")
 packadd("adwaita.nvim")
 packadd("nord.nvim")
+packadd("solarized-osaka.nvim")
 packadd("mason.nvim")
 packadd("efmls-configs-nvim")
 
@@ -1072,6 +1074,6 @@ vim.g.nord_bold = false
 require('nord').set()
 
 -- vim.cmd("colorscheme koda-dark")
-vim.cmd("colorscheme darkvoid")
--- vim.cmd("colorscheme adwaita")
+-- vim.cmd("colorscheme darkvoid")
+vim.cmd("colorscheme adwaita")
 
