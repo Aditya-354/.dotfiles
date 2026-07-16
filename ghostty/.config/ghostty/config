@@ -1,9 +1,9 @@
 # Typography
 # font-family = JetBrains Mono Nerd Font
-font-family = MesloLGS Nerd Font Mono
+# font-family = MesloLGS Nerd Font Mono
 # font-family = FiraCode Nerd Font
 # font-family = CaskaydiaMono Nerd Font Mono
-# font-family = Maple Mono NF
+font-family = Maple Mono NF
 # font-family = "Iosevka NFM"
 font-size = 13
 # font-feature = -calt
@@ -13,7 +13,7 @@ font-size = 13
 # Aesthetics
 window-padding-x = 0
 window-padding-y = 0
-theme = Dracula
+# theme = Dracula
 # theme = Catppuccin Frappe
 # theme = Catppuccin Mocha
 theme = Adwaita Dark
@@ -51,10 +51,10 @@ theme = Adwaita Dark
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
 # background-opacity = 0.85
-# background-opacity = 1
+background-opacity = 1
 # # background-blur = 20
-background = #121212
-# background = #090909
+# background = #171717
+background = #111111
 # background = #242424
 
 # Feature config

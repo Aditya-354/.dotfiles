@@ -1058,9 +1058,9 @@ end
 -- Gruvbox-material Config: Set options BEFORE loading the colorscheme
 vim.g.gruvbox_material_background = "hard"
 vim.g.gruvbox_material_foreground = "mix"
-vim.g.gruvbox_material_enable_italic = false
+vim.g.gruvbox_material_enable_italic = true
 vim.g.gruvbox_material_better_performance = true
-vim.g.gruvbox_material_transparent_background = 1
+vim.g.gruvbox_material_transparent_background = 0
 
 -- Nord Config
 vim.g.nord_contrast = false
@@ -1074,6 +1074,8 @@ vim.g.nord_bold = false
 require('nord').set()
 
 -- vim.cmd("colorscheme koda-dark")
-vim.cmd("colorscheme darkvoid")
--- vim.cmd("colorscheme adwaita")
+-- vim.cmd("colorscheme darkvoid")
+vim.cmd("colorscheme adwaita")
+-- vim.cmd("colorscheme gruvbox")
+-- vim.cmd("colorscheme dracula")
 
