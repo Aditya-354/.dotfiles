@@ -1,6 +1,6 @@
 {
     "layer": "top",
-    "position": "bottom",
+    "position": "top",
     "modules-left": ["hyprland/workspaces", "hyprland/submap", "group/media"],
     "modules-center": ["clock"],
     "modules-right": ["group/volume", "battery", "bluetooth", "network", "cpu", "memory"],
