@@ -623,7 +623,7 @@ local diagnostic_signs = {
 
 vim.diagnostic.config({
 	-- virtual_text = { prefix = "●", spacing = 4 },
-  virtual_text = true,
+  -- virtual_text = true,
 	signs = {
 		text = {
 			[vim.diagnostic.severity.ERROR] = diagnostic_signs.Error,

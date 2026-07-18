@@ -4,10 +4,12 @@ ZSH=/usr/share/oh-my-zsh/
 alias so='source ~/.zshrc && clear && fastfetch'
 alias cl='clear'
 alias dev='tmux new -As dev'
-alias base='tmux new -As base'
 alias gdc='git add . && git commit -m "." && git push'
 alias cpp='~/scripts/./cpp.bash'
 alias bin='~/scripts/./bin.bash'
+alias nvim='nvim $(fzf)'
+alias pd='cd $(fzf --walker=dir,hidden,follow --popup center)'
+alias scd='cd $(fzf --walker=dir,hidden,follow --walker-root=/home/asrwx)'
 
 ZSH_THEME="robbyrussell"
 # ZSH_THEME="kafeitu"
