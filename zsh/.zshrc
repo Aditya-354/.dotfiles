@@ -4,6 +4,7 @@ ZSH=/usr/share/oh-my-zsh/
 alias so='source ~/.zshrc && clear && fastfetch'
 alias cl='clear'
 alias dev='tmux new -As dev'
+alias projects='tmux new -As projects'
 alias gdc='git add . && git commit -m "." && git push'
 alias cpp='~/scripts/./cpp.bash'
 alias bin='~/scripts/./bin.bash'
