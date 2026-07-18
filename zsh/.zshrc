@@ -8,7 +8,7 @@ alias projects='tmux new -As projects'
 alias gdc='git add . && git commit -m "." && git push'
 alias cpp='~/scripts/./cpp.bash'
 alias bin='~/scripts/./bin.bash'
-alias e='nvim $(fzf)'
+alias nvim='nvim $(fzf)'
 alias pd='cd $(fzf --walker=dir,hidden,follow --popup center)'
 alias scd='cd $(fzf --walker=dir,hidden,follow --walker-root=/home/asrwx)'
 
