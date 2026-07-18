@@ -938,6 +938,28 @@ vim.lsp.enable({
 -- end, { noremap = true, silent = true, desc = "Close floating terminal" })
 
 -- =============================================================================================
+-- NEOVIDE
+-- =============================================================================================
+
+if vim.g.neovide then
+    vim.o.guifont = "JetBrainsMono Nerd Font"
+    -- Zoom in
+    vim.keymap.set('n', '<C-=>', function()
+        vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1
+    end)
+
+    -- Zoom out
+    vim.keymap.set('n', '<C-->', function()
+        vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1
+    end)
+
+    -- Reset zoom
+    vim.keymap.set('n', '<C-0>', function()
+        vim.g.neovide_scale_factor = 1.0
+    end)
+end
+
+-- =============================================================================================
 -- THEME CONFIG
 -- =============================================================================================
 
@@ -1074,8 +1096,8 @@ vim.g.nord_bold = false
 require('nord').set()
 
 -- vim.cmd("colorscheme koda-dark")
--- vim.cmd("colorscheme darkvoid")
+vim.cmd("colorscheme darkvoid")
 -- vim.cmd("colorscheme adwaita")
-vim.cmd("colorscheme gruvbox")
+-- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme dracula")
 
