@@ -1,12 +1,12 @@
 # Typography
 # font-family = JetBrains Mono Nerd Font
-# font-family = MesloLGS Nerd Font Mono
+font-family = MesloLGS Nerd Font Mono
 # font-family = FiraCode Nerd Font
 # font-family = CaskaydiaMono Nerd Font Mono
-font-family = Maple Mono NF
+# font-family = Maple Mono NF
 # font-family = "Iosevka NFM"
 font-size = 13
-font-feature = -calt
+# font-feature = -calt
 # font-thicken = true
 # adjust-cell-height = 5%
 
@@ -50,11 +50,11 @@ theme = Adwaita Dark
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-# background-opacity = 0.85
-background-opacity = 1
+background-opacity = 0.9
+# background-opacity = 1
 # # background-blur = 20
 # background = #171717
-background = #181918
+background = #120909
 # background = #242424
 
 # Feature config

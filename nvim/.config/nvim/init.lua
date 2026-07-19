@@ -1099,5 +1099,6 @@ require('nord').set()
 -- vim.cmd("colorscheme darkvoid")
 -- vim.cmd("colorscheme adwaita")
 -- vim.cmd("colorscheme gruvbox")
-vim.cmd("colorscheme dracula")
+vim.cmd("colorscheme retrobox")
+-- vim.cmd("colorscheme dracula")
 
