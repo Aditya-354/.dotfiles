@@ -942,7 +942,7 @@ vim.lsp.enable({
 -- =============================================================================================
 
 if vim.g.neovide then
-    vim.o.guifont = "JetBrainsMono Nerd Font"
+    vim.o.guifont = "FiraCode Nerd Font"
     -- Zoom in
     vim.keymap.set('n', '<C-=>', function()
         vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1
@@ -1095,9 +1095,9 @@ vim.g.nord_bold = false
 -- Load the colorscheme
 require('nord').set()
 
-vim.cmd("colorscheme koda-dark")
+-- vim.cmd("colorscheme koda-dark")
 -- vim.cmd("colorscheme darkvoid")
 -- vim.cmd("colorscheme adwaita")
 -- vim.cmd("colorscheme gruvbox")
--- vim.cmd("colorscheme dracula")
+vim.cmd("colorscheme dracula")
 

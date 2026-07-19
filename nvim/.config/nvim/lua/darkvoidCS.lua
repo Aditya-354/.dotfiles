@@ -1,6 +1,6 @@
 local darkvoid = require("darkvoid")
 darkvoid.setup({
-    transparent = true,
+    transparent = false,
     glow = false,
     show_end_of_buffer = true,
 
