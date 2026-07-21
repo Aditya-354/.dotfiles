@@ -1005,6 +1005,58 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "retrobox",
+    callback = function()
+        local hl_groups = {
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "TabLineSel",
+            "LineNr",
+            "Cursor",
+        }
+        for _, group in ipairs(hl_groups) do
+            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+        end
+    end,
+})
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "unokai",
+    callback = function()
+        local hl_groups = {
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "TabLineSel",
+            "LineNr",
+            "Cursor",
+        }
+        for _, group in ipairs(hl_groups) do
+            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+        end
+    end,
+})
+
+vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "adwaita",
     callback = function()
         local hl_groups = {
@@ -1058,7 +1110,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         vim.api.nvim_set_hl(0, "TabLine", { bg = "none", ctermbg = "none" })
         vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", ctermbg = "none" })
         vim.api.nvim_set_hl(0, "SignColumn", { bg = "none", ctermbg = "none" })
-        vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none", ctermbg = "none" })
+        -- vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none", ctermbg = "none" })
         vim.api.nvim_set_hl(0, "Cursor", { bg = "none", ctermbg = "none" })
     end,
 })
