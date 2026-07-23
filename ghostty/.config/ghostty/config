@@ -50,11 +50,11 @@ theme = Adwaita Dark
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-background-opacity = 0.9
+background-opacity = 0.8
 # background-opacity = 1
 # # background-blur = 20
 # background = #171717
-background = #120909
+background = #000000
 # background = #242424
 
 # Feature config
