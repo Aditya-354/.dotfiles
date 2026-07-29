@@ -54,7 +54,7 @@ theme = Gruvbox Material
 background-opacity = 1
 # # background-blur = 20
 # background = #171717
-# background = #000000
+background = #000000
 # background = #242424
 
 # Feature config
