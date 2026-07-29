@@ -39,4 +39,4 @@ source /usr/share/nvm/init-nvm.sh
 # eval "$(oh-my-posh init bash --config emodipt-extend)"
 
 # source ~/.bash/themes/aphrodite/aphrodite.theme.sh
-# eval "$(starship init bash)"
+eval "$(starship init bash)"
