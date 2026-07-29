@@ -1057,7 +1057,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "adwaita",
+    pattern = "edge",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1147,10 +1147,10 @@ vim.g.nord_bold = false
 -- Load the colorscheme
 require('nord').set()
 
-vim.cmd("colorscheme koda-dark")
+-- vim.cmd("colorscheme koda-dark")
 -- vim.cmd("colorscheme darkvoid")
 -- vim.cmd("colorscheme adwaita")
 -- vim.cmd("colorscheme gruvbox")
--- vim.cmd("colorscheme retrobox")
+vim.cmd("colorscheme retrobox")
 -- vim.cmd("colorscheme dracula")
 

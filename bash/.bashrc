@@ -14,6 +14,8 @@ alias cl='clear'
 alias cpp='~/scripts/./cpp.bash'
 alias bin='~/scripts/./bin.bash'
 alias gdc='git add . && git commit -m "." && git push'
+alias pd='~/scripts/./pd.bash'
+alias scd='cd $(fzf --walker=dir,hidden,follow --walker-root=/home/asrwx)'
 
 PS1='\[\e[33m\e[1m\]\u@\h: \[\e[34m\]\W \[\e[0m\]\$ '
 # ➜
