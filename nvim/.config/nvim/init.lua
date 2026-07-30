@@ -1062,7 +1062,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "edge",
+    pattern = "dark-funeral",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1084,8 +1084,58 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         for _, group in ipairs(hl_groups) do
             vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
         end
-        -- vim.api.nvim_set_hl(0, "Comment", { fg = "#dd00af" })
-        -- vim.api.nvim_set_hl(0, "MatchParen", { fg = "#000000", bg = "#ffffff" })
+    end,
+})
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "bathory",
+    callback = function()
+        local hl_groups = {
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "TabLineSel",
+            "LineNr",
+            "Cursor",
+        }
+        for _, group in ipairs(hl_groups) do
+            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+        end
+    end,
+})
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "burzum",
+    callback = function()
+        local hl_groups = {
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "TabLineSel",
+            "LineNr",
+            "Cursor",
+        }
+        for _, group in ipairs(hl_groups) do
+            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+        end
     end,
 })
 
@@ -1154,7 +1204,8 @@ vim.g.zenbones_compat = 1
 
 -- vim.cmd("colorscheme koda-dark")
 -- vim.cmd("colorscheme darkvoid")
-vim.cmd("colorscheme lackluster-night")
+-- vim.cmd("colorscheme lackluster-night")
+vim.cmd("colorscheme dark-funeral")
 -- vim.cmd("colorscheme adwaita")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme retrobox")
