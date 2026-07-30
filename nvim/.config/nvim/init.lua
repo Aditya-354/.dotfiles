@@ -388,8 +388,10 @@ vim.pack.add({
   "https://github.com/sainnhe/edge",
   "https://github.com/sainnhe/sonokai",
   "https://github.com/Mofiqul/adwaita.nvim",
+  "https://github.com/zenbones-theme/zenbones.nvim",
   "https://github.com/darkvoid-theme/darkvoid.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
+  "https://github.com/slugbyte/lackluster.nvim",
   "https://github.com/oskarnurm/koda.nvim",
   "https://github.com/sainnhe/gruvbox-material",
   "https://github.com/craftzdog/solarized-osaka.nvim",
@@ -464,6 +466,7 @@ packadd("gitsigns.nvim")
 packadd("lualine.nvim")
 packadd("netrw.nvim")
 packadd("fzf-lua")
+packadd("lackluster.nvim")
 packadd("strudel.nvim")
 packadd("nvim-lspconfig")
 packadd("indent-blankline.nvim")
@@ -471,6 +474,7 @@ packadd("gruvbox-material")
 packadd("adwaita.nvim")
 packadd("nord.nvim")
 packadd("solarized-osaka.nvim")
+packadd("zenbones.nvim")
 packadd("mason.nvim")
 packadd("efmls-configs-nvim")
 
@@ -969,6 +973,7 @@ require("blackmetalCS")
 require("darkvoidCS")
 require("rosepineCS")
 require("draculaCS")
+require("lacklusterCS")
 require("kodaCS")
 require("myGreeter")
 require("netrwicons")
@@ -1144,11 +1149,12 @@ vim.g.nord_italic = false
 vim.g.nord_uniform_diff_background = true
 vim.g.nord_bold = false
 
--- Load the colorscheme
-require('nord').set()
+-- Zenbones
+vim.g.zenbones_compat = 1
 
-vim.cmd("colorscheme koda-dark")
+-- vim.cmd("colorscheme koda-dark")
 -- vim.cmd("colorscheme darkvoid")
+vim.cmd("colorscheme lackluster-night")
 -- vim.cmd("colorscheme adwaita")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme retrobox")
