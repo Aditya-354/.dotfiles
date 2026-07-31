@@ -391,6 +391,7 @@ vim.pack.add({
   "https://github.com/zenbones-theme/zenbones.nvim",
   "https://github.com/darkvoid-theme/darkvoid.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
+  "https://github.com/rktjmp/lush.nvim",
   "https://github.com/slugbyte/lackluster.nvim",
   "https://github.com/oskarnurm/koda.nvim",
   "https://github.com/sainnhe/gruvbox-material",
@@ -470,6 +471,7 @@ packadd("lackluster.nvim")
 packadd("strudel.nvim")
 packadd("nvim-lspconfig")
 packadd("indent-blankline.nvim")
+packadd("lush.nvim")
 packadd("gruvbox-material")
 packadd("adwaita.nvim")
 packadd("nord.nvim")
@@ -1205,7 +1207,8 @@ vim.g.zenbones_compat = 1
 -- vim.cmd("colorscheme koda-dark")
 -- vim.cmd("colorscheme darkvoid")
 -- vim.cmd("colorscheme lackluster-night")
-vim.cmd("colorscheme dark-funeral")
+-- vim.cmd("colorscheme dark-funeral")
+vim.cmd("colorscheme bathory")
 -- vim.cmd("colorscheme adwaita")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme retrobox")
