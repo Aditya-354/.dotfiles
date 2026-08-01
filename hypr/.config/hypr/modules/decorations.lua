@@ -3,10 +3,10 @@
 -----------------------
 hl.config({
     general = {
-        gaps_in  = 5,
-        gaps_out = 10,
-        -- gaps_in = 0,
-        -- gaps_out = 0,
+        -- gaps_in  = 5,
+        -- gaps_out = 10,
+        gaps_in = 0,
+        gaps_out = 0,
 
         border_size = 1,
 
@@ -37,7 +37,7 @@ hl.config({
         },
 
         blur = {
-            enabled   = false,
+            enabled   = true,
             size      = 1,
             passes    = 2,
             vibrancy  = 0.1696,

@@ -1090,7 +1090,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "bathory",
+    pattern = "zenbones",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1208,7 +1208,8 @@ vim.g.zenbones_compat = 1
 -- vim.cmd("colorscheme darkvoid")
 -- vim.cmd("colorscheme lackluster-night")
 -- vim.cmd("colorscheme dark-funeral")
-vim.cmd("colorscheme bathory")
+-- vim.cmd("colorscheme bathory")
+vim.cmd("colorscheme zenbones")
 -- vim.cmd("colorscheme adwaita")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme retrobox")
