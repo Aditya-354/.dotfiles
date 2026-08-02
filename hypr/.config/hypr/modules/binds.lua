@@ -3,8 +3,8 @@
 ---------------------
 local terminal    = "ghostty"
 local terminal2   = "kitty"
-local fileManager = "dolphin"
-local menu        = "~/.config/rofi/launchers/myType/./launcher.sh"
+local fileManager = "nautilus"
+local menu        = "~/.config/rofi/launchers/type-6/./launcher.sh"
 local wallpaperManager = "waypaper"
 local reload_bar = "~/.config/waybar/scripts/reload_waybar.sh"
 local powermenu = "~/.config/rofi/applets/bin/./powermenu.sh"
