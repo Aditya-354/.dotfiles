@@ -6,7 +6,7 @@ vim.opt.termguicolors = true
 -- ============================================================================
 vim.opt.number = true -- line number
 vim.opt.relativenumber = true -- relative line numbers
-vim.opt.cursorline = true -- highlight current line
+vim.opt.cursorline = false -- highlight current line
 vim.opt.wrap = false -- do not wrap lines by default
 vim.opt.scrolloff = 10 -- keep 20 lines above/below cursor
 vim.opt.sidescrolloff = 10 -- keep 10 lines to left/right of cursor
@@ -987,21 +987,21 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "darkvoid",
     callback = function()
         local hl_groups = {
-            -- "Normal",
-            -- "NormalFloat",
-            -- "SignColumn",
-            -- "NormalNC", -- background for non-current windows
-            -- "EndOfBuffer",
-            -- "MsgArea",
-            -- "FloatBorder",
-            -- "StatusLine",
-            -- "StatusLineNC",
-            -- "ColorColumn",
-            -- "TabLine",
-            -- "TabLineFill",
-            -- "TabLineSel",
-            -- "LineNr",
-            -- "Cursor",
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "TabLineSel",
+            "LineNr",
+            "Cursor",
         }
         for _, group in ipairs(hl_groups) do
             vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
@@ -1064,7 +1064,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "dark-funeral",
+    pattern = "sonokai",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1116,7 +1116,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "burzum",
+    pattern = "edge",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1188,7 +1188,7 @@ end
 
 -- Gruvbox-material Config: Set options BEFORE loading the colorscheme
 vim.g.gruvbox_material_background = "hard"
-vim.g.gruvbox_material_foreground = "mix"
+vim.g.gruvbox_material_foreground = "original"
 vim.g.gruvbox_material_enable_italic = true
 vim.g.gruvbox_material_better_performance = true
 vim.g.gruvbox_material_transparent_background = 0
@@ -1209,9 +1209,9 @@ vim.g.zenbones_compat = 1
 -- vim.cmd("colorscheme lackluster-night")
 -- vim.cmd("colorscheme dark-funeral")
 -- vim.cmd("colorscheme bathory")
-vim.cmd("colorscheme zenbones")
+-- vim.cmd("colorscheme zenbones")
 -- vim.cmd("colorscheme adwaita")
 -- vim.cmd("colorscheme gruvbox")
--- vim.cmd("colorscheme retrobox")
+vim.cmd("colorscheme retrobox")
 -- vim.cmd("colorscheme dracula")
 

@@ -1,11 +1,11 @@
 # Typography
-# font-family = JetBrains Mono Nerd Font
-font-family = MesloLGS Nerd Font Mono
+font-family = JetBrains Mono Nerd Font
+# font-family = MesloLGS Nerd Font Mono
 # font-family = FiraCode Nerd Font
 # font-family = CaskaydiaMono Nerd Font Mono
 # font-family = Maple Mono NF
 # font-family = "Iosevka NFM"
-font-size = 17
+font-size = 9
 # font-feature = -calt
 # font-thicken = true
 # adjust-cell-height = 5%
@@ -21,7 +21,7 @@ window-padding-y = 0
 # theme = TokyoNight Night
 # theme = Calamity
 # theme = Rapture
-theme = Zenbones Dark
+# theme = Zenbones Dark
 # theme = Matte Black
 # theme = Selenized Black
 # theme = Cursor Dark
@@ -54,6 +54,7 @@ theme = Zenbones Dark
 background-opacity = 1
 # # background-blur = 20
 # background = #171717
+background = #111111
 # background = #000000
 # background = #242424
 
@@ -65,3 +66,5 @@ keybind = ctrl+backspace=text:\x17
 # resize-overlay-duration = 4s 200ms
 keybind = ctrl+|=new_split:right
 keybind = ctrl+z=close_surface
+
+async-backend = epoll
