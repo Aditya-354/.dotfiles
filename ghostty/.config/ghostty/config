@@ -5,7 +5,7 @@ font-family = JetBrains Mono Nerd Font
 # font-family = CaskaydiaMono Nerd Font Mono
 # font-family = Maple Mono NF
 # font-family = "Iosevka NFM"
-font-size = 9
+font-size = 13
 # font-feature = -calt
 # font-thicken = true
 # adjust-cell-height = 5%
@@ -46,6 +46,7 @@ window-padding-y = 0
 # theme = Monokai Soda
 # theme = Banana Blueberry
 # theme = Everforest Dark Hard
+theme = Gruvbox Dark Hard
 # theme = 3024 Night
 # theme = Jellybeans
 # theme = Nord
@@ -55,7 +56,8 @@ background-opacity = 0.8
 # # background-blur = 20
 # background = #171717
 # background = #111111
-background = #000000
+# background = #000000
+background = #1a2021
 # background = #242424
 
 # Feature config
