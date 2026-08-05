@@ -5,11 +5,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:$HOME/.local/share/gem/ruby/3.4.0/bin/:/usr/local/bin:$PATH
 ZSH=/usr/share/oh-my-zsh/
 
 alias so='source ~/.zshrc && clear && fastfetch'
 alias cl='clear'
+alias cls='colorls'
+alias cll='colorls -lAh'
 alias dev='tmux new -As dev'
 alias projects='tmux new -As projects'
 alias gdc='git add . && git commit -m "." && git push'
