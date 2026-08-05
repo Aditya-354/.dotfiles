@@ -392,8 +392,10 @@ vim.pack.add({
   "https://github.com/darkvoid-theme/darkvoid.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
   "https://github.com/rktjmp/lush.nvim",
+  "https://github.com/edeneast/nightfox.nvim",
   "https://github.com/slugbyte/lackluster.nvim",
   "https://github.com/oskarnurm/koda.nvim",
+  "https://github.com/kepano/flexoki-neovim",
   "https://github.com/sainnhe/gruvbox-material",
   "https://github.com/craftzdog/solarized-osaka.nvim",
   "https://github.com/Mofiqul/dracula.nvim",
@@ -476,6 +478,8 @@ packadd("gruvbox-material")
 packadd("adwaita.nvim")
 packadd("nord.nvim")
 packadd("solarized-osaka.nvim")
+packadd("flexoki-neovim")
+packadd("nightfox.nvim")
 packadd("zenbones.nvim")
 packadd("mason.nvim")
 packadd("efmls-configs-nvim")

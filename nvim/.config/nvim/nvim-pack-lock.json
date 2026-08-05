@@ -29,6 +29,10 @@
       "rev": "5dc52088c231f2721f545570fcb541b04802ce6b",
       "src": "https://github.com/creativenull/efmls-configs-nvim"
     },
+    "flexoki-neovim": {
+      "rev": "c3e2251e813d29d885a7cbbe9808a7af234d845d",
+      "src": "https://github.com/kepano/flexoki-neovim"
+    },
     "fzf-lua": {
       "rev": "eee072d89ccdc0a4627bf67d0757d2e4981c7292",
       "src": "https://www.github.com/ibhagwan/fzf-lua"
@@ -85,6 +89,10 @@
     "netrw.nvim": {
       "rev": "3f643df59951d9adc4cf348cefe435fcdb5a3671",
       "src": "https://github.com/prichrd/netrw.nvim"
+    },
+    "nightfox.nvim": {
+      "rev": "4dacd3f0185a2227bdf3b6c0975a8f0bf87cac9a",
+      "src": "https://github.com/edeneast/nightfox.nvim"
     },
     "nord.nvim": {
       "rev": "80c1e5321505aeb22b7a9f23eb82f1e193c12470",
