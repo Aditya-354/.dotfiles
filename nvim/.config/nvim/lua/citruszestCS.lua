@@ -2,7 +2,7 @@
 local citruszest = require("citruszest")
 citruszest.setup({
     option = {
-        transparent = true, -- Enable/Disable transparency
+        transparent = false, -- Enable/Disable transparency
         bold = false,
         italic = true,
     },

@@ -1125,7 +1125,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "edge",
+    pattern = "terafox",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1222,6 +1222,7 @@ vim.g.zenbones_compat = 1
 -- vim.cmd("colorscheme adwaita")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme retrobox")
-vim.cmd("colorscheme citruszest")
+-- vim.cmd("colorscheme citruszest")
+vim.cmd("colorscheme terafox")
 -- vim.cmd("colorscheme dracula")
 
