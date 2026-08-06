@@ -393,6 +393,7 @@ vim.pack.add({
   "https://github.com/metalelf0/black-metal-theme-neovim",
   "https://github.com/rktjmp/lush.nvim",
   "https://github.com/edeneast/nightfox.nvim",
+  "https://github.com/zootedb0t/citruszest.nvim",
   "https://github.com/slugbyte/lackluster.nvim",
   "https://github.com/oskarnurm/koda.nvim",
   "https://github.com/kepano/flexoki-neovim",
@@ -481,6 +482,7 @@ packadd("solarized-osaka.nvim")
 packadd("flexoki-neovim")
 packadd("nightfox.nvim")
 packadd("zenbones.nvim")
+packadd("citruszest.nvim")
 packadd("mason.nvim")
 packadd("efmls-configs-nvim")
 
@@ -973,13 +975,16 @@ end
 -- THEME CONFIG
 -- =============================================================================================
 
+-- require colorschemes
 require("gruvboxCS")
 require("lualineSL")
 require("blackmetalCS")
 require("darkvoidCS")
+require("citruszestCS")
 require("rosepineCS")
 require("draculaCS")
 require("lacklusterCS")
+require("nightfoxCS")
 require("kodaCS")
 require("myGreeter")
 require("netrwicons")
@@ -1216,6 +1221,7 @@ vim.g.zenbones_compat = 1
 -- vim.cmd("colorscheme zenbones")
 -- vim.cmd("colorscheme adwaita")
 -- vim.cmd("colorscheme gruvbox")
-vim.cmd("colorscheme retrobox")
+-- vim.cmd("colorscheme retrobox")
+vim.cmd("colorscheme citruszest")
 -- vim.cmd("colorscheme dracula")
 
