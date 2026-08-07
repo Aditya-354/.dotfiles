@@ -392,6 +392,7 @@ vim.pack.add({
   "https://github.com/darkvoid-theme/darkvoid.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
   "https://github.com/rktjmp/lush.nvim",
+  "https://github.com/navarasu/onedark.nvim",
   "https://github.com/edeneast/nightfox.nvim",
   "https://github.com/zootedb0t/citruszest.nvim",
   "https://github.com/slugbyte/lackluster.nvim",
@@ -480,6 +481,7 @@ packadd("adwaita.nvim")
 packadd("nord.nvim")
 packadd("solarized-osaka.nvim")
 packadd("flexoki-neovim")
+packadd("onedark.nvim")
 packadd("nightfox.nvim")
 packadd("zenbones.nvim")
 packadd("citruszest.nvim")
@@ -986,6 +988,7 @@ require("draculaCS")
 require("lacklusterCS")
 require("nightfoxCS")
 require("kodaCS")
+require("onedarkCS")
 require("myGreeter")
 require("netrwicons")
 require("imagerenderer")
@@ -1125,32 +1128,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "terafox",
-    callback = function()
-        local hl_groups = {
-            "Normal",
-            "NormalFloat",
-            "SignColumn",
-            "NormalNC", -- background for non-current windows
-            "EndOfBuffer",
-            "MsgArea",
-            "FloatBorder",
-            "StatusLine",
-            "StatusLineNC",
-            "ColorColumn",
-            "TabLine",
-            "TabLineFill",
-            "TabLineSel",
-            "LineNr",
-            "Cursor",
-        }
-        for _, group in ipairs(hl_groups) do
-            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
-        end
-    end,
-})
-
-vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "adwaita",
     callback = function()
         -- Fetch all current highlight groups
@@ -1223,6 +1200,7 @@ vim.g.zenbones_compat = 1
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme retrobox")
 -- vim.cmd("colorscheme citruszest")
-vim.cmd("colorscheme terafox")
+vim.cmd("colorscheme nordfox")
+-- vim.cmd("colorscheme sonokai")
 -- vim.cmd("colorscheme dracula")
 

@@ -8,10 +8,10 @@ citruszest.setup({
     },
     -- Override default highlight style in this table
     -- E.g If you want to override `Constant` highlight style
-    style = {
-        -- This will change Constant foreground color and make it bold.
-        Constant = { fg = "#FFFFFF", bold = true}
-    },
+    -- style = {
+    --     -- This will change Constant foreground color and make it bold.
+    --     Constant = { fg = "#FFFFFF", bold = true}
+    -- },
 })
 
 return citruszest
