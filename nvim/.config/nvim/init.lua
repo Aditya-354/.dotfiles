@@ -383,6 +383,7 @@ vim.pack.add({
   "https://github.com/nvim-lualine/lualine.nvim",
   "https://github.com/lukas-reineke/indent-blankline.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
+  "https://github.com/nyoom-engineering/oxocarbon.nvim",
   "https://github.com/navarasu/onedark.nvim",
   "https://github.com/oskarnurm/koda.nvim",
   "https://github.com/Mofiqul/dracula.nvim",
@@ -461,6 +462,7 @@ packadd("nvim-lspconfig")
 packadd("indent-blankline.nvim")
 packadd("onedark.nvim")
 packadd("mason.nvim")
+packadd("oxocarbon.nvim")
 packadd("efmls-configs-nvim")
 packadd("koda.nvim")
 packadd("dracula.nvim")
