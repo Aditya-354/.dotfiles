@@ -17,6 +17,10 @@
       "rev": "e6fed9ec3d0ac190b1387379c138ba5e23a1f4f9",
       "src": "https://github.com/zootedb0t/citruszest.nvim"
     },
+    "cyberdream.nvim": {
+      "rev": "d0e6e837b0248e3507f3a295deb4661221610e78",
+      "src": "https://github.com/scottmckendry/cyberdream.nvim"
+    },
     "darkvoid.nvim": {
       "rev": "45be993a5617e05811b6b293c05e6aded7003cc9",
       "src": "https://github.com/darkvoid-theme/darkvoid.nvim"

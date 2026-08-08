@@ -393,6 +393,7 @@ vim.pack.add({
   "https://github.com/navarasu/onedark.nvim",
   "https://github.com/edeneast/nightfox.nvim",
   "https://github.com/zootedb0t/citruszest.nvim",
+  "https://github.com/scottmckendry/cyberdream.nvim",
   "https://github.com/slugbyte/lackluster.nvim",
   "https://github.com/oskarnurm/koda.nvim",
   "https://github.com/kepano/flexoki-neovim",
@@ -482,6 +483,7 @@ packadd("flexoki-neovim")
 packadd("onedark.nvim")
 packadd("nightfox.nvim")
 packadd("zenbones.nvim")
+packadd("cyberdream.nvim")
 packadd("citruszest.nvim")
 packadd("mason.nvim")
 packadd("efmls-configs-nvim")
@@ -987,6 +989,7 @@ require("lacklusterCS")
 require("nightfoxCS")
 require("kodaCS")
 require("onedarkCS")
+require("cyberdreamCS")
 require("myGreeter")
 require("netrwicons")
 require("imagerenderer")
