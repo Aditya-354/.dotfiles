@@ -1,14 +1,14 @@
 # Typography
 # font-family = JetBrains Mono Nerd Font
 # font-family = MesloLGS Nerd Font Mono
-# font-family = FiraCode Nerd Font
+font-family = FiraCode Nerd Font
 # font-family = Hack
-font-family = Agave Nerd Font Mono
+# font-family = Agave Nerd Font Mono
 # font-family = CaskaydiaMono Nerd Font Mono
 # font-family = Maple Mono NF
 # font-family = "Iosevka NFM"
 font-size = 13
-# font-feature = -calt
+font-feature = -calt
 # font-thicken = true
 # adjust-cell-height = 5%
 
@@ -27,7 +27,7 @@ window-padding-y = 0
 # theme = Matte Black
 # theme = Selenized Black
 # theme = Cursor Dark
-# theme = Rose Pine
+theme = Rose Pine
 # theme = Dark Modern
 # theme = Midnight In Mojave
 # theme = Modus Vivendi Tinted
@@ -55,14 +55,14 @@ window-padding-y = 0
 # theme = Flexoki Dark
 # theme = 3024 Night
 # theme = Jellybeans
-theme = Nord
+# theme = Nord
 # theme = Cyberpunk Scarlet Protocol
 # background-opacity = 0.8
 background-opacity = 1
 # # background-blur = 20
 # background = #171717
 # background = #111111
-# background = #000000
+background = #000000
 # background = #242424
 
 # Feature config
