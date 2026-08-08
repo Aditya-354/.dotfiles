@@ -6,7 +6,7 @@ vim.opt.termguicolors = true
 -- ============================================================================
 vim.opt.number = true -- line number
 vim.opt.relativenumber = true -- relative line numbers
-vim.opt.cursorline = false -- highlight current line
+vim.opt.cursorline = true -- highlight current line
 vim.opt.wrap = false -- do not wrap lines by default
 vim.opt.scrolloff = 10 -- keep 20 lines above/below cursor
 vim.opt.sidescrolloff = 10 -- keep 10 lines to left/right of cursor
@@ -281,10 +281,8 @@ vim.keymap.set({ "n", "v" }, "<leader>x", '"_d', { desc = "Delete without yankin
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" })
 
-vim.keymap.set("n", "<leader>dc", ":colo darkvoid<CR>", { desc = "Change color theme to darkvoid" })
-vim.keymap.set("n", "<leader>dd", ":colo dracula<CR>", { desc = "Change color theme to dracula" })
-vim.keymap.set("n", "<leader>tc", ":colo catppuccin<CR>", { desc = "Change color theme to catppuccin-mocha" })
-vim.keymap.set("n", "<leader>tg", ":colo gruvbox<CR>", { desc = "Change color theme to gruvbox" })
+vim.keymap.set("n", "<leader>gm", ":colo gruvbox-material<CR>", { desc = "Change color theme to gruvbox" })
+vim.keymap.set("n", "<leader>nf", ":colo nordfox<CR>", { desc = "Change color theme to nordfox" })
 vim.keymap.set("n", "<leader>tt", ":!date<CR>", { desc = "Display date and time" })
 
 vim.keymap.set("n", "<leader>j", ":Ex<CR>", { desc = "Open neo-tree" })
