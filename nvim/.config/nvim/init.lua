@@ -966,7 +966,6 @@ require("netrwicons")
 require("imagerenderer")
 -- require("ibl").setup()
 
--- OVERRIDES:
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "retrobox",
     callback = function()
@@ -994,32 +993,31 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 -- OVERRIDES:
-vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "dark-funeral",
-    callback = function()
-        local hl_groups = {
-            "Normal",
-            "NormalFloat",
-            "SignColumn",
-            "NormalNC", -- background for non-current windows
-            "EndOfBuffer",
-            "MsgArea",
-            "FloatBorder",
-            "StatusLine",
-            "StatusLineNC",
-            "ColorColumn",
-            "TabLine",
-            "TabLineFill",
-            "TabLineSel",
-            "LineNr",
-            "Cursor",
-        }
-        for _, group in ipairs(hl_groups) do
-            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
-        end
-    end,
-})
-
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--     pattern = "dark-funeral",
+--     callback = function()
+--         local hl_groups = {
+--             "Normal",
+--             "NormalFloat",
+--             "SignColumn",
+--             "NormalNC", -- background for non-current windows
+--             "EndOfBuffer",
+--             "MsgArea",
+--             "FloatBorder",
+--             "StatusLine",
+--             "StatusLineNC",
+--             "ColorColumn",
+--             "TabLine",
+--             "TabLineFill",
+--             "TabLineSel",
+--             "LineNr",
+--             "Cursor",
+--         }
+--         for _, group in ipairs(hl_groups) do
+--             vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+--         end
+--     end,
+-- })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "*",
@@ -1048,11 +1046,11 @@ for _, group in ipairs(NeoTreeGroups) do
 end
 
 -- vim.cmd("colorscheme koda-dark")
-vim.cmd("colorscheme dark-funeral")
+-- vim.cmd("colorscheme dark-funeral")
 -- vim.cmd("colorscheme bathory")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme retrobox")
--- vim.cmd("colorscheme rose-pine")
+vim.cmd("colorscheme rose-pine")
 -- vim.cmd("colorscheme darkvoid")
 -- vim.cmd("colorscheme dracula")
 
