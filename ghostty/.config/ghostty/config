@@ -1,7 +1,7 @@
 # Typography
 # font-family = JetBrains Mono Nerd Font
-# font-family = MesloLGS Nerd Font Mono
-font-family = FiraCode Nerd Font
+font-family = MesloLGS Nerd Font Mono
+# font-family = FiraCode Nerd Font
 # font-family = Hack
 # font-family = Agave Nerd Font Mono
 # font-family = CaskaydiaMono Nerd Font Mono
@@ -27,7 +27,7 @@ window-padding-y = 0
 # theme = Matte Black
 # theme = Selenized Black
 # theme = Cursor Dark
-theme = Rose Pine
+# theme = Rose Pine
 # theme = Dark Modern
 # theme = Midnight In Mojave
 # theme = Modus Vivendi Tinted
@@ -48,7 +48,7 @@ theme = Rose Pine
 # theme = Chalk
 # theme = Afterglow
 # theme = Flexoki Dark
-# theme = Monokai Soda
+theme = Monokai Classic
 # theme = Banana Blueberry
 # theme = Everforest Dark Hard
 # theme = Gruvbox Dark Hard
@@ -62,10 +62,11 @@ background-opacity = 1
 # # background-blur = 20
 # background = #171717
 # background = #111111
-background = #000000
+# background = #000000
 # background = #242424
 
 # Feature config
+cursor-color = #ffffff
 cursor-style = block
 # custom-shader = cursor_animation.glsl
 shell-integration-features = no-cursor   

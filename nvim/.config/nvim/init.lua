@@ -383,6 +383,7 @@ vim.pack.add({
   "https://github.com/nvim-lualine/lualine.nvim",
   "https://github.com/lukas-reineke/indent-blankline.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
+  "https://github.com/loctvl842/monokai-pro.nvim",
   "https://github.com/nyoom-engineering/oxocarbon.nvim",
   "https://github.com/navarasu/onedark.nvim",
   "https://github.com/darkvoid-theme/darkvoid.nvim",
@@ -464,6 +465,7 @@ packadd("darkvoid.nvim")
 packadd("indent-blankline.nvim")
 packadd("onedark.nvim")
 packadd("mason.nvim")
+packadd("monokai-pro.nvim")
 packadd("oxocarbon.nvim")
 packadd("efmls-configs-nvim")
 packadd("koda.nvim")
@@ -959,6 +961,7 @@ require("blackmetalCS")
 require("rosepineCS")
 require("draculaCS")
 require("darkvoidCS")
+require("monokaiproCS")
 require("kodaCS")
 require("onedarkCS")
 require("myGreeter")
@@ -994,7 +997,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 
 -- OVERRIDES:
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "dark-funeral",
+    pattern = "unokai",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1051,7 +1054,7 @@ end
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme retrobox")
 -- vim.cmd("colorscheme rose-pine")
-vim.cmd("colorscheme unokai")
+vim.cmd("colorscheme monokai-pro-classic")
 -- vim.cmd("colorscheme darkvoid")
 -- vim.cmd("colorscheme dracula")
 
