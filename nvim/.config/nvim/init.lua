@@ -385,6 +385,7 @@ vim.pack.add({
   "https://github.com/metalelf0/black-metal-theme-neovim",
   "https://github.com/nyoom-engineering/oxocarbon.nvim",
   "https://github.com/navarasu/onedark.nvim",
+  "https://github.com/darkvoid-theme/darkvoid.nvim",
   "https://github.com/oskarnurm/koda.nvim",
   "https://github.com/Mofiqul/dracula.nvim",
 
@@ -459,6 +460,7 @@ packadd("netrw.nvim")
 packadd("fzf-lua")
 packadd("strudel.nvim")
 packadd("nvim-lspconfig")
+packadd("darkvoid.nvim")
 packadd("indent-blankline.nvim")
 packadd("onedark.nvim")
 packadd("mason.nvim")
@@ -956,6 +958,7 @@ require("lualineSL")
 require("blackmetalCS")
 require("rosepineCS")
 require("draculaCS")
+require("darkvoidCS")
 require("kodaCS")
 require("onedarkCS")
 require("myGreeter")
@@ -1045,10 +1048,11 @@ for _, group in ipairs(NeoTreeGroups) do
 end
 
 -- vim.cmd("colorscheme koda-dark")
--- vim.cmd("colorscheme dark-funeral")
+vim.cmd("colorscheme dark-funeral")
 -- vim.cmd("colorscheme bathory")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme retrobox")
-vim.cmd("colorscheme rose-pine")
+-- vim.cmd("colorscheme rose-pine")
+-- vim.cmd("colorscheme darkvoid")
 -- vim.cmd("colorscheme dracula")
 

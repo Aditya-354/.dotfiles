@@ -1,11 +1,26 @@
 {
     "layer": "top",
-    "position": "top",
-    "modules-left": ["hyprland/workspaces", "hyprland/submap", "group/media"],
+    "position": "bottom",
+    "modules-left": ["hyprland/workspaces", "hyprland/window", "hyprland/submap"],
     "modules-center": ["clock"],
-    "modules-right": ["group/volume", "battery", "bluetooth", "network", "cpu", "memory"],
+    "modules-right": ["group/media", "group/volume", "battery", "bluetooth", "network", "cpu", "memory"],
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+        },
+        "persistent-workspaces": {
+            "*": 5, // 5 workspaces by default on every monitor
+        },
+    },
     "hyprland/window": {
-        "max-length": 50
+        "max-length": 50,
+        "icon": true,
+        "icon-size": 17,
     },
     // "battery": {
     //     "interval": 60,
