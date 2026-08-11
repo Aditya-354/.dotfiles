@@ -614,7 +614,7 @@ local diagnostic_signs = {
 
 vim.diagnostic.config({
 	-- virtual_text = { prefix = "●", spacing = 4 },
-  virtual_text = true,
+  -- virtual_text = true,
 	signs = {
 		text = {
 			[vim.diagnostic.severity.ERROR] = diagnostic_signs.Error,
@@ -1056,7 +1056,8 @@ end
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme retrobox")
 -- vim.cmd("colorscheme rose-pine")
-vim.cmd("colorscheme monokai-pro-classic")
+-- vim.cmd("colorscheme monokai-pro-classic")
+vim.cmd("colorscheme onedark")
 -- vim.cmd("colorscheme darkvoid")
 -- vim.cmd("colorscheme dracula")
 
