@@ -1,6 +1,6 @@
 local monokaipro = require("monokai-pro")
 monokaipro.setup({
-  transparent_background = false,
+  transparent_background = true,
   terminal_colors = true,
   devicons = true,
   styles = {

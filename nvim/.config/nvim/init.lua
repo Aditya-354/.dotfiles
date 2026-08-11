@@ -614,7 +614,7 @@ local diagnostic_signs = {
 
 vim.diagnostic.config({
 	-- virtual_text = { prefix = "●", spacing = 4 },
-  -- virtual_text = true,
+  virtual_text = true,
 	signs = {
 		text = {
 			[vim.diagnostic.severity.ERROR] = diagnostic_signs.Error,
@@ -761,6 +761,7 @@ vim.lsp.config("bashls", {})
 vim.lsp.config("ts_ls", {})
 vim.lsp.config("gopls", {})
 vim.lsp.config("clangd", {})
+vim.lsp.config("rust_analyzer", {})
 
 do
 	local luacheck = require("efmls-configs.linters.luacheck")
@@ -835,6 +836,7 @@ vim.lsp.enable({
 	"ts_ls",
 	"gopls",
 	"clangd",
+  "rust_analyzer",
 	-- "efm",
 })
 

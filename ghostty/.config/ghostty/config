@@ -1,7 +1,7 @@
 # Typography
 # font-family = JetBrains Mono Nerd Font
-font-family = MesloLGS Nerd Font Mono
-# font-family = FiraCode Nerd Font
+# font-family = MesloLGS Nerd Font Mono
+font-family = FiraCode Nerd Font
 # font-family = Hack
 # font-family = Agave Nerd Font Mono
 # font-family = CaskaydiaMono Nerd Font Mono
@@ -37,7 +37,7 @@ window-padding-y = 0
 # theme = Belafonte Night
 # theme = Vercel
 # theme = Gruvbox Dark
-# theme = Atom One Dark
+theme = Atom One Dark
 # theme = Terafox
 # theme = Nordfox
 # theme = Citruszest
@@ -48,7 +48,7 @@ window-padding-y = 0
 # theme = Chalk
 # theme = Afterglow
 # theme = Flexoki Dark
-theme = Monokai Classic
+# theme = Monokai Classic
 # theme = Banana Blueberry
 # theme = Everforest Dark Hard
 # theme = Gruvbox Dark Hard
