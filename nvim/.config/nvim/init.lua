@@ -281,8 +281,8 @@ vim.keymap.set({ "n", "v" }, "<leader>x", '"_d', { desc = "Delete without yankin
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" })
 
-vim.keymap.set("n", "<leader>gm", ":colo gruvbox-material<CR>", { desc = "Change color theme to gruvbox" })
-vim.keymap.set("n", "<leader>nf", ":colo nordfox<CR>", { desc = "Change color theme to nordfox" })
+vim.keymap.set("n", "<leader>on", ":colo onedark<CR>", { desc = "Change color theme to onedark" })
+vim.keymap.set("n", "<leader>mc", ":colo monokai-pro-classic<CR>", { desc = "Change color theme to main" })
 vim.keymap.set("n", "<leader>tt", ":!date<CR>", { desc = "Display date and time" })
 
 vim.keymap.set("n", "<leader>j", ":Ex<CR>", { desc = "Open neo-tree" })
@@ -999,7 +999,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 
 -- OVERRIDES:
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "unokai",
+    pattern = "dark-funeral",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1056,8 +1056,8 @@ end
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme retrobox")
 -- vim.cmd("colorscheme rose-pine")
--- vim.cmd("colorscheme monokai-pro-classic")
-vim.cmd("colorscheme onedark")
+vim.cmd("colorscheme monokai-pro-classic")
+-- vim.cmd("colorscheme onedark")
 -- vim.cmd("colorscheme darkvoid")
 -- vim.cmd("colorscheme dracula")
 

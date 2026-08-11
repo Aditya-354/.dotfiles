@@ -37,7 +37,7 @@ window-padding-y = 0
 # theme = Belafonte Night
 # theme = Vercel
 # theme = Gruvbox Dark
-theme = Monokai Remastered
+theme = noctalia
 # theme = Terafox
 # theme = Nordfox
 # theme = Citruszest
@@ -57,12 +57,12 @@ theme = Monokai Remastered
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-# background-opacity = 0.8
-background-opacity = 1
+background-opacity = 0.8
+# background-opacity = 1
 # # background-blur = 20
 # background = #171717
 # background = #111111
-# background = #000000
+background = #000000
 # background = #242424
 
 # Feature config

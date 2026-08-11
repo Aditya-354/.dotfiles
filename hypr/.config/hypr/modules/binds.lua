@@ -16,17 +16,32 @@ local powermenu = "~/.config/rofi/applets/bin/./powermenu.sh"
 local mainMod = "ALT" -- Sets "ALT" key as main modifier
 local super = "SUPER"
 
--- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
+local ipc = "noctalia msg "
+
+-- Core binds
+hl.bind(mainMod .. "+Space", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
+hl.bind(mainMod .. "+S", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
+hl.bind(mainMod .. "+comma", hl.dsp.exec_cmd(ipc .. "settings-toggle"))
+hl.bind("ALT + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher"))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(ipc .. "bar-toggle"))
+hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(ipc .. "dock-toggle"))
+
+-- Media keys
+-- hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(ipc .. "volume-up"))
+-- hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(ipc .. "volume-down"))
+-- hl.bind("XF86AudioMute", hl.dsp.exec_cmd(ipc .. "volume-mute"))
+-- hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(ipc .. "brightness-up"))
+-- hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(ipc .. "brightness-down"))
+
 hl.bind(mainMod .. " + G", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + C", hl.dsp.window.kill())
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal2))
-hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(wallpaperManager))
-hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(reload_bar))
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(ipc .. "panel-toggle wallpaper"))
+-- hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(reload_bar))
 hl.bind(super .. " + N", hl.dsp.exec_cmd("swaync-client -t"))
 hl.bind(super .. " + B", hl.dsp.exec_cmd("brave --password-store=basic"))
--- hl.bind(super .. " + O", hl.dsp.exec_cmd("obsidian"))
--- hl.bind(super .. " + E", hl.dsp.exec_cmd("krita"))
+hl.bind(super .. " + E", hl.dsp.exec_cmd("krita"))
 -- hl.bind(super .. " + P", hl.dsp.exec_cmd("shotwell"))
 hl.bind(super .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
@@ -34,7 +49,7 @@ hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(powermenu))
+-- hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(powermenu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 -- hl.bind(super .. " + J", hl.dsp.exec_cmd("togglesplit"))    -- dwindle only
 hl.bind(super .. " + W", hl.dsp.exec_cmd("hyprshot -m window"))
@@ -53,8 +68,8 @@ for i = 1, 10 do
 end
 
 -- Example special workspace (scratchpad)
-hl.bind(super .. " + S",         hl.dsp.workspace.toggle_special("magic"))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+-- hl.bind(super .. " + S",         hl.dsp.workspace.toggle_special("magic"))
+-- hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
