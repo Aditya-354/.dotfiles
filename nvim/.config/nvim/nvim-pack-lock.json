@@ -41,10 +41,6 @@
       "rev": "88351f1f7d9dbae286e671ce3690a49660dd8a5c",
       "src": "https://github.com/3rd/image.nvim"
     },
-    "indent-blankline.nvim": {
-      "rev": "d28a3f70721c79e3c5f6693057ae929f3d9c0a03",
-      "src": "https://github.com/lukas-reineke/indent-blankline.nvim"
-    },
     "koda.nvim": {
       "rev": "a7da3ced59eadafbda6eb4d7f7e2a6a3d9ecf858",
       "src": "https://github.com/oskarnurm/koda.nvim"

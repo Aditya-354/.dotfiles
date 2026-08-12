@@ -20,7 +20,7 @@ alias bin='~/scripts/./bin.bash'
 alias pd='~/scripts/./pd.bash'
 alias scd='cd $(fzf --walker=dir,hidden,follow --walker-root=/home/asrwx)'
 
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 # ZSH_THEME="kafeitu"
 # ZSH_THEME="kphoen"
 # ZSH_THEME="gianu"
@@ -52,4 +52,4 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"

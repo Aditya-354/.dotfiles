@@ -4,7 +4,7 @@
 hl.config({
     general = {
         gaps_in  = 5,
-        gaps_out = 43,
+        gaps_out = 29,
         -- gaps_in = 0,
         -- gaps_out = 0,
 
@@ -38,7 +38,7 @@ hl.config({
 
         blur = {
             enabled   = true,
-            size      = 3,
+            size      = 5,
             passes    = 2,
             vibrancy  = 0.1696,
         },

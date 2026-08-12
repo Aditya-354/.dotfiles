@@ -381,7 +381,7 @@ vim.pack.add({
   "https://github.com/ellisonleao/gruvbox.nvim",
   "https://github.com/prichrd/netrw.nvim",
   "https://github.com/nvim-lualine/lualine.nvim",
-  "https://github.com/lukas-reineke/indent-blankline.nvim",
+  -- "https://github.com/lukas-reineke/indent-blankline.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
   "https://github.com/loctvl842/monokai-pro.nvim",
   "https://github.com/nyoom-engineering/oxocarbon.nvim",
@@ -462,7 +462,7 @@ packadd("fzf-lua")
 packadd("strudel.nvim")
 packadd("nvim-lspconfig")
 packadd("darkvoid.nvim")
-packadd("indent-blankline.nvim")
+-- packadd("indent-blankline.nvim")
 packadd("onedark.nvim")
 packadd("mason.nvim")
 packadd("monokai-pro.nvim")
@@ -724,25 +724,25 @@ vim.keymap.set("n", "<leader>q", function()
 end, { desc = "Open diagnostic list" })
 vim.keymap.set("n", "<leader>dl", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
 
-require("blink.cmp").setup({
-	keymap = {
-		preset = "none",
-		["<C-Space>"] = { "show", "hide" },
-		["<CR>"] = { "accept", "fallback" },
-		["<C-j>"] = { "select_next", "fallback" },
-		["<C-k>"] = { "select_prev", "fallback" },
-		["<Tab>"] = { "snippet_forward", "fallback" },
-		["<S-Tab>"] = { "snippet_backward", "fallback" },
-	},
-	appearance = { nerd_font_variant = "mono" },
-	completion = { menu = { auto_show = true } },
-	sources = { default = { "lsp", "path", "buffer", "snippets" } },
-
-	fuzzy = {
-		implementation = "prefer_rust",
-		prebuilt_binaries = { download = true },
-	},
-})
+-- require("blink.cmp").setup({
+-- 	keymap = {
+-- 		preset = "none",
+-- 		["<C-Space>"] = { "show", "hide" },
+-- 		["<CR>"] = { "accept", "fallback" },
+-- 		["<C-j>"] = { "select_next", "fallback" },
+-- 		["<C-k>"] = { "select_prev", "fallback" },
+-- 		["<Tab>"] = { "snippet_forward", "fallback" },
+-- 		["<S-Tab>"] = { "snippet_backward", "fallback" },
+-- 	},
+-- 	appearance = { nerd_font_variant = "mono" },
+-- 	completion = { menu = { auto_show = true } },
+-- 	sources = { default = { "lsp", "path", "buffer", "snippets" } },
+--
+-- 	fuzzy = {
+-- 		implementation = "prefer_rust",
+-- 		prebuilt_binaries = { download = true },
+-- 	},
+-- })
 
 vim.lsp.config["*"] = {
 	capabilities = require("blink.cmp").get_lsp_capabilities(),
