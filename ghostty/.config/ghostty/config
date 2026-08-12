@@ -57,12 +57,12 @@ theme = Sonokai
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-background-opacity = 0.88
-# background-opacity = 1
+# background-opacity = 0.9
+background-opacity = 1
 # # background-blur = 20
 # background = #171717
-background = #111111
-# background = #000000
+# background = #111111
+background = #000000
 # background = #242424
 
 # Feature config
