@@ -19,7 +19,7 @@ oasis.setup({
   },
 
   -- Display options
-  transparent = false,                  -- Set to true for transparent backgrounds (bye-bye theme backgrounds)
+  transparent = true,                  -- Set to true for transparent backgrounds (bye-bye theme backgrounds)
   terminal_colors = true,               -- Apply Oasis colors to Neovim's built-in terminal
   match_paren_bg = false,               -- Enable/disable background on MatchParen highlight
 
@@ -31,7 +31,9 @@ oasis.setup({
   },
 
   palette_overrides = {},               -- Override colors in specific palettes
-  highlight_overrides = {},             -- Override specific highlight groups
+  highlight_overrides = {
+      ["@type.builtin"] = { fg = "#ff5050" },
+  },             -- Override specific highlight groups
 
   -- Plugin integrations
   integrations = {
