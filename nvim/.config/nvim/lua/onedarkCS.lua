@@ -32,7 +32,8 @@ onedark.setup  {
     colors = {}, -- Override default colors
     highlights = {
         ["@type.builtin"] = { fg = "#f02070" },
-    }, -- Override highlight groups
+        ["@variable.parameter"] = { fg = "#a7aab0" },
+    },
 
     -- Plugins Config --
     diagnostics = {
