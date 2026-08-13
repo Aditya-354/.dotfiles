@@ -8,7 +8,7 @@
 font-family = Maple Mono NF
 # font-family = "Iosevka NFM"
 font-size = 13
-font-feature = -calt
+# font-feature = -calt
 # font-thicken = true
 # adjust-cell-height = 5%
 
@@ -38,13 +38,13 @@ window-padding-y = 0
 # theme = Vercel
 # theme = Gruvbox Dark
 # theme = noctalia
-# theme = Terafox
+theme = Terafox
 # theme = Nordfox
 # theme = Citruszest
 # theme = Gruvbox Material
 # theme = Brogrammer
 # theme = Vague
-theme = Sonokai
+# theme = Sonokai
 # theme = Chalk
 # theme = Afterglow
 # theme = Flexoki Dark
@@ -62,7 +62,7 @@ background-opacity = 1
 # # background-blur = 20
 # background = #171717
 # background = #111111
-background = #000000
+background = #161617
 # background = #242424
 
 # Feature config

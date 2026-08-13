@@ -21,10 +21,6 @@
       "rev": "5dc52088c231f2721f545570fcb541b04802ce6b",
       "src": "https://github.com/creativenull/efmls-configs-nvim"
     },
-    "farout.nvim": {
-      "rev": "ebfcb874c3ebdb86fff8f22de4ae0944c3fa2bbc",
-      "src": "https://github.com/thallada/farout.nvim"
-    },
     "fzf-lua": {
       "rev": "eee072d89ccdc0a4627bf67d0757d2e4981c7292",
       "src": "https://www.github.com/ibhagwan/fzf-lua"
@@ -37,6 +33,10 @@
       "rev": "a2ba2e037b81c4848d6fe892c43b9aee398de1d1",
       "src": "/home/asrwx/plugins/greeter.nvim"
     },
+    "gruvbox-baby": {
+      "rev": "bd52e62d8134647090108189e69c8b3cd18bdbbf",
+      "src": "https://github.com/luisiacc/gruvbox-baby"
+    },
     "gruvbox.nvim": {
       "rev": "334d5fd49fc8033f26408425366c66c6390c57bb",
       "src": "https://github.com/ellisonleao/gruvbox.nvim"
@@ -44,10 +44,6 @@
     "image.nvim": {
       "rev": "88351f1f7d9dbae286e671ce3690a49660dd8a5c",
       "src": "https://github.com/3rd/image.nvim"
-    },
-    "koda.nvim": {
-      "rev": "a7da3ced59eadafbda6eb4d7f7e2a6a3d9ecf858",
-      "src": "https://github.com/oskarnurm/koda.nvim"
     },
     "lualine.nvim": {
       "rev": "a905eeebc4e63fdc48b5135d3bf8aea5618fb21c",
@@ -70,6 +66,10 @@
       "rev": "3f643df59951d9adc4cf348cefe435fcdb5a3671",
       "src": "https://github.com/prichrd/netrw.nvim"
     },
+    "nightfox.nvim": {
+      "rev": "4dacd3f0185a2227bdf3b6c0975a8f0bf87cac9a",
+      "src": "https://github.com/EdenEast/nightfox.nvim"
+    },
     "nui.nvim": {
       "rev": "de740991c12411b663994b2860f1a4fd0937c130",
       "src": "https://github.com/MunifTanjim/nui.nvim"
@@ -86,13 +86,17 @@
       "rev": "dad71387de386a946b123079d0e53f23028f3abd",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
+    "oasis.nvim": {
+      "rev": "e108374309de2ef1b2def36ab522036165abf911",
+      "src": "https://github.com/uhs-robert/oasis.nvim"
+    },
+    "oldworld.nvim": {
+      "rev": "db072a0bd2c90035fc3a57a73014cb54d3902f1f",
+      "src": "https://github.com/dgox16/oldworld.nvim"
+    },
     "onedark.nvim": {
       "rev": "df4792accde9db0043121f32628bcf8e645d9aea",
       "src": "https://github.com/navarasu/onedark.nvim"
-    },
-    "oxocarbon.nvim": {
-      "rev": "488dca6e3ff01acd88a648b83244073037261e64",
-      "src": "https://github.com/nyoom-engineering/oxocarbon.nvim"
     },
     "plenary.nvim": {
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
