@@ -752,7 +752,7 @@ vim.lsp.config["*"] = {
 	capabilities = require("blink.cmp").get_lsp_capabilities(),
 }
 
-vim.lsp.semantic_tokens.enable(false)
+vim.lsp.semantic_tokens.enable(true)
 
 vim.lsp.config("lua_ls", {
 	settings = {
@@ -1116,11 +1116,11 @@ vim.g.gruvbox_baby_transparent_mode = 0
 -- vim.cmd("colorscheme bathory")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme retrobox")
--- vim.cmd("colorscheme rose-pine-moon")
+vim.cmd("colorscheme rose-pine-moon")
 -- vim.cmd("colorscheme monokai-pro-classic")
 -- vim.cmd("colorscheme oldworld")
 -- vim.cmd("colorscheme oasis-sol")
-vim.cmd("colorscheme onedark")
+-- vim.cmd("colorscheme onedark")
 -- vim.cmd("colorscheme darkvoid")
 -- vim.cmd("colorscheme dracula")
 

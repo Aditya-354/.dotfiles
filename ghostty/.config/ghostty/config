@@ -1,7 +1,7 @@
 # Typography
-font-family = JetBrains Mono Nerd Font
+# font-family = JetBrains Mono Nerd Font
 # font-family = MesloLGS Nerd Font Mono
-# font-family = FiraMono Nerd Font Mono
+font-family = FiraMono Nerd Font Mono
 # font-family = Hack
 # font-family = Agave Nerd Font Mono
 # font-family = CaskaydiaMono Nerd Font Mono
@@ -58,12 +58,12 @@ theme = Atom One Dark
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-# background-opacity = 0.9
-background-opacity = 1
+background-opacity = 0.9
+# background-opacity = 1
 # background-blur = 20
 # background = #301515
-background = #171717
-# background = #201010
+# background = #171717
+background = #300710
 # background = #000000
 # background = #202020
 
