@@ -58,14 +58,14 @@ theme = Atom One Dark
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-# background-opacity = 0.89
+background-opacity = 0.9
 # background-opacity = 1
 # # background-blur = 20
 # background = #171717
 # background = #111111
-background = #161617
+background = #220202
 # background = #000000
-background = #242424
+# background = #242424
 
 # Feature config
 cursor-color = #ffffff
