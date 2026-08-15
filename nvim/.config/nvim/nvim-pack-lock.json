@@ -33,10 +33,6 @@
       "rev": "a2ba2e037b81c4848d6fe892c43b9aee398de1d1",
       "src": "/home/asrwx/plugins/greeter.nvim"
     },
-    "gruvbox-baby": {
-      "rev": "bd52e62d8134647090108189e69c8b3cd18bdbbf",
-      "src": "https://github.com/luisiacc/gruvbox-baby"
-    },
     "gruvbox.nvim": {
       "rev": "334d5fd49fc8033f26408425366c66c6390c57bb",
       "src": "https://github.com/ellisonleao/gruvbox.nvim"
@@ -53,10 +49,6 @@
       "rev": "b03fb0f20bc1d43daf558cda981a2be22e73ac42",
       "src": "https://github.com/mason-org/mason.nvim"
     },
-    "monokai-pro.nvim": {
-      "rev": "a68e38b8e55d69a215d0f02598900a79c356da9d",
-      "src": "https://github.com/loctvl842/monokai-pro.nvim"
-    },
     "neo-tree.nvim": {
       "rev": "83e7a2982fd12b9c3d35bc39dd5877cd91a02a61",
       "src": "https://github.com/nvim-neo-tree/neo-tree.nvim",
@@ -65,10 +57,6 @@
     "netrw.nvim": {
       "rev": "3f643df59951d9adc4cf348cefe435fcdb5a3671",
       "src": "https://github.com/prichrd/netrw.nvim"
-    },
-    "nightfox.nvim": {
-      "rev": "4dacd3f0185a2227bdf3b6c0975a8f0bf87cac9a",
-      "src": "https://github.com/EdenEast/nightfox.nvim"
     },
     "nui.nvim": {
       "rev": "de740991c12411b663994b2860f1a4fd0937c130",
@@ -85,14 +73,6 @@
     "nvim-web-devicons": {
       "rev": "dad71387de386a946b123079d0e53f23028f3abd",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
-    },
-    "oasis.nvim": {
-      "rev": "e108374309de2ef1b2def36ab522036165abf911",
-      "src": "https://github.com/uhs-robert/oasis.nvim"
-    },
-    "oldworld.nvim": {
-      "rev": "db072a0bd2c90035fc3a57a73014cb54d3902f1f",
-      "src": "https://github.com/dgox16/oldworld.nvim"
     },
     "onedark.nvim": {
       "rev": "df4792accde9db0043121f32628bcf8e645d9aea",

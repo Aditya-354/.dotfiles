@@ -6,7 +6,7 @@ vim.opt.termguicolors = true
 -- ============================================================================
 vim.opt.number = true -- line number
 vim.opt.relativenumber = true -- relative line numbers
-vim.opt.cursorline = true -- highlight current line
+vim.opt.cursorline = false -- highlight current line
 vim.opt.wrap = true -- do not wrap lines by default
 vim.opt.scrolloff = 10 -- keep 20 lines above/below cursor
 vim.opt.sidescrolloff = 10 -- keep 10 lines to left/right of cursor
@@ -383,13 +383,7 @@ vim.pack.add({
   "https://github.com/nvim-lualine/lualine.nvim",
   -- "https://github.com/lukas-reineke/indent-blankline.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
-  "https://github.com/loctvl842/monokai-pro.nvim",
   "https://github.com/navarasu/onedark.nvim",
-  "https://github.com/luisiacc/gruvbox-baby",
-  "https://github.com/darkvoid-theme/darkvoid.nvim",
-  "https://github.com/uhs-robert/oasis.nvim",
-  "https://github.com/dgox16/oldworld.nvim",
-  "https://github.com/EdenEast/nightfox.nvim",
   "https://github.com/Mofiqul/dracula.nvim",
 
   {
@@ -463,15 +457,9 @@ packadd("netrw.nvim")
 packadd("fzf-lua")
 packadd("strudel.nvim")
 packadd("nvim-lspconfig")
-packadd("darkvoid.nvim")
 -- packadd("indent-blankline.nvim")
 packadd("onedark.nvim")
 packadd("mason.nvim")
-packadd("monokai-pro.nvim")
-packadd("oasis.nvim")
-packadd("gruvbox-baby")
-packadd("oldworld.nvim")
-packadd("nightfox.nvim")
 packadd("efmls-configs-nvim")
 packadd("dracula.nvim")
 packadd("gruvbox.nvim")
@@ -967,11 +955,7 @@ require("gruvboxCS")
 require("lualineSL")
 require("blackmetalCS")
 require("rosepineCS")
-require("oasisCS")
 require("draculaCS")
-require("darkvoidCS")
-require("monokaiproCS")
-require("nightfoxCS")
 require("onedarkCS")
 require("myGreeter")
 require("netrwicons")
@@ -982,19 +966,19 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "retrobox",
     callback = function()
         local hl_groups = {
-            -- "Normal",
-            -- "NormalFloat",
-            -- "SignColumn",
-            -- "NormalNC", -- background for non-current windows
-            -- "EndOfBuffer",
-            -- "MsgArea",
-            -- "FloatBorder",
-            -- "StatusLine",
-            -- "StatusLineNC",
-            -- "ColorColumn",
-            -- "TabLine",
-            -- "TabLineFill",
-            -- "TabLineSel",
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "TabLineSel",
             "LineNr",
             "Cursor",
             "CursorLineNr",
@@ -1008,58 +992,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 -- OVERRIDES:
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "dark-funeral",
-    callback = function()
-        local hl_groups = {
-            "Normal",
-            "NormalFloat",
-            "SignColumn",
-            "NormalNC", -- background for non-current windows
-            "EndOfBuffer",
-            "MsgArea",
-            "FloatBorder",
-            "StatusLine",
-            "StatusLineNC",
-            "ColorColumn",
-            "TabLine",
-            "TabLineFill",
-            "TabLineSel",
-            "LineNr",
-            "Cursor",
-        }
-        for _, group in ipairs(hl_groups) do
-            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
-        end
-    end,
-})
-
-vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "darkvoid",
-    callback = function()
-        local hl_groups = {
-            "Normal",
-            "NormalFloat",
-            "SignColumn",
-            "NormalNC", -- background for non-current windows
-            "EndOfBuffer",
-            "MsgArea",
-            "FloatBorder",
-            "StatusLine",
-            "StatusLineNC",
-            "ColorColumn",
-            "TabLine",
-            "TabLineFill",
-            "TabLineSel",
-            "LineNr",
-            "Cursor",
-        }
-        for _, group in ipairs(hl_groups) do
-            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
-        end
-    end,
-})
-
-vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "oldworld",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1115,8 +1047,9 @@ vim.g.gruvbox_baby_transparent_mode = 0
 -- vim.cmd("colorscheme dark-funeral")
 -- vim.cmd("colorscheme bathory")
 -- vim.cmd("colorscheme gruvbox")
--- vim.cmd("colorscheme retrobox")
-vim.cmd("colorscheme rose-pine-moon")
+vim.cmd("colorscheme retrobox")
+-- vim.cmd("colorscheme rose-pine-moon")
+-- vim.cmd("colorscheme koda-moss")
 -- vim.cmd("colorscheme monokai-pro-classic")
 -- vim.cmd("colorscheme oldworld")
 -- vim.cmd("colorscheme oasis-sol")
