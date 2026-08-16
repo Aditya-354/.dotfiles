@@ -73,6 +73,10 @@
     "strudel.nvim": {
       "rev": "3a7e62c9048a318281328ad08d6269e50b884cd3",
       "src": "https://github.com/gruvw/strudel.nvim.git"
+    },
+    "vague.nvim": {
+      "rev": "f9060fdaf7b20f68575d6f8214da6f1cf0c72825",
+      "src": "https://github.com/vague-theme/vague.nvim"
     }
   }
 }
