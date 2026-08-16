@@ -17,7 +17,7 @@ alias gdc='git add . && git commit -m "." && git push'
 alias pd='~/scripts/./pd.bash'
 alias scd='cd $(fzf --walker=dir,hidden,follow --walker-root=/home/asrwx)'
 
-PS1='\[\e[33m\e[1m\]\u@\h: \[\e[34m\]\W \[\e[0m\]\$ '
+PS1='\[\e[33m\e[1m\]\u@\h: \[\e[34m\]\w \[\e[0m\] \n$ '
 # ➜
 export PATH="$PATH:~/.cargo/bin"
 export PATH="$HOME/.local/bin:$PATH"
@@ -26,7 +26,7 @@ export BAT_PAGER="less -R --incsearch"
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export PATH="$HOME/.config/emacs/bin:$PATH"
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH:$HOME/.local/share/gem/ruby/3.4.0/bin/:$PATH
 export MANPAGER="nvim +Man!"
 # export VIMRUNTIME=~/workspace/neovim/runtime
 
@@ -39,4 +39,4 @@ source /usr/share/nvm/init-nvm.sh
 # eval "$(oh-my-posh init bash --config emodipt-extend)"
 
 # source ~/.bash/themes/aphrodite/aphrodite.theme.sh
-eval "$(starship init bash)"
+# eval "$(starship init bash)"
