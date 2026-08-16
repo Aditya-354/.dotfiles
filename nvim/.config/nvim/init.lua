@@ -1056,4 +1056,4 @@ end
 -- vim.cmd("colorscheme default")
 -- vim.cmd("colorscheme elflord")
 -- vim.cmd("colorscheme murphy")
-vim.cmd("colorscheme catppuccin")
+vim.cmd("colorscheme catppuccin-mocha")
