@@ -6,7 +6,7 @@ vim.opt.termguicolors = false
 -- ============================================================================
 vim.opt.number = true -- line number
 vim.opt.relativenumber = true -- relative line numbers
-vim.opt.cursorline = false -- highlight current line
+vim.opt.cursorline = true -- highlight current line
 vim.opt.wrap = true -- do not wrap lines by default
 vim.opt.scrolloff = 10 -- keep 20 lines above/below cursor
 vim.opt.sidescrolloff = 10 -- keep 10 lines to left/right of cursor
@@ -395,6 +395,8 @@ vim.pack.add({
 		version = vim.version.range("1.*"),
 	},
 })
+
+vim.pack.add { { src = "https://github.com/catppuccin/nvim", name = "catppuccin" } }
 
 vim.pack.add({
   {
@@ -970,7 +972,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "elflord",
+    pattern = "retrobox",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -996,17 +998,44 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
--- vim.api.nvim_create_autocmd("ColorScheme", {
---     pattern = "*",
---     callback = function()
---         vim.api.nvim_set_hl(0, "CursorLine", { bg = "none", ctermbg = "none" })
---         vim.api.nvim_set_hl(0, "TabLine", { bg = "none", ctermbg = "none" })
---         vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", ctermbg = "none" })
---         vim.api.nvim_set_hl(0, "SignColumn", { bg = "none", ctermbg = "none" })
---         -- vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none", ctermbg = "none" })
---         vim.api.nvim_set_hl(0, "Cursor", { bg = "none", ctermbg = "none" })
---     end,
--- })
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "unokai",
+    callback = function()
+        local hl_groups = {
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "TabLineSel",
+            "LineNr",
+            "Cursor",
+            "CursorLineNr",
+        }
+        for _, group in ipairs(hl_groups) do
+            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+        end
+    end,
+})
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "*",
+    callback = function()
+        vim.api.nvim_set_hl(0, "CursorLine", { bg = "none", ctermbg = "none" })
+        vim.api.nvim_set_hl(0, "TabLine", { bg = "none", ctermbg = "none" })
+        vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", ctermbg = "none" })
+        vim.api.nvim_set_hl(0, "SignColumn", { bg = "none", ctermbg = "none" })
+        vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none", ctermbg = "none" })
+        vim.api.nvim_set_hl(0, "Cursor", { bg = "none", ctermbg = "none" })
+    end,
+})
 
 local NeoTreeGroups = {
     "NeoTreeNormal",
@@ -1022,17 +1051,9 @@ for _, group in ipairs(NeoTreeGroups) do
     vim.api.nvim_set_hl(0, group, { bg = "NONE", ctermbg = "NONE" })
 end
 
--- vim.cmd("colorscheme dark-funeral")
--- vim.cmd("colorscheme bathory")
--- vim.cmd("colorscheme gruvbox")
--- vim.cmd("colorscheme retrobox")
--- vim.cmd("colorscheme koda-moss")
--- vim.cmd("colorscheme adwaita")
--- vim.cmd("colorscheme nordfox")
--- vim.cmd("colorscheme default")
-vim.cmd("colorscheme murphy")
--- vim.cmd("colorscheme rose-pine-moon")
--- vim.cmd("colorscheme monokai-pro-classic")
--- vim.cmd("colorscheme onedark")
--- vim.cmd("colorscheme dracula")
 
+-- vim.cmd("colorscheme retrobox")
+-- vim.cmd("colorscheme default")
+-- vim.cmd("colorscheme elflord")
+-- vim.cmd("colorscheme murphy")
+vim.cmd("colorscheme catppuccin")
