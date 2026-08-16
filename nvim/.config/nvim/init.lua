@@ -1,4 +1,4 @@
-vim.opt.termguicolors = true
+vim.opt.termguicolors = false
 
 
 -- ============================================================================
@@ -378,15 +378,9 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.pack.add({
 	"https://www.github.com/lewis6991/gitsigns.nvim",
 	"https://www.github.com/ibhagwan/fzf-lua",
-  "https://github.com/ellisonleao/gruvbox.nvim",
   "https://github.com/prichrd/netrw.nvim",
-  "https://github.com/Mofiqul/adwaita.nvim",
-  "https://github.com/oskarnurm/koda.nvim",
   "https://github.com/nvim-lualine/lualine.nvim",
   -- "https://github.com/lukas-reineke/indent-blankline.nvim",
-  "https://github.com/metalelf0/black-metal-theme-neovim",
-  "https://github.com/navarasu/onedark.nvim",
-  "https://github.com/Mofiqul/dracula.nvim",
 
   {
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
@@ -410,13 +404,6 @@ vim.pack.add({
   -- dependencies
   "https://github.com/nvim-lua/plenary.nvim",
   "https://github.com/MunifTanjim/nui.nvim",
-})
-
-vim.pack.add({
-	{
-		src = "https://github.com/rose-pine/neovim",
-		name = "rose-pine",
-	},
 })
 
 vim.pack.add({
@@ -460,14 +447,8 @@ packadd("fzf-lua")
 packadd("strudel.nvim")
 packadd("nvim-lspconfig")
 -- packadd("indent-blankline.nvim")
-packadd("onedark.nvim")
-packadd("adwaita.nvim")
 packadd("mason.nvim")
-packadd("koda.nvim")
 packadd("efmls-configs-nvim")
-packadd("dracula.nvim")
-packadd("gruvbox.nvim")
-packadd("black-metal-theme-neovim")
 packadd("blink.cmp")
 
 -- ============================================================================
@@ -955,20 +936,14 @@ end
 -- =============================================================================================
 
 -- require colorschemes
-require("gruvboxCS")
 require("lualineSL")
-require("blackmetalCS")
-require("kodaCS")
-require("rosepineCS")
-require("draculaCS")
-require("onedarkCS")
 require("myGreeter")
 require("netrwicons")
 require("imagerenderer")
 -- require("ibl").setup()
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "retrobox",
+    pattern = "murphy",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -994,9 +969,8 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
--- OVERRIDES:
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "dark-funeral",
+    pattern = "elflord",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1014,6 +988,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
             "TabLineSel",
             "LineNr",
             "Cursor",
+            "CursorLineNr",
         }
         for _, group in ipairs(hl_groups) do
             vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
@@ -1021,17 +996,17 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
-vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "*",
-    callback = function()
-        vim.api.nvim_set_hl(0, "CursorLine", { bg = "none", ctermbg = "none" })
-        vim.api.nvim_set_hl(0, "TabLine", { bg = "none", ctermbg = "none" })
-        vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", ctermbg = "none" })
-        vim.api.nvim_set_hl(0, "SignColumn", { bg = "none", ctermbg = "none" })
-        -- vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none", ctermbg = "none" })
-        vim.api.nvim_set_hl(0, "Cursor", { bg = "none", ctermbg = "none" })
-    end,
-})
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--     pattern = "*",
+--     callback = function()
+--         vim.api.nvim_set_hl(0, "CursorLine", { bg = "none", ctermbg = "none" })
+--         vim.api.nvim_set_hl(0, "TabLine", { bg = "none", ctermbg = "none" })
+--         vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", ctermbg = "none" })
+--         vim.api.nvim_set_hl(0, "SignColumn", { bg = "none", ctermbg = "none" })
+--         -- vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none", ctermbg = "none" })
+--         vim.api.nvim_set_hl(0, "Cursor", { bg = "none", ctermbg = "none" })
+--     end,
+-- })
 
 local NeoTreeGroups = {
     "NeoTreeNormal",
@@ -1047,38 +1022,17 @@ for _, group in ipairs(NeoTreeGroups) do
     vim.api.nvim_set_hl(0, group, { bg = "NONE", ctermbg = "NONE" })
 end
 
-vim.g.gruvbox_baby_transparent_mode = 0
-
--- vim.g.adwaita_darker = true -- for darker version
-vim.g.adwaita_disable_cursorline = true -- to disable cursorline
-vim.g.adwaita_transparent = true -- makes the background transparent
-
-vim.api.nvim_create_autocmd('ColorScheme', {
-  pattern = 'adwaita',
-  callback = function()
-    -- Get all current highlight groups or target specific ones like @constructor, Special, etc.
-    for _, group in ipairs(vim.fn.getcompletion('', 'highlight')) do
-      local hl = vim.api.nvim_get_hl(0, { name = group, link = false })
-      if hl.bold then
-        hl.bold = false
-        vim.api.nvim_set_hl(0, group, hl)
-      end
-    end
-  end,
-})
-
 -- vim.cmd("colorscheme dark-funeral")
 -- vim.cmd("colorscheme bathory")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme retrobox")
 -- vim.cmd("colorscheme koda-moss")
-vim.cmd("colorscheme adwaita")
+-- vim.cmd("colorscheme adwaita")
+-- vim.cmd("colorscheme nordfox")
+-- vim.cmd("colorscheme default")
+vim.cmd("colorscheme murphy")
 -- vim.cmd("colorscheme rose-pine-moon")
--- vim.cmd("colorscheme koda-moss")
 -- vim.cmd("colorscheme monokai-pro-classic")
--- vim.cmd("colorscheme oldworld")
--- vim.cmd("colorscheme oasis-sol")
 -- vim.cmd("colorscheme onedark")
--- vim.cmd("colorscheme darkvoid")
 -- vim.cmd("colorscheme dracula")
 
