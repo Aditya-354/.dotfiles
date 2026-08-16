@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "adwaita.nvim": {
+      "rev": "c607954f7b2cf56b24e921db0dab4749f3430a22",
+      "src": "https://github.com/Mofiqul/adwaita.nvim"
+    },
     "black-metal-theme-neovim": {
       "rev": "d7ce1c4b9196b3b34e70ca4fa9af108bb4207818",
       "src": "https://github.com/metalelf0/black-metal-theme-neovim"
@@ -40,6 +44,10 @@
     "image.nvim": {
       "rev": "88351f1f7d9dbae286e671ce3690a49660dd8a5c",
       "src": "https://github.com/3rd/image.nvim"
+    },
+    "koda.nvim": {
+      "rev": "a7da3ced59eadafbda6eb4d7f7e2a6a3d9ecf858",
+      "src": "https://github.com/oskarnurm/koda.nvim"
     },
     "lualine.nvim": {
       "rev": "a905eeebc4e63fdc48b5135d3bf8aea5618fb21c",

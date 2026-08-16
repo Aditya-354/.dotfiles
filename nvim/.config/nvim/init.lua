@@ -380,6 +380,8 @@ vim.pack.add({
 	"https://www.github.com/ibhagwan/fzf-lua",
   "https://github.com/ellisonleao/gruvbox.nvim",
   "https://github.com/prichrd/netrw.nvim",
+  "https://github.com/Mofiqul/adwaita.nvim",
+  "https://github.com/oskarnurm/koda.nvim",
   "https://github.com/nvim-lualine/lualine.nvim",
   -- "https://github.com/lukas-reineke/indent-blankline.nvim",
   "https://github.com/metalelf0/black-metal-theme-neovim",
@@ -459,7 +461,9 @@ packadd("strudel.nvim")
 packadd("nvim-lspconfig")
 -- packadd("indent-blankline.nvim")
 packadd("onedark.nvim")
+packadd("adwaita.nvim")
 packadd("mason.nvim")
+packadd("koda.nvim")
 packadd("efmls-configs-nvim")
 packadd("dracula.nvim")
 packadd("gruvbox.nvim")
@@ -929,7 +933,7 @@ vim.lsp.enable({
 -- =============================================================================================
 
 if vim.g.neovide then
-    vim.o.guifont = "FiraCode Nerd Font"
+    vim.o.guifont = "Maple Mono"
     -- Zoom in
     vim.keymap.set('n', '<C-=>', function()
         vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1
@@ -954,6 +958,7 @@ end
 require("gruvboxCS")
 require("lualineSL")
 require("blackmetalCS")
+require("kodaCS")
 require("rosepineCS")
 require("draculaCS")
 require("onedarkCS")
@@ -1044,10 +1049,30 @@ end
 
 vim.g.gruvbox_baby_transparent_mode = 0
 
+-- vim.g.adwaita_darker = true -- for darker version
+vim.g.adwaita_disable_cursorline = true -- to disable cursorline
+vim.g.adwaita_transparent = true -- makes the background transparent
+
+vim.api.nvim_create_autocmd('ColorScheme', {
+  pattern = 'adwaita',
+  callback = function()
+    -- Get all current highlight groups or target specific ones like @constructor, Special, etc.
+    for _, group in ipairs(vim.fn.getcompletion('', 'highlight')) do
+      local hl = vim.api.nvim_get_hl(0, { name = group, link = false })
+      if hl.bold then
+        hl.bold = false
+        vim.api.nvim_set_hl(0, group, hl)
+      end
+    end
+  end,
+})
+
 -- vim.cmd("colorscheme dark-funeral")
 -- vim.cmd("colorscheme bathory")
 -- vim.cmd("colorscheme gruvbox")
-vim.cmd("colorscheme retrobox")
+-- vim.cmd("colorscheme retrobox")
+-- vim.cmd("colorscheme koda-moss")
+vim.cmd("colorscheme adwaita")
 -- vim.cmd("colorscheme rose-pine-moon")
 -- vim.cmd("colorscheme koda-moss")
 -- vim.cmd("colorscheme monokai-pro-classic")
