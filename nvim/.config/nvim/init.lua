@@ -379,7 +379,7 @@ vim.pack.add({
 	"https://www.github.com/lewis6991/gitsigns.nvim",
 	"https://www.github.com/ibhagwan/fzf-lua",
   "https://github.com/prichrd/netrw.nvim",
-  "https://github.com/olimorris/onedarkpro.nvim",
+  "https://github.com/navarasu/onedark.nvim",
   "https://github.com/nvim-lualine/lualine.nvim",
   -- "https://github.com/lukas-reineke/indent-blankline.nvim",
 
@@ -452,7 +452,7 @@ packadd("fzf-lua")
 packadd("gruber-darker.nvim")
 packadd("vague.nvim")
 packadd("strudel.nvim")
-packadd("onedarkpro.nvim")
+packadd("onedark.nvim")
 packadd("nvim-lspconfig")
 -- packadd("indent-blankline.nvim")
 packadd("mason.nvim")
