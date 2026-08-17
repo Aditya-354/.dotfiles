@@ -379,6 +379,7 @@ vim.pack.add({
 	"https://www.github.com/lewis6991/gitsigns.nvim",
 	"https://www.github.com/ibhagwan/fzf-lua",
   "https://github.com/prichrd/netrw.nvim",
+  "https://github.com/olimorris/onedarkpro.nvim",
   "https://github.com/nvim-lualine/lualine.nvim",
   -- "https://github.com/lukas-reineke/indent-blankline.nvim",
 
@@ -389,6 +390,7 @@ vim.pack.add({
 	},
 	"https://www.github.com/neovim/nvim-lspconfig",
   "https://github.com/vague-theme/vague.nvim",
+  "https://github.com/blazkowolf/gruber-darker.nvim",
 	"https://github.com/mason-org/mason.nvim",
 	"https://github.com/creativenull/efmls-configs-nvim",
 	{
@@ -447,8 +449,10 @@ packadd("gitsigns.nvim")
 packadd("lualine.nvim")
 packadd("netrw.nvim")
 packadd("fzf-lua")
+packadd("gruber-darker.nvim")
 packadd("vague.nvim")
 packadd("strudel.nvim")
+packadd("onedarkpro.nvim")
 packadd("nvim-lspconfig")
 -- packadd("indent-blankline.nvim")
 packadd("mason.nvim")
@@ -946,6 +950,23 @@ require("netrwicons")
 require("imagerenderer")
 -- require("ibl").setup()
 
+require("gruber-darker").setup({
+    bold = false,
+    invert = {
+        signs = false,
+        tabline = false,
+        visual = false,
+    },
+    italic = {
+        strings = false,
+        comments = false,
+        operators = false,
+        folds = false,
+    },
+    undercurl = true,
+    underline = true,
+})
+
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "murphy",
     callback = function()
@@ -1001,7 +1022,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "unokai",
+    pattern = "gruber-darker",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1086,7 +1107,8 @@ require('vague').setup({
 })
 
 -- vim.cmd("colorscheme retrobox")
-vim.cmd("colorscheme default")
+-- vim.cmd("colorscheme default")
+vim.cmd("colorscheme gruber-darker")
 -- vim.cmd("colorscheme vague")
 -- vim.cmd("colorscheme elflord")
 -- vim.cmd("colorscheme murphy")

@@ -70,7 +70,7 @@ theme = Gruber Darker
 # background = #1b1b1b
 
 # Feature config
-cursor-color = #ffffff
+# cursor-color = #ffffff
 cursor-style = block
 # custom-shader = cursor_animation.glsl
 shell-integration-features = no-cursor   
