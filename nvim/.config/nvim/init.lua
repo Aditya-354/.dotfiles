@@ -946,6 +946,7 @@ end
 -- require colorschemes
 require("lualineSL")
 require("myGreeter")
+require("onedarkCS")
 require("netrwicons")
 require("imagerenderer")
 -- require("ibl").setup()
@@ -1107,8 +1108,9 @@ require('vague').setup({
 })
 
 -- vim.cmd("colorscheme retrobox")
--- vim.cmd("colorscheme default")
-vim.cmd("colorscheme gruber-darker")
+vim.cmd("colorscheme default")
+-- vim.cmd("colorscheme gruber-darker")
+-- vim.cmd("colorscheme onedark")
 -- vim.cmd("colorscheme vague")
 -- vim.cmd("colorscheme elflord")
 -- vim.cmd("colorscheme murphy")
