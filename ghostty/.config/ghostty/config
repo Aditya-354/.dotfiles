@@ -1,12 +1,12 @@
 # Typography
 # font-family = JetBrains Mono Nerd Font
-# font-family = MesloLGS Nerd Font Mono
+font-family = MesloLGS Nerd Font Mono
 # font-family = FiraMono Nerd Font Mono
 # font-family = Hack
 # font-family = Agave Nerd Font Mono
 # font-family = CaskaydiaMono Nerd Font Mono
 # font-family = Maple Mono NF
-font-family = "Iosevka NFM"
+# font-family = "Iosevka NFM"
 font-size = 13
 font-style = Regular
 # font-family-italic = "Maple Mono NF"
