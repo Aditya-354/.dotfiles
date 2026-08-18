@@ -1,4 +1,4 @@
-vim.opt.termguicolors = false
+vim.opt.termguicolors = true
 
 
 -- ============================================================================
@@ -390,6 +390,7 @@ vim.pack.add({
 	},
 	"https://www.github.com/neovim/nvim-lspconfig",
   "https://github.com/vague-theme/vague.nvim",
+  "https://github.com/oskarnurm/koda.nvim",
   "https://github.com/blazkowolf/gruber-darker.nvim",
 	"https://github.com/mason-org/mason.nvim",
 	"https://github.com/creativenull/efmls-configs-nvim",
@@ -451,6 +452,7 @@ packadd("netrw.nvim")
 packadd("fzf-lua")
 packadd("gruber-darker.nvim")
 packadd("vague.nvim")
+packadd("koda.nvim")
 packadd("strudel.nvim")
 packadd("onedark.nvim")
 packadd("nvim-lspconfig")
@@ -946,6 +948,7 @@ end
 -- require colorschemes
 require("lualineSL")
 require("myGreeter")
+require("kodaCS")
 require("onedarkCS")
 require("netrwicons")
 require("imagerenderer")
@@ -969,7 +972,7 @@ require("gruber-darker").setup({
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "murphy",
+    pattern = "vague",
     callback = function()
         local hl_groups = {
             "Normal",
