@@ -972,7 +972,7 @@ require("gruber-darker").setup({
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "vague",
+    pattern = "murphy",
     callback = function()
         local hl_groups = {
             "Normal",

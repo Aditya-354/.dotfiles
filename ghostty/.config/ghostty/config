@@ -46,7 +46,7 @@ window-padding-y = 0
 # theme = Citruszest
 # theme = Gruvbox Material
 # theme = Brogrammer
-# theme = Vague
+theme = Vague
 # theme = Sonokai
 # theme = Chalk
 # theme = Afterglow
@@ -55,7 +55,7 @@ window-padding-y = 0
 # theme = Banana Blueberry
 # theme = Everforest Dark Hard
 # theme = Gruvbox Dark Hard
-theme = Atom One Dark
+# theme = Atom One Dark
 # theme = 3024 Night
 # theme = Jellybeans
 # theme = Nord
@@ -67,7 +67,7 @@ theme = Atom One Dark
 # background = #171717
 # background = #300710
 # background = #000000
-background = #1a1a1a
+# background = #1a1a1a
 
 # Feature config
 # cursor-color = #ffffff
