@@ -391,6 +391,7 @@ vim.pack.add({
 	"https://www.github.com/neovim/nvim-lspconfig",
   "https://github.com/vague-theme/vague.nvim",
   "https://github.com/oskarnurm/koda.nvim",
+  "https://github.com/ribru17/bamboo.nvim",
   "https://github.com/blazkowolf/gruber-darker.nvim",
 	"https://github.com/mason-org/mason.nvim",
 	"https://github.com/creativenull/efmls-configs-nvim",
@@ -454,6 +455,7 @@ packadd("gruber-darker.nvim")
 packadd("vague.nvim")
 packadd("koda.nvim")
 packadd("strudel.nvim")
+packadd("bamboo.nvim")
 packadd("onedark.nvim")
 packadd("nvim-lspconfig")
 -- packadd("indent-blankline.nvim")
@@ -948,6 +950,7 @@ end
 -- require colorschemes
 require("lualineSL")
 require("myGreeter")
+require("bambooCS")
 require("kodaCS")
 require("onedarkCS")
 require("netrwicons")
@@ -1111,7 +1114,8 @@ require('vague').setup({
   },
 })
 
-vim.cmd("colorscheme retrobox")
+-- vim.cmd("colorscheme retrobox")
+vim.cmd("colorscheme bamboo")
 -- vim.cmd("colorscheme default")
 -- vim.cmd("colorscheme gruber-darker")
 -- vim.cmd("colorscheme onedark")
