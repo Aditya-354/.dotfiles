@@ -33,7 +33,9 @@ bamboo.setup {
 
   -- Custom Highlights --
   colors = {}, -- Override default colors
-  highlights = {}, -- Override highlight groups
+  highlights = {
+      ["@comment"] = { fg = "#696969" },
+  }, -- Override highlight groups
 
   -- Plugins Config --
   diagnostics = {
