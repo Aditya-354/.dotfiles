@@ -1099,5 +1099,5 @@ require('vague').setup({
 -- vim.cmd("colorscheme vague")
 -- vim.cmd("colorscheme elflord")
 -- vim.cmd("colorscheme murphy")
--- vim.cmd("colorscheme catppuccin-mocha")
-vim.cmd("colorscheme catppuccin-frappe")
+vim.cmd("colorscheme catppuccin-mocha")
+-- vim.cmd("colorscheme catppuccin-frappe")
