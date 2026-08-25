@@ -1,11 +1,11 @@
 # Typography
-font-family = JetBrains Mono Nerd Font
+# font-family = JetBrains Mono Nerd Font
 # font-family = MesloLGS Nerd Font Mono
 # font-family = FiraMono Nerd Font Mono
 # font-family = Hack
 # font-family = Agave Nerd Font Mono
 # font-family = CaskaydiaMono Nerd Font Mono
-# font-family = Maple Mono NF
+font-family = Maple Mono NF
 # font-family = "Iosevka NFM"
 font-size = 13
 font-style = Regular
@@ -20,7 +20,7 @@ window-padding-x = 0
 window-padding-y = 0
 # theme = Dracula
 # theme = Catppuccin Frappe
-# theme = Catppuccin Mocha
+theme = Catppuccin Mocha
 # theme = Adwaita Dark
 # theme = Blue Berry Pie
 # theme = TokyoNight Night
@@ -60,14 +60,14 @@ theme = Vague
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-# background-opacity = 0.9
+background-opacity = 0.9
 # background-opacity = 1
 # background-blur = 20
 # background = #301515
 # background = #171717
 # background = #300710
 # background = #000000
-# background = #1a1a1a
+background = #111111
 
 # Feature config
 # cursor-color = #ffffff

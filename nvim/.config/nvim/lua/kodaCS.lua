@@ -1,6 +1,6 @@
 local koda = require("koda")
 koda.setup({
-    transparent = false, -- enable for transparent backgrounds
+    transparent = true, -- enable for transparent backgrounds
 
     -- Set the variants to use when auto-switching based on vim.o.background
     -- Valid values: 'dark', 'light', 'moss', 'glade'
