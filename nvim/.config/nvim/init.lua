@@ -391,6 +391,7 @@ vim.pack.add({
 	"https://www.github.com/neovim/nvim-lspconfig",
   "https://github.com/vague-theme/vague.nvim",
   "https://github.com/oskarnurm/koda.nvim",
+  "https://github.com/darkvoid-theme/darkvoid.nvim",
   "https://github.com/folke/tokyonight.nvim",
   "https://github.com/ribru17/bamboo.nvim",
   "https://github.com/blazkowolf/gruber-darker.nvim",
@@ -458,6 +459,7 @@ packadd("koda.nvim")
 packadd("strudel.nvim")
 packadd("bamboo.nvim")
 packadd("tokyonight.nvim")
+packadd("darkvoid.nvim")
 packadd("onedark.nvim")
 packadd("nvim-lspconfig")
 -- packadd("indent-blankline.nvim")
@@ -956,6 +958,7 @@ require("bambooCS")
 require("kodaCS")
 require("onedarkCS")
 require("netrwicons")
+require("darkvoidCS")
 require("tokyonightCS")
 require("imagerenderer")
 -- require("ibl").setup()
@@ -977,32 +980,32 @@ require("gruber-darker").setup({
     underline = true,
 })
 
--- vim.api.nvim_create_autocmd("ColorScheme", {
---     pattern = "murphy",
---     callback = function()
---         local hl_groups = {
---             "Normal",
---             "NormalFloat",
---             "SignColumn",
---             "NormalNC", -- background for non-current windows
---             "EndOfBuffer",
---             "MsgArea",
---             "FloatBorder",
---             "StatusLine",
---             "StatusLineNC",
---             "ColorColumn",
---             "TabLine",
---             "TabLineFill",
---             "TabLineSel",
---             "LineNr",
---             "Cursor",
---             "CursorLineNr",
---         }
---         for _, group in ipairs(hl_groups) do
---             vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
---         end
---     end,
--- })
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "darkvoid",
+    callback = function()
+        local hl_groups = {
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "TabLineSel",
+            "LineNr",
+            "Cursor",
+            "CursorLineNr",
+        }
+        for _, group in ipairs(hl_groups) do
+            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+        end
+    end,
+})
 
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "retrobox",
@@ -1092,6 +1095,7 @@ require('vague').setup({
 
 -- vim.cmd("colorscheme retrobox")
 -- vim.cmd("colorscheme bamboo")
+vim.cmd("colorscheme darkvoid")
 -- vim.cmd("colorscheme koda")
 -- vim.cmd("colorscheme default")
 -- vim.cmd("colorscheme gruber-darker")
@@ -1099,5 +1103,5 @@ require('vague').setup({
 -- vim.cmd("colorscheme vague")
 -- vim.cmd("colorscheme elflord")
 -- vim.cmd("colorscheme murphy")
-vim.cmd("colorscheme catppuccin-mocha")
+-- vim.cmd("colorscheme catppuccin-mocha")
 -- vim.cmd("colorscheme catppuccin-frappe")
