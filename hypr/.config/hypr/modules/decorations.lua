@@ -8,7 +8,7 @@ hl.config({
         -- gaps_in = 0,
         -- gaps_out = 0,
 
-        border_size = 0,
+        border_size = 1,
 
         col = {
             -- active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
@@ -23,9 +23,9 @@ hl.config({
 
     decoration = {
         -- rounding       = 5,
+        -- rounding_power = 10,
+        -- rounding = 13,
         -- rounding_power = 5,
-        rounding = 13,
-        rounding_power = 5,
 
         active_opacity   = 1.0,
         inactive_opacity = 1.0,
