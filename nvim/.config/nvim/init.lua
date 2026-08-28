@@ -1094,8 +1094,8 @@ require('vague').setup({
 })
 
 -- vim.cmd("colorscheme retrobox")
--- vim.cmd("colorscheme bamboo")
-vim.cmd("colorscheme darkvoid")
+vim.cmd("colorscheme bamboo")
+-- vim.cmd("colorscheme darkvoid")
 -- vim.cmd("colorscheme koda")
 -- vim.cmd("colorscheme default")
 -- vim.cmd("colorscheme gruber-darker")
