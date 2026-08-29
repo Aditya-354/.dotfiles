@@ -1062,7 +1062,7 @@ for _, group in ipairs(NeoTreeGroups) do
 end
 
 require('vague').setup({
-  transparent = false, -- If true, background is not set
+  transparent = true, -- If true, background is not set
   bold = false, -- Disable bold globally
   italic = true, -- Disable italic globally
   on_highlights = function(hl, colors) end,
@@ -1099,8 +1099,8 @@ require('vague').setup({
 -- vim.cmd("colorscheme koda")
 -- vim.cmd("colorscheme default")
 -- vim.cmd("colorscheme gruber-darker")
-vim.cmd("colorscheme onedark")
--- vim.cmd("colorscheme vague")
+-- vim.cmd("colorscheme onedark")
+vim.cmd("colorscheme vague")
 -- vim.cmd("colorscheme elflord")
 -- vim.cmd("colorscheme murphy")
 -- vim.cmd("colorscheme catppuccin-mocha")
