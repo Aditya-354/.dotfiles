@@ -394,6 +394,7 @@ vim.pack.add({
   "https://github.com/darkvoid-theme/darkvoid.nvim",
   "https://github.com/folke/tokyonight.nvim",
   "https://github.com/ribru17/bamboo.nvim",
+  "https://github.com/ficd0/ashen.nvim",
   "https://github.com/blazkowolf/gruber-darker.nvim",
 	"https://github.com/mason-org/mason.nvim",
 	"https://github.com/creativenull/efmls-configs-nvim",
@@ -459,6 +460,7 @@ packadd("koda.nvim")
 packadd("strudel.nvim")
 packadd("bamboo.nvim")
 packadd("tokyonight.nvim")
+packadd("ashen.nvim")
 packadd("darkvoid.nvim")
 packadd("onedark.nvim")
 packadd("nvim-lspconfig")
@@ -960,6 +962,7 @@ require("onedarkCS")
 require("netrwicons")
 require("darkvoidCS")
 require("tokyonightCS")
+require("ashenCS")
 require("imagerenderer")
 -- require("ibl").setup()
 
@@ -1064,7 +1067,7 @@ end
 require('vague').setup({
   transparent = true, -- If true, background is not set
   bold = false, -- Disable bold globally
-  italic = true, -- Disable italic globally
+  italic = false, -- Disable italic globally
   on_highlights = function(hl, colors) end,
   colors = {
     bg = '#141415',
@@ -1072,7 +1075,7 @@ require('vague').setup({
     fg = '#cdcdcd',
     floatBorder = '#878787',
     line = '#252530',
-    comment = '#606079',
+    comment = '#707079',
     builtin = '#b4d4cf',
     func = '#c48282',
     string = '#e8b589',
