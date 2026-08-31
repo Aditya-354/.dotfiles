@@ -22,8 +22,8 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 3,
-        rounding_power = 10,
+        rounding       = 1,
+        rounding_power = 5,
         -- rounding = 13,
         -- rounding_power = 5,
 
@@ -38,7 +38,7 @@ hl.config({
         },
 
         blur = {
-            enabled   = true,
+            enabled   = false,
             size      = 1,
             passes    = 2,
             vibrancy  = 0.1696,

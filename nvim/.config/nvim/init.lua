@@ -392,6 +392,7 @@ vim.pack.add({
   "https://github.com/vague-theme/vague.nvim",
   "https://github.com/oskarnurm/koda.nvim",
   "https://github.com/darkvoid-theme/darkvoid.nvim",
+  "https://github.com/mellow-theme/mellow.nvim",
   "https://github.com/folke/tokyonight.nvim",
   "https://github.com/ribru17/bamboo.nvim",
   "https://github.com/ficd0/ashen.nvim",
@@ -462,6 +463,7 @@ packadd("bamboo.nvim")
 packadd("tokyonight.nvim")
 packadd("ashen.nvim")
 packadd("darkvoid.nvim")
+packadd("mellow.nvim")
 packadd("onedark.nvim")
 packadd("nvim-lspconfig")
 -- packadd("indent-blankline.nvim")
@@ -1095,6 +1097,14 @@ require('vague').setup({
     delta = '#f3be7c',
   },
 })
+
+vim.g.mellow_italic_functions = false
+vim.g.mellow_bold_functions = false
+vim.g.mellow_italic_comments = true
+vim.g.mellow_italic_keywords = true
+vim.g.mellow_italic_booleans = false
+vim.g.mellow_transparent = true
+vim.g.mellow_highlight_overrides = {}
 
 -- vim.cmd("colorscheme retrobox")
 -- vim.cmd("colorscheme bamboo")
