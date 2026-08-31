@@ -391,6 +391,7 @@ vim.pack.add({
 	"https://www.github.com/neovim/nvim-lspconfig",
   "https://github.com/vague-theme/vague.nvim",
   "https://github.com/oskarnurm/koda.nvim",
+  "https://github.com/rebelot/kanagawa.nvim",
   "https://github.com/darkvoid-theme/darkvoid.nvim",
   "https://github.com/folke/tokyonight.nvim",
   "https://github.com/ribru17/bamboo.nvim",
@@ -462,6 +463,7 @@ packadd("bamboo.nvim")
 packadd("tokyonight.nvim")
 packadd("ashen.nvim")
 packadd("darkvoid.nvim")
+packadd("kanagawa.nvim")
 packadd("onedark.nvim")
 packadd("nvim-lspconfig")
 -- packadd("indent-blankline.nvim")
@@ -957,6 +959,7 @@ end
 require("lualineSL")
 require("myGreeter")
 require("bambooCS")
+require("kanagawaCS")
 require("kodaCS")
 require("onedarkCS")
 require("netrwicons")
@@ -1012,6 +1015,34 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "retrobox",
+    callback = function()
+        local hl_groups = {
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "TabLineSel",
+            "LineNr",
+            "Cursor",
+            "CursorLine",
+            "CursorLineNr",
+        }
+        for _, group in ipairs(hl_groups) do
+            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+        end
+    end,
+})
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "kanagawa-dragon",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1103,7 +1134,8 @@ require('vague').setup({
 -- vim.cmd("colorscheme default")
 -- vim.cmd("colorscheme gruber-darker")
 -- vim.cmd("colorscheme onedark")
-vim.cmd("colorscheme vague")
+-- vim.cmd("colorscheme vague")
+vim.cmd("colorscheme kanagawa-dragon")
 -- vim.cmd("colorscheme elflord")
 -- vim.cmd("colorscheme murphy")
 -- vim.cmd("colorscheme catppuccin-mocha")
