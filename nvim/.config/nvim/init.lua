@@ -390,11 +390,13 @@ vim.pack.add({
 	},
 	"https://www.github.com/neovim/nvim-lspconfig",
   "https://github.com/vague-theme/vague.nvim",
+  "https://github.com/zenbones-theme/zenbones.nvim",
   "https://github.com/oskarnurm/koda.nvim",
   "https://github.com/darkvoid-theme/darkvoid.nvim",
   "https://github.com/mellow-theme/mellow.nvim",
   "https://github.com/folke/tokyonight.nvim",
   "https://github.com/ribru17/bamboo.nvim",
+  "https://github.com/rktjmp/lush.nvim",
   "https://github.com/ficd0/ashen.nvim",
   "https://github.com/blazkowolf/gruber-darker.nvim",
 	"https://github.com/mason-org/mason.nvim",
@@ -462,8 +464,10 @@ packadd("strudel.nvim")
 packadd("bamboo.nvim")
 packadd("tokyonight.nvim")
 packadd("ashen.nvim")
+packadd("zenbones.nvim")
 packadd("darkvoid.nvim")
 packadd("mellow.nvim")
+packadd("lush.nvim")
 packadd("onedark.nvim")
 packadd("nvim-lspconfig")
 -- packadd("indent-blankline.nvim")
@@ -1106,6 +1110,10 @@ vim.g.mellow_italic_booleans = false
 vim.g.mellow_transparent = true
 vim.g.mellow_highlight_overrides = {}
 
+vim.g.zenbones_solid_line_nr = true
+vim.g.zenwritten_transparent_background = true
+vim.g.zenbones_transparent_background = true
+
 -- vim.cmd("colorscheme retrobox")
 -- vim.cmd("colorscheme bamboo")
 -- vim.cmd("colorscheme darkvoid")
@@ -1113,7 +1121,8 @@ vim.g.mellow_highlight_overrides = {}
 -- vim.cmd("colorscheme default")
 -- vim.cmd("colorscheme gruber-darker")
 -- vim.cmd("colorscheme onedark")
-vim.cmd("colorscheme vague")
+-- vim.cmd("colorscheme vague")
+vim.cmd("colorscheme zenbones")
 -- vim.cmd("colorscheme elflord")
 -- vim.cmd("colorscheme murphy")
 -- vim.cmd("colorscheme catppuccin-mocha")
