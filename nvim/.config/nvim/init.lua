@@ -1071,7 +1071,7 @@ for _, group in ipairs(NeoTreeGroups) do
 end
 
 require('vague').setup({
-  transparent = true, -- If true, background is not set
+  transparent = false, -- If true, background is not set
   bold = false, -- Disable bold globally
   italic = false, -- Disable italic globally
   on_highlights = function(hl, colors) end,
@@ -1102,6 +1102,34 @@ require('vague').setup({
   },
 })
 
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "vague",
+    callback = function()
+        local hl_groups = {
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "TabLineSel",
+            "LineNr",
+            "Cursor",
+            "CursorLine",
+            "CursorLineNr",
+        }
+        for _, group in ipairs(hl_groups) do
+            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+        end
+    end,
+})
+
 vim.g.mellow_italic_functions = false
 vim.g.mellow_bold_functions = false
 vim.g.mellow_italic_comments = true
@@ -1121,8 +1149,8 @@ vim.g.zenbones_transparent_background = true
 -- vim.cmd("colorscheme default")
 -- vim.cmd("colorscheme gruber-darker")
 -- vim.cmd("colorscheme onedark")
--- vim.cmd("colorscheme vague")
-vim.cmd("colorscheme zenbones")
+vim.cmd("colorscheme vague")
+-- vim.cmd("colorscheme zenbones")
 -- vim.cmd("colorscheme elflord")
 -- vim.cmd("colorscheme murphy")
 -- vim.cmd("colorscheme catppuccin-mocha")

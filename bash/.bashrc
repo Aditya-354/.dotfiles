@@ -7,6 +7,7 @@
 
 alias cls='colorls'
 alias ls='ls --color=auto'
+alias init-vksdk='source ~/scripts/init-vksdk.sh'
 alias ll='ls -hAl'
 alias grep='grep --color=auto'
 alias so='clear && source ~/.bashrc && fastfetch'

@@ -10,6 +10,7 @@ ZSH=/usr/share/oh-my-zsh/
 
 alias so='source ~/.zshrc && clear && fastfetch'
 alias cl='clear'
+alias init-vksdk='source ~/scripts/init-vksdk.sh'
 alias cls='colorls'
 alias cll='colorls -lAh'
 alias dev='tmux new -As dev'
