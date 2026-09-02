@@ -410,6 +410,10 @@ vim.pack.add({
 vim.pack.add { { src = "https://github.com/catppuccin/nvim", name = "catppuccin" } }
 
 vim.pack.add({
+  "https://github.com/ellisonleao/gruvbox.nvim"
+})
+
+vim.pack.add({
   {
     src = 'https://github.com/nvim-neo-tree/neo-tree.nvim',
     version = vim.version.range('3')
@@ -968,6 +972,7 @@ require("onedarkCS")
 require("netrwicons")
 require("darkvoidCS")
 require("tokyonightCS")
+require("gruvboxCS")
 require("ashenCS")
 require("imagerenderer")
 -- require("ibl").setup()
@@ -1149,7 +1154,8 @@ vim.g.zenbones_transparent_background = true
 -- vim.cmd("colorscheme default")
 -- vim.cmd("colorscheme gruber-darker")
 -- vim.cmd("colorscheme onedark")
-vim.cmd("colorscheme vague")
+-- vim.cmd("colorscheme vague")
+vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme zenbones")
 -- vim.cmd("colorscheme elflord")
 -- vim.cmd("colorscheme murphy")
