@@ -251,6 +251,8 @@ vim.opt.maxmempattern = 20000 -- increase max memory
 vim.g.mapleader = " " -- space for leader
 vim.g.maplocalleader = " " -- space for localleader
 
+local keymap_opts = { noremap = true, silent = true }
+
 -- better movement in wrapped text
 vim.keymap.set("n", "j", function()
 	return vim.v.count == 0 and "gj" or "j"
@@ -299,6 +301,24 @@ vim.keymap.set("n", "<C-Up>", ":resize +2<CR>", { desc = "Increase window height
 vim.keymap.set("n", "<C-Down>", ":resize -2<CR>", { desc = "Decrease window height" })
 vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", { desc = "Decrease window width" })
 vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { desc = "Increase window width" })
+
+vim.keymap.set("n", "<leader>,", "<Cmd>BufferPrevious<CR>", keymap_opts)
+vim.keymap.set("n", "<leader>.", "<Cmd>BufferNext<CR>", keymap_opts)
+vim.keymap.set("n", "<leader><", "<Cmd>BufferMovePrevious<CR>", keymap_opts)
+vim.keymap.set("n", "<leader>>", "<Cmd>BufferMoveNext<CR>", keymap_opts)
+
+vim.keymap.set("n", "<leader>1", "<Cmd>BufferGoto 1<CR>", keymap_opts)
+vim.keymap.set("n", "<leader>2", "<Cmd>BufferGoto 2<CR>", keymap_opts)
+vim.keymap.set("n", "<leader>3", "<Cmd>BufferGoto 3<CR>", keymap_opts)
+vim.keymap.set("n", "<leader>4", "<Cmd>BufferGoto 4<CR>", keymap_opts)
+vim.keymap.set("n", "<leader>5", "<Cmd>BufferGoto 5<CR>", keymap_opts)
+vim.keymap.set("n", "<leader>6", "<Cmd>BufferGoto 6<CR>", keymap_opts)
+vim.keymap.set("n", "<leader>7", "<Cmd>BufferGoto 7<CR>", keymap_opts)
+vim.keymap.set("n", "<leader>8", "<Cmd>BufferGoto 8<CR>", keymap_opts)
+vim.keymap.set("n", "<leader>9", "<Cmd>BufferGoto 9<CR>", keymap_opts)
+vim.keymap.set("n", "<leader>0", "<Cmd>Bufferlast<CR>", keymap_opts)
+
+vim.keymap.set("n", "<leader>k", "<Cmd>BufferClose<CR>", keymap_opts)
 
 -- Hyprland
 vim.keymap.set("n", "<A-u>", ":m .+1<CR>==", { desc = "Move line down" })
@@ -394,6 +414,7 @@ vim.pack.add({
   "https://github.com/zenbones-theme/zenbones.nvim",
   "https://github.com/oskarnurm/koda.nvim",
   "https://github.com/darkvoid-theme/darkvoid.nvim",
+  "https://github.com/romgrk/barbar.nvim",
   "https://github.com/folke/tokyonight.nvim",
   "https://github.com/ribru17/bamboo.nvim",
   "https://github.com/rktjmp/lush.nvim",
@@ -474,6 +495,7 @@ packadd("onedark.nvim")
 packadd("nvim-lspconfig")
 -- packadd("indent-blankline.nvim")
 packadd("mason.nvim")
+packadd("barbar.nvim")
 packadd("efmls-configs-nvim")
 packadd("blink.cmp")
 
