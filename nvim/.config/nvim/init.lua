@@ -389,16 +389,15 @@ vim.pack.add({
 		build = ":TSUpdate",
 	},
 	"https://www.github.com/neovim/nvim-lspconfig",
+  "https://github.com/mofiqul/dracula.nvim",
   "https://github.com/vague-theme/vague.nvim",
   "https://github.com/zenbones-theme/zenbones.nvim",
   "https://github.com/oskarnurm/koda.nvim",
   "https://github.com/darkvoid-theme/darkvoid.nvim",
-  "https://github.com/mellow-theme/mellow.nvim",
   "https://github.com/folke/tokyonight.nvim",
   "https://github.com/ribru17/bamboo.nvim",
   "https://github.com/rktjmp/lush.nvim",
   "https://github.com/ficd0/ashen.nvim",
-  "https://github.com/blazkowolf/gruber-darker.nvim",
 	"https://github.com/mason-org/mason.nvim",
 	"https://github.com/creativenull/efmls-configs-nvim",
 	{
@@ -461,7 +460,6 @@ packadd("gitsigns.nvim")
 packadd("lualine.nvim")
 packadd("netrw.nvim")
 packadd("fzf-lua")
-packadd("gruber-darker.nvim")
 packadd("vague.nvim")
 packadd("koda.nvim")
 packadd("strudel.nvim")
@@ -469,8 +467,8 @@ packadd("bamboo.nvim")
 packadd("tokyonight.nvim")
 packadd("ashen.nvim")
 packadd("zenbones.nvim")
+packadd("dracula.nvim")
 packadd("darkvoid.nvim")
-packadd("mellow.nvim")
 packadd("lush.nvim")
 packadd("onedark.nvim")
 packadd("nvim-lspconfig")
@@ -971,28 +969,12 @@ require("kodaCS")
 require("onedarkCS")
 require("netrwicons")
 require("darkvoidCS")
+require("draculaCS")
 require("tokyonightCS")
 require("gruvboxCS")
 require("ashenCS")
 require("imagerenderer")
 -- require("ibl").setup()
-
-require("gruber-darker").setup({
-    bold = false,
-    invert = {
-        signs = false,
-        tabline = false,
-        visual = false,
-    },
-    italic = {
-        strings = false,
-        comments = false,
-        operators = false,
-        folds = false,
-    },
-    undercurl = true,
-    underline = true,
-})
 
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "darkvoid",
@@ -1052,7 +1034,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "*",
     callback = function()
-        vim.api.nvim_set_hl(0, "CursorLine", { bg = "none", ctermbg = "none" })
+        -- vim.api.nvim_set_hl(0, "CursorLine", { bg = "none", ctermbg = "none" })
         vim.api.nvim_set_hl(0, "TabLine", { bg = "none", ctermbg = "none" })
         vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", ctermbg = "none" })
         vim.api.nvim_set_hl(0, "SignColumn", { bg = "none", ctermbg = "none" })
@@ -1143,20 +1125,23 @@ vim.g.mellow_italic_booleans = false
 vim.g.mellow_transparent = true
 vim.g.mellow_highlight_overrides = {}
 
-vim.g.zenbones_solid_line_nr = true
+-- vim.g.zenbones_solid_line_nr = true
 vim.g.zenwritten_transparent_background = true
 vim.g.zenbones_transparent_background = true
+
+vim.g.adwaita_transparent = true
 
 -- vim.cmd("colorscheme retrobox")
 -- vim.cmd("colorscheme bamboo")
 -- vim.cmd("colorscheme darkvoid")
 -- vim.cmd("colorscheme koda")
 -- vim.cmd("colorscheme default")
--- vim.cmd("colorscheme gruber-darker")
 -- vim.cmd("colorscheme onedark")
 -- vim.cmd("colorscheme vague")
-vim.cmd("colorscheme gruvbox")
+-- vim.cmd("colorscheme gruvbox")
+-- vim.cmd("colorscheme dracula")
 -- vim.cmd("colorscheme zenbones")
+vim.cmd("colorscheme ashen")
 -- vim.cmd("colorscheme elflord")
 -- vim.cmd("colorscheme murphy")
 -- vim.cmd("colorscheme catppuccin-mocha")
