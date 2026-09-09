@@ -1,8 +1,8 @@
 # Typography
 # font-family = JetBrains Mono Nerd Font
-font-family = MesloLGS Nerd Font Mono
+# font-family = MesloLGS Nerd Font Mono
 # font-family = FiraMono Nerd Font Mono
-# font-family = Hack
+font-family = Hack
 # font-family = Agave Nerd Font Mono
 # font-family = CaskaydiaMono Nerd Font Mono
 # font-family = Maple Mono NF
@@ -13,7 +13,7 @@ font-style = Regular
 # font-style-italic = "Italic"
 # font-feature = -calt
 # font-thicken = true
-# adjust-cell-height = 5%
+adjust-cell-height = 5%
 
 # Aesthetics
 window-padding-x = 0
