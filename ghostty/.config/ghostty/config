@@ -1,11 +1,11 @@
 # Typography
 # font-family = JetBrains Mono Nerd Font
-# font-family = MesloLGS Nerd Font Mono
+font-family = MesloLGS Nerd Font Mono
 # font-family = FiraMono Nerd Font Mono
 # font-family = Hack
 # font-family = Agave Nerd Font Mono
 # font-family = CaskaydiaMono Nerd Font Mono
-font-family = Maple Mono NF
+# font-family = Maple Mono NF
 # font-family = "Iosevka NFM"
 font-size = 12
 font-style = Regular
@@ -23,7 +23,7 @@ window-padding-y = 0
 # theme = Catppuccin Mocha
 # theme = Adwaita Dark
 # theme = Blue Berry Pie
-theme = TokyoNight Storm
+# theme = TokyoNight Storm
 # theme = Calamity
 # theme = Rapture
 # theme = Zenbones Dark
@@ -55,7 +55,7 @@ theme = TokyoNight Storm
 # theme = Banana Blueberry
 # theme = Everforest Dark Hard
 # theme = Gruvbox Dark Hard
-# theme = Atom One Dark
+theme = Atom One Dark
 # theme = 3024 Night
 # theme = Jellybeans
 # theme = Nord
@@ -66,7 +66,7 @@ background-opacity = 1
 # background = #301515
 # background = #171717
 # background = #300710
-# background = #000000
+background = #000000
 # background = #111111
 
 # Feature config
