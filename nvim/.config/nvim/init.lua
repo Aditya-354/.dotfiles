@@ -412,6 +412,7 @@ vim.pack.add({
   "https://github.com/folke/tokyonight.nvim",
   "https://github.com/ribru17/bamboo.nvim",
   "https://github.com/ficd0/ashen.nvim",
+  "https://github.com/harshrajsachan/omni.nvim",
 	"https://github.com/mason-org/mason.nvim",
 	"https://github.com/creativenull/efmls-configs-nvim",
 	{
@@ -419,6 +420,8 @@ vim.pack.add({
 		version = vim.version.range("1.*"),
 	},
 })
+
+vim.pack.add { { src = "https://github.com/metalelf0/black-metal-theme-neovim" } }
 
 vim.pack.add { { src = "https://github.com/catppuccin/nvim", name = "catppuccin" } }
 
@@ -479,6 +482,7 @@ packadd("strudel.nvim")
 packadd("bamboo.nvim")
 packadd("tokyonight.nvim")
 packadd("ashen.nvim")
+packadd("omni.nvim")
 packadd("dracula.nvim")
 packadd("nvim-lspconfig")
 -- packadd("indent-blankline.nvim")
@@ -978,13 +982,42 @@ require("bambooCS")
 require("netrwicons")
 require("draculaCS")
 require("tokyonightCS")
+require("black-metalCS")
 require("gruvboxCS")
 require("ashenCS")
 require("imagerenderer")
 -- require("ibl").setup()
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "retrobox",
+    pattern = "omni-dusk",
+    callback = function()
+        local hl_groups = {
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "TabLineSel",
+            "LineNr",
+            "Cursor",
+            "CursorLine",
+            "CursorLineNr",
+        }
+        for _, group in ipairs(hl_groups) do
+            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+        end
+    end,
+})
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "omni-crimson",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1014,7 +1047,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "*",
     callback = function()
-        -- vim.api.nvim_set_hl(0, "CursorLine", { bg = "none", ctermbg = "none" })
+        vim.api.nvim_set_hl(0, "CursorLine", { bg = "none", ctermbg = "none" })
         vim.api.nvim_set_hl(0, "TabLine", { bg = "none", ctermbg = "none" })
         vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", ctermbg = "none" })
         vim.api.nvim_set_hl(0, "SignColumn", { bg = "none", ctermbg = "none" })
@@ -1075,6 +1108,8 @@ require('vague').setup({
 -- vim.cmd("colorscheme vague")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme dracula")
-vim.cmd("colorscheme ashen")
+-- vim.cmd("colorscheme ashen")
+-- vim.cmd("colorscheme bathory")
+vim.cmd("colorscheme omni-crimson")
 -- vim.cmd("colorscheme catppuccin-mocha")
 -- vim.cmd("colorscheme catppuccin-frappe")

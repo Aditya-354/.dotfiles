@@ -12,6 +12,10 @@
       "rev": "337ecfadb8bf005050990bf2f624dc4fc828dabd",
       "src": "https://github.com/romgrk/barbar.nvim"
     },
+    "black-metal-theme-neovim": {
+      "rev": "3a5522fbc7127c638ac8a98692cb83bbdf3594a9",
+      "src": "https://github.com/metalelf0/black-metal-theme-neovim"
+    },
     "blink.cmp": {
       "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
       "src": "https://github.com/saghen/blink.cmp",
@@ -81,6 +85,10 @@
     "nvim-web-devicons": {
       "rev": "dad71387de386a946b123079d0e53f23028f3abd",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
+    },
+    "omni.nvim": {
+      "rev": "1419a20aaffb204c13b2720cf65af7454183debf",
+      "src": "https://github.com/harshrajsachan/omni.nvim"
     },
     "plenary.nvim": {
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
