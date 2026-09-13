@@ -432,6 +432,13 @@ vim.pack.add({
 })
 
 vim.pack.add({
+	{
+		src = "https://github.com/rose-pine/neovim",
+		name = "rose-pine",
+	},
+})
+
+vim.pack.add({
   {
     src = 'https://github.com/nvim-neo-tree/neo-tree.nvim',
     version = vim.version.range('3')
@@ -984,6 +991,7 @@ require("myGreeter")
 require("bambooCS")
 require("netrwicons")
 require("draculaCS")
+require("rosepineCS")
 require("tokyonightCS")
 require("black-metalCS")
 require("gruvboxCS")
@@ -1228,7 +1236,8 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 -- vim.cmd("colorscheme vague")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme dracula")
-vim.cmd("colorscheme ashen")
+-- vim.cmd("colorscheme ashen")
+vim.cmd("colorscheme rose-pine-moon")
 -- vim.cmd("colorscheme bathory")
 -- vim.cmd("colorscheme omni-crimson")
 -- vim.cmd("colorscheme catppuccin-mocha")
