@@ -412,6 +412,7 @@ vim.pack.add({
   "https://github.com/folke/tokyonight.nvim",
   "https://github.com/ribru17/bamboo.nvim",
   "https://github.com/ficd0/ashen.nvim",
+  "https://github.com/Mofiqul/adwaita.nvim",
   "https://github.com/oskarnurm/koda.nvim",
   "https://github.com/harshrajsachan/omni.nvim",
 	"https://github.com/mason-org/mason.nvim",
@@ -486,6 +487,7 @@ packadd("ashen.nvim")
 packadd("koda.nvim")
 packadd("omni.nvim")
 packadd("dracula.nvim")
+packadd("adwaita.nvim")
 packadd("nvim-lspconfig")
 -- packadd("indent-blankline.nvim")
 packadd("mason.nvim")
@@ -1190,9 +1192,38 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "adwaita",
+    callback = function()
+        local hl_groups = {
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "TabLineSel",
+            "LineNr",
+            "Cursor",
+            "CursorLine",
+            "CursorLineNr",
+        }
+        for _, group in ipairs(hl_groups) do
+            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+        end
+    end,
+})
+
 -- vim.cmd("colorscheme retrobox")
 -- vim.cmd("colorscheme bamboo")
-vim.cmd("colorscheme omni-copper")
+-- vim.cmd("colorscheme omni-copper")
+vim.cmd("colorscheme adwaita")
 -- vim.cmd("colorscheme default")
 -- vim.cmd("colorscheme vague")
 -- vim.cmd("colorscheme gruvbox")
