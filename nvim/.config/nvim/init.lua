@@ -745,29 +745,29 @@ vim.keymap.set("n", "<leader>q", function()
 end, { desc = "Open diagnostic list" })
 vim.keymap.set("n", "<leader>dl", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
 
-require("blink.cmp").setup({
-	keymap = {
-		preset = "none",
-		["<C-Space>"] = { "show", "hide" },
-		["<CR>"] = { "accept", "fallback" },
-		["<C-j>"] = { "select_next", "fallback" },
-		["<C-k>"] = { "select_prev", "fallback" },
-		["<Tab>"] = { "snippet_forward", "fallback" },
-		["<S-Tab>"] = { "snippet_backward", "fallback" },
-	},
-	appearance = { nerd_font_variant = "mono" },
-	completion = { menu = { auto_show = true } },
-	sources = { default = { "lsp", "path", "buffer", "snippets" } },
-
-	fuzzy = {
-		implementation = "prefer_rust",
-		prebuilt_binaries = { download = true },
-	},
-})
-
-vim.lsp.config["*"] = {
-	capabilities = require("blink.cmp").get_lsp_capabilities(),
-}
+-- require("blink.cmp").setup({
+-- 	keymap = {
+-- 		preset = "none",
+-- 		["<C-Space>"] = { "show", "hide" },
+-- 		["<CR>"] = { "accept", "fallback" },
+-- 		["<C-j>"] = { "select_next", "fallback" },
+-- 		["<C-k>"] = { "select_prev", "fallback" },
+-- 		["<Tab>"] = { "snippet_forward", "fallback" },
+-- 		["<S-Tab>"] = { "snippet_backward", "fallback" },
+-- 	},
+-- 	appearance = { nerd_font_variant = "mono" },
+-- 	completion = { menu = { auto_show = true } },
+-- 	sources = { default = { "lsp", "path", "buffer", "snippets" } },
+--
+-- 	fuzzy = {
+-- 		implementation = "prefer_rust",
+-- 		prebuilt_binaries = { download = true },
+-- 	},
+-- })
+--
+-- vim.lsp.config["*"] = {
+-- 	capabilities = require("blink.cmp").get_lsp_capabilities(),
+-- }
 
 vim.lsp.semantic_tokens.enable(true)
 
@@ -1223,12 +1223,12 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 -- vim.cmd("colorscheme retrobox")
 -- vim.cmd("colorscheme bamboo")
 -- vim.cmd("colorscheme omni-copper")
-vim.cmd("colorscheme adwaita")
+-- vim.cmd("colorscheme adwaita")
 -- vim.cmd("colorscheme default")
 -- vim.cmd("colorscheme vague")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme dracula")
--- vim.cmd("colorscheme ashen")
+vim.cmd("colorscheme ashen")
 -- vim.cmd("colorscheme bathory")
 -- vim.cmd("colorscheme omni-crimson")
 -- vim.cmd("colorscheme catppuccin-mocha")
