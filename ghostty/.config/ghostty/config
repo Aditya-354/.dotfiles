@@ -14,6 +14,7 @@ font-family-italic = "Maple Mono NF"
 # font-feature = -calt
 # font-thicken = true
 adjust-cell-height = 29%
+# adjust-cell-height = 9%
 
 # Aesthetics
 window-padding-x = 0
@@ -21,7 +22,7 @@ window-padding-y = 0
 # theme = Dracula
 # theme = Catppuccin Frappe
 # theme = Catppuccin Mocha
-theme = Adwaita Dark
+# theme = Adwaita Dark
 # theme = Blue Berry Pie
 # theme = TokyoNight Storm
 # theme = Calamity
@@ -45,7 +46,7 @@ theme = Adwaita Dark
 # theme = Nordfox
 # theme = Citruszest
 # theme = Gruvbox Material
-# theme = Brogrammer
+theme = Brogrammer
 # theme = Vague
 # theme = Sonokai
 # theme = Chalk
