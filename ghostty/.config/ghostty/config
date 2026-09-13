@@ -71,7 +71,8 @@ background-opacity = 1
 background = #111111
 
 # Feature config
-# cursor-color = #ffffff
+cursor-color = #ffffff
+cursor-text = #000000
 cursor-style = block
 # custom-shader = cursor_animation.glsl
 shell-integration-features = no-cursor   
