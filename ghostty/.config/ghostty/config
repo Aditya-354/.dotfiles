@@ -1,19 +1,19 @@
 # Typography
 # font-family = JetBrains Mono Nerd Font
 # font-family = MesloLGS Nerd Font Mono
-font-family = FiraMono Nerd Font Mono
+# font-family = FiraMono Nerd Font Mono
 # font-family = Hack
 # font-family = Agave Nerd Font Mono
-# font-family = CaskaydiaMono Nerd Font Mono
+font-family = CaskaydiaMono Nerd Font Mono
 # font-family = Maple Mono NF
 # font-family = "Iosevka NFM"
 font-size = 12
 font-style = Regular
-# font-family-italic = "Maple Mono NF"
+font-family-italic = "Maple Mono NF"
 # font-style-italic = "Italic"
 # font-feature = -calt
 # font-thicken = true
-# adjust-cell-height = 29%
+adjust-cell-height = 29%
 # adjust-cell-height = 9%
 
 # Aesthetics
@@ -24,7 +24,7 @@ window-padding-y = 0
 # theme = Catppuccin Mocha
 # theme = Adwaita Dark
 # theme = Blue Berry Pie
-# theme = TokyoNight Storm
+theme = TokyoNight Moon
 # theme = Calamity
 # theme = Rapture
 # theme = Zenbones Dark
@@ -47,7 +47,7 @@ window-padding-y = 0
 # theme = Citruszest
 # theme = Gruvbox Material
 # theme = Brogrammer
-theme = Vague
+# theme = Vague
 # theme =Black Metal (Venom)
 # theme = Sonokai
 # theme = Chalk
@@ -62,14 +62,14 @@ theme = Vague
 # theme = Jellybeans
 # theme = Nord
 # theme = Cyberpunk Scarlet Protocol
-background-opacity = 0.85
-# background-opacity = 1
+# background-opacity = 0.85
+background-opacity = 1
 # background-blur = 20
 # background = #301515
 # background = #171717
 # background = #300710
 # background = #000000
-background = #150000
+# background = #150000
 
 # Feature config
 cursor-color = #ffffff

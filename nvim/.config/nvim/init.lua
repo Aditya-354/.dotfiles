@@ -406,15 +406,9 @@ vim.pack.add({
 		build = ":TSUpdate",
 	},
 	"https://www.github.com/neovim/nvim-lspconfig",
-  "https://github.com/mofiqul/dracula.nvim",
-  "https://github.com/vague-theme/vague.nvim",
   "https://github.com/romgrk/barbar.nvim",
   "https://github.com/folke/tokyonight.nvim",
-  "https://github.com/ribru17/bamboo.nvim",
-  "https://github.com/ficd0/ashen.nvim",
   "https://github.com/Mofiqul/adwaita.nvim",
-  "https://github.com/oskarnurm/koda.nvim",
-  "https://github.com/harshrajsachan/omni.nvim",
 	"https://github.com/mason-org/mason.nvim",
 	"https://github.com/creativenull/efmls-configs-nvim",
 	{
@@ -424,8 +418,6 @@ vim.pack.add({
 })
 
 vim.pack.add { { src = "https://github.com/metalelf0/black-metal-theme-neovim" } }
-
-vim.pack.add { { src = "https://github.com/catppuccin/nvim", name = "catppuccin" } }
 
 vim.pack.add({
   "https://github.com/ellisonleao/gruvbox.nvim"
@@ -486,14 +478,8 @@ packadd("gitsigns.nvim")
 packadd("lualine.nvim")
 packadd("netrw.nvim")
 packadd("fzf-lua")
-packadd("vague.nvim")
 packadd("strudel.nvim")
-packadd("bamboo.nvim")
 packadd("tokyonight.nvim")
-packadd("ashen.nvim")
-packadd("koda.nvim")
-packadd("omni.nvim")
-packadd("dracula.nvim")
 packadd("adwaita.nvim")
 packadd("nvim-lspconfig")
 -- packadd("indent-blankline.nvim")
@@ -988,46 +974,14 @@ end
 
 -- require colorschemes
 require("myGreeter")
-require("bambooCS")
 require("netrwicons")
-require("draculaCS")
 require("rosepineCS")
 require("tokyonightCS")
 require("black-metalCS")
 require("gruvboxCS")
-require("ashenCS")
-require("kodaCS")
--- require("lualineSL")
+require("lualineSL")
 require("imagerenderer")
 -- require("ibl").setup()
-
-vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "omni-copper",
-    callback = function()
-        local hl_groups = {
-            "Normal",
-            "NormalFloat",
-            "SignColumn",
-            "NormalNC", -- background for non-current windows
-            "EndOfBuffer",
-            "MsgArea",
-            "FloatBorder",
-            "StatusLine",
-            "StatusLineNC",
-            "ColorColumn",
-            "TabLine",
-            "TabLineFill",
-            "TabLineSel",
-            "LineNr",
-            "Cursor",
-            "CursorLine",
-            "CursorLineNr",
-        }
-        for _, group in ipairs(hl_groups) do
-            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
-        end
-    end,
-})
 
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "default",
@@ -1082,34 +1036,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         for _, group in ipairs(hl_groups) do
             vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
         end
-    end,
-})
-
-vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "bamboo",
-    callback = function()
-        local hl_groups = {
-            "Normal",
-            "NormalFloat",
-            "SignColumn",
-            "NormalNC", -- background for non-current windows
-            "EndOfBuffer",
-            "MsgArea",
-            "FloatBorder",
-            "StatusLine",
-            "StatusLineNC",
-            "ColorColumn",
-            "TabLine",
-            "TabLineFill",
-            "TabLineSel",
-            "LineNr",
-            "Cursor",
-            "CursorLine",
-            "CursorLineNr",
-        }
-        for _, group in ipairs(hl_groups) do
-            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
-        end
+        vim.opt.cursorline = false
     end,
 })
 
@@ -1122,7 +1049,8 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         vim.api.nvim_set_hl(0, "SignColumn", { bg = "none", ctermbg = "none" })
         vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none", ctermbg = "none" })
         vim.api.nvim_set_hl(0, "Cursor", { bg = "none", ctermbg = "none" })
-        vim.api.nvim_set_hl(0, "StatusLine", { bg = "#2c2c2c", fg = "#ffffff" })
+        -- vim.api.nvim_set_hl(0, "StatusLine", { bg = "#2c2c2c", fg = "#ffffff" })
+        vim.api.nvim_set_hl(0, "StatusLine", { bg = "none", fg = "none" })
     end,
 })
 
@@ -1139,66 +1067,6 @@ local NeoTreeGroups = {
 for _, group in ipairs(NeoTreeGroups) do
     vim.api.nvim_set_hl(0, group, { bg = "NONE", ctermbg = "NONE" })
 end
-
-require('vague').setup({
-  transparent = false, -- If true, background is not set
-  bold = false, -- Disable bold globally
-  italic = false, -- Disable italic globally
-  on_highlights = function(hl, colors) end,
-  colors = {
-    bg = '#141415',
-    inactiveBg = '#1c1c24',
-    fg = '#cdcdcd',
-    floatBorder = '#878787',
-    line = '#252530',
-    comment = '#707079',
-    builtin = '#b4d4cf',
-    func = '#c48282',
-    string = '#e8b589',
-    number = '#e0a363',
-    property = '#c3c3d5',
-    constant = '#aeaed1',
-    parameter = '#bb9dbd',
-    visual = '#333738',
-    error = '#d8647e',
-    warning = '#f3be7c',
-    hint = '#7e98e8',
-    operator = '#90a0b5',
-    keyword = '#6e94b2',
-    type = '#9bb4bc',
-    search = '#405065',
-    plus = '#7fa563',
-    delta = '#f3be7c',
-  },
-})
-
-vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "vague",
-    callback = function()
-        local hl_groups = {
-            "Normal",
-            "NormalFloat",
-            "SignColumn",
-            "NormalNC", -- background for non-current windows
-            "EndOfBuffer",
-            "MsgArea",
-            "FloatBorder",
-            "StatusLine",
-            "StatusLineNC",
-            "ColorColumn",
-            "TabLine",
-            "TabLineFill",
-            "TabLineSel",
-            "LineNr",
-            "Cursor",
-            "CursorLine",
-            "CursorLineNr",
-        }
-        for _, group in ipairs(hl_groups) do
-            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
-        end
-    end,
-})
 
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "adwaita",
@@ -1228,17 +1096,22 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
--- vim.cmd("colorscheme retrobox")
--- vim.cmd("colorscheme bamboo")
--- vim.cmd("colorscheme omni-copper")
--- vim.cmd("colorscheme adwaita")
--- vim.cmd("colorscheme default")
--- vim.cmd("colorscheme vague")
--- vim.cmd("colorscheme gruvbox")
--- vim.cmd("colorscheme dracula")
--- vim.cmd("colorscheme ashen")
-vim.cmd("colorscheme rose-pine-moon")
--- vim.cmd("colorscheme bathory")
--- vim.cmd("colorscheme omni-crimson")
--- vim.cmd("colorscheme catppuccin-mocha")
--- vim.cmd("colorscheme catppuccin-frappe")
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "adwaita",
+    callback = function()
+        local hl_groups = vim.fn.getcompletion("", "highlight")
+        for _, group in ipairs(hl_groups) do
+            local hl = vim.api.nvim_get_hl(0, { name = group, link = false })
+            if hl.bold then
+                hl.bold = nil
+                vim.api.nvim_set_hl(0, group, hl)
+            end
+            if hl.italic then
+                hl.italic = nil
+                vim.api.nvim_set_hl(0, group, hl)
+            end
+        end
+    end,
+})
+
+vim.cmd("colorscheme tokyonight")
