@@ -24,13 +24,13 @@ vim.opt.hlsearch = true -- highlight search matches
 vim.opt.incsearch = true -- show matches as you type
 
 vim.opt.signcolumn = "yes" -- always show a sign column
--- vim.opt.colorcolumn = "100" -- show a column at 100 position chars
--- vim.api.nvim_create_autocmd("ColorScheme", {
---     pattern = "*",
---     callback = function()
---         vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#3b4252", ctermbg = "darkgray" })
---     end,
--- })
+vim.opt.colorcolumn = "100" -- show a column at 100 position chars
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "*",
+    callback = function()
+        vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#3b4252", ctermbg = "darkgray" })
+    end,
+})
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "man",
     callback = function()
@@ -1060,7 +1060,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "oldworld",
+    pattern = "gruvbox",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1072,35 +1072,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
             "FloatBorder",
             "StatusLine",
             "StatusLineNC",
-            -- "ColorColumn",
-            "TabLine",
-            "TabLineFill",
-            "TabLineSel",
-            "LineNr",
-            "Cursor",
-            "CursorLine",
-            "CursorLineNr",
-        }
-        for _, group in ipairs(hl_groups) do
-            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
-        end
-    end,
-})
-
-vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "bathory",
-    callback = function()
-        local hl_groups = {
-            "Normal",
-            "NormalFloat",
-            "SignColumn",
-            "NormalNC", -- background for non-current windows
-            "EndOfBuffer",
-            "MsgArea",
-            "FloatBorder",
-            "StatusLine",
-            "StatusLineNC",
-            -- "ColorColumn",
+            "ColorColumn",
             "TabLine",
             "TabLineFill",
             "TabLineSel",
