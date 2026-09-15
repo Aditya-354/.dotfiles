@@ -24,13 +24,13 @@ vim.opt.hlsearch = true -- highlight search matches
 vim.opt.incsearch = true -- show matches as you type
 
 vim.opt.signcolumn = "yes" -- always show a sign column
-vim.opt.colorcolumn = "100" -- show a column at 100 position chars
-vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "*",
-    callback = function()
-        vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#3b4252", ctermbg = "darkgray" })
-    end,
-})
+-- vim.opt.colorcolumn = "100" -- show a column at 100 position chars
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--     pattern = "*",
+--     callback = function()
+--         vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#3b4252", ctermbg = "darkgray" })
+--     end,
+-- })
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "man",
     callback = function()
@@ -411,6 +411,8 @@ vim.pack.add({
   "https://github.com/folke/tokyonight.nvim",
   "https://github.com/Mofiqul/adwaita.nvim",
   "https://github.com/ficd0/ashen.nvim",
+  "https://github.com/navarasu/onedark.nvim",
+  "https://github.com/Yazeed1s/minimal.nvim",
 	"https://github.com/mason-org/mason.nvim",
 	"https://github.com/creativenull/efmls-configs-nvim",
 	{
@@ -420,6 +422,8 @@ vim.pack.add({
 })
 
 vim.pack.add { { src = "https://github.com/metalelf0/black-metal-theme-neovim" } }
+
+vim.pack.add { { src = "https://github.com/catppuccin/nvim", name = "catppuccin" } }
 
 vim.pack.add({
   "https://github.com/ellisonleao/gruvbox.nvim"
@@ -484,6 +488,8 @@ packadd("strudel.nvim")
 packadd("tokyonight.nvim")
 packadd("adwaita.nvim")
 packadd("ashen.nvim")
+packadd("minimal.nvim")
+packadd("onedark.nvim")
 packadd("oldworld.nvim")
 packadd("nvim-lspconfig")
 -- packadd("indent-blankline.nvim")
@@ -981,6 +987,7 @@ require("myGreeter")
 require("netrwicons")
 require("rosepineCS")
 require("tokyonightCS")
+require("onedarkCS")
 require("black-metalCS")
 require("gruvboxCS")
 require("lualineSL")
@@ -1166,7 +1173,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "tokyonight",
+    pattern = "minimal-base16",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1193,6 +1200,10 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
+-- vim.g.minimal_italic_comments = true
+-- vim.g.minimal_italic_keywords = true
+vim.g.minimal_transparent_background = true
+
 -- require("oldworld").setup({})
 
 vim.api.nvim_create_autocmd("ColorScheme", {
@@ -1213,5 +1224,4 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
-
-vim.cmd("colorscheme ashen")
+vim.cmd("colorscheme gruvbox")
