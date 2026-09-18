@@ -1,4 +1,4 @@
-vim.opt.termguicolors = false
+vim.opt.termguicolors = true
 
 
 -- ============================================================================
@@ -410,6 +410,7 @@ vim.pack.add({
   "https://github.com/folke/tokyonight.nvim",
   "https://github.com/Mofiqul/adwaita.nvim",
   "https://github.com/navarasu/onedark.nvim",
+  "https://github.com/craftzdog/solarized-osaka.nvim",
 	"https://github.com/mason-org/mason.nvim",
 	"https://github.com/creativenull/efmls-configs-nvim",
 	{
@@ -484,6 +485,7 @@ packadd("fzf-lua")
 packadd("strudel.nvim")
 packadd("tokyonight.nvim")
 packadd("adwaita.nvim")
+packadd("solarized-osaka.nvim")
 packadd("onedark.nvim")
 packadd("nvim-lspconfig")
 -- packadd("indent-blankline.nvim")
@@ -1016,35 +1018,36 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--     pattern = "catppuccin-macchiato",
+--     callback = function()
+--         local hl_groups = {
+--             "Normal",
+--             "NormalFloat",
+--             "SignColumn",
+--             "NormalNC", -- background for non-current windows
+--             "EndOfBuffer",
+--             "MsgArea",
+--             "FloatBorder",
+--             "StatusLine",
+--             "StatusLineNC",
+--             -- "ColorColumn",
+--             "TabLine",
+--             "TabLineFill",
+--             "TabLineSel",
+--             "LineNr",
+--             "Cursor",
+--             "CursorLine",
+--             "CursorLineNr",
+--         }
+--         for _, group in ipairs(hl_groups) do
+--             vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+--         end
+--     end,
+-- })
+
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "catppuccin-macchiato",
-    callback = function()
-        local hl_groups = {
-            "Normal",
-            "NormalFloat",
-            "SignColumn",
-            "NormalNC", -- background for non-current windows
-            "EndOfBuffer",
-            "MsgArea",
-            "FloatBorder",
-            "StatusLine",
-            "StatusLineNC",
-            -- "ColorColumn",
-            "TabLine",
-            "TabLineFill",
-            "TabLineSel",
-            "LineNr",
-            "Cursor",
-            "CursorLine",
-            "CursorLineNr",
-        }
-        for _, group in ipairs(hl_groups) do
-            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
-        end
-    end,
-})
-vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "gruvbox",
+    pattern = "rose-pine-moon",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1149,4 +1152,5 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 -- vim.cmd("colorscheme onedark")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme adwaita")
-vim.cmd("colorscheme catppuccin-macchiato")
+-- vim.cmd("colorscheme catppuccin-macchiato")
+vim.cmd("colorscheme rose-pine-moon")

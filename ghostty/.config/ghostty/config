@@ -1,11 +1,11 @@
 # Typography
 # font-family = JetBrains Mono Nerd Font
 # font-family = MesloLGS Nerd Font Mono
-# font-family = FiraMono Nerd Font Mono
+font-family = FiraMono Nerd Font Mono
 # font-family = Hack
 # font-family = Agave Nerd Font Mono
 # font-family = CaskaydiaMono Nerd Font Mono
-font-family = Maple Mono NF
+# font-family = Maple Mono NF
 # font-family = "Iosevka NFM"
 font-size = 12
 font-style = Regular
@@ -15,7 +15,7 @@ font-style = Regular
 # font-thicken = true
 # adjust-cell-height = 30%
 # adjust-cell-height = 20%
-adjust-cell-height = 14%
+# adjust-cell-height = 14%
 
 # Aesthetics
 window-padding-x = 0
@@ -23,7 +23,7 @@ window-padding-y = 0
 # theme = Dracula
 # theme = Catppuccin Frappe
 # theme = Catppuccin Mocha
-theme = Catppuccin Macchiato
+# theme = Catppuccin Macchiato
 # theme = Adwaita Dark
 # theme = Blue Berry Pie
 # theme = TokyoNight Moon
@@ -33,12 +33,13 @@ theme = Catppuccin Macchiato
 # theme = Matte Black
 # theme = Selenized Black
 # theme = Cursor Dark
-# theme = Rose Pine
+theme = Rose Pine Moon
 # theme = Dark Modern
 # theme = Midnight In Mojave
 # theme = Modus Vivendi Tinted
 # theme = iTerm2 Solarized Dark
 # theme = Gruber Darker
+# theme = Solarized Osaka Night
 # theme = Solarized Dark Higher Contrast
 # theme = Belafonte Night
 # theme = Vercel
@@ -70,8 +71,8 @@ background-opacity = 1
 # background = #301515
 # background = #171717
 # background = #300710
-# background = #000000
-# background = #150000
+background = #000000
+# background = #101010
 
 # Feature config
 cursor-color = #ffffff
