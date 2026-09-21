@@ -412,6 +412,7 @@ vim.pack.add({
   "https://github.com/navarasu/onedark.nvim",
   "https://github.com/craftzdog/solarized-osaka.nvim",
 	"https://github.com/mason-org/mason.nvim",
+  "https://github.com/projekt0n/github-nvim-theme",
 	"https://github.com/creativenull/efmls-configs-nvim",
 	{
 		src = "https://github.com/saghen/blink.cmp",
@@ -987,6 +988,7 @@ require("tokyonightCS")
 require("onedarkCS")
 require("black-metalCS")
 require("gruvboxCS")
+require("githubCS")
 require("lualineSL")
 require("imagerenderer")
 -- require("ibl").setup()
@@ -1019,6 +1021,33 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "tokyonight-storm",
+    callback = function()
+        local hl_groups = {
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            -- "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "TabLineSel",
+            "LineNr",
+            "Cursor",
+            "CursorLine",
+            "CursorLineNr",
+        }
+        for _, group in ipairs(hl_groups) do
+            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+        end
+    end,
+})
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "vague",
     callback = function()
@@ -1183,6 +1212,8 @@ require('vague').setup({
 })
 
 -- vim.cmd("colorscheme onedark")
+-- vim.cmd("colorscheme github_dark")
+-- vim.cmd("colorscheme tokyonight-storm")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme adwaita")
 -- vim.cmd("colorscheme catppuccin-macchiato")
