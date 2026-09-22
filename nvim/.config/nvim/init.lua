@@ -413,7 +413,6 @@ vim.pack.add({
   "https://github.com/craftzdog/solarized-osaka.nvim",
 	"https://github.com/mason-org/mason.nvim",
   "https://github.com/shaunsingh/nord.nvim",
-  "https://github.com/sainnhe/sonokai",
   "https://github.com/projekt0n/github-nvim-theme",
 	"https://github.com/creativenull/efmls-configs-nvim",
 	{
@@ -1025,7 +1024,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "tokyonight-storm",
+    pattern = "tokyonight",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1214,8 +1213,6 @@ require('vague').setup({
   },
 })
 
-vim.g.sonokai_style = "default"
-
 vim.g.nord_contrast = true
 vim.g.nord_disable_background = false
 vim.g.nord_italic = true
@@ -1223,8 +1220,8 @@ vim.g.nord_bold = false
 
 -- vim.cmd("colorscheme onedark")
 -- vim.cmd("colorscheme github_dark")
--- vim.cmd("colorscheme tokyonight-storm")
-vim.cmd("colorscheme gruvbox")
+-- vim.cmd("colorscheme tokyonight")
+-- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme adwaita")
 -- vim.cmd("colorscheme catppuccin-macchiato")
--- vim.cmd("colorscheme rose-pine-moon")
+vim.cmd("colorscheme rose-pine-moon")
