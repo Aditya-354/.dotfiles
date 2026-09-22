@@ -66,6 +66,10 @@
       "rev": "3f643df59951d9adc4cf348cefe435fcdb5a3671",
       "src": "https://github.com/prichrd/netrw.nvim"
     },
+    "nord.nvim": {
+      "rev": "80c1e5321505aeb22b7a9f23eb82f1e193c12470",
+      "src": "https://github.com/shaunsingh/nord.nvim"
+    },
     "nui.nvim": {
       "rev": "de740991c12411b663994b2860f1a4fd0937c130",
       "src": "https://github.com/MunifTanjim/nui.nvim"
@@ -101,6 +105,10 @@
     "solarized-osaka.nvim": {
       "rev": "a21176efde15fab21fabda0bf2ba123ed6d7332d",
       "src": "https://github.com/craftzdog/solarized-osaka.nvim"
+    },
+    "sonokai": {
+      "rev": "b023c5280b16fe2366f5e779d8d2756b3e5ee9c3",
+      "src": "https://github.com/sainnhe/sonokai"
     },
     "strudel.nvim": {
       "rev": "3a7e62c9048a318281328ad08d6269e50b884cd3",
