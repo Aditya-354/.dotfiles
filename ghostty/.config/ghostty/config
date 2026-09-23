@@ -1,10 +1,10 @@
 # Typography
 # font-family = JetBrains Mono Nerd Font
 # font-family = MesloLGS Nerd Font Mono
-# font-family = FiraMono Nerd Font Mono
+font-family = FiraMono Nerd Font Mono
 # font-family = Hack
 # font-family = Agave Nerd Font Mono
-font-family = CaskaydiaMono Nerd Font Mono
+# font-family = CaskaydiaMono Nerd Font Mono
 # font-family = Maple Mono NF
 # font-family = "Iosevka NFM"
 font-size = 15
@@ -15,8 +15,8 @@ font-style = Regular
 # font-thicken = true
 # adjust-cell-height = 30%
 # adjust-cell-height = 20%
-# adjust-cell-height = 50%
-adjust-cell-height = 55%
+adjust-cell-height = 50%
+# adjust-cell-height = 55%
 
 # Aesthetics
 window-padding-x = 0
