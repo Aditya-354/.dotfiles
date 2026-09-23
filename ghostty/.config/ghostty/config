@@ -1,10 +1,10 @@
 # Typography
 # font-family = JetBrains Mono Nerd Font
 # font-family = MesloLGS Nerd Font Mono
-font-family = FiraMono Nerd Font Mono
+# font-family = FiraMono Nerd Font Mono
 # font-family = Hack
 # font-family = Agave Nerd Font Mono
-# font-family = CaskaydiaMono Nerd Font Mono
+font-family = CaskaydiaMono Nerd Font Mono
 # font-family = Maple Mono NF
 # font-family = "Iosevka NFM"
 font-size = 15
@@ -15,7 +15,8 @@ font-style = Regular
 # font-thicken = true
 # adjust-cell-height = 30%
 # adjust-cell-height = 20%
-adjust-cell-height = 50%
+# adjust-cell-height = 50%
+adjust-cell-height = 55%
 
 # Aesthetics
 window-padding-x = 0
@@ -26,12 +27,12 @@ window-padding-y = 0
 # theme = Catppuccin Macchiato
 # theme = Adwaita Dark
 # theme = Blue Berry Pie
-theme = TokyoNight Night
+# theme = TokyoNight Night
 # theme = Calamity
 # theme = Rapture
 # theme = Zenbones Dark
 # theme = Matte Black
-# theme = Selenized Black
+theme = Selenized Black
 # theme = Cursor Dark
 # theme = Rose Pine
 # theme = Dark Modern
@@ -73,7 +74,8 @@ background-opacity = 0.9
 # background = #301515
 # background = #171717
 # background = #300710
-background = #000000
+# background = #000000
+background = #080c10
 # background = #1a1a1a
 # background = #2a2a2a
 # background = #101010

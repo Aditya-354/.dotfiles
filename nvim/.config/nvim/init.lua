@@ -412,6 +412,7 @@ vim.pack.add({
   "https://github.com/navarasu/onedark.nvim",
   "https://github.com/craftzdog/solarized-osaka.nvim",
 	"https://github.com/mason-org/mason.nvim",
+  "https://github.com/dasupradyumna/midnight.nvim",
   "https://github.com/olivercederborg/poimandres.nvim",
   "https://github.com/shaunsingh/nord.nvim",
   "https://github.com/projekt0n/github-nvim-theme",
@@ -492,6 +493,7 @@ packadd("adwaita.nvim")
 packadd("solarized-osaka.nvim")
 packadd("onedark.nvim")
 packadd("poimandres.nvim")
+packadd("midnight.nvim")
 packadd("nvim-lspconfig")
 packadd("nord.nvim")
 -- packadd("indent-blankline.nvim")
@@ -1054,7 +1056,34 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "tokyonight",
+    pattern = "midnight",
+    callback = function()
+        local hl_groups = {
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "TabLineSel",
+            "LineNr",
+            "Cursor",
+            "CursorLine",
+            "CursorLineNr",
+        }
+        for _, group in ipairs(hl_groups) do
+            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+        end
+    end,
+})
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "vague",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1080,8 +1109,9 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         end
     end,
 })
+
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "vague",
+    pattern = "tokyonight",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1256,4 +1286,5 @@ vim.g.nord_bold = false
 -- vim.cmd("colorscheme catppuccin-macchiato")
 -- vim.cmd("colorscheme rose-pine-moon")
 -- vim.cmd("colorscheme default")
-vim.cmd("colorscheme poimandres")
+-- vim.cmd("colorscheme poimandres")
+vim.cmd("colorscheme midnight")
