@@ -412,6 +412,7 @@ vim.pack.add({
   "https://github.com/navarasu/onedark.nvim",
   "https://github.com/craftzdog/solarized-osaka.nvim",
 	"https://github.com/mason-org/mason.nvim",
+  "https://github.com/slugbyte/lackluster.nvim",
   "https://github.com/dasupradyumna/midnight.nvim",
   "https://github.com/olivercederborg/poimandres.nvim",
   "https://github.com/shaunsingh/nord.nvim",
@@ -492,6 +493,7 @@ packadd("tokyonight.nvim")
 packadd("adwaita.nvim")
 packadd("solarized-osaka.nvim")
 packadd("onedark.nvim")
+packadd("lackluster.nvim")
 packadd("poimandres.nvim")
 packadd("midnight.nvim")
 packadd("nvim-lspconfig")
@@ -1029,6 +1031,34 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "gorgoroth",
+    callback = function()
+        local hl_groups = {
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "TabLineSel",
+            "LineNr",
+            "Cursor",
+            "CursorLine",
+            "CursorLineNr",
+        }
+        for _, group in ipairs(hl_groups) do
+            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+        end
+    end,
+})
+
+vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "poimandres",
     callback = function()
         local hl_groups = {
@@ -1284,8 +1314,8 @@ vim.g.nord_bold = false
 -- vim.cmd("colorscheme tokyonight")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme adwaita")
--- vim.cmd("colorscheme catppuccin-macchiato")
-vim.cmd("colorscheme rose-pine")
+vim.cmd("colorscheme catppuccin-frappe")
+-- vim.cmd("colorscheme rose-pine")
 -- vim.cmd("colorscheme default")
 -- vim.cmd("colorscheme poimandres")
 -- vim.cmd("colorscheme midnight")
