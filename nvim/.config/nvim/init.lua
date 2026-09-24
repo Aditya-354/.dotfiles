@@ -1285,7 +1285,7 @@ vim.g.nord_bold = false
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme adwaita")
 -- vim.cmd("colorscheme catppuccin-macchiato")
-vim.cmd("colorscheme rose-pine-moon")
+vim.cmd("colorscheme rose-pine")
 -- vim.cmd("colorscheme default")
 -- vim.cmd("colorscheme poimandres")
 -- vim.cmd("colorscheme midnight")
