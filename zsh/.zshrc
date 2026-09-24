@@ -26,7 +26,7 @@ alias scd='cd $(fzf --walker=dir,hidden,follow --walker-root=/home/asrwx)'
 # ZSH_THEME="kafeitu"
 # ZSH_THEME="kphoen"
 # ZSH_THEME="gianu"
-# ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(git)
 
@@ -54,7 +54,7 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/dotfiles/zsh/.p10k.zsh.
 [[ ! -f ~/dotfiles/zsh/.p10k.zsh ]] || source ~/dotfiles/zsh/.p10k.zsh
