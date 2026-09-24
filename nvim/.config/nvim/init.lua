@@ -300,23 +300,23 @@ vim.keymap.set("n", "<C-Down>", ":resize -2<CR>", { desc = "Decrease window heig
 vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", { desc = "Decrease window width" })
 vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { desc = "Increase window width" })
 
-vim.keymap.set("n", "<leader>,", "<Cmd>BufferPrevious<CR>", keymap_opts)
-vim.keymap.set("n", "<leader>.", "<Cmd>BufferNext<CR>", keymap_opts)
-vim.keymap.set("n", "<leader><", "<Cmd>BufferMovePrevious<CR>", keymap_opts)
-vim.keymap.set("n", "<leader>>", "<Cmd>BufferMoveNext<CR>", keymap_opts)
+-- vim.keymap.set("n", "<leader>,", "<Cmd>BufferPrevious<CR>", keymap_opts)
+-- vim.keymap.set("n", "<leader>.", "<Cmd>BufferNext<CR>", keymap_opts)
+-- vim.keymap.set("n", "<leader><", "<Cmd>BufferMovePrevious<CR>", keymap_opts)
+-- vim.keymap.set("n", "<leader>>", "<Cmd>BufferMoveNext<CR>", keymap_opts)
 
-vim.keymap.set("n", "<leader>1", "<Cmd>BufferGoto 1<CR>", keymap_opts)
-vim.keymap.set("n", "<leader>2", "<Cmd>BufferGoto 2<CR>", keymap_opts)
-vim.keymap.set("n", "<leader>3", "<Cmd>BufferGoto 3<CR>", keymap_opts)
-vim.keymap.set("n", "<leader>4", "<Cmd>BufferGoto 4<CR>", keymap_opts)
-vim.keymap.set("n", "<leader>5", "<Cmd>BufferGoto 5<CR>", keymap_opts)
-vim.keymap.set("n", "<leader>6", "<Cmd>BufferGoto 6<CR>", keymap_opts)
-vim.keymap.set("n", "<leader>7", "<Cmd>BufferGoto 7<CR>", keymap_opts)
-vim.keymap.set("n", "<leader>8", "<Cmd>BufferGoto 8<CR>", keymap_opts)
-vim.keymap.set("n", "<leader>9", "<Cmd>BufferGoto 9<CR>", keymap_opts)
-vim.keymap.set("n", "<leader>0", "<Cmd>Bufferlast<CR>", keymap_opts)
+-- vim.keymap.set("n", "<leader>1", "<Cmd>BufferGoto 1<CR>", keymap_opts)
+-- vim.keymap.set("n", "<leader>2", "<Cmd>BufferGoto 2<CR>", keymap_opts)
+-- vim.keymap.set("n", "<leader>3", "<Cmd>BufferGoto 3<CR>", keymap_opts)
+-- vim.keymap.set("n", "<leader>4", "<Cmd>BufferGoto 4<CR>", keymap_opts)
+-- vim.keymap.set("n", "<leader>5", "<Cmd>BufferGoto 5<CR>", keymap_opts)
+-- vim.keymap.set("n", "<leader>6", "<Cmd>BufferGoto 6<CR>", keymap_opts)
+-- vim.keymap.set("n", "<leader>7", "<Cmd>BufferGoto 7<CR>", keymap_opts)
+-- vim.keymap.set("n", "<leader>8", "<Cmd>BufferGoto 8<CR>", keymap_opts)
+-- vim.keymap.set("n", "<leader>9", "<Cmd>BufferGoto 9<CR>", keymap_opts)
+-- vim.keymap.set("n", "<leader>0", "<Cmd>Bufferlast<CR>", keymap_opts)
 
-vim.keymap.set("n", "<leader>k", "<Cmd>BufferClose<CR>", keymap_opts)
+-- vim.keymap.set("n", "<leader>k", "<Cmd>BufferClose<CR>", keymap_opts)
 
 -- Hyprland
 vim.keymap.set("n", "<A-u>", ":m .+1<CR>==", { desc = "Move line down" })
@@ -406,7 +406,6 @@ vim.pack.add({
 		build = ":TSUpdate",
 	},
 	"https://www.github.com/neovim/nvim-lspconfig",
-  "https://github.com/romgrk/barbar.nvim",
   "https://github.com/folke/tokyonight.nvim",
 	"https://github.com/mason-org/mason.nvim",
   "https://github.com/nyoom-engineering/oxocarbon.nvim",
@@ -485,7 +484,6 @@ packadd("oxocarbon.nvim")
 packadd("nvim-lspconfig")
 -- packadd("indent-blankline.nvim")
 packadd("mason.nvim")
-packadd("barbar.nvim")
 packadd("efmls-configs-nvim")
 packadd("blink.cmp")
 
@@ -1117,6 +1115,7 @@ end
 
 -- vim.cmd("colorscheme tokyonight")
 -- vim.cmd("colorscheme gruvbox")
-vim.cmd("colorscheme catppuccin-frappe")
+-- vim.cmd("colorscheme catppuccin-frappe")
+vim.cmd("colorscheme oxocarbon")
 -- vim.cmd("colorscheme rose-pine")
 -- vim.cmd("colorscheme default")
