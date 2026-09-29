@@ -1143,6 +1143,24 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--     pattern = "tokyonight",
+--     callback = function()
+--         local hl_groups = vim.fn.getcompletion("", "highlight")
+--         for _, group in ipairs(hl_groups) do
+--             local hl = vim.api.nvim_get_hl(0, { name = group, link = false })
+--             if hl.bold then
+--                 hl.bold = nil
+--                 vim.api.nvim_set_hl(0, group, hl)
+--             end
+--             if hl.italic then
+--                 hl.italic = nil
+--                 vim.api.nvim_set_hl(0, group, hl)
+--             end
+--         end
+--     end,
+-- })
+
 -- vim.cmd("colorscheme tokyonight")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme catppuccin-frappe")
