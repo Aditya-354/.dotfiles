@@ -409,6 +409,8 @@ vim.pack.add({
   "https://github.com/folke/tokyonight.nvim",
 	"https://github.com/mason-org/mason.nvim",
   "https://github.com/nyoom-engineering/oxocarbon.nvim",
+  "https://github.com/oskarnurm/koda.nvim",
+  "https://github.com/ficd0/ashen.nvim",
 	"https://github.com/creativenull/efmls-configs-nvim",
 	{
 		src = "https://github.com/saghen/blink.cmp",
@@ -481,6 +483,8 @@ packadd("fzf-lua")
 packadd("strudel.nvim")
 packadd("tokyonight.nvim")
 packadd("oxocarbon.nvim")
+packadd("koda.nvim")
+packadd("ashen.nvim")
 packadd("nvim-lspconfig")
 -- packadd("indent-blankline.nvim")
 packadd("mason.nvim")
@@ -978,6 +982,7 @@ require("netrwicons")
 require("rosepineCS")
 require("tokyonightCS")
 require("gruvboxCS")
+require("kodaCS")
 require("lualineSL")
 require("imagerenderer")
 -- require("ibl").setup()
@@ -1067,35 +1072,35 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
-vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "oxocarbon",
-    callback = function()
-        local hl_groups = {
-            "Normal",
-            "NormalFloat",
-            "SignColumn",
-            "NormalNC", -- background for non-current windows
-            "EndOfBuffer",
-            "MsgArea",
-            "FloatBorder",
-            "StatusLine",
-            "StatusLineNC",
-            "ColorColumn",
-            "TabLine",
-            "TabLineFill",
-            "TabLineSel",
-            "LineNr",
-            "Cursor",
-            "CursorLine",
-            "CursorLineNr",
-        }
-        for _, group in ipairs(hl_groups) do
-            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
-        end
-            vim.api.nvim_set_hl(0, "Comment", { fg = "#9d858f" })
-            vim.api.nvim_set_hl(0, "@comment", { link = "Comment" })
-    end,
-})
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--     pattern = "ashen",
+--     callback = function()
+--         local hl_groups = {
+--             "Normal",
+--             "NormalFloat",
+--             "SignColumn",
+--             "NormalNC", -- background for non-current windows
+--             "EndOfBuffer",
+--             "MsgArea",
+--             "FloatBorder",
+--             "StatusLine",
+--             "StatusLineNC",
+--             "ColorColumn",
+--             "TabLine",
+--             "TabLineFill",
+--             "TabLineSel",
+--             "LineNr",
+--             "Cursor",
+--             "CursorLine",
+--             "CursorLineNr",
+--         }
+--         for _, group in ipairs(hl_groups) do
+--             vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+--         end
+--             vim.api.nvim_set_hl(0, "Comment", { fg = "#9d858f" })
+--             vim.api.nvim_set_hl(0, "@comment", { link = "Comment" })
+--     end,
+-- })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "*",
@@ -1163,7 +1168,8 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 
 -- vim.cmd("colorscheme tokyonight")
 -- vim.cmd("colorscheme gruvbox")
--- vim.cmd("colorscheme catppuccin-frappe")
-vim.cmd("colorscheme oxocarbon")
+vim.cmd("colorscheme catppuccin-mocha")
+-- vim.cmd("colorscheme oxocarbon")
+-- vim.cmd("colorscheme ashen")
 -- vim.cmd("colorscheme rose-pine")
 -- vim.cmd("colorscheme default")
