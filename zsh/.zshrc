@@ -9,6 +9,7 @@ export PATH=$HOME/bin:$HOME/.local/bin:$HOME/.local/share/gem/ruby/3.4.0/bin/:/u
 ZSH=/usr/share/oh-my-zsh/
 
 alias so='source ~/.zshrc'
+alias e='nvim'
 alias ff='clear && fastfetch'
 alias cl='clear'
 alias init-vksdk='source ~/scripts/init-vksdk.sh'
@@ -22,11 +23,11 @@ alias bin='~/scripts/./bin.bash'
 alias pd='~/scripts/./pd.bash'
 alias scd='cd $(fzf --walker=dir,hidden,follow --walker-root=/home/asrwx)'
 
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 # ZSH_THEME="kafeitu"
 # ZSH_THEME="kphoen"
 # ZSH_THEME="gianu"
-# ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(git)
 
