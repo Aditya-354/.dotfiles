@@ -410,6 +410,7 @@ vim.pack.add({
 	"https://github.com/mason-org/mason.nvim",
   "https://github.com/nyoom-engineering/oxocarbon.nvim",
   "https://github.com/oskarnurm/koda.nvim",
+  "https://github.com/EdenEast/nightfox.nvim",
   "https://github.com/ficd0/ashen.nvim",
 	"https://github.com/creativenull/efmls-configs-nvim",
 	{
@@ -482,6 +483,7 @@ packadd("netrw.nvim")
 packadd("fzf-lua")
 packadd("strudel.nvim")
 packadd("tokyonight.nvim")
+packadd("nightfox.nvim")
 packadd("oxocarbon.nvim")
 packadd("koda.nvim")
 packadd("ashen.nvim")
@@ -1199,8 +1201,8 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 -- vim.cmd("colorscheme tokyonight")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme catppuccin-mocha")
-vim.cmd("colorscheme koda-dark")
+-- vim.cmd("colorscheme koda-dark")
 -- vim.cmd("colorscheme oxocarbon")
--- vim.cmd("colorscheme ashen")
+vim.cmd("colorscheme ashen")
 -- vim.cmd("colorscheme rose-pine")
 -- vim.cmd("colorscheme default")
