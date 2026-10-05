@@ -1203,6 +1203,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 -- vim.cmd("colorscheme catppuccin-mocha")
 -- vim.cmd("colorscheme koda-dark")
 -- vim.cmd("colorscheme oxocarbon")
-vim.cmd("colorscheme ashen")
--- vim.cmd("colorscheme rose-pine")
+-- vim.cmd("colorscheme ashen")
+vim.cmd("colorscheme rose-pine")
 -- vim.cmd("colorscheme default")
