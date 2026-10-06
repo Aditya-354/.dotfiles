@@ -410,6 +410,7 @@ vim.pack.add({
 	"https://github.com/mason-org/mason.nvim",
   "https://github.com/nyoom-engineering/oxocarbon.nvim",
   "https://github.com/oskarnurm/koda.nvim",
+  "https://github.com/navarasu/onedark.nvim",
   "https://github.com/EdenEast/nightfox.nvim",
   "https://github.com/ficd0/ashen.nvim",
 	"https://github.com/creativenull/efmls-configs-nvim",
@@ -423,7 +424,8 @@ vim.pack.add({
 vim.pack.add { { src = "https://github.com/catppuccin/nvim", name = "catppuccin" } }
 
 vim.pack.add({
-  "https://github.com/ellisonleao/gruvbox.nvim",
+    "https://github.com/sainnhe/sonokai",
+    "https://github.com/ellisonleao/gruvbox.nvim",
 })
 
 vim.pack.add({
@@ -485,6 +487,7 @@ packadd("strudel.nvim")
 packadd("tokyonight.nvim")
 packadd("nightfox.nvim")
 packadd("oxocarbon.nvim")
+packadd("onedark.nvim")
 packadd("koda.nvim")
 packadd("ashen.nvim")
 packadd("nvim-lspconfig")
@@ -985,6 +988,7 @@ require("rosepineCS")
 require("tokyonightCS")
 require("gruvboxCS")
 require("kodaCS")
+require("onedarkCS")
 require("lualineSL")
 require("imagerenderer")
 -- require("ibl").setup()
@@ -1076,6 +1080,36 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "oxocarbon",
+    callback = function()
+        local hl_groups = {
+            "Normal",
+            "NormalFloat",
+            "SignColumn",
+            "NormalNC", -- background for non-current windows
+            "EndOfBuffer",
+            "MsgArea",
+            "FloatBorder",
+            "StatusLine",
+            "StatusLineNC",
+            "ColorColumn",
+            "TabLine",
+            "TabLineFill",
+            "TabLineSel",
+            "LineNr",
+            "Cursor",
+            "CursorLine",
+            "CursorLineNr",
+        }
+        for _, group in ipairs(hl_groups) do
+            vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+        end
+            vim.api.nvim_set_hl(0, "Comment", { fg = "#9d858f" })
+            vim.api.nvim_set_hl(0, "@comment", { link = "Comment" })
+    end,
+})
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "sonokai",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -1204,5 +1238,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 -- vim.cmd("colorscheme koda-dark")
 -- vim.cmd("colorscheme oxocarbon")
 -- vim.cmd("colorscheme ashen")
-vim.cmd("colorscheme rose-pine")
+-- vim.cmd("colorscheme rose-pine")
+vim.cmd("colorscheme onedark")
 -- vim.cmd("colorscheme default")
