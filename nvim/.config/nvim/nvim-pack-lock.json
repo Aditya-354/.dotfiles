@@ -25,9 +25,9 @@
       "rev": "8d82c240f190fc33723d48c308ccc1ed8baad69d",
       "src": "https://www.github.com/lewis6991/gitsigns.nvim"
     },
-    "greeter.nvim": {
-      "rev": "a2ba2e037b81c4848d6fe892c43b9aee398de1d1",
-      "src": "/home/asrwx/plugins/greeter.nvim"
+    "gruvbox-material": {
+      "rev": "11d779b26a9ab2b3db8c22c6ac9fb6e8ed4fea79",
+      "src": "https://github.com/sainnhe/gruvbox-material"
     },
     "gruvbox.nvim": {
       "rev": "154eb5ff5b96d0641307113fa385eaf0d36d9796",
