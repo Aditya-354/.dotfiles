@@ -509,4 +509,4 @@ vim.g.gruvbox_material_enable_bold = 0
 vim.g.gruvbox_material_enable_italic = 1
 vim.g.gruvbox_material_transparent_background = 0
 
-vim.cmd("colorscheme gruvbox-material")
+vim.cmd("colorscheme catppuccin-frappe")
