@@ -499,6 +499,7 @@ require("tokyonightCS")
 require("gruvboxCS")
 require("kodaCS")
 require("onedarkCS")
+require("catppuccinCS")
 require("lualineSL")
 require("imagerenderer")
 
