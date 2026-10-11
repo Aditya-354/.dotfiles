@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "adwaita.nvim": {
+      "rev": "c607954f7b2cf56b24e921db0dab4749f3430a22",
+      "src": "https://github.com/Mofiqul/adwaita.nvim"
+    },
     "ashen.nvim": {
       "rev": "bfb04bd50b69d863469b2deb9fb361cf0d945ba7",
       "src": "https://github.com/ficd0/ashen.nvim"
@@ -13,9 +17,17 @@
       "rev": "edefef779ab08ce1a4a404713e3012b0d202bd35",
       "src": "https://github.com/catppuccin/nvim"
     },
+    "dracula.nvim": {
+      "rev": "ae752c13e95fb7c5f58da4b5123cb804ea7568ee",
+      "src": "https://github.com/Mofiqul/dracula.nvim"
+    },
     "efmls-configs-nvim": {
       "rev": "5dc52088c231f2721f545570fcb541b04802ce6b",
       "src": "https://github.com/creativenull/efmls-configs-nvim"
+    },
+    "everforest": {
+      "rev": "85a86eb62409e3ec88713bff3d1b9d7374e112e4",
+      "src": "https://github.com/sainnhe/everforest"
     },
     "fzf-lua": {
       "rev": "eee072d89ccdc0a4627bf67d0757d2e4981c7292",

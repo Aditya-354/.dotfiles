@@ -21,8 +21,10 @@ vim.pack.add({
 	"https://github.com/mason-org/mason.nvim",
   "https://github.com/nyoom-engineering/oxocarbon.nvim",
   "https://github.com/oskarnurm/koda.nvim",
+  "https://github.com/Mofiqul/dracula.nvim",
   "https://github.com/navarasu/onedark.nvim",
   "https://github.com/EdenEast/nightfox.nvim",
+  "https://github.com/Mofiqul/adwaita.nvim",
   "https://github.com/ficd0/ashen.nvim",
 	"https://github.com/creativenull/efmls-configs-nvim",
 	{
@@ -35,6 +37,7 @@ vim.pack.add({
 vim.pack.add { { src = "https://github.com/catppuccin/nvim", name = "catppuccin" } }
 
 vim.pack.add({
+    "https://github.com/sainnhe/everforest",
     "https://github.com/sainnhe/gruvbox-material",
     "https://github.com/sainnhe/sonokai",
     "https://github.com/ellisonleao/gruvbox.nvim",
@@ -94,6 +97,8 @@ packadd("tokyonight.nvim")
 packadd("nightfox.nvim")
 packadd("oxocarbon.nvim")
 packadd("onedark.nvim")
+packadd("dracula.nvim")
+packadd("adwaita.nvim")
 packadd("koda.nvim")
 packadd("ashen.nvim")
 packadd("nvim-lspconfig")
@@ -510,4 +515,7 @@ vim.g.gruvbox_material_enable_bold = 0
 vim.g.gruvbox_material_enable_italic = 1
 vim.g.gruvbox_material_transparent_background = 0
 
-vim.cmd("colorscheme ashen")
+vim.g.everforest_disable_italic_comment = 1
+vim.g.everforest_transparent_background = 2
+
+vim.cmd("colorscheme retrobox")
