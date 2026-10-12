@@ -23,6 +23,7 @@ vim.pack.add({
   "https://github.com/oskarnurm/koda.nvim",
   "https://github.com/Mofiqul/dracula.nvim",
   "https://github.com/navarasu/onedark.nvim",
+  "https://github.com/vague-theme/vague.nvim",
   "https://github.com/tiagovla/tokyodark.nvim",
   "https://github.com/EdenEast/nightfox.nvim",
   "https://github.com/Mofiqul/adwaita.nvim",
@@ -103,6 +104,7 @@ packadd("dracula.nvim")
 packadd("adwaita.nvim")
 packadd("tokyodark.nvim")
 packadd("koda.nvim")
+packadd("vague.nvim")
 packadd("ashen.nvim")
 packadd("nvim-lspconfig")
 -- packadd("indent-blankline.nvim")
@@ -510,15 +512,16 @@ require("onedarkCS")
 require("catppuccinCS")
 require("lualineSL")
 require("imagerenderer")
+require("vagueCS")
 
 vim.g.gruvbox_material_background = "hard"
-vim.g.gruvbox_material_foreground = "mix"
+vim.g.gruvbox_material_foreground = "material"
 vim.g.gruvbox_material_disable_italic_comment = 0
 vim.g.gruvbox_material_enable_bold = 0
 vim.g.gruvbox_material_enable_italic = 1
-vim.g.gruvbox_material_transparent_background = 0
+vim.g.gruvbox_material_transparent_background = 2
 
 vim.g.everforest_disable_italic_comment = 1
 vim.g.everforest_transparent_background = 0
 
-vim.cmd("colorscheme melange")
+vim.cmd("colorscheme gruvbox-material")
