@@ -514,4 +514,4 @@ vim.g.zenbones_solid_line_nr = false
 vim.g.zenbones_transparent_background = true
 vim.g.zenwritten_transparent_background = true
 
-vim.cmd("colorscheme zenwritten")
+vim.cmd("colorscheme zenbones")

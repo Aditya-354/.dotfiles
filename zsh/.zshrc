@@ -8,9 +8,8 @@ fi
 export PATH=$HOME/bin:$HOME/.local/bin:$HOME/.local/share/gem/ruby/3.4.0/bin/:/usr/local/bin:$PATH
 ZSH=/usr/share/oh-my-zsh/
 
-alias so='source ~/.zshrc'
 alias e='nvim'
-alias ff='clear && fastfetch'
+alias fetch='fastfetch'
 alias cl='clear'
 alias init-vksdk='source ~/scripts/init-vksdk.sh'
 alias cls='colorls'
