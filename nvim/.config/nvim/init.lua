@@ -26,6 +26,10 @@ vim.pack.add({
   "https://github.com/vague-theme/vague.nvim",
   "https://github.com/tiagovla/tokyodark.nvim",
   "https://github.com/EdenEast/nightfox.nvim",
+  "https://github.com/zenbones-theme/zenbones.nvim",
+  "https://github.com/mellow-theme/mellow.nvim",
+  "https://github.com/dgox16/oldworld.nvim",
+  "https://github.com/rktjmp/lush.nvim",
   "https://github.com/Mofiqul/adwaita.nvim",
   "https://github.com/ficd0/ashen.nvim",
 	"https://github.com/creativenull/efmls-configs-nvim",
@@ -104,7 +108,11 @@ packadd("dracula.nvim")
 packadd("adwaita.nvim")
 packadd("tokyodark.nvim")
 packadd("koda.nvim")
+packadd("zenbones.nvim")
+packadd("oldworld.nvim")
+packadd("mellow.nvim")
 packadd("vague.nvim")
+packadd("lush.nvim")
 packadd("ashen.nvim")
 packadd("nvim-lspconfig")
 -- packadd("indent-blankline.nvim")
@@ -362,25 +370,25 @@ vim.keymap.set("n", "<leader>q", function()
 end, { desc = "Open diagnostic list" })
 vim.keymap.set("n", "<leader>dl", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
 
-require("blink.cmp").setup({
-	keymap = {
-		preset = "none",
-		["<C-Space>"] = { "show", "hide" },
-		["<CR>"] = { "accept", "fallback" },
-		["<C-j>"] = { "select_next", "fallback" },
-		["<C-k>"] = { "select_prev", "fallback" },
-		["<Tab>"] = { "snippet_forward", "fallback" },
-		["<S-Tab>"] = { "snippet_backward", "fallback" },
-	},
-	appearance = { nerd_font_variant = "mono" },
-	completion = { menu = { auto_show = true } },
-	sources = { default = { "lsp", "path", "buffer", "snippets" } },
-
-	fuzzy = {
-		implementation = "prefer_rust",
-		prebuilt_binaries = { download = true },
-	},
-})
+-- require("blink.cmp").setup({
+-- 	keymap = {
+-- 		preset = "none",
+-- 		["<C-Space>"] = { "show", "hide" },
+-- 		["<CR>"] = { "accept", "fallback" },
+-- 		["<C-j>"] = { "select_next", "fallback" },
+-- 		["<C-k>"] = { "select_prev", "fallback" },
+-- 		["<Tab>"] = { "snippet_forward", "fallback" },
+-- 		["<S-Tab>"] = { "snippet_backward", "fallback" },
+-- 	},
+-- 	appearance = { nerd_font_variant = "mono" },
+-- 	completion = { menu = { auto_show = true } },
+-- 	sources = { default = { "lsp", "path", "buffer", "snippets" } },
+--
+-- 	fuzzy = {
+-- 		implementation = "prefer_rust",
+-- 		prebuilt_binaries = { download = true },
+-- 	},
+-- })
 
 vim.lsp.config["*"] = {
 	capabilities = require("blink.cmp").get_lsp_capabilities(),
@@ -524,4 +532,10 @@ vim.g.gruvbox_material_transparent_background = 2
 vim.g.everforest_disable_italic_comment = 1
 vim.g.everforest_transparent_background = 0
 
-vim.cmd("colorscheme gruvbox-material")
+vim.g.zenbones_solid_line_nr = false
+vim.g.zenbones_transparent_background = true
+vim.g.zenwritten_transparent_background = true
+
+vim.g.mellow_transparent = true
+
+vim.cmd("colorscheme zenwritten")

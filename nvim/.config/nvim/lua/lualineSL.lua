@@ -1,12 +1,17 @@
 local lualine = require("lualine")
+local transparent_theme = require("lualine.themes.auto")
+
+transparent_theme.normal.c.bg = 'NONE'
+transparent_theme.inactive.c.bg = 'NONE'
+
 lualine.setup({
     options = {
         icons_enabled = true,
-        theme = 'auto',
-        component_separators = { left = '', right = ''},
-        section_separators = { left = '', right = ''},
-        -- component_separators = { left = '', right = '' },
-        -- section_separators = { left = '', right = '' };
+        theme = transparent_theme,
+        -- component_separators = { left = '', right = ''},
+        -- section_separators = { left = '', right = ''},
+        component_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' };
         disabled_filetypes = {
             statusline = {},
             winbar = {},
