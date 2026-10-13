@@ -20,18 +20,11 @@ vim.pack.add({
   "https://github.com/folke/tokyonight.nvim",
 	"https://github.com/mason-org/mason.nvim",
   "https://github.com/nyoom-engineering/oxocarbon.nvim",
-  "https://github.com/oskarnurm/koda.nvim",
-  "https://github.com/Mofiqul/dracula.nvim",
   "https://github.com/navarasu/onedark.nvim",
-  "https://github.com/vague-theme/vague.nvim",
-  "https://github.com/tiagovla/tokyodark.nvim",
   "https://github.com/EdenEast/nightfox.nvim",
   "https://github.com/zenbones-theme/zenbones.nvim",
-  "https://github.com/mellow-theme/mellow.nvim",
-  "https://github.com/dgox16/oldworld.nvim",
   "https://github.com/rktjmp/lush.nvim",
   "https://github.com/Mofiqul/adwaita.nvim",
-  "https://github.com/ficd0/ashen.nvim",
 	"https://github.com/creativenull/efmls-configs-nvim",
 	{
 		src = "https://github.com/saghen/blink.cmp",
@@ -43,10 +36,7 @@ vim.pack.add({
 vim.pack.add { { src = "https://github.com/catppuccin/nvim", name = "catppuccin" } }
 
 vim.pack.add({
-    "https://github.com/savq/melange-nvim",
-    "https://github.com/sainnhe/everforest",
     "https://github.com/sainnhe/gruvbox-material",
-    "https://github.com/sainnhe/sonokai",
     "https://github.com/ellisonleao/gruvbox.nvim",
 })
 
@@ -104,16 +94,9 @@ packadd("tokyonight.nvim")
 packadd("nightfox.nvim")
 packadd("oxocarbon.nvim")
 packadd("onedark.nvim")
-packadd("dracula.nvim")
 packadd("adwaita.nvim")
-packadd("tokyodark.nvim")
-packadd("koda.nvim")
 packadd("zenbones.nvim")
-packadd("oldworld.nvim")
-packadd("mellow.nvim")
-packadd("vague.nvim")
 packadd("lush.nvim")
-packadd("ashen.nvim")
 packadd("nvim-lspconfig")
 -- packadd("indent-blankline.nvim")
 packadd("mason.nvim")
@@ -515,12 +498,10 @@ require("netrwicons")
 require("rosepineCS")
 require("tokyonightCS")
 require("gruvboxCS")
-require("kodaCS")
 require("onedarkCS")
 require("catppuccinCS")
 require("lualineSL")
 require("imagerenderer")
-require("vagueCS")
 
 vim.g.gruvbox_material_background = "hard"
 vim.g.gruvbox_material_foreground = "material"
@@ -529,13 +510,8 @@ vim.g.gruvbox_material_enable_bold = 0
 vim.g.gruvbox_material_enable_italic = 1
 vim.g.gruvbox_material_transparent_background = 2
 
-vim.g.everforest_disable_italic_comment = 1
-vim.g.everforest_transparent_background = 0
-
 vim.g.zenbones_solid_line_nr = false
 vim.g.zenbones_transparent_background = true
 vim.g.zenwritten_transparent_background = true
-
-vim.g.mellow_transparent = true
 
 vim.cmd("colorscheme zenwritten")

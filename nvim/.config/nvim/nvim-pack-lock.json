@@ -4,10 +4,6 @@
       "rev": "c607954f7b2cf56b24e921db0dab4749f3430a22",
       "src": "https://github.com/Mofiqul/adwaita.nvim"
     },
-    "ashen.nvim": {
-      "rev": "bfb04bd50b69d863469b2deb9fb361cf0d945ba7",
-      "src": "https://github.com/ficd0/ashen.nvim"
-    },
     "blink.cmp": {
       "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
       "src": "https://github.com/saghen/blink.cmp",
@@ -17,17 +13,9 @@
       "rev": "edefef779ab08ce1a4a404713e3012b0d202bd35",
       "src": "https://github.com/catppuccin/nvim"
     },
-    "dracula.nvim": {
-      "rev": "ae752c13e95fb7c5f58da4b5123cb804ea7568ee",
-      "src": "https://github.com/Mofiqul/dracula.nvim"
-    },
     "efmls-configs-nvim": {
       "rev": "5dc52088c231f2721f545570fcb541b04802ce6b",
       "src": "https://github.com/creativenull/efmls-configs-nvim"
-    },
-    "everforest": {
-      "rev": "85a86eb62409e3ec88713bff3d1b9d7374e112e4",
-      "src": "https://github.com/sainnhe/everforest"
     },
     "fzf-lua": {
       "rev": "eee072d89ccdc0a4627bf67d0757d2e4981c7292",
@@ -49,10 +37,6 @@
       "rev": "88351f1f7d9dbae286e671ce3690a49660dd8a5c",
       "src": "https://github.com/3rd/image.nvim"
     },
-    "koda.nvim": {
-      "rev": "25a5c98ca2f6bb0b69f5e2654a78f0d7c7e0721d",
-      "src": "https://github.com/oskarnurm/koda.nvim"
-    },
     "lualine.nvim": {
       "rev": "a905eeebc4e63fdc48b5135d3bf8aea5618fb21c",
       "src": "https://github.com/nvim-lualine/lualine.nvim"
@@ -64,14 +48,6 @@
     "mason.nvim": {
       "rev": "b03fb0f20bc1d43daf558cda981a2be22e73ac42",
       "src": "https://github.com/mason-org/mason.nvim"
-    },
-    "melange-nvim": {
-      "rev": "ce42f6b629beeaa00591ba73a77d3eeac4cf28ce",
-      "src": "https://github.com/savq/melange-nvim"
-    },
-    "mellow.nvim": {
-      "rev": "6273b7f0ddf6ac2b75021b3bc0bd8b3305cfeef1",
-      "src": "https://github.com/mellow-theme/mellow.nvim"
     },
     "neo-tree.nvim": {
       "rev": "83e7a2982fd12b9c3d35bc39dd5877cd91a02a61",
@@ -102,10 +78,6 @@
       "rev": "dad71387de386a946b123079d0e53f23028f3abd",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
-    "oldworld.nvim": {
-      "rev": "db072a0bd2c90035fc3a57a73014cb54d3902f1f",
-      "src": "https://github.com/dgox16/oldworld.nvim"
-    },
     "onedark.nvim": {
       "rev": "df4792accde9db0043121f32628bcf8e645d9aea",
       "src": "https://github.com/navarasu/onedark.nvim"
@@ -126,25 +98,13 @@
       "rev": "ff483051a47e27d84bdef47703538df1ed9f4a47",
       "src": "https://github.com/rose-pine/neovim"
     },
-    "sonokai": {
-      "rev": "b023c5280b16fe2366f5e779d8d2756b3e5ee9c3",
-      "src": "https://github.com/sainnhe/sonokai"
-    },
     "strudel.nvim": {
       "rev": "3a7e62c9048a318281328ad08d6269e50b884cd3",
       "src": "https://github.com/gruvw/strudel.nvim.git"
     },
-    "tokyodark.nvim": {
-      "rev": "659aff3c73dc2e0159314050a81671f0b2eaad01",
-      "src": "https://github.com/tiagovla/tokyodark.nvim"
-    },
     "tokyonight.nvim": {
       "rev": "cdc07ac78467a233fd62c493de29a17e0cf2b2b6",
       "src": "https://github.com/folke/tokyonight.nvim"
-    },
-    "vague.nvim": {
-      "rev": "73f8aaa866bf3d14dd0b0ab9e48c11794c1cb7ab",
-      "src": "https://github.com/vague-theme/vague.nvim"
     },
     "zenbones.nvim": {
       "rev": "8304d8df9b823ff11e103afa62f38c39f534abe6",
