@@ -2,7 +2,15 @@ local lualine = require("lualine")
 local transparent_theme = require("lualine.themes.auto")
 
 transparent_theme.normal.c.bg = 'NONE'
-transparent_theme.inactive.c.bg = 'NONE'
+transparent_theme.normal.c.fg = 'NONE'
+transparent_theme.insert.c.bg = 'NONE'
+transparent_theme.insert.c.fg = 'NONE'
+transparent_theme.command.c.bg = 'NONE'
+transparent_theme.command.c.fg = 'NONE'
+transparent_theme.replace.c.fg = 'NONE'
+transparent_theme.visual.c.bg = 'NONE'
+transparent_theme.visual.c.fg = 'NONE'
+-- transparent_theme.inactive.c.bg = 'NONE'
 
 lualine.setup({
     options = {
