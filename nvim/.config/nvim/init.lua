@@ -523,5 +523,5 @@ if string.find(term, "ghostty") or term_program == "ghostty" then
 elseif is_kitty then
     vim.cmd("colorscheme gruvbox-material")
 else
-    pcall(vim.cmd, "colorscheme default")
+    pcall(vim.cmd, "colorscheme rose-pine-moon")
 end
