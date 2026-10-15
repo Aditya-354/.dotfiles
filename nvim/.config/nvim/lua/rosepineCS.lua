@@ -14,7 +14,7 @@ rosepine.setup({
     styles = {
         bold = false,
         italic = false,
-        transparency = false,
+        transparency = true,
     },
 
     groups = {
@@ -60,6 +60,7 @@ rosepine.setup({
 	-- per group via `inherit = false`
     highlight_groups = {
         -- Comment = { fg = "foam" },
+        -- ["@type.builtin"] = { fg = "love" },
         -- StatusLine = { fg = "love", bg = "love", blend = 15 },
         -- VertSplit = { fg = "muted", bg = "muted" },
         -- Visual = { fg = "base", bg = "text", inherit = false },

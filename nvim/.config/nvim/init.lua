@@ -469,7 +469,7 @@ vim.lsp.enable({
 	"gopls",
 	"clangd",
   "rust_analyzer",
-	-- "efm",
+	"efm",
 })
 
 -- =============================================================================================
@@ -514,4 +514,14 @@ vim.g.zenbones_solid_line_nr = false
 vim.g.zenbones_transparent_background = true
 vim.g.zenwritten_transparent_background = true
 
-vim.cmd("colorscheme zenbones")
+local term = os.getenv("TERM") or ""
+local term_program = os.getenv("TERM_PROGRAM") or ""
+local is_kitty = os.getenv("KITTY_WINDOW_ID") ~= nil
+
+if string.find(term, "ghostty") or term_program == "ghostty" then
+    vim.cmd("colorscheme rose-pine-moon")
+elseif is_kitty then
+    vim.cmd("colorscheme gruvbox-material")
+else
+    pcall(vim.cmd, "colorscheme default")
+end
