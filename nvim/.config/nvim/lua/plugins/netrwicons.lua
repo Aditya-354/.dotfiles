@@ -1,3 +1,7 @@
+vim.pack.add({
+    "https://github.com/prichrd/netrw.nvim",
+})
+
 local netrw = require("netrw")
 
 netrw.setup({

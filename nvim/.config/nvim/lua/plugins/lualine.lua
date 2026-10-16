@@ -1,26 +1,13 @@
-local lualine = require("lualine")
-local transparent_theme = require("lualine.themes.auto")
+vim.pack.add({
+    "https://github.com/nvim-lualine/lualine.nvim",
+})
 
-transparent_theme.normal.c.bg = 'NONE'
-transparent_theme.normal.c.fg = 'NONE'
-transparent_theme.insert.c.bg = 'NONE'
-transparent_theme.insert.c.fg = 'NONE'
-transparent_theme.command.c.bg = 'NONE'
-transparent_theme.command.c.fg = 'NONE'
-transparent_theme.replace.c.fg = 'NONE'
-transparent_theme.visual.c.bg = 'NONE'
-transparent_theme.visual.c.fg = 'NONE'
--- transparent_theme.inactive.c.bg = 'NONE'
-
-lualine.setup({
+require('lualine').setup {
     options = {
         icons_enabled = true,
-        -- theme = transparent_theme,
         theme = 'auto',
-        -- component_separators = { left = '', right = ''},
-        -- section_separators = { left = '', right = ''},
-        component_separators = { left = '', right = '' },
-        section_separators = { left = '', right = '' };
+        component_separators = { left = '', right = ''},
+        section_separators = { left = '', right = ''},
         disabled_filetypes = {
             statusline = {},
             winbar = {},
@@ -68,6 +55,4 @@ lualine.setup({
     winbar = {},
     inactive_winbar = {},
     extensions = {}
-})
-
-return lualine
+}

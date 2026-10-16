@@ -1,27 +1,22 @@
 vim.opt.termguicolors = true
-
--- ============================================================================
--- OPTIONS
--- ============================================================================
+vim.g.mapleader = " " -- space for leader
+vim.g.maplocalleader = " " -- space for localleader
 vim.opt.number = true -- line number
 vim.opt.relativenumber = true -- relative line numbers
 vim.opt.cursorline = true -- highlight current line
 vim.opt.wrap = false -- do not wrap lines by default
 vim.opt.scrolloff = 10 -- keep 20 lines above/below cursor
 vim.opt.sidescrolloff = 10 -- keep 10 lines to left/right of cursor
-
 vim.opt.tabstop = 2 -- tabwidth
 vim.opt.shiftwidth = 4 -- indent width
 vim.opt.softtabstop = 2 -- soft tab stop not tabs on tab/backspace
 vim.opt.expandtab = true -- use spaces instead of tabs
 vim.opt.smartindent = true -- smart auto-indent
 vim.opt.autoindent = true -- copy indent from current line
-
 vim.opt.ignorecase = true -- case insensitive search
 vim.opt.smartcase = true -- case sensitive if uppercase in string
 vim.opt.hlsearch = true -- highlight search matches
 vim.opt.incsearch = true -- show matches as you type
-
 vim.opt.signcolumn = "yes" -- always show a sign column
 -- vim.opt.colorcolumn = "100" -- show a column at 100 position chars
 -- vim.api.nvim_create_autocmd("ColorScheme", {
@@ -51,10 +46,8 @@ vim.opt.synmaxcol = 300 -- syntax highlighting limit
 -- vim.opt.fillchars = { eob = " " } -- hide "~" on empty lines
 
 local undodir = vim.fn.expand("~/.vim/undodir")
-if
-	vim.fn.isdirectory(undodir) == 0 -- create undodir if nonexistent
-then
-	vim.fn.mkdir(undodir, "p")
+if vim.fn.isdirectory(undodir) == 0 then
+	vim.fn.mkdir(undodir, "p") -- create undodir if it does not exist already
 end
 
 vim.opt.backup = false -- do not create a backup file
@@ -80,14 +73,14 @@ vim.opt.clipboard:append("unnamedplus") -- use system clipboard
 vim.opt.modifiable = true -- allow buffer modifications
 vim.opt.encoding = "utf-8" -- set encoding
 
-vim.opt.guicursor =
-	"n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50" -- a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175" -- cursor blinking and settings
+vim.opt.guicursor = "n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50"
+-- a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175" -- cursor blinking and settings
 
 -- Folding: requires treesitter available at runtime; safe fallback if not
 -- vim.opt.foldmethod = "expr" -- use expression for folding
 -- vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()" -- use treesitter for folding
 -- vim.opt.foldlevel = 99 -- start with all folds open
-vim.opt.foldenable = true
+vim.opt.foldenable = false
 
 vim.opt.splitbelow = true -- horizontal splits go below
 vim.opt.splitright = true -- vertical splits go right

@@ -1,6 +1,8 @@
--- Lua
-local onedark = require("onedark")
-onedark.setup  {
+vim.pack.add({
+    "https://github.com/navarasu/onedark.nvim",
+})
+
+require("onedark").setup  {
     -- Main options --
     style = 'warmer', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
     transparent = false,  -- Show/hide background
@@ -40,4 +42,4 @@ onedark.setup  {
     },
 }
 
-return onedark
+vim.cmd("colorscheme onedark")

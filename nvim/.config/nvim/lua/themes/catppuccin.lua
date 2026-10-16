@@ -1,5 +1,6 @@
-local catppuccin = require("catppuccin")
-catppuccin.setup({
+vim.pack.add { { src = "https://github.com/catppuccin/nvim", name = "catppuccin" } }
+
+require("catppuccin").setup({
     flavour = "auto", -- latte, frappe, macchiato, mocha
     background = { -- :h background
         light = "latte",
@@ -69,4 +70,5 @@ catppuccin.setup({
     },
 })
 
-return catppuccin
+-- vim.cmd("colorscheme catppuccin-frappe")
+vim.cmd("colorscheme catppuccin-mocha")
