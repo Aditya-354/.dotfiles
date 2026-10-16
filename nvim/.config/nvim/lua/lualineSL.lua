@@ -15,8 +15,8 @@ transparent_theme.visual.c.fg = 'NONE'
 lualine.setup({
     options = {
         icons_enabled = true,
-        theme = transparent_theme,
-        -- theme = 'auto',
+        -- theme = transparent_theme,
+        theme = 'auto',
         -- component_separators = { left = '', right = ''},
         -- section_separators = { left = '', right = ''},
         component_separators = { left = '', right = '' },
