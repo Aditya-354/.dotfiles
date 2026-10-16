@@ -3,19 +3,19 @@
 -----------------------
 hl.config({
     general = {
-        -- gaps_in  = 10,
-        -- gaps_out = 35,
-        gaps_in = 0,
-        gaps_out = 0,
+        gaps_in  = 10,
+        gaps_out = 35,
+        -- gaps_in = 0,
+        -- gaps_out = 0,
 
-        border_size = 0,
+        border_size = 1,
 
         col = {
             -- active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
             -- active_border = "rgba(1cdc51ff)",
-            -- active_border = "rgba(9999eeff)",
-            active_border = "rgba(ffffffff)",
-            inactive_border = "rgba(595959aa)",
+            active_border = "rgba(b9b9eeff)",
+            -- active_border = "rgba(ffffffff)",
+            -- inactive_border = "rgba(595959aa)",
         },
 
         resize_on_border = false,
@@ -23,10 +23,10 @@ hl.config({
     },
 
     decoration = {
-        -- rounding       = 4,
-        -- rounding_power = 8,
-        rounding = 0,
-        rounding_power = 0,
+        rounding       = 10,
+        rounding_power = 2,
+        -- rounding = 0,
+        -- rounding_power = 0,
 
         active_opacity   = 1.0,
         inactive_opacity = 1.0,
@@ -41,7 +41,7 @@ hl.config({
         blur = {
             enabled   = true,
             size      = 5,
-            passes    = 3,
+            passes    = 4,
             vibrancy  = 0.1696,
         },
     },

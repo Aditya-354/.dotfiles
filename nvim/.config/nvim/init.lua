@@ -519,9 +519,9 @@ local term_program = os.getenv("TERM_PROGRAM") or ""
 local is_kitty = os.getenv("KITTY_WINDOW_ID") ~= nil
 
 if string.find(term, "ghostty") or term_program == "ghostty" then
-    vim.cmd("colorscheme rose-pine-moon")
-elseif is_kitty then
     vim.cmd("colorscheme gruvbox-material")
+elseif is_kitty then
+    vim.cmd("colorscheme tokyonight")
 else
-    pcall(vim.cmd, "colorscheme rose-pine-moon")
+    pcall(vim.cmd, "colorscheme gruvbox-material")
 end

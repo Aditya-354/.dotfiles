@@ -271,10 +271,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
                 hl.bold = nil
                 vim.api.nvim_set_hl(0, group, hl)
             end
-            if hl.italic then
-                hl.italic = nil
-                vim.api.nvim_set_hl(0, group, hl)
-            end
         end
     end,
 })
