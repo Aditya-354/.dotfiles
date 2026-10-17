@@ -41,6 +41,30 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "*",
+  callback = function()
+    -- The main background fill for the entire tabline bar
+    vim.api.nvim_set_hl(0, "BufferTabpageFill", { bg = "none", ctermbg = "none" })
+
+    -- Inactive tabs and components
+    vim.api.nvim_set_hl(0, "BufferInactive", { bg = "none", ctermbg = "none" })
+    vim.api.nvim_set_hl(0, "BufferInactiveIndex", { bg = "none", ctermbg = "none" })
+    vim.api.nvim_set_hl(0, "BufferInactiveMod", { bg = "none", ctermbg = "none" })
+    vim.api.nvim_set_hl(0, "BufferInactiveSign", { bg = "none", ctermbg = "none" })
+    vim.api.nvim_set_hl(0, "BufferInactiveTarget", { bg = "none", ctermbg = "none" })
+
+    -- Visible but non-focused tabs (if using split windows)
+    -- vim.api.nvim_set_hl(0, "BufferVisible", { bg = "none", ctermbg = "none" })
+    -- vim.api.nvim_set_hl(0, "BufferVisibleIndex", { bg = "none", ctermbg = "none" })
+    -- vim.api.nvim_set_hl(0, "BufferVisibleMod", { bg = "none", ctermbg = "none" })
+    -- vim.api.nvim_set_hl(0, "BufferVisibleSign", { bg = "none", ctermbg = "none" })
+    -- vim.api.nvim_set_hl(0, "BufferVisibleTarget", { bg = "none", ctermbg = "none" })
+    -- Optional: If you want your currently active tab to be transparent too
+    -- vim.api.nvim_set_hl(0, "BufferCurrent", { bg = "none", ctermbg = "none" })
+  end,
+})
+
+vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "alabaster",
     callback = function()
         local hl_groups = {
