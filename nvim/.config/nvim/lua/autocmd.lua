@@ -92,19 +92,19 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
--- vim.api.nvim_create_autocmd("ColorScheme", {
---     pattern = "*",
---     callback = function()
---         vim.api.nvim_set_hl(0, "CursorLine", { bg = "none", ctermbg = "none" })
---         vim.api.nvim_set_hl(0, "TabLine", { bg = "none", ctermbg = "none" })
---         vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", ctermbg = "none" })
---         vim.api.nvim_set_hl(0, "SignColumn", { bg = "none", ctermbg = "none" })
---         vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none", ctermbg = "none" })
---         vim.api.nvim_set_hl(0, "Cursor", { bg = "none", ctermbg = "none" })
---         -- vim.api.nvim_set_hl(0, "StatusLine", { bg = "#3c3c5f", fg = "#ffffff" })
---         vim.api.nvim_set_hl(0, "StatusLine", { bg = "none", fg = "none" })
---     end,
--- })
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "*",
+    callback = function()
+        vim.api.nvim_set_hl(0, "CursorLine", { bg = "none", ctermbg = "none" })
+        vim.api.nvim_set_hl(0, "TabLine", { bg = "none", ctermbg = "none" })
+        vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", ctermbg = "none" })
+        vim.api.nvim_set_hl(0, "SignColumn", { bg = "none", ctermbg = "none" })
+        -- vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none", ctermbg = "none" })
+        vim.api.nvim_set_hl(0, "Cursor", { bg = "none", ctermbg = "none" })
+        -- vim.api.nvim_set_hl(0, "StatusLine", { bg = "#3c3c5f", fg = "#ffffff" })
+        vim.api.nvim_set_hl(0, "StatusLine", { bg = "none", fg = "none" })
+    end,
+})
 
 -- vim.api.nvim_create_autocmd("ColorScheme", {
 --     pattern = "oxocarbon",

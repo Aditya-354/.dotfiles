@@ -33,6 +33,8 @@ vim.diagnostic.config({
     },
 })
 
+local fzf_lua = require("fzf-lua")
+
 do
     local orig = vim.lsp.util.open_floating_preview
     function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
@@ -52,7 +54,7 @@ local function lsp_on_attach(ev)
     local opts = { noremap = true, silent = true, buffer = bufnr }
 
     vim.keymap.set("n", "<leader>gd", function()
-        require("fzf-lua").lsp_definitions({ jump1 = true })
+        fzf_lua.lsp_definitions({ jump1 = true })
     end, opts)
 
     vim.keymap.set("n", "<leader>gD", vim.lsp.buf.definition, opts)
@@ -82,22 +84,22 @@ local function lsp_on_attach(ev)
     vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 
     vim.keymap.set("n", "<leader>fd", function()
-        require("fzf-lua").lsp_definitions({ jump_to_single_result = true })
+        fzf_lua.lsp_definitions({ jump_to_single_result = true })
     end, opts)
     vim.keymap.set("n", "<leader>fr", function()
-        require("fzf-lua").lsp_references()
+        fzf_lua.lsp_references()
     end, opts)
     vim.keymap.set("n", "<leader>ft", function()
-        require("fzf-lua").lsp_typedefs()
+        fzf_lua.lsp_typedefs()
     end, opts)
     vim.keymap.set("n", "<leader>fs", function()
-        require("fzf-lua").lsp_document_symbols()
+        fzf_lua.lsp_document_symbols()
     end, opts)
     vim.keymap.set("n", "<leader>fw", function()
-        require("fzf-lua").lsp_workspace_symbols()
+        fzf_lua.lsp_workspace_symbols()
     end, opts)
     vim.keymap.set("n", "<leader>fi", function()
-        require("fzf-lua").lsp_implementations()
+        fzf_lua.lsp_implementations()
     end, opts)
 
     if client:supports_method("textDocument/codeAction", bufnr) then
@@ -165,25 +167,25 @@ vim.lsp.config("efm", {
     },
     init_options = { documentFormatting = true },
     settings = {
-        languages = {
-            c = { clangfmt, cpplint },
-            go = { gofumpt, go_revive },
-            cpp = { clangfmt, cpplint },
-            css = { prettier_d },
-            html = { prettier_d },
-            javascript = { eslint_d, prettier_d },
-            javascriptreact = { eslint_d, prettier_d },
-            json = { eslint_d, fixjson },
-            jsonc = { eslint_d, fixjson },
-            lua = { luacheck, stylua },
-            markdown = { prettier_d },
-            python = { flake8, black },
-            sh = { shellcheck, shfmt },
-            typescript = { eslint_d, prettier_d },
-            typescriptreact = { eslint_d, prettier_d },
-            vue = { eslint_d, prettier_d },
-            svelte = { eslint_d, prettier_d },
-        },
+        -- languages = {
+        --     c = { clangfmt, cpplint },
+        --     go = { gofumpt, go_revive },
+        --     cpp = { clangfmt, cpplint },
+        --     css = { prettier_d },
+        --     html = { prettier_d },
+        --     javascript = { eslint_d, prettier_d },
+        --     javascriptreact = { eslint_d, prettier_d },
+        --     json = { eslint_d, fixjson },
+        --     jsonc = { eslint_d, fixjson },
+        --     lua = { luacheck, stylua },
+        --     markdown = { prettier_d },
+        --     python = { flake8, black },
+        --     sh = { shellcheck, shfmt },
+        --     typescript = { eslint_d, prettier_d },
+        --     typescriptreact = { eslint_d, prettier_d },
+        --     vue = { eslint_d, prettier_d },
+        --     svelte = { eslint_d, prettier_d },
+        -- },
     },
 })
 

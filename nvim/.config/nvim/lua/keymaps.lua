@@ -33,8 +33,7 @@ map("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" })
 
 map("n", "<leader>tt", ":!date<CR>", { desc = "Display date and time" })
 
-map("n", "<leader>j", ":Ex<CR>", { desc = "Open neo-tree" })
-map("n", "<leader>F", ":Neotree toggle<CR>", { desc = "Open neo-tree" })
+map("n", "<leader>j", ":Ex<CR>", { desc = "Open netrw" })
 
 map("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
 map("n", "<C-j>", "<C-w>j", { desc = "Move to bottom window" })

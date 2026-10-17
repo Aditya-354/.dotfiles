@@ -1,4 +1,5 @@
 require("themes.tokyonight")
+-- require("themes.rosepine")
 -- require("themes.nightfox")
 -- require("themes.onedark")
 -- require("themes.catppuccin")
