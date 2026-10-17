@@ -1,5 +1,6 @@
 require("options")
 require("keymaps")
+require("autocmd")
 require("plugins.gitsigns")
 require("plugins.blink")
 require("plugins.fzf-lua")

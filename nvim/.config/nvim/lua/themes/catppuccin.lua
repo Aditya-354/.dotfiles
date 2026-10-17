@@ -6,9 +6,9 @@ require("catppuccin").setup({
         light = "latte",
         dark = "mocha",
     },
-    transparent_background = false, -- disables setting the background color.
+    transparent_background = true, -- disables setting the background color.
     float = {
-        transparent = false, -- enable transparent floating windows
+        transparent = true, -- enable transparent floating windows
         solid = false, -- use solid styling for floating windows, see |winborder|
     },
     term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
@@ -21,27 +21,27 @@ require("catppuccin").setup({
     no_bold = false, -- Force no bold
     no_underline = false, -- Force no underline
     styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
-        comments = { "italic" }, -- Change the style of comments
-        conditionals = { "italic" },
+        comments = {}, -- Change the style of comments
+        conditionals = {},
         loops = {},
         functions = {},
-        keywords = { "italic" },
+        keywords = {},
         strings = {},
         variables = {},
         numbers = {},
         booleans = {},
         properties = {},
-        types = { "italic" },
+        types = {},
         operators = {},
         -- miscs = {}, -- Uncomment to turn off hard-coded styles
     },
     lsp_styles = { -- Handles the style of specific lsp hl groups (see `:h lsp-highlight`).
         virtual_text = {
-            errors = { "italic" },
-            hints = { "italic" },
-            warnings = { "italic" },
-            information = { "italic" },
-            ok = { "italic" },
+            errors = {},
+            hints = {},
+            warnings = {},
+            information = {},
+            ok = {},
         },
         underlines = {
             errors = { "undercurl" },
@@ -70,5 +70,5 @@ require("catppuccin").setup({
     },
 })
 
--- vim.cmd("colorscheme catppuccin-frappe")
-vim.cmd("colorscheme catppuccin-mocha")
+vim.cmd("colorscheme catppuccin-frappe")
+-- vim.cmd("colorscheme catppuccin-mocha")
