@@ -70,5 +70,5 @@ require("catppuccin").setup({
     },
 })
 
-vim.cmd("colorscheme catppuccin-frappe")
--- vim.cmd("colorscheme catppuccin-mocha")
+-- vim.cmd("colorscheme catppuccin-frappe")
+vim.cmd("colorscheme catppuccin-mocha")
