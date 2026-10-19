@@ -37,13 +37,17 @@ hl.config({
             render_power = 3,
             color        = "0xee1a1a1a",
         },
-
         blur = {
-            enabled   = true,
-            passes    = 3,
-            size      = 3,
-            vibrancy  = 0.1696,
-            ignore_opacity = true,
+            enabled = false,
+            size = 6,               -- Kernel size (higher = larger blur spread)
+            passes = 3,             -- Number of blur passes (3 is the sweet spot for quality vs. GPU load)
+            new_optimizations = true,
+            xray = false,
+            noise = 0.0117,         -- Adds a subtle film/paper texture
+            contrast = 0.9116,
+            brightness = 0.8172,
+            vibrancy = 0.1696,
+            vibrancy_darkness = 0.0,
         },
     },
 
