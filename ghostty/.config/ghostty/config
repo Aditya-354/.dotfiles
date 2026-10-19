@@ -1,5 +1,29 @@
-# Typography
 font-family = JetBrains Mono Nerd Font
+font-size = 13
+font-style = Regular
+font-style-italic = false
+font-style-bold-italic = false
+window-padding-x = 0
+window-padding-y = 0
+theme = Catppuccin Mocha
+background-opacity = 0.85
+# background = #000000
+cursor-color = #ffffff
+cursor-text = #000000
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor   
+keybind = ctrl+backspace=text:\x17
+keybind = ctrl+|=new_split:right
+keybind = ctrl+z=close_surface
+async-backend = epoll
+
+# font-family-italic = "VictorMono Nerd Font"
+# font-style-italic = "Italic"
+# font-feature = -calt
+# font-thicken = true
+# adjust-cell-height = 20%
+# resize-overlay-duration = 4s 200ms
 # font-family = MesloLGS Nerd Font Mono
 # font-family = "BlexMono Nerd Font Mono"
 # font-family = FiraMono Nerd Font Mono
@@ -7,97 +31,3 @@ font-family = JetBrains Mono Nerd Font
 # font-family = CaskaydiaMono Nerd Font Mono
 # font-family = Maple Mono NF
 # font-family = "Iosevka NFM"
-font-size = 13
-# font-style = Regular
-# font-style-italic = false
-# font-style-bold-italic = false
-# font-family-italic = "VictorMono Nerd Font"
-# font-style-italic = "Italic"
-# font-feature = -calt
-# font-thicken = true
-# adjust-cell-height = 20%
-# adjust-cell-height = 40%
-# adjust-cell-height = 50%
-# adjust-cell-height = 55%
-
-# Aesthetics
-window-padding-x = 0
-window-padding-y = 0
-# theme = Dracula
-# theme = Catppuccin Frappe
-# theme = Catppuccin Mocha
-# theme = Catppuccin Macchiato
-# theme = Adwaita Dark
-# theme = Blue Berry Pie
-# theme = Oxocarbon
-theme = TokyoNight Night
-# theme = Calamity
-# theme = Rapture
-# theme = Zenwritten Dark
-# theme = Matte Black
-# theme = Selenized Black
-# theme = Cursor Dark
-# theme = Rose Pine
-# theme = Dark Modern
-# theme = Midnight In Mojave
-# theme = Modus Vivendi Tinted
-# theme = iTerm2 Solarized Dark
-# theme = Gruber Darker
-# theme = Solarized Osaka Night
-# theme = Solarized Dark Higher Contrast
-# theme = Mellow
-# theme = GitHub Dark Dimmed
-# theme = Belafonte Night
-# theme = Vercel
-# theme = Gruvbox Dark
-# theme = noctalia
-# theme = Terafox
-# theme = Nordfox
-# theme = Citruszest
-# theme = Gruvbox Material
-# theme = Brogrammer
-# theme = Vague
-# theme = Black Metal (Gorgoroth)
-# theme = Dimmed Monokai
-# theme = Sonokai
-# theme = Chalk
-# theme = Afterglow
-# theme = Flexoki Dark
-# theme = Monokai Classic
-# theme = Banana Blueberry
-# theme = Everforest Dark Hard
-# theme = Gruvbox Dark Hard
-# theme = Atom One Dark
-# theme = 3024 Night
-# theme = Jellybeans
-# theme = Nord
-# theme = Cyberpunk Scarlet Protocol
-background-opacity = 0.90
-# background-opacity = 1
-# background-blur = 20
-# background = #301515
-# background = #171717
-# background = #300710
-# background = #000000
-# background = #2c343a
-# background = #100c05
-# background = #000000
-# background = #050c10
-# background = #121212
-# background = #1a1a1a
-# background = #2a2a2a
-# background = #101010
-
-# Feature config
-cursor-color = #ffffff
-cursor-text = #000000
-cursor-style = block
-cursor-style-blink = false
-# custom-shader = cursor_animation.glsl
-shell-integration-features = no-cursor   
-keybind = ctrl+backspace=text:\x17
-# resize-overlay-duration = 4s 200ms
-keybind = ctrl+|=new_split:right
-keybind = ctrl+z=close_surface
-
-async-backend = epoll
