@@ -19,7 +19,7 @@ alias gdc='git add . && git commit -m "." && git push'
 alias pd='~/scripts/./pd.bash'
 alias scd='cd $(fzf --walker=dir,hidden,follow --walker-root=/home/asrwx)'
 
-PS1='\[\e[33m\]\u@\h: \[\e[34m\]\W \[\e[0m\]$ '
+# PS1='\[\e[33m\]\u@\h: \[\e[34m\]\W \[\e[0m\]$ '
 # PS1='󰣇 \[\e[34m\]\w \[\e[0m\]$ '
 #➜  ➜
 export PATH="$PATH:~/.cargo/bin"
@@ -42,4 +42,4 @@ source /usr/share/nvm/init-nvm.sh
 # eval "$(oh-my-posh init bash --config emodipt-extend)"
 
 # source ~/.bash/themes/aphrodite/aphrodite.theme.sh
-# eval "$(starship init bash)"
+eval "$(starship init bash)"
