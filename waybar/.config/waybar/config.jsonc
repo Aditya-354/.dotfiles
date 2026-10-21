@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "bottom",
-    "modules-left": ["hyprland/workspaces", "hyprland/window", "hyprland/submap"],
+    "modules-left": ["niri/workspaces", "hyprland/workspaces", "hyprland/window", "hyprland/submap"],
     "modules-center": ["clock"],
     "modules-right": ["group/media", "group/volume", "battery", "bluetooth", "network", "cpu", "memory"],
     "hyprland/workspaces": {
@@ -53,9 +53,9 @@
     },
     "network": {
         "format": "",
-        "format-wifi": "",
-        "format-ethernet": "",
-        "format-disconnected": "󰤭", //An empty format will hide the module.
+        "format-wifi": " ",
+        "format-ethernet": " ",
+        "format-disconnected": "󰤭 ", //An empty format will hide the module.
         "tooltip-format": "{ifname} via {gwaddr} 󰊗",
         "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
         "tooltip-format-ethernet": "{ifname} ",
@@ -120,5 +120,9 @@
         "escape": true,
         "interval": 1,
         "tooltip": false,
+    },
+
+    "niri/workspaces": {
+        "format": "{index}",
     },
 }

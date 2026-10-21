@@ -114,7 +114,7 @@ output "eDP-1" {
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 15
+    gaps 21
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -184,9 +184,9 @@ layout {
         // If you enable the border, you probably want to disable the focus ring.
         on
 
-        width 0
-        active-color "#999999"
-        inactive-color "#505050"
+        width 2
+        active-color "#88c0d0"
+        // inactive-color "#505050"
 
         // Color of the border around windows that request your attention.
         urgent-color "#9b0000"
@@ -242,11 +242,18 @@ layout {
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
     // layer-shell panels and regular gaps.
     struts {
-        // left 64
-        // right 64
-        top -5
-        bottom -5
+        // left 10
+        // right 10
+        top 0
+        bottom 0
     }
+}
+
+blur {
+    passes 2
+    offset 4.0
+    noise 0.01
+    saturation 1.50
 }
 
 // Add lines like this to spawn processes at startup.
@@ -281,7 +288,7 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // https://yalter.github.io/niri/Configuration:-Animations
 animations {
     // Uncomment to turn off all animations.
-    // off
+    off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
     slowdown 1.0
@@ -299,6 +306,11 @@ window-rule {
     // You can get away with just app-id="wezterm" if you want.
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
     default-column-width {}
+}
+
+window-rule {
+    match app-id="com.gabm.satty"
+    open-floating true
 }
 
 // Open the Firefox picture-in-picture player as floating by default.
@@ -335,27 +347,26 @@ binds {
 
     // Applications & Programs
     Alt+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Alt+F {spawn "foot"; }
     Alt+G hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Alt+Shift+W { spawn "waypaper"; }
-    Alt+R { spawn "~/.config/rofi/launchers/myType/./launcher.sh"; }
-    Alt+S { spawn "~/.config/rofi/applets/bin/./powermenu.sh"; }
+    Alt+S { spawn "~/.config/rofi/scripts/powermenu.sh"; }
+    Alt+Space { spawn-sh "rofi -show drun"; }
     Alt+N { spawn "~/.config/waybar/scripts/reload_waybar.sh";}
-    Alt+E { spawn "dolphin"; }
-    Mod+B { spawn "brave"; }
+    Alt+E { spawn "nautilus"; }
+    Mod+B { spawn "zen-browser"; }
     Mod+O { spawn "obsidian"; }
-    Mod+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
+    Mod+Shift+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
 
     // Volume, Audio, & Brightness
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
-    XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
-    XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
-    XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
-    XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
-    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
+    XF86AudioRaiseVolume  allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
+    XF86AudioLowerVolume  allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+    XF86AudioMute         allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    XF86AudioMicMute      allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    XF86AudioPlay         allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    XF86AudioStop         allow-when-locked=true { spawn-sh "playerctl stop"; }
+    XF86AudioPrev         allow-when-locked=true { spawn-sh "playerctl previous"; }
+    XF86AudioNext         allow-when-locked=true { spawn-sh "playerctl next"; }
+    XF86MonBrightnessUp   allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
     // Desktop Navigations
@@ -421,7 +432,7 @@ binds {
     Mod+Comma  { consume-window-into-column; }
     Mod+Period { expel-window-from-column; }
 
-    Mod+R { switch-preset-column-width; }
+    Alt+R { switch-preset-column-width; }
     // Mod+R { switch-preset-column-width-back; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
@@ -436,7 +447,6 @@ binds {
     Mod+Shift+Equal { set-window-height "+10%"; }
     Alt+V       { toggle-window-floating; }
     Alt+Shift+V { switch-focus-between-floating-and-tiling; }
-    Mod+W { toggle-column-tabbed-display; }
 
     // Actions to switch layouts.
     // Note: if you uncomment these, make sure you do NOT have
@@ -448,8 +458,19 @@ binds {
 
 
     // Screenshot
-    // Alt+Shift+S { spawn "grim"; }
-    Alt+W { spawn-sh "grim -g \"$(slurp)\" - | wl-copy"; }   
+    Alt+W { spawn-sh "grim -g \"$(slurp)\" - | satty --filename -"; }   
+
+    Mod+W { spawn-sh "grim -t ppm -g \"$(slurp -o -d -F monospace)\" - |
+        satty --filename - --copy-command=wl-copy --annotation-size-factor 2.0 
+        --output-filename=\"$(xdg-user-dir PICTURES)/Screenshots/Screenshot from %Y-%m-%d %H:%M:%S.png\"
+    --actions-on-enter=\"save-to-clipboard,exit\" --brush-smooth-history-size=5 --disable-notifications"; }
+
+    Mod+Shift+W {
+        spawn-sh "grim -t ppm - |
+        satty --filename - --copy-command=wl-copy --annotation-size-factor 2.0
+        --output-filename=\"$(xdg-user-dir PICTURES)/Screenshots/Screenshot from %Y-%m-%d %H:%M:%S.png\"
+        --actions-on-enter=\"save-to-clipboard,exit\" --brush-smooth-history-size=5 --disable-notifications";
+    }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here
@@ -481,6 +502,4 @@ binds {
     // Alt+Shift+J { focus-monitor-down; }
     // Alt+Shift+K { focus-monitor-up; }
     // Alt+Shift+L { focus-monitor-right; }
-
 }
-include "./noctalia.kdl"

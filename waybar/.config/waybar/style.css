@@ -5,41 +5,56 @@
 @define-color dark-6 rgba(82, 82, 91, 1);
 @define-color dark-5 rgba(113, 113, 122, 1);
 
+@define-color nord_bg #2e3440;      /* Polar Night (darkest) */
+@define-color nord_bg_light #3b4252;/* Polar Night (lighter) */
+@define-color nord_bg_bright #434c5e;/* Polar Night (brightest) */
+@define-color nord_fg #d8dee9;      /* Snow Storm (darker text) */
+@define-color nord_fg_light #e5e9f0;/* Snow Storm (light text) */
+@define-color frost_cyan #8fbcbb;   /* Frost Cyan */
+@define-color frost_blue #88c0d0;   /* Frost Ice Blue */
+@define-color frost_lake #81a1c1;   /* Frost Arctic Lake */
+@define-color frost_deep #5e81ac;   /* Frost Deep Blue */
+@define-color aurora_red #bf616a;   /* Aurora Red */
+@define-color aurora_orange #d08770;/* Aurora Orange */
+@define-color aurora_yellow #ebcb8b;/* Aurora Yellow */
+@define-color aurora_green #a3be8c; /* Aurora Green */
+@define-color aurora_purple #b48ead;/* Aurora Purple */
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FiraCode Nerd Font Propo;
+    font-family: JetBrainsMono Nerd Font Propo;
+    /* font-family: Maple Mono NF; */
     font-size: 17px;
-    margin-top: -4px;
-    margin-bottom: -5px;
+    margin-top: -2px;
+    margin-bottom: -2px;
 }
 
 window#waybar {
-    background-color: @dark-9;
+    background-color: @nord_bg;
     /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
     color: #ffffff;
 }
 
 #window {
     margin-left: 20px;
-    color: lightyellow;
 }
 
 #workspaces button {
     /* padding: 3px; */
     margin: 7px 0px 7px 7px;
     background: transparent;
-    border-radius: 0px;
-    color: white;
+    border-radius: 10px;
+    color: @nord_fg;
 }
 
 #workspaces button.active {
-    background: @highlight;
+    background: @aurora_green;
     color: black;
     font-weight: 700;
 }
 
 #workspaces button.urgent {
-    background: rgba(227, 81, 73, 1);
+    background: @aurora_red;
 }
 
 #battery,
@@ -103,31 +118,32 @@ window#waybar {
     font-size: 14px;
 }
 
-tooltip {
-    background: @dark-9;
-    border-radius: 5px;
+#tooltip {
+    background: @nord_bg;
+    /* border-radius: 5px; */
+    padding: 10px;
 }
 
-tooltip label {
+#tooltip label {
     color: white;
 }
 
 #network {
-    color: red;
+    color: @aurora_red;
 }
 
 #cpu {
-    color: magenta;
+    color: @frost_cyan;
 }
 
 #memory {
-    color: orange;
+    color: @aurora_orange;
 }
 
 #bluetooth {
-    color: skyblue;
+    color: @frost_blue;
 }
 
 #volume {
-    color: rgba(245, 100, 100, 1);
+    color: @aurora_yellow;
 }
