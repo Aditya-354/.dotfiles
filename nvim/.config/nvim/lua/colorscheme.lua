@@ -8,12 +8,6 @@
 -- require("themes.vague")
 -- require("themes.alabaster")
 -- require("themes.evergarden")
-
-local term = os.getenv("TERM")
-if term == "xterm-kitty" then
-    require("themes.nord")
-end
-
-if term == "xterm-ghostty" then
-    require("themes.unokai")
-end
+require("themes.nord")
+-- require("themes.unokai")
+require("themes.githubtheme")
