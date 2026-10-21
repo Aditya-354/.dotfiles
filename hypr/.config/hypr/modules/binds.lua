@@ -4,10 +4,8 @@
 local terminal    = "ghostty"
 local terminal2   = "kitty"
 local fileManager = "nautilus"
-local menu        = "~/.config/rofi/launchers/type-6/./launcher.sh"
 local wallpaperManager = "waypaper"
-local reload_bar = "~/.config/waybar/scripts/reload_waybar.sh"
-local powermenu = "~/.config/rofi/applets/bin/./powermenu.sh"
+local bar_toggle = "~/.config/waybar/scripts/reload_waybar.sh"
 
 ---------------------
 ---- KEYBINDINGS ----
@@ -16,15 +14,13 @@ local powermenu = "~/.config/rofi/applets/bin/./powermenu.sh"
 local mainMod = "ALT" -- Sets "ALT" key as main modifier
 local super = "SUPER"
 
-local ipc = "noctalia msg "
-
 -- Core binds
-hl.bind(mainMod .. "+Space", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
-hl.bind(mainMod .. "+S", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
-hl.bind(mainMod .. "+comma", hl.dsp.exec_cmd(ipc .. "settings-toggle"))
-hl.bind("ALT + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher"))
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(ipc .. "bar-toggle"))
-hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(ipc .. "dock-toggle"))
+hl.bind(mainMod .. "+Space", hl.dsp.exec_cmd("rofi -show drun"))
+hl.bind(mainMod .. "+S", hl.dsp.exec_cmd("~/.config/rofi/scripts/powermenu.sh"))
+-- hl.bind(mainMod .. "+comma", hl.dsp.exec_cmd("settings-toggle"))
+-- hl.bind("ALT + Tab", hl.dsp.exec_cmd("window-switcher"))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(bar_toggle))
+-- hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("dock-toggle"))
 
 -- Media keys
 -- hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(ipc .. "volume-up"))
@@ -37,21 +33,19 @@ hl.bind(mainMod .. " + G", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + C", hl.dsp.window.kill())
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal2))
-hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(ipc .. "panel-toggle wallpaper"))
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(wallpaperManager))
 -- hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(reload_bar))
 hl.bind(super .. " + N", hl.dsp.exec_cmd("swaync-client -t"))
 hl.bind(super .. " + B", hl.dsp.exec_cmd("zen-browser --password-store=basic"))
-hl.bind(super .. " + E", hl.dsp.exec_cmd("krita"))
+hl.bind(super .. " + E", hl.dsp.exec_cmd("gimp"))
 -- hl.bind(super .. " + P", hl.dsp.exec_cmd("shotwell"))
-hl.bind(super .. " + SHIFT + L", hl.dsp.exec_cmd(ipc .. "session lock"))
+hl.bind(super .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 -- hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
--- hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(powermenu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
--- hl.bind(super .. " + J", hl.dsp.exec_cmd("togglesplit"))    -- dwindle only
+hl.bind(super .. " + J", hl.dsp.exec_cmd("togglesplit"))    -- dwindle only
 hl.bind(super .. " + W", hl.dsp.exec_cmd("hyprshot -m window"))
 hl.bind(super .. " + R", hl.dsp.exec_cmd("hyprshot -m region --raw | satty --filename -"))
 

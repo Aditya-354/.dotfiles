@@ -1,4 +1,8 @@
 #! /usr/bin/env bash
 
-killall -SIGUSR2 waybar
+if pgrep -x waybar; then
+    killall waybar
+else
+    waybar & disown
+fi
 

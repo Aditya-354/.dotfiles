@@ -127,7 +127,7 @@ vim.lsp.config["*"] = {
     capabilities = require("blink.cmp").get_lsp_capabilities(),
 }
 
-vim.lsp.semantic_tokens.enable(true)
+vim.lsp.semantic_tokens.enable(false)
 
 vim.lsp.config("lua_ls", {
     settings = {

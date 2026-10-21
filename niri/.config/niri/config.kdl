@@ -352,6 +352,7 @@ binds {
     Alt+S { spawn "~/.config/rofi/scripts/powermenu.sh"; }
     Alt+Space { spawn-sh "rofi -show drun"; }
     Alt+N { spawn "~/.config/waybar/scripts/reload_waybar.sh";}
+    Mod+N { spawn-sh "swaync-client -t"; }
     Alt+E { spawn "nautilus"; }
     Mod+B { spawn "zen-browser"; }
     Mod+O { spawn "obsidian"; }
