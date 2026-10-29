@@ -121,7 +121,6 @@ layer-rule {
 overview {
     // backdrop-color "#00000000"
     workspace-shadow { off; }
-    zoom 0.3
 }
 
 // Settings that influence how windows are positioned and sized.
@@ -197,10 +196,10 @@ layout {
     border {
         // The settings are the same as for the focus ring.
         // If you enable the border, you probably want to disable the focus ring.
-        off
+        on
 
-        width 2
-        active-color "#88c0d0"
+        width 1
+        active-color "#acacac"
         // inactive-color "#505050"
 
         // Color of the border around windows that request your attention.
@@ -370,6 +369,7 @@ binds {
     Alt+G hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Alt+Shift+W { spawn "waypaper"; }
     Alt+S { spawn "~/.config/rofi/scripts/powermenu.sh"; }
+    Alt+B { spawn "~/.config/waybar/scripts/reload_waybar.sh"; }
     Alt+Space { spawn-sh "rofi -show drun"; }
     Alt+N { spawn "~/.config/waybar/scripts/reload_waybar.sh";}
     Mod+N { spawn-sh "swaync-client -t"; }
