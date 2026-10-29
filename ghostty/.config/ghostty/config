@@ -30,5 +30,5 @@ async-backend = epoll
 # font-family = FiraMono Nerd Font Mono
 # font-family = Hack
 # font-family = CaskaydiaMono Nerd Font Mono
-# font-family = Maple Mono NF
-font-family = "Iosevka NFM"
+font-family = Maple Mono NF
+# font-family = "Iosevka NFM"
