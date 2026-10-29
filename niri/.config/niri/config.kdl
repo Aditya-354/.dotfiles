@@ -109,12 +109,27 @@ output "eDP-1" {
     position x=1280 y=0
 }
 
+spawn-sh-at-startup "waybar & disown"
+spawn-sh-at-startup "waypaper --restore"
+spawn-sh-at-startup "swaync"
+
+layer-rule {
+    match namespace="^awww-daemon$"
+    place-within-backdrop true
+}
+
+overview {
+    // backdrop-color "#00000000"
+    workspace-shadow { off; }
+    zoom 0.3
+}
+
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 21
+    gaps 5
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -182,7 +197,7 @@ layout {
     border {
         // The settings are the same as for the focus ring.
         // If you enable the border, you probably want to disable the focus ring.
-        on
+        off
 
         width 2
         active-color "#88c0d0"
@@ -247,11 +262,13 @@ layout {
         top 0
         bottom 0
     }
+
+    background-color "transparent"
 }
 
 blur {
-    passes 2
-    offset 4.0
+    passes 3
+    offset 3.0
     noise 0.01
     saturation 1.50
 }
@@ -265,10 +282,6 @@ blur {
 // spawn-at-startup "waybar"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
-spawn-sh-at-startup "waybar & disown"
-spawn-sh-at-startup "waypaper --restore"
-spawn-sh-at-startup "awww-daemon &"
-spawn-sh-at-startup "swaync"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
@@ -339,6 +352,13 @@ window-rule {
 window-rule {
     geometry-corner-radius 0
     clip-to-geometry true
+}
+
+window-rule {
+    background-effect {
+        blur true
+        xray false
+    }
 }
 
 binds {

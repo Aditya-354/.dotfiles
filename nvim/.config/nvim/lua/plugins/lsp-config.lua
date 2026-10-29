@@ -123,9 +123,9 @@ vim.keymap.set("n", "<leader>q", function()
 end, { desc = "Open diagnostic list" })
 vim.keymap.set("n", "<leader>dl", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
 
-vim.lsp.config["*"] = {
-    capabilities = require("blink.cmp").get_lsp_capabilities(),
-}
+-- vim.lsp.config["*"] = {
+--     capabilities = require("blink.cmp").get_lsp_capabilities(),
+-- }
 
 vim.lsp.semantic_tokens.enable(false)
 
