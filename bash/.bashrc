@@ -39,7 +39,7 @@ export MANPAGER="nvim +Man!"
 
 source /usr/share/nvm/init-nvm.sh
 # source ~/.bash/themes/aphrodite/aphrodite.theme.sh
-eval "$(starship init bash)"
+# eval "$(starship init bash)"
 # eval "$(oh-my-posh init bash --config emodipt-extend)"
 # eval "$(oh-my-posh init bash --config kali)"
 # eval "$(oh-my-posh init bash --config robbyrussell)"
