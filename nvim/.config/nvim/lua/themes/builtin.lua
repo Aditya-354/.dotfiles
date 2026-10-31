@@ -1,5 +1,5 @@
 vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "unokai",
+    pattern = "retrobox",
     callback = function()
         local hl_groups = {
             "Normal",
@@ -27,7 +27,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 -- vim.api.nvim_create_autocmd("ColorScheme", {
---     pattern = "unokai",
+--     pattern = "retrobox",
 --     callback = function()
 --         local hl_groups = vim.fn.getcompletion("", "highlight")
 --         for _, group in ipairs(hl_groups) do
@@ -40,4 +40,4 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 --     end,
 -- })
 
-vim.cmd("colo unokai")
+vim.cmd("colo retrobox")
